@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>高神舟 Shenzhou Gao · 多模态与具身智能</title>
+<meta name="description" content="高神舟 Shenzhou Gao — 青岛大学计算机科学与技术(图灵班),研究方向:多模态与具身智能、世界模型与交互式视频。AAAI 2026 Oral 共同第一作者。" />
+<meta name="author" content="高神舟 Shenzhou Gao" />
+<meta name="keywords" content="高神舟, Shenzhou Gao, 多模态, 具身智能, 世界模型, VLM, 青岛大学, 图灵班, AAAI 2026" />
+<meta name="theme-color" content="#2f5390" />
+<link rel="canonical" href="https://evan-joseph.github.io/" />
+<!-- Open Graph / 社交分享卡 -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="高神舟 Shenzhou Gao · 多模态与具身智能" />
+<meta property="og:description" content="青岛大学计算机科学与技术(图灵班),研究方向:多模态与具身智能、世界模型与交互式视频。AAAI 2026 Oral 共同第一作者。" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:url" content="https://evan-joseph.github.io/" />
+<meta property="profile:first_name" content="神舟" />
+<meta property="profile:last_name" content="高" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="高神舟 Shenzhou Gao · 多模态与具身智能" />
+<meta name="twitter:description" content="青岛大学图灵班 · 多模态与具身智能 · AAAI 2026 Oral 共一" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%232f5390'/%3E%3Ctext%20x='32'%20y='45'%20font-size='38'%20text-anchor='middle'%20fill='%23ffffff'%20font-family='Georgia,serif'%3E高%3C/text%3E%3C/svg%3E" />
+<style>
+  /* ===== Editorial / academic-journal direction =====================
+     纸白底 + 墨黑字 + 单一学术墨蓝强调色;衬线拉丁标题,无衬线中文正文,
+     等宽承载会议/年份元数据。发丝线 + 留白做版面,无阴影、无圆角卡片堆叠。 */
+  :root {
+    --bg:      oklch(98.5% 0.004 95);
+    --surface: oklch(100% 0.001 95);
+    --fg:      oklch(21% 0.016 70);
+    --muted:   oklch(47% 0.012 70);
+    --faint:   oklch(62% 0.010 70);
+    --border:  oklch(89% 0.006 80);
+    --hair:    oklch(83% 0.008 80);
+    --accent:  oklch(45% 0.115 252);
+    --accent-soft: color-mix(in oklch, var(--accent) 10%, var(--bg));
+    --accent-line: color-mix(in oklch, var(--accent) 38%, var(--bg));
+
+    --font-display: 'Iowan Old Style', 'Charter', 'Palatino Linotype', Georgia, 'Songti SC', serif;
+    --font-body:    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', system-ui, sans-serif;
+    --font-mono:    'SF Mono', ui-monospace, 'JetBrains Mono', Menlo, monospace;
+
+    --maxw: 1080px;
+    --pad: clamp(20px, 5vw, 64px);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: inherit; text-decoration: none; }
+  a:active { opacity: 0.62; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  ::selection { background: var(--accent-soft); }
+
+  /* ---- shared layout ---- */
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--pad); }
+  section { padding-block: clamp(48px, 7vw, 96px); border-top: 1px solid var(--border); }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex; align-items: baseline; gap: 12px;
+    margin: 0 0 28px;
+  }
+  .eyebrow .idx { color: var(--faint); }
+  .eyebrow::after {
+    content: ""; flex: 1; height: 1px;
+    background: var(--hair);
+    align-self: center;
+  }
+  .sec-h {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+  .sec-sub { color: var(--muted); max-width: 60ch; margin: 0 0 36px; text-wrap: pretty; }
+
+  /* ---- top nav ---- */
+  header.nav {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in oklch, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(12px);
+    -webkit-backdrop-filter: saturate(1.4) blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-in {
+    max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad);
+    height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .brand { display: flex; align-items: baseline; gap: 10px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
+  .brand .en { font-family: var(--font-display); font-size: 19px; }
+  .brand .cn { color: var(--muted); font-size: 14px; }
+  .brand:hover .en { color: var(--accent); }
+  .brand .en, .brand .cn { transition: color .18s; }
+  nav.links { display: flex; gap: 4px; }
+  nav.links a {
+    font-size: 14px; color: var(--muted);
+    padding: 7px 11px; border-radius: 6px;
+    transition: color .18s, background .18s;
+  }
+  nav.links a:hover { color: var(--fg); background: var(--surface); }
+  nav.links a.active { color: var(--accent); }
+  .lang-switch {
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em;
+    color: var(--muted); background: var(--surface);
+    border: 1px solid var(--hair); border-radius: 4px;
+    padding: 7px 9px; cursor: pointer; line-height: 1;
+    transition: color .16s, border-color .16s, background .16s;
+  }
+  .lang-switch:hover { color: var(--accent); border-color: var(--accent-line); background: var(--accent-soft); }
+  .nav-toggle { display: none; }
+  .skip-link {
+    position: absolute; left: -9999px; top: 0; z-index: 300;
+    background: var(--accent); color: #fff; padding: 11px 18px;
+    border-radius: 0 0 8px 0; font-size: 14px;
+  }
+  .skip-link:focus { left: 0; }
+
+  /* ---- hero ---- */
+  .hero { border-top: 0; padding-top: clamp(48px, 8vw, 104px); }
+  .hero-status {
+    font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.14em;
+    color: var(--accent); text-transform: uppercase; margin-bottom: 22px;
+    display: inline-flex; align-items: center; gap: 9px;
+  }
+  .hero-status .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(46px, 9vw, 104px);
+    line-height: 0.96;
+    letter-spacing: -0.028em;
+    margin: 0;
+  }
+  .hero h1 .cn { display: block; font-size: 0.42em; letter-spacing: 0.16em; color: var(--muted); font-weight: 500; margin-bottom: 0.42em; font-family: var(--font-body); }
+  .hero-role {
+    margin: 30px 0 0; max-width: 64ch;
+    font-size: clamp(17px, 2.2vw, 21px); line-height: 1.55; color: var(--fg); text-wrap: pretty;
+  }
+  .hero-role b { font-weight: 600; }
+  .hero-role .ac { color: var(--accent); font-weight: 600; }
+  .hero-meta { margin-top: 22px; color: var(--muted); font-size: 15.5px; }
+
+  .pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
+  .pill {
+    font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.04em;
+    padding: 8px 13px; border: 1px solid var(--hair); border-radius: 999px;
+    color: var(--fg); background: var(--surface);
+    display: inline-flex; align-items: center; gap: 7px;
+  }
+  .pill b { color: var(--accent); font-weight: 700; }
+
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 22px 26px; margin-top: 40px; align-items: center; }
+  .hero-cta a, .hero-cta .pdf-link {
+    font-size: 15px; display: inline-flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid var(--accent-line); padding-bottom: 3px;
+    transition: border-color .18s, color .18s;
+  }
+  .hero-cta a:hover, .hero-cta .pdf-link:hover { color: var(--accent); border-color: var(--accent); }
+  .hero-cta a svg, .hero-cta .pdf-link svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+
+  /* ---- research areas ---- */
+  .areas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .area { background: var(--surface); padding: 26px clamp(20px, 2.4vw, 30px); }
+  .area .no { font-family: var(--font-mono); font-size: 12px; color: var(--accent); letter-spacing: 0.1em; }
+  .area h3 { font-family: var(--font-display); font-size: 21px; font-weight: 600; margin: 12px 0 8px; letter-spacing: -0.01em; }
+  .area p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+
+  /* ---- publications ---- */
+  .pub-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+  .pub-filters button {
+    font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.06em;
+    background: var(--surface); color: var(--muted);
+    border: 1px solid var(--hair); border-radius: 999px;
+    padding: 7px 14px; cursor: pointer; transition: all .16s;
+  }
+  .pub-filters button:hover { color: var(--fg); border-color: var(--faint); }
+  .pub-filters button.on { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+  .pub { display: grid; grid-template-columns: 176px 1fr; gap: 0 32px; padding: 26px 0; border-top: 1px solid var(--border); }
+  .pub:first-of-type { border-top: 1px solid var(--hair); }
+  .pub-venue { display: flex; flex-direction: column; gap: 7px; padding-top: 4px; min-width: 0; }
+  .badge {
+    align-self: start;
+    font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.08em; font-weight: 600;
+    padding: 4px 9px; border-radius: 5px; line-height: 1.3; max-width: 100%; overflow-wrap: anywhere;
+  }
+  .badge.oral { background: var(--accent); color: #fff; }
+  .badge.accept { background: color-mix(in oklch, var(--accent) 16%, var(--bg)); color: var(--accent); border: 1px solid var(--accent-line); }
+  .badge.review { background: var(--surface); color: var(--muted); border: 1px dashed var(--hair); }
+  .pub-year { font-family: var(--font-mono); font-size: 12px; color: var(--faint); letter-spacing: 0.06em; }
+
+  .pub-body { min-width: 0; }
+  .pub-body h3 { font-family: var(--font-display); font-size: clamp(19px, 2.4vw, 23px); font-weight: 600; line-height: 1.28; margin: 0 0 9px; letter-spacing: -0.01em; }
+  .pub-title-btn { font: inherit; color: inherit; background: none; border: 0; padding: 0; text-align: left; cursor: pointer; border-bottom: 1px solid transparent; }
+  .pub-title-btn:hover { color: var(--accent); border-bottom-color: var(--accent-line); }
+  .pub-title-btn::after { content: " 待补链接"; font-family: var(--font-mono); font-size: 11px; color: var(--faint); letter-spacing: 0.04em; margin-left: 8px; }
+  body[data-lang="en"] .pub-title-btn::after { content: " link pending"; }
+  .pub-title-link {
+    color: inherit;
+    border-bottom: 1px solid transparent;
+    transition: color .18s, border-color .18s;
+  }
+  .pub-title-link:hover { color: var(--accent); border-bottom-color: var(--accent-line); }
+  .pub-authors { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
+  .pub-authors .me { color: var(--fg); font-weight: 700; border-bottom: 2px solid var(--accent-line); }
+  .pub-authors .star { color: var(--accent); }
+  .pub-authors .corr { color: var(--faint); }
+  .pub-authors .corr sup { color: var(--accent); font-weight: 700; }
+  .pub-body p { margin: 0 0 8px; color: var(--muted); font-size: 14.5px; line-height: 1.62; max-width: 70ch; text-wrap: pretty; }
+  .pub-role { font-size: 13.5px; color: var(--fg); }
+  .pub-role .k { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); margin-right: 8px; }
+  .metric {
+    display: inline-block; margin-top: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--accent);
+    background: var(--accent-soft); padding: 3px 9px; border-radius: 5px;
+  }
+
+  /* ---- projects ---- */
+  .proj { display: grid; grid-template-columns: 1fr; gap: 0; }
+  .proj-item { padding: 24px 0; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 8px 24px; align-items: start; }
+  .proj-item:first-child { border-top: 1px solid var(--hair); }
+  .proj-head h3 { font-family: var(--font-display); font-size: 21px; font-weight: 600; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .proj-head .stack { font-family: var(--font-mono); font-size: 12.5px; color: var(--faint); letter-spacing: 0.03em; margin-bottom: 10px; }
+  .proj-head p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.6; max-width: 64ch; text-wrap: pretty; }
+  .proj-tag { justify-self: end; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; color: var(--accent); text-align: right; white-space: nowrap; padding-top: 5px; }
+
+  /* ---- education ---- */
+  .edu-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  .edu-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 20px; }
+  .edu-top h3 { font-family: var(--font-display); font-size: 24px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
+  .edu-top .span { font-family: var(--font-mono); font-size: 13px; color: var(--faint); letter-spacing: 0.04em; }
+  .edu-major { color: var(--muted); margin: 6px 0 22px; }
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .stat { background: var(--surface); padding: 20px 18px; }
+  .stat .num { font-family: var(--font-display); font-size: clamp(26px, 3.4vw, 34px); font-weight: 600; letter-spacing: -0.02em; line-height: 1; }
+  .stat .lbl { font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+  .courses { margin-top: 24px; }
+  .courses .ct { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); margin-bottom: 12px; }
+  .course-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .course { font-size: 13.5px; border: 1px solid var(--hair); border-radius: 6px; padding: 6px 11px; background: var(--surface); }
+  .course .sc { font-family: var(--font-mono); color: var(--accent); font-weight: 600; margin-left: 7px; }
+
+  /* ---- awards (within projects/experience) ---- */
+  .awards { margin-top: 8px; }
+  .award { display: grid; grid-template-columns: 64px 1fr; gap: 18px; padding: 16px 0; border-top: 1px solid var(--border); align-items: baseline; }
+  .award:first-child { border-top: 1px solid var(--hair); }
+  .award .yr { font-family: var(--font-mono); font-size: 13px; color: var(--accent); letter-spacing: 0.04em; }
+  .award p { margin: 0; font-size: 14.5px; color: var(--fg); line-height: 1.55; }
+  .award p .lv { color: var(--muted); }
+
+  /* ---- skills ---- */
+  .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px 48px; }
+  .skill-group h3 { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin: 0 0 14px; display: flex; align-items: baseline; gap: 10px; }
+  .skill-group h3 .n { font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font-size: 13.5px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--fg); }
+
+  /* ---- contact ---- */
+  .contact { background: var(--surface); }
+  .contact .sec-h { margin-bottom: 28px; }
+  .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .cc { background: var(--bg); padding: 24px clamp(20px, 2.4vw, 28px); display: block; transition: background .18s; }
+  .cc:hover { background: var(--accent-soft); }
+  .cc .lbl { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint); }
+  .cc .val { font-size: 17px; margin-top: 9px; word-break: break-all; display: flex; align-items: center; gap: 9px; }
+  .cc .val svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 1.6; flex: none; }
+
+  footer { border-top: 1px solid var(--border); padding-block: 40px; color: var(--faint); font-size: 13px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+  footer .font-mono { font-family: var(--font-mono); letter-spacing: 0.04em; }
+
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+  /* ---- copy buttons (邮箱/电话即时复制,无确认) ---- */
+  .cta-item { display: inline-flex; align-items: center; gap: 10px; }
+  .copy-btn {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em;
+    color: var(--muted); background: var(--surface);
+    border: 1px solid var(--hair); border-radius: 6px;
+    padding: 6px 8px; cursor: pointer; line-height: 1; min-width: 31px; min-height: 31px;
+    display: inline-flex; align-items: center; justify-content: center;
+    transition: color .16s, border-color .16s, background .16s;
+  }
+  .copy-btn svg { width: 15px; height: 15px; flex: none; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .copy-btn:hover { color: var(--accent); border-color: var(--accent-line); }
+  .copy-btn:active { opacity: 0.62; }
+  .copy-btn.done { color: #fff; background: var(--accent); border-color: var(--accent); }
+  .copy-btn.done svg { stroke: #fff; }
+  .cc-act { position: relative; display: block; padding: 0; }
+  .cc-act .cc-main { display: block; padding: 24px clamp(20px, 2.4vw, 28px); }
+  .cc-act .cc-main .val { padding-right: 56px; }
+  .cc-act .copy-btn { position: absolute; top: 16px; right: 16px; z-index: 2; }
+
+  /* ---- jump confirm modal (外链/邮件/电话 5s 倒计时,可撤销) ---- */
+  .jump-modal {
+    position: fixed; inset: 0; z-index: 200;
+    display: grid; place-items: center; padding: 20px;
+    background: color-mix(in oklch, var(--fg) 42%, transparent);
+    backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+    animation: jm-fade .18s ease;
+  }
+  .jump-modal[hidden] { display: none; }
+  @keyframes jm-fade { from { opacity: 0; } to { opacity: 1; } }
+  .jump-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 28px 28px 24px; max-width: 420px; width: 100%;
+    box-shadow: 0 24px 60px color-mix(in oklch, var(--fg) 24%, transparent);
+    animation: jm-rise .2s ease;
+  }
+  @keyframes jm-rise { from { transform: translateY(10px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .jump-kicker { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+  .jump-card h3 { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin: 10px 0 6px; letter-spacing: -0.01em; }
+  .jump-dest { margin: 0 0 18px; color: var(--muted); font-size: 14.5px; word-break: break-all; }
+  .jump-bar { height: 3px; border-radius: 999px; background: var(--border); overflow: hidden; }
+  .jump-bar span { display: block; height: 100%; width: 100%; background: var(--accent); transform-origin: left; }
+  .jump-count { margin: 12px 0 20px; font-family: var(--font-mono); font-size: 12.5px; color: var(--faint); letter-spacing: 0.03em; }
+  .jump-count b { color: var(--accent); }
+  .jump-actions { display: flex; gap: 10px; justify-content: flex-end; }
+  .jump-actions button { font-size: 14px; font-family: var(--font-body); padding: 9px 16px; border-radius: 8px; cursor: pointer; border: 1px solid var(--hair); transition: filter .16s, border-color .16s; }
+  .jump-stay { background: var(--surface); color: var(--fg); }
+  .jump-stay:hover { border-color: var(--faint); }
+  .jump-go { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .jump-go:hover { filter: brightness(1.08); }
+  .jump-actions button:active { opacity: 0.7; }
+
+  /* ---- toast ---- */
+  .toast {
+    position: fixed; left: 50%; bottom: 32px; transform: translateX(-50%) translateY(12px);
+    z-index: 240; background: var(--fg); color: var(--bg);
+    font-size: 13.5px; padding: 10px 18px; border-radius: 999px;
+    opacity: 0; transition: opacity .2s, transform .2s; pointer-events: none;
+    font-family: var(--font-mono); letter-spacing: 0.03em; max-width: 80vw; text-align: center;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+
+
+  /* ---- document actions: PDF reader + back top ---- */
+  .pdf-link {
+    font: inherit; color: inherit; background: none; border: 0; cursor: pointer;
+    font-size: 15px; display: inline-flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid var(--accent-line); padding: 0 0 3px;
+    transition: border-color .18s, color .18s;
+  }
+  .pdf-link:hover { color: var(--accent); border-color: var(--accent); }
+  .pdf-link svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+  .footer-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .footer-actions button { color: var(--accent); }
+  .back-top {
+    position: fixed; right: 22px; bottom: 24px; z-index: 120;
+    min-width: 46px; height: 34px; padding: 0 11px;
+    border-radius: 2px; border: 1px solid var(--hair);
+    background: color-mix(in oklch, var(--surface) 94%, transparent); color: var(--accent);
+    cursor: pointer; opacity: 0; transform: translateY(8px); pointer-events: none;
+    transition: opacity .2s, transform .2s, background .2s, border-color .2s;
+    display: inline-grid; place-items: center;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em;
+  }
+  .back-top.show { opacity: 1; transform: none; pointer-events: auto; }
+  .back-top:hover { background: var(--accent-soft); border-color: var(--accent-line); }
+
+  .pdf-modal {
+    position: fixed; inset: 0; z-index: 260;
+    background: color-mix(in oklch, var(--fg) 46%, transparent);
+    display: block;
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  }
+  .pdf-modal[hidden] { display: none; }
+  body.pdf-open { overflow: hidden; }
+  .pdf-panel {
+    position: absolute; left: 50vw; top: 50dvh;
+    width: min(960px, calc(100vw - 32px));
+    height: min(820px, calc(100dvh - 32px));
+    max-height: calc(100svh - 32px);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 2px;
+    display: flex; flex-direction: column; overflow: hidden;
+    box-shadow: 0 18px 50px color-mix(in oklch, var(--fg) 24%, transparent);
+    transform: translate(calc(-50% + var(--pdf-x, 0px)), calc(-50% + var(--pdf-y, 0px)));
+  }
+  .pdf-panel.compact { width: min(760px, calc(100vw - 32px)); height: min(680px, calc(100dvh - 32px)); }
+  .pdf-panel.expanded { width: min(1180px, calc(100vw - 24px)); height: min(900px, calc(100dvh - 24px)); max-height: calc(100svh - 24px); }
+  .pdf-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 10px 12px 10px 16px; border-bottom: 1px solid var(--border);
+    cursor: move; user-select: none; background: var(--bg);
+  }
+  .pdf-title { font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; color: var(--muted); }
+  .pdf-tools { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+  .pdf-tools button, .pdf-tools a {
+    font-family: var(--font-mono); font-size: 12px; color: var(--fg); background: var(--surface);
+    border: 1px solid var(--hair); border-radius: 2px; padding: 6px 9px; cursor: pointer;
+  }
+  .pdf-tools button:hover, .pdf-tools a:hover { border-color: var(--accent-line); color: var(--accent); }
+  .pdf-body { flex: 1; min-height: 0; overflow: hidden; background: oklch(94% .005 250); }
+  .pdf-object { border: 0; display: block; width: 100%; height: 100%; background: #fff; }
+  .pdf-fallback {
+    height: 100%; display: grid; place-items: center; padding: 32px; text-align: center;
+    color: var(--muted); background: var(--surface);
+  }
+  .pdf-fallback p { margin: 0 0 16px; }
+  .pdf-fallback a { color: var(--accent); border-bottom: 1px solid var(--accent-line); }
+  @media (max-width: 720px) {
+    .pdf-panel, .pdf-panel.compact, .pdf-panel.expanded { width: calc(100vw - 20px); height: min(760px, calc(100dvh - 20px)); max-height: calc(100svh - 20px); }
+    .pdf-head { align-items: flex-start; cursor: default; }
+    .pdf-tools { max-width: 210px; }
+    .back-top { right: 16px; bottom: 18px; }
+  }
+
+  /* ---- responsive ---- */
+  @media (max-width: 880px) {
+    .areas, .skills, .contact-grid { grid-template-columns: 1fr 1fr; }
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 720px) {
+    nav.links { display: none; }
+    .lang-switch { margin-left: auto; }
+    nav.links.open {
+      display: flex; flex-direction: column; gap: 2px;
+      position: absolute; top: 64px; left: 0; right: 0;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      padding: 10px var(--pad) 16px;
+    }
+    nav.links.open a { padding: 11px 10px; font-size: 15.5px; }
+    .nav-toggle {
+      display: inline-flex; flex-direction: column; gap: 4px; cursor: pointer;
+      background: none; border: 0; padding: 8px;
+    }
+    .nav-toggle span { width: 22px; height: 1.6px; background: var(--fg); display: block; }
+    .pub { grid-template-columns: 1fr; gap: 14px; }
+    .pub-venue { flex-direction: row; align-items: center; gap: 12px; padding-top: 0; }
+    .proj-item { grid-template-columns: 1fr; }
+    .proj-tag { justify-self: start; text-align: left; padding-top: 0; }
+  }
+  @media (max-width: 480px) {
+    .areas, .skills, .contact-grid { grid-template-columns: 1fr; }
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .award { grid-template-columns: 52px 1fr; gap: 12px; }
+    .course { width: 100%; display: flex; justify-content: space-between; }
+    .course .sc { margin-left: 0; }
+  }
+</style>
+</head>
+<body data-lang="zh">
+
+<a class="skip-link" href="#top">跳到主要内容</a>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top">
+      <span class="en">Shenzhou Gao</span>
+      <span class="cn">高神舟</span>
+    </a>
+    <nav class="links" id="navlinks">
+      <a href="#research">研究方向</a>
+      <a href="#publications">发表论文</a>
+      <a href="#projects">项目经历</a>
+      <a href="#education">教育经历</a>
+      <a href="#skills">技能</a>
+      <a href="#contact">联系方式</a>
+    </nav>
+    <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch language">EN</button>
+    <button class="nav-toggle" id="navtoggle" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-status"><span class="dot"></span>本科在读 · 正在寻求科研与实习机会</div>
+      <h1>
+        <span class="cn">高神舟</span>
+        Shenzhou&nbsp;Gao
+      </h1>
+      <p class="hero-role">
+        青岛大学计算机科学与技术 <b>(图灵班)</b> 2023 级。研究聚焦
+        <span class="ac">多模态与具身智能</span>、<span class="ac">世界模型与交互式视频</span>,
+        关注 VLM 任务导向的时空推理、长程具身规划与 Agent。
+        <b>AAAI 2026 Oral 共同第一作者</b>,另有 ICML 2026 中稿与多篇顶会在投。
+      </p>
+      <p class="hero-meta">青岛大学计算机科学技术学院 · 山东青岛 · 2023.09 – 2027.06</p>
+
+      <div class="pills">
+        <span class="pill"><b>AAAI 2026</b> Oral · 共一</span>
+        <span class="pill"><b>ICML 2026</b> 中稿</span>
+        <span class="pill">顶会在投 <b>3</b> 篇</span>
+        <span class="pill">省级/区域级竞赛 <b>5</b> 项</span>
+        <span class="pill">横向项目 <b>2</b> 项</span>
+      </div>
+
+      <div class="hero-cta">
+        <span class="cta-item">
+          <a href="mailto:gaoshenzhou@qdu.edu.cn">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            gaoshenzhou@qdu.edu.cn
+          </a>
+          <button type="button" class="copy-btn" data-copy="gaoshenzhou@qdu.edu.cn" aria-label="复制邮箱地址"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </span>
+        <a href="https://github.com/Evan-Joseph" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+          github.com/Evan-Joseph
+        </a>
+        <a href="https://openreview.net/profile?id=%7EShenzhou_Gao1" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          OpenReview
+        </a>
+        <button type="button" class="pdf-link" data-open-pdf>
+          <svg viewBox="0 0 24 24"><path d="M14 3v5h5"/><path d="M5 3h9l5 5v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M9 13h6M9 17h4"/></svg>
+          <span>查看简历 PDF</span>
+        </button>
+        <span class="cta-item">
+          <a href="tel:13176534543">
+            <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            131 7653 4543
+          </a>
+          <button type="button" class="copy-btn" data-copy="13176534543" aria-label="复制电话号码"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH AREAS ===== -->
+  <section id="research">
+    <div class="wrap">
+      <p class="eyebrow"><span class="idx">01</span>研究方向</p>
+      <h2 class="sec-h">Research Interests</h2>
+      <p class="sec-sub">围绕“让模型在真实世界中理解任务进展并做出规划”这条主线,从评测诊断、训练策略到落地 Agent 系统逐层推进。</p>
+      <div class="areas">
+        <div class="area reveal">
+          <span class="no">A1</span>
+          <h3>多模态与具身智能</h3>
+          <p>视觉-语言模型在真实机器人操作视频中的任务导向时空推理,衡量并提升对动态任务进展的理解。</p>
+        </div>
+        <div class="area reveal">
+          <span class="no">A2</span>
+          <h3>世界模型 / 交互式视频</h3>
+          <p>面向第一视角与操作场景的时序建模,研究输入顺序偏置与时空幻觉的成因与缓解。</p>
+        </div>
+        <div class="area reveal">
+          <span class="no">A3</span>
+          <h3>长程具身规划</h3>
+          <p>将长程任务重构为动作蓝图(Action Blueprint)生成,缓解全局规划不足与显式规划器的感知脱节。</p>
+        </div>
+        <div class="area reveal">
+          <span class="no">A4</span>
+          <h3>Agent 与强化学习</h3>
+          <p>GUI Agent 的分步反馈强化学习,围绕原则约束的奖励建模与在线轨迹构建。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <section id="publications">
+    <div class="wrap">
+      <p class="eyebrow"><span class="idx">02</span>发表论文</p>
+      <h2 class="sec-h">Publications</h2>
+      <p class="sec-sub">星号 <span style="color:var(--accent)">*</span> 表示共同第一作者,加粗下划线为本人,et al. 表示合作者。点选下方标签可按状态筛选。</p>
+
+      <div class="pub-filters" id="pubFilters">
+        <button class="on" data-f="all">全部</button>
+        <button data-f="lead">第一/共一作者</button>
+        <button data-f="accepted">已录用</button>
+        <button data-f="review">在投</button>
+      </div>
+
+      <div id="pubList">
+
+        <article class="pub reveal" data-tags="lead accepted">
+          <div class="pub-venue">
+            <span class="badge oral">AAAI 2026 · ORAL</span>
+            <span class="pub-year">共同第一作者 · 2026</span>
+          </div>
+          <div class="pub-body">
+            <h3><a class="pub-title-link" href="https://ojs.aaai.org/index.php/AAAI/article/view/39022" target="_blank" rel="noopener">SpatialLogic-Bench:任务导向时空推理诊断基准</a></h3>
+            <p class="pub-authors">Xiaoda Yang<span class="star">*</span>, <span class="me">Shenzhou Gao*</span>, Can Wang<span class="star">*</span>, et al.</p>
+            <p>面向现有 VLM 评测难以衡量动态任务进展理解的问题,共同构建基于真实机器人操作视频的时空推理诊断基准,引入双任务前/反向时序范式与多粒度滑窗评测。</p>
+            <p class="pub-role"><span class="k">我的工作</span>数据整理与标注、开源/闭源 VLM 批量评测、结果分析与论文 rebuttal。</p>
+          </div>
+        </article>
+
+        <article class="pub reveal" data-tags="lead review">
+          <div class="pub-venue">
+            <span class="badge review">ECCV 2026 · 投稿中</span>
+            <span class="pub-year">第一作者 · 2026</span>
+          </div>
+          <div class="pub-body">
+            <h3><a class="pub-title-link" href="https://openreview.net/forum?id=3DKDjS7nnp" target="_blank" rel="noopener">LEAP:面向长程具身规划的动作蓝图生成</a></h3>
+            <p class="pub-authors"><span class="me">Shenzhou Gao</span> (第一作者), et al.</p>
+            <p>针对长程具身任务全局规划不足、显式规划器感知脱节与推理延迟问题,将任务重构为 Action Blueprint 生成。</p>
+            <p class="pub-role"><span class="k">我的工作</span>独立完成 idea 选取、Agibot-derived 数据准备、Qwen3-VL-2B-Instruct Full-SFT / LoRA 微调、VLABench 评测与投稿 rebuttal 闭环。</p>
+          </div>
+        </article>
+
+        <article class="pub reveal" data-tags="lead review">
+          <div class="pub-venue">
+            <span class="badge review">NeurIPS 2026 · 投稿中</span>
+            <span class="pub-year">第一作者 · 2026</span>
+          </div>
+          <div class="pub-body">
+            <h3><button type="button" class="pub-title-btn" data-placeholder="论文链接待上线后补充">Progressive Training:具身 VLM 时空幻觉缓解</button></h3>
+            <p class="pub-authors"><span class="me">Shenzhou Gao</span> (第一作者), et al.</p>
+            <p>针对具身 VLM 多图推理中的输入顺序偏置与时空幻觉,构建 STCR-CoT 与弱监督扩展数据,监督模型先感知状态再判断进展;提出从 CoT 强监督预训练到标签弱监督微调的渐进式训练策略。</p>
+            <p class="pub-role"><span class="k">关键结果</span>forward / reverse 性能差距由 70%+ 降至 <span class="metric">6.53%</span></p>
+          </div>
+        </article>
+
+        <article class="pub reveal" data-tags="accepted">
+          <div class="pub-venue">
+            <span class="badge accept">ICML 2026 · 中稿</span>
+            <span class="pub-year">合作 · 2026</span>
+          </div>
+          <div class="pub-body">
+            <h3><a class="pub-title-link" href="https://arxiv.org/abs/2604.10517" target="_blank" rel="noopener">From Perception to Planning:第一视角任务导向时空推理</a></h3>
+            <p class="pub-authors">合作者 · <span class="me">Shenzhou Gao</span> (共一后第一位 / 第三作者)</p>
+            <p>研究第一视角视频中的任务导向时空推理与课程学习。</p>
+            <p class="pub-role"><span class="k">我的工作</span>核心科研插图绘制,参与部分改稿与实验问题讨论。</p>
+          </div>
+        </article>
+
+        <article class="pub reveal" data-tags="review">
+          <div class="pub-venue">
+            <span class="badge review">NeurIPS 2026 · 投稿中</span>
+            <span class="pub-year">第二作者 · 2026</span>
+          </div>
+          <div class="pub-body">
+            <h3><button type="button" class="pub-title-btn" data-placeholder="论文链接待上线后补充">Orcust:GUI Agent 分步反馈强化学习</button></h3>
+            <p class="pub-authors">合作者 · <span class="me">Shenzhou Gao</span> (第二作者)</p>
+            <p>围绕 GUI Agent 的逐步反馈强化学习,聚焦原则约束的奖励建模与在线 VM 轨迹构建。</p>
+            <p class="pub-role"><span class="k">我的工作</span>科研插图绘制。</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS & EXPERIENCE ===== -->
+  <section id="projects">
+    <div class="wrap">
+      <p class="eyebrow"><span class="idx">03</span>项目 / 经历</p>
+      <h2 class="sec-h">Projects &amp; Experience</h2>
+      <p class="sec-sub">从企业横向落地系统到学生科研/竞赛产品,覆盖前端重构、算法服务与 Agent 工作流的完整开发。</p>
+
+      <div class="proj">
+        <div class="proj-item reveal">
+          <div class="proj-head">
+            <h3>港口拖轮智能调度系统</h3>
+            <div class="stack">React / Vite · OpenLayers · Recharts · FastAPI BFF</div>
+            <p>参与调度规则梳理、关键约束建模、系统开发与企业沟通;独立完成前端重构与地图可视化交互优化,对接上游 API,支撑任务、方案、助手、历史与指标等页面能力。</p>
+          </div>
+          <div class="proj-tag">横向项目<br>Demo / 竞标支撑</div>
+        </div>
+
+        <div class="proj-item reveal">
+          <div class="proj-head">
+            <h3>港口危险品堆位推荐算法服务</h3>
+            <div class="stack">FastAPI · SQLAlchemy · pytest</div>
+            <p>独立推进堆位推荐服务设计与开发,覆盖硬约束过滤、软评分、Top-4 推荐、位置校验、模拟写回与审计日志;基于真实 Excel 样例搭建可回归原型,支持规则、地图、场位属性与推荐过程的版本化维护。</p>
+          </div>
+          <div class="proj-tag">横向项目<br>主链路开发中</div>
+        </div>
+
+        <div class="proj-item reveal">
+          <div class="proj-head">
+            <h3>KouPilot · 大学生科研与竞赛智能伴侣</h3>
+            <div class="stack">Coze 工作流 · LLM / Code / Plugin 节点 · TypeScript · Native DB</div>
+            <p>作为主要负责人设计 Coze 原子工作流,覆盖画像构建、竞赛搜索、智能组队与备赛诊断;实现跨源去重与 LLM 匹配评分。</p>
+          </div>
+          <div class="proj-tag">二等奖 · 卓越典范奖<br>2026</div>
+        </div>
+
+        <div class="proj-item reveal">
+          <div class="proj-head">
+            <h3>合众诊 · AI 医疗咨询与健康信息服务原型</h3>
+            <div class="stack">全栈开发 · 路演 / 答辩</div>
+            <p>面向 AI 医疗咨询场景,作为队长负责平台绝大部分开发、PPT 制作、路演与答辩;组织用户问诊、健康信息问答与服务演示链路。</p>
+          </div>
+          <div class="proj-tag">省级一等奖<br>2025</div>
+        </div>
+      </div>
+
+      <h3 style="font-family:var(--font-display);font-size:18px;font-weight:600;margin:44px 0 4px;">竞赛与奖项 · Awards</h3>
+      <div class="awards">
+        <div class="award reveal"><span class="yr">2026</span><p>青岛银行 · 高校“扣子”智能体创新大赛 <b>二等奖 · 卓越典范奖</b> <span class="lv">— KouPilot</span></p></div>
+        <div class="award reveal"><span class="yr">2026</span><p>中国大学生计算机设计大赛 <span class="lv">— 两项作品进入山东省级评审</span></p></div>
+        <div class="award reveal"><span class="yr">2025</span><p>中国大学生计算机设计大赛 山东省级赛 <b>一等奖</b> <span class="lv">— 队长 / 主要开发 / PPT 与答辩</span></p></div>
+        <div class="award reveal"><span class="yr">2024</span><p>蓝桥杯 山东赛区 C/C++ 程序设计 <b>二等奖</b></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education">
+    <div class="wrap">
+      <p class="eyebrow"><span class="idx">04</span>教育经历</p>
+      <h2 class="sec-h">Education</h2>
+      <div class="edu-grid">
+        <div>
+          <div class="edu-top">
+            <h3>青岛大学 · 计算机科学技术学院</h3>
+            <span class="span">2023.09 – 2027.06</span>
+          </div>
+          <p class="edu-major">计算机科学与技术(图灵班)· 本科</p>
+
+          <div class="stat-row">
+            <div class="stat reveal"><div class="num">6/20</div><div class="lbl">专业排名</div></div>
+            <div class="stat reveal"><div class="num">86.19</div><div class="lbl">平均成绩 / 100</div></div>
+            <div class="stat reveal"><div class="num">3.46</div><div class="lbl">GPA / 4.00</div></div>
+            <div class="stat reveal"><div class="num">564</div><div class="lbl">CET-6</div></div>
+          </div>
+
+          <div class="courses">
+            <div class="ct">核心课程成绩</div>
+            <div class="course-list">
+              <span class="course">计算机组成与结构 <span class="sc">96</span></span>
+              <span class="course">人工智能数学基础 <span class="sc">96</span></span>
+              <span class="course">数据库原理 <span class="sc">92</span></span>
+              <span class="course">计算理论 <span class="sc">90</span></span>
+              <span class="course">计算机网络原理 <span class="sc">88</span></span>
+              <span class="course">人工智能技术 <span class="sc">88</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="wrap">
+      <p class="eyebrow"><span class="idx">05</span>专业技能</p>
+      <h2 class="sec-h">Skills</h2>
+      <div class="skills">
+        <div class="skill-group reveal">
+          <h3><span class="n">S1</span>科研执行</h3>
+          <div class="chips">
+            <span class="chip">评测基准部署</span><span class="chip">开源/闭源模型推理评测</span>
+            <span class="chip">Prompt 设计</span><span class="chip">输出解析</span>
+            <span class="chip">实验记录</span><span class="chip">统计分析</span><span class="chip">科研图表</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3><span class="n">S2</span>训练与数据</h3>
+          <div class="chips">
+            <span class="chip">多模态数据构建与清洗</span><span class="chip">SFT / LoRA</span>
+            <span class="chip">BF16 训练配置</span><span class="chip">训练/测试/盲评数据组织</span>
+            <span class="chip">实验脚本整理</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3><span class="n">S3</span>工程与表达</h3>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">React</span>
+            <span class="chip">FastAPI</span><span class="chip">SQLAlchemy</span><span class="chip">pytest / httpx</span>
+            <span class="chip">LaTeX</span><span class="chip">技术方案 / 文档</span><span class="chip">PPT / 答辩</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3><span class="n">S4</span>AI 工具使用</h3>
+          <div class="chips">
+            <span class="chip">Codex</span><span class="chip">Claude Code</span><span class="chip">Cursor</span>
+            <span class="chip">Trae</span><span class="chip">DeepSeek TUI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="eyebrow"><span class="idx">06</span>联系方式</p>
+      <h2 class="sec-h">Get in touch</h2>
+      <p class="sec-sub">正在寻求多模态 / 具身智能方向的科研与实习机会,若有合适的位置,恳请联系,不胜感激。</p>
+      <div class="contact-grid">
+        <div class="cc cc-act">
+          <a class="cc-main" href="mailto:gaoshenzhou@qdu.edu.cn">
+            <div class="lbl">Email</div>
+            <div class="val"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>gaoshenzhou@qdu.edu.cn</div>
+          </a>
+          <button type="button" class="copy-btn" data-copy="gaoshenzhou@qdu.edu.cn" aria-label="复制邮箱地址"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+        <div class="cc cc-act">
+          <a class="cc-main" href="tel:13176534543">
+            <div class="lbl">电话</div>
+            <div class="val"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>131 7653 4543</div>
+          </a>
+          <button type="button" class="copy-btn" data-copy="13176534543" aria-label="复制电话号码"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+        <a class="cc" href="https://github.com/Evan-Joseph" target="_blank" rel="noopener">
+          <div class="lbl">GitHub</div>
+          <div class="val"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>github.com/Evan-Joseph</div>
+        </a>
+        <a class="cc" href="https://openreview.net/profile?id=%7EShenzhou_Gao1" target="_blank" rel="noopener">
+          <div class="lbl">OpenReview</div>
+          <div class="val"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>查看评审记录</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 高神舟 Shenzhou Gao</span>
+    <span class="footer-actions">
+      <button type="button" class="pdf-link" data-open-pdf>
+        <svg viewBox="0 0 24 24"><path d="M14 3v5h5"/><path d="M5 3h9l5 5v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M9 13h6M9 17h4"/></svg>
+        <span>查看简历 PDF</span>
+      </button>
+      <span class="font-mono">青岛大学 · 计算机科学与技术(图灵班)</span>
+    </span>
+  </div>
+</footer>
+
+<button type="button" class="back-top" id="backTop" aria-label="回到顶部">TOP</button>
+
+<!-- PDF 阅读器弹窗 -->
+<div class="pdf-modal" id="pdfModal" hidden>
+  <div class="pdf-panel" id="pdfPanel" role="dialog" aria-modal="true" aria-label="简历 PDF 阅读器">
+    <div class="pdf-head" id="pdfHead">
+      <div class="pdf-title">Shenzhou_Gao_CV.pdf</div>
+      <div class="pdf-tools">
+        <button type="button" id="pdfCompact" aria-label="缩小阅读窗口">小窗</button>
+        <button type="button" id="pdfExpand" aria-label="放大阅读窗口">大窗</button>
+        <button type="button" id="pdfFit" aria-label="恢复自适应居中尺寸">适配</button>
+        <a href="Shenzhou_Gao_CV.pdf" id="pdfNewTab" target="_blank" rel="noopener">新标签打开</a>
+        <a href="Shenzhou_Gao_CV.pdf" id="pdfDownload" download>下载</a>
+        <button type="button" id="pdfClose" aria-label="关闭 PDF 阅读器">退出</button>
+      </div>
+    </div>
+    <div class="pdf-body">
+      <object class="pdf-object" id="pdfObject" title="高神舟简历 PDF" data="Shenzhou_Gao_CV.pdf#view=FitH" type="application/pdf">
+        <div class="pdf-fallback">
+          <div>
+            <p>当前浏览器不适合内嵌预览 PDF。可在新标签打开或下载后查看。</p>
+            <a href="Shenzhou_Gao_CV.pdf" target="_blank" rel="noopener">新标签打开简历 PDF</a>
+          </div>
+        </div>
+      </object>
+    </div>
+  </div>
+</div>
+
+<!-- 跳转确认弹窗 + 复制反馈 -->
+<div class="jump-modal" id="jumpModal" hidden>
+  <div class="jump-card" role="alertdialog" aria-modal="true" aria-labelledby="jumpTitle" aria-describedby="jumpDest">
+    <div class="jump-kicker">即将离开此页</div>
+    <h3 id="jumpTitle">确认跳转</h3>
+    <p class="jump-dest" id="jumpDest"></p>
+    <div class="jump-bar"><span id="jumpBarFill"></span></div>
+    <p class="jump-count"><b id="jumpCount">5</b> 秒后自动前往,可点“留在此页”撤销。</p>
+    <div class="jump-actions">
+      <button type="button" class="jump-stay" id="jumpStay">留在此页</button>
+      <button type="button" class="jump-go" id="jumpGo">立即前往</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+  // 移动端导航
+  (function () {
+    var toggle = document.getElementById('navtoggle');
+    var links = document.getElementById('navlinks');
+    toggle.addEventListener('click', function () { links.classList.toggle('open'); });
+    links.addEventListener('click', function (e) { if (e.target.tagName === 'A') links.classList.remove('open'); });
+  })();
+
+  // 滚动揭示动画
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function (el) { el.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+
+  // 导航高亮当前板块
+  (function () {
+    var secs = document.querySelectorAll('main section[id]');
+    var navMap = {};
+    document.querySelectorAll('nav.links a').forEach(function (a) { navMap[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          Object.keys(navMap).forEach(function (k) { navMap[k].classList.remove('active'); });
+          if (navMap[en.target.id]) navMap[en.target.id].classList.add('active');
+        }
+      });
+    }, { threshold: 0.5, rootMargin: '-20% 0px -40% 0px' });
+    secs.forEach(function (s) { io.observe(s); });
+  })();
+
+  // 论文筛选
+  (function () {
+    var filters = document.getElementById('pubFilters');
+    var pubs = Array.prototype.slice.call(document.querySelectorAll('#pubList .pub'));
+    filters.addEventListener('click', function (e) {
+      var btn = e.target.closest('button'); if (!btn) return;
+      filters.querySelectorAll('button').forEach(function (b) { b.classList.remove('on'); });
+      btn.classList.add('on');
+      var f = btn.getAttribute('data-f');
+      pubs.forEach(function (p) {
+        var show = f === 'all' || (p.getAttribute('data-tags') || '').indexOf(f) > -1;
+        p.style.display = show ? '' : 'none';
+      });
+    });
+  })();
+
+  // 复制反馈 toast
+  function showToast(msg) {
+    var t = document.getElementById('toast');
+    t.textContent = msg; t.hidden = false;
+    requestAnimationFrame(function () { t.classList.add('show'); });
+    clearTimeout(t._timer);
+    t._timer = setTimeout(function () { t.classList.remove('show'); }, 1800);
+  }
+
+  // 点击复制邮箱 / 电话(无需确认)
+  (function () {
+    var COPY_SVG = '<svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    var CHECK_SVG = '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.top = '-1000px'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (_) {}
+      document.body.removeChild(ta);
+    }
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.copy-btn'); if (!btn) return;
+      e.preventDefault(); e.stopPropagation();
+      var text = btn.getAttribute('data-copy') || '';
+      function done() {
+        btn.innerHTML = CHECK_SVG; btn.classList.add('done');
+        showToast((window.__pageLang === 'en' ? 'Copied: ' : '已复制:') + text);
+        clearTimeout(btn._t);
+        btn._t = setTimeout(function () { btn.classList.remove('done'); btn.innerHTML = COPY_SVG; }, 1600);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); });
+      } else { fallbackCopy(text); done(); }
+    });
+  })();
+
+
+  // 完整中英切换：覆盖页面正文、控件、弹窗与 SEO 元信息；事实信息不新增、不杜撰。
+  (function () {
+    var langSwitch = document.getElementById('langSwitch');
+    var cn = {
+      lang: 'zh-CN', toggle: 'EN', copied: '已复制:', pubPending: '论文链接待上线后补充',
+      title: '高神舟 Shenzhou Gao · 多模态与具身智能',
+      desc: '高神舟 Shenzhou Gao — 青岛大学计算机科学与技术(图灵班),研究方向:多模态与具身智能、世界模型与交互式视频。AAAI 2026 Oral 共同第一作者。',
+      twitter: '青岛大学图灵班 · 多模态与具身智能 · AAAI 2026 Oral 共一',
+      text: [
+        ['.skip-link','跳到主要内容'], ['nav.links a[href="#research"]','研究方向'], ['nav.links a[href="#publications"]','发表论文'], ['nav.links a[href="#projects"]','项目经历'], ['nav.links a[href="#education"]','教育经历'], ['nav.links a[href="#skills"]','技能'], ['nav.links a[href="#contact"]','联系方式'],
+        ['.hero h1 .cn','高神舟'], ['.hero-meta','青岛大学计算机科学技术学院 · 山东青岛 · 2023.09 – 2027.06'],
+        ['#research .sec-h','Research Interests'], ['#publications .sec-h','Publications'], ['#projects .sec-h','Projects & Experience'], ['#education .sec-h','Education'], ['#skills .sec-h','Skills'], ['#contact .sec-h','Get in touch'],
+        ['#pdfCompact','小窗'], ['#pdfExpand','大窗'], ['#pdfFit','适配'], ['#pdfNewTab','新标签打开'], ['#pdfDownload','下载'], ['#pdfClose','退出'], ['#jumpTitle','确认跳转'], ['#jumpStay','留在此页'], ['#jumpGo','立即前往'], ['#backTop','TOP'], ['.pdf-title','Shenzhou_Gao_CV.pdf']
+      ],
+      html: [
+        ['.hero-status','<span class="dot"></span>本科在读 · 正在寻求科研与实习机会'],
+        ['.hero-role','青岛大学计算机科学与技术 <b>(图灵班)</b> 2023 级。研究聚焦 <span class="ac">多模态与具身智能</span>、<span class="ac">世界模型与交互式视频</span>,关注 VLM 任务导向的时空推理、长程具身规划与 Agent。<b>AAAI 2026 Oral 共同第一作者</b>,另有 ICML 2026 中稿与多篇顶会在投。'],
+        ['.pills .pill:nth-child(1)','<b>AAAI 2026</b> Oral · 共一'], ['.pills .pill:nth-child(2)','<b>ICML 2026</b> 中稿'], ['.pills .pill:nth-child(3)','顶会在投 <b>3</b> 篇'], ['.pills .pill:nth-child(4)','省级/区域级竞赛 <b>5</b> 项'], ['.pills .pill:nth-child(5)','横向项目 <b>2</b> 项'],
+        ['.hero-cta [data-open-pdf] span','查看简历 PDF'], ['footer [data-open-pdf] span','查看简历 PDF'],
+        ['#research .eyebrow','<span class="idx">01</span>研究方向'], ['#research .sec-sub','围绕“让模型在真实世界中理解任务进展并做出规划”这条主线,从评测诊断、训练策略到落地 Agent 系统逐层推进。'],
+        ['.area:nth-child(1) h3','多模态与具身智能'], ['.area:nth-child(1) p','视觉-语言模型在真实机器人操作视频中的任务导向时空推理,衡量并提升对动态任务进展的理解。'], ['.area:nth-child(2) h3','世界模型 / 交互式视频'], ['.area:nth-child(2) p','面向第一视角与操作场景的时序建模,研究输入顺序偏置与时空幻觉的成因与缓解。'], ['.area:nth-child(3) h3','长程具身规划'], ['.area:nth-child(3) p','将长程任务重构为动作蓝图(Action Blueprint)生成,缓解全局规划不足与显式规划器的感知脱节。'], ['.area:nth-child(4) h3','Agent 与强化学习'], ['.area:nth-child(4) p','GUI Agent 的分步反馈强化学习,围绕原则约束的奖励建模与在线轨迹构建。'],
+        ['#publications .eyebrow','<span class="idx">02</span>发表论文'], ['#publications .sec-sub','星号 <span style="color:var(--accent)">*</span> 表示共同第一作者,加粗下划线为本人,et al. 表示合作者。点选下方标签可按状态筛选。'], ['#pubFilters button:nth-child(1)','全部'], ['#pubFilters button:nth-child(2)','第一/共一作者'], ['#pubFilters button:nth-child(3)','已录用'], ['#pubFilters button:nth-child(4)','在投'],
+        ['#pubList .pub:nth-child(1) .badge','AAAI 2026 · ORAL'], ['#pubList .pub:nth-child(1) .pub-year','共同第一作者 · 2026'], ['#pubList .pub:nth-child(1) .pub-title-link','SpatialLogic-Bench:任务导向时空推理诊断基准'], ['#pubList .pub:nth-child(1) .pub-authors','Xiaoda Yang<span class="star">*</span>, <span class="me">Shenzhou Gao*</span>, Can Wang<span class="star">*</span>, et al.'], ['#pubList .pub:nth-child(1) .pub-body p:nth-of-type(2)','面向现有 VLM 评测难以衡量动态任务进展理解的问题,共同构建基于真实机器人操作视频的时空推理诊断基准,引入双任务前/反向时序范式与多粒度滑窗评测。'], ['#pubList .pub:nth-child(1) .pub-role','<span class="k">我的工作</span>数据整理与标注、开源/闭源 VLM 批量评测、结果分析与论文 rebuttal。'],
+        ['#pubList .pub:nth-child(2) .badge','ECCV 2026 · 投稿中'], ['#pubList .pub:nth-child(2) .pub-year','第一作者 · 2026'], ['#pubList .pub:nth-child(2) .pub-title-link','LEAP:面向长程具身规划的动作蓝图生成'], ['#pubList .pub:nth-child(2) .pub-authors','<span class="me">Shenzhou Gao</span> (第一作者), et al.'], ['#pubList .pub:nth-child(2) .pub-body p:nth-of-type(2)','针对长程具身任务全局规划不足、显式规划器感知脱节与推理延迟问题,将任务重构为 Action Blueprint 生成。'], ['#pubList .pub:nth-child(2) .pub-role','<span class="k">我的工作</span>独立完成 idea 选取、Agibot-derived 数据准备、Qwen3-VL-2B-Instruct Full-SFT / LoRA 微调、VLABench 评测与投稿 rebuttal 闭环。'],
+        ['#pubList .pub:nth-child(3) .badge','NeurIPS 2026 · 投稿中'], ['#pubList .pub:nth-child(3) .pub-year','第一作者 · 2026'], ['#pubList .pub:nth-child(3) .pub-title-btn','Progressive Training:具身 VLM 时空幻觉缓解'], ['#pubList .pub:nth-child(3) .pub-authors','<span class="me">Shenzhou Gao</span> (第一作者), et al.'], ['#pubList .pub:nth-child(3) .pub-body p:nth-of-type(2)','针对具身 VLM 多图推理中的输入顺序偏置与时空幻觉,构建 STCR-CoT 与弱监督扩展数据,监督模型先感知状态再判断进展;提出从 CoT 强监督预训练到标签弱监督微调的渐进式训练策略。'], ['#pubList .pub:nth-child(3) .pub-role','<span class="k">关键结果</span>forward / reverse 性能差距由 70%+ 降至 <span class="metric">6.53%</span>'],
+        ['#pubList .pub:nth-child(4) .badge','ICML 2026 · 中稿'], ['#pubList .pub:nth-child(4) .pub-year','合作 · 2026'], ['#pubList .pub:nth-child(4) .pub-title-link','From Perception to Planning:第一视角任务导向时空推理'], ['#pubList .pub:nth-child(4) .pub-authors','合作者 · <span class="me">Shenzhou Gao</span> (共一后第一位 / 第三作者)'], ['#pubList .pub:nth-child(4) .pub-body p:nth-of-type(2)','研究第一视角视频中的任务导向时空推理与课程学习。'], ['#pubList .pub:nth-child(4) .pub-role','<span class="k">我的工作</span>核心科研插图绘制,参与部分改稿与实验问题讨论。'],
+        ['#pubList .pub:nth-child(5) .badge','NeurIPS 2026 · 投稿中'], ['#pubList .pub:nth-child(5) .pub-year','第二作者 · 2026'], ['#pubList .pub:nth-child(5) .pub-title-btn','Orcust:GUI Agent 分步反馈强化学习'], ['#pubList .pub:nth-child(5) .pub-authors','合作者 · <span class="me">Shenzhou Gao</span> (第二作者)'], ['#pubList .pub:nth-child(5) .pub-body p:nth-of-type(2)','围绕 GUI Agent 的逐步反馈强化学习,聚焦原则约束的奖励建模与在线 VM 轨迹构建。'], ['#pubList .pub:nth-child(5) .pub-role','<span class="k">我的工作</span>科研插图绘制。'],
+        ['#projects .eyebrow','<span class="idx">03</span>项目 / 经历'], ['#projects .sec-sub','从企业横向落地系统到学生科研/竞赛产品,覆盖前端重构、算法服务与 Agent 工作流的完整开发。'],
+        ['#projects .proj-item:nth-child(1) h3','港口拖轮智能调度系统'], ['#projects .proj-item:nth-child(1) .stack','React / Vite · OpenLayers · Recharts · FastAPI BFF'], ['#projects .proj-item:nth-child(1) p','参与调度规则梳理、关键约束建模、系统开发与企业沟通;独立完成前端重构与地图可视化交互优化,对接上游 API,支撑任务、方案、助手、历史与指标等页面能力。'], ['#projects .proj-item:nth-child(1) .proj-tag','横向项目<br>Demo / 竞标支撑'],
+        ['#projects .proj-item:nth-child(2) h3','港口危险品堆位推荐算法服务'], ['#projects .proj-item:nth-child(2) .stack','FastAPI · SQLAlchemy · pytest'], ['#projects .proj-item:nth-child(2) p','独立推进堆位推荐服务设计与开发,覆盖硬约束过滤、软评分、Top-4 推荐、位置校验、模拟写回与审计日志;基于真实 Excel 样例搭建可回归原型,支持规则、地图、场位属性与推荐过程的版本化维护。'], ['#projects .proj-item:nth-child(2) .proj-tag','横向项目<br>主链路开发中'],
+        ['#projects .proj-item:nth-child(3) h3','KouPilot · 大学生科研与竞赛智能伴侣'], ['#projects .proj-item:nth-child(3) .stack','Coze 工作流 · LLM / Code / Plugin 节点 · TypeScript · Native DB'], ['#projects .proj-item:nth-child(3) p','作为主要负责人设计 Coze 原子工作流,覆盖画像构建、竞赛搜索、智能组队与备赛诊断;实现跨源去重与 LLM 匹配评分。'], ['#projects .proj-item:nth-child(3) .proj-tag','二等奖 · 卓越典范奖<br>2026'],
+        ['#projects .proj-item:nth-child(4) h3','合众诊 · AI 医疗咨询与健康信息服务原型'], ['#projects .proj-item:nth-child(4) .stack','全栈开发 · 路演 / 答辩'], ['#projects .proj-item:nth-child(4) p','面向 AI 医疗咨询场景,作为队长负责平台绝大部分开发、PPT 制作、路演与答辩;组织用户问诊、健康信息问答与服务演示链路。'], ['#projects .proj-item:nth-child(4) .proj-tag','省级一等奖<br>2025'],
+        ['#projects h3[style]','竞赛与奖项 · Awards'], ['.award:nth-child(1) p','青岛银行 · 高校“扣子”智能体创新大赛 <b>二等奖 · 卓越典范奖</b> <span class="lv">— KouPilot</span>'], ['.award:nth-child(2) p','中国大学生计算机设计大赛 <span class="lv">— 两项作品进入山东省级评审</span>'], ['.award:nth-child(3) p','中国大学生计算机设计大赛 山东省级赛 <b>一等奖</b> <span class="lv">— 队长 / 主要开发 / PPT 与答辩</span>'], ['.award:nth-child(4) p','蓝桥杯 山东赛区 C/C++ 程序设计 <b>二等奖</b>'],
+        ['#education .eyebrow','<span class="idx">04</span>教育经历'], ['.edu-top h3','青岛大学 · 计算机科学技术学院'], ['.edu-major','计算机科学与技术(图灵班)· 本科'], ['.stat:nth-child(1) .lbl','专业排名'], ['.stat:nth-child(2) .lbl','平均成绩 / 100'], ['.stat:nth-child(3) .lbl','GPA / 4.00'], ['.stat:nth-child(4) .lbl','CET-6'], ['.courses .ct','核心课程成绩'],
+        ['.course:nth-child(1)','计算机组成与结构 <span class="sc">96</span>'], ['.course:nth-child(2)','人工智能数学基础 <span class="sc">96</span>'], ['.course:nth-child(3)','数据库原理 <span class="sc">92</span>'], ['.course:nth-child(4)','计算理论 <span class="sc">90</span>'], ['.course:nth-child(5)','计算机网络原理 <span class="sc">88</span>'], ['.course:nth-child(6)','人工智能技术 <span class="sc">88</span>'],
+        ['#skills .eyebrow','<span class="idx">05</span>专业技能'], ['.skill-group:nth-child(1) h3','<span class="n">S1</span>科研执行'], ['.skill-group:nth-child(1) .chips','<span class="chip">评测基准部署</span><span class="chip">开源/闭源模型推理评测</span><span class="chip">Prompt 设计</span><span class="chip">输出解析</span><span class="chip">实验记录</span><span class="chip">统计分析</span><span class="chip">科研图表</span>'], ['.skill-group:nth-child(2) h3','<span class="n">S2</span>训练与数据'], ['.skill-group:nth-child(2) .chips','<span class="chip">多模态数据构建与清洗</span><span class="chip">SFT / LoRA</span><span class="chip">BF16 训练配置</span><span class="chip">训练/测试/盲评数据组织</span><span class="chip">实验脚本整理</span>'], ['.skill-group:nth-child(3) h3','<span class="n">S3</span>工程与表达'], ['.skill-group:nth-child(3) .chips','<span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">FastAPI</span><span class="chip">SQLAlchemy</span><span class="chip">pytest / httpx</span><span class="chip">LaTeX</span><span class="chip">技术方案 / 文档</span><span class="chip">PPT / 答辩</span>'], ['.skill-group:nth-child(4) h3','<span class="n">S4</span>AI 工具使用'], ['.skill-group:nth-child(4) .chips','<span class="chip">Codex</span><span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">Trae</span><span class="chip">DeepSeek TUI</span>'],
+        ['#contact .eyebrow','<span class="idx">06</span>联系方式'], ['#contact .sec-sub','正在寻求多模态 / 具身智能方向的科研与实习机会,若有合适的位置,恳请联系,不胜感激。'], ['.contact-grid .cc:nth-child(2) .lbl','电话'], ['.contact-grid .cc:nth-child(4) .val','<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>查看评审记录'], ['footer .wrap > span:first-child','© 2026 高神舟 Shenzhou Gao'], ['footer .font-mono','青岛大学 · 计算机科学与技术(图灵班)'],
+        ['.jump-kicker','即将离开此页'], ['.jump-count','<b id="jumpCount">5</b> 秒后自动前往,可点“留在此页”撤销。'], ['.pdf-fallback p','当前浏览器不适合内嵌预览 PDF。可在新标签打开或下载后查看。'], ['.pdf-fallback a','新标签打开简历 PDF']
+      ],
+      attrs: [
+        ['#navtoggle','aria-label','菜单'], ['#langSwitch','aria-label','Switch language'], ['#pdfPanel','aria-label','简历 PDF 阅读器'], ['#pdfObject','title','高神舟简历 PDF'], ['#pdfCompact','aria-label','缩小阅读窗口'], ['#pdfExpand','aria-label','放大阅读窗口'], ['#pdfFit','aria-label','恢复自适应居中尺寸'], ['#pdfClose','aria-label','关闭 PDF 阅读器'], ['#backTop','aria-label','回到顶部'], ['.hero-cta .copy-btn:nth-of-type(1)','aria-label','复制邮箱地址']
+      ]
+    };
+
+    var en = {
+      lang: 'en', toggle: '中', copied: 'Copied: ', pubPending: 'Paper link will be added after publication',
+      title: 'Shenzhou Gao · Multimodal AI and Embodied Intelligence',
+      desc: 'Shenzhou Gao is an undergraduate in Computer Science and Technology (Turing Class) at Qingdao University, working on multimodal AI, embodied intelligence, world models, and interactive video. AAAI 2026 Oral co-first author.',
+      twitter: 'Qingdao University Turing Class · Multimodal AI and Embodied Intelligence · AAAI 2026 Oral co-first author',
+      text: [
+        ['.skip-link','Skip to main content'], ['nav.links a[href="#research"]','Research'], ['nav.links a[href="#publications"]','Publications'], ['nav.links a[href="#projects"]','Projects'], ['nav.links a[href="#education"]','Education'], ['nav.links a[href="#skills"]','Skills'], ['nav.links a[href="#contact"]','Contact'],
+        ['.hero h1 .cn','高神舟'], ['.hero-meta','School of Computer Science and Technology, Qingdao University · Qingdao, China · Sep 2023 – Jun 2027'],
+        ['#research .sec-h','Research Interests'], ['#publications .sec-h','Publications'], ['#projects .sec-h','Projects & Experience'], ['#education .sec-h','Education'], ['#skills .sec-h','Skills'], ['#contact .sec-h','Get in touch'],
+        ['#pdfCompact','Small'], ['#pdfExpand','Large'], ['#pdfFit','Fit'], ['#pdfNewTab','New tab'], ['#pdfDownload','Download'], ['#pdfClose','Close'], ['#jumpTitle','Confirm navigation'], ['#jumpStay','Stay here'], ['#jumpGo','Go now'], ['#backTop','TOP'], ['.pdf-title','Shenzhou_Gao_CV.pdf']
+      ],
+      html: [
+        ['.hero-status','<span class="dot"></span>Undergraduate · seeking research and internship opportunities'],
+        ['.hero-role','I am a 2023 undergraduate student in Computer Science and Technology <b>(Turing Class)</b> at Qingdao University. My work focuses on <span class="ac">multimodal AI and embodied intelligence</span>, <span class="ac">world models and interactive video</span>, with interests in task-oriented spatio-temporal reasoning, long-horizon embodied planning, and agents. I am a <b>co-first author of an AAAI 2026 Oral paper</b>, with one ICML 2026 accepted paper and several top-conference submissions under review.'],
+        ['.pills .pill:nth-child(1)','<b>AAAI 2026</b> Oral · Co-first'], ['.pills .pill:nth-child(2)','<b>ICML 2026</b> accepted'], ['.pills .pill:nth-child(3)','Under review <b>3</b> papers'], ['.pills .pill:nth-child(4)','Provincial / regional awards <b>5</b>'], ['.pills .pill:nth-child(5)','Industry projects <b>2</b>'],
+        ['.hero-cta [data-open-pdf] span','View CV PDF'], ['footer [data-open-pdf] span','View CV PDF'],
+        ['#research .eyebrow','<span class="idx">01</span>Research'], ['#research .sec-sub','My research follows a practical question: how can models understand task progress in the physical world and plan accordingly? I work across diagnosis, training strategy, and deployable agent systems.'],
+        ['.area:nth-child(1) h3','Multimodal & Embodied Intelligence'], ['.area:nth-child(1) p','Task-oriented spatio-temporal reasoning for vision-language models on real robot manipulation videos, with emphasis on understanding dynamic task progress.'], ['.area:nth-child(2) h3','World Models / Interactive Video'], ['.area:nth-child(2) p','Temporal modeling for first-person and action-centric scenarios, studying input-order bias and spatio-temporal hallucination.'], ['.area:nth-child(3) h3','Long-Horizon Embodied Planning'], ['.area:nth-child(3) p','Reformulating long-horizon tasks as Action Blueprint generation to reduce weak global planning and perception gaps in explicit planners.'], ['.area:nth-child(4) h3','Agents & Reinforcement Learning'], ['.area:nth-child(4) p','Step-wise feedback reinforcement learning for GUI agents, including principle-constrained reward modeling and online VM trajectory construction.'],
+        ['#publications .eyebrow','<span class="idx">02</span>Publications'], ['#publications .sec-sub','Asterisk <span style="color:var(--accent)">*</span> denotes equal contribution; my name is bold and underlined; et al. denotes collaborators. Use the filters below to view papers by status.'], ['#pubFilters button:nth-child(1)','All'], ['#pubFilters button:nth-child(2)','Lead / co-first'], ['#pubFilters button:nth-child(3)','Accepted'], ['#pubFilters button:nth-child(4)','Under review'],
+        ['#pubList .pub:nth-child(1) .badge','AAAI 2026 · ORAL'], ['#pubList .pub:nth-child(1) .pub-year','Co-first author · 2026'], ['#pubList .pub:nth-child(1) .pub-title-link','SpatialLogic-Bench: A Task-Oriented Spatio-Temporal Reasoning Diagnostic Benchmark'], ['#pubList .pub:nth-child(1) .pub-authors','Xiaoda Yang<span class="star">*</span>, <span class="me">Shenzhou Gao*</span>, Can Wang<span class="star">*</span>, et al.'], ['#pubList .pub:nth-child(1) .pub-body p:nth-of-type(2)','We build a diagnostic benchmark based on real robot manipulation videos to evaluate whether current VLMs understand dynamic task progress, using forward/reverse temporal tasks and multi-granularity sliding-window evaluation.'], ['#pubList .pub:nth-child(1) .pub-role','<span class="k">My work</span>Data organization and annotation, open/closed-source VLM batch evaluation, result analysis, and rebuttal support.'],
+        ['#pubList .pub:nth-child(2) .badge','ECCV 2026 · under review'], ['#pubList .pub:nth-child(2) .pub-year','First author · 2026'], ['#pubList .pub:nth-child(2) .pub-title-link','LEAP: Action Blueprint Generation for Long-Horizon Embodied Planning'], ['#pubList .pub:nth-child(2) .pub-authors','<span class="me">Shenzhou Gao</span> (first author), et al.'], ['#pubList .pub:nth-child(2) .pub-body p:nth-of-type(2)','LEAP addresses weak global planning, the perception gap of explicit planners, and inference latency in long-horizon embodied tasks by reformulating planning as Action Blueprint generation.'], ['#pubList .pub:nth-child(2) .pub-role','<span class="k">My work</span>Independently led idea selection, Agibot-derived data preparation, Qwen3-VL-2B-Instruct Full-SFT / LoRA fine-tuning, VLABench evaluation, and rebuttal workflow.'],
+        ['#pubList .pub:nth-child(3) .badge','NeurIPS 2026 · under review'], ['#pubList .pub:nth-child(3) .pub-year','First author · 2026'], ['#pubList .pub:nth-child(3) .pub-title-btn','Progressive Training for Mitigating Spatio-Temporal Hallucination in Embodied VLMs'], ['#pubList .pub:nth-child(3) .pub-authors','<span class="me">Shenzhou Gao</span> (first author), et al.'], ['#pubList .pub:nth-child(3) .pub-body p:nth-of-type(2)','We address input-order bias and spatio-temporal hallucination in multi-image reasoning for embodied VLMs by constructing STCR-CoT and weakly supervised extended data, guiding the model to perceive states before judging progress.'], ['#pubList .pub:nth-child(3) .pub-role','<span class="k">Key result</span>The forward / reverse performance gap is reduced from over 70% to <span class="metric">6.53%</span>'],
+        ['#pubList .pub:nth-child(4) .badge','ICML 2026 · accepted'], ['#pubList .pub:nth-child(4) .pub-year','Collaborator · 2026'], ['#pubList .pub:nth-child(4) .pub-title-link','From Perception to Planning: Task-Oriented Spatio-Temporal Reasoning in First-Person Video'], ['#pubList .pub:nth-child(4) .pub-authors','Collaborator · <span class="me">Shenzhou Gao</span> (first after co-first authors / third author)'], ['#pubList .pub:nth-child(4) .pub-body p:nth-of-type(2)','This work studies task-oriented spatio-temporal reasoning and curriculum learning in first-person video.'], ['#pubList .pub:nth-child(4) .pub-role','<span class="k">My work</span>Created key research figures and participated in manuscript revision and experiment discussions.'],
+        ['#pubList .pub:nth-child(5) .badge','NeurIPS 2026 · under review'], ['#pubList .pub:nth-child(5) .pub-year','Second author · 2026'], ['#pubList .pub:nth-child(5) .pub-title-btn','Orcust: Step-Wise Feedback Reinforcement Learning for GUI Agents'], ['#pubList .pub:nth-child(5) .pub-authors','Collaborator · <span class="me">Shenzhou Gao</span> (second author)'], ['#pubList .pub:nth-child(5) .pub-body p:nth-of-type(2)','Orcust studies step-wise feedback reinforcement learning for GUI agents, focusing on principle-constrained reward modeling and online VM trajectory construction.'], ['#pubList .pub:nth-child(5) .pub-role','<span class="k">My work</span>Created research figures.'],
+        ['#projects .eyebrow','<span class="idx">03</span>Projects / Experience'], ['#projects .sec-sub','Hands-on engineering across industry collaboration projects and student research/competition products, covering front-end refactoring, algorithm services, and agent workflows.'],
+        ['#projects .proj-item:nth-child(1) h3','Intelligent Tugboat Scheduling System'], ['#projects .proj-item:nth-child(1) .stack','React / Vite · OpenLayers · Recharts · FastAPI BFF'], ['#projects .proj-item:nth-child(1) p','Participated in scheduling rule analysis, constraint modeling, system development, and enterprise communication. Independently refactored the front end, improved map-based interactions, and integrated upstream APIs for task, plan, assistant, history, and metrics pages.'], ['#projects .proj-item:nth-child(1) .proj-tag','Industry project<br>Demo / bidding support'],
+        ['#projects .proj-item:nth-child(2) h3','Dangerous Goods Yard-Slot Recommendation Service'], ['#projects .proj-item:nth-child(2) .stack','FastAPI · SQLAlchemy · pytest'], ['#projects .proj-item:nth-child(2) p','Independently designed and developed a yard-slot recommendation service covering hard-constraint filtering, soft scoring, Top-4 recommendation, position validation, simulated write-back, and audit logs. Built a regression-ready prototype from real Excel samples.'], ['#projects .proj-item:nth-child(2) .proj-tag','Industry project<br>Main pipeline in development'],
+        ['#projects .proj-item:nth-child(3) h3','KouPilot · AI Companion for Student Research and Competitions'], ['#projects .proj-item:nth-child(3) .stack','Coze workflows · LLM / Code / Plugin nodes · TypeScript · Native DB'], ['#projects .proj-item:nth-child(3) p','As the main contributor, designed atomic Coze workflows covering profile construction, competition search, intelligent team matching, and preparation diagnosis; implemented cross-source deduplication and LLM-based matching scores.'], ['#projects .proj-item:nth-child(3) .proj-tag','Second Prize · Excellence Model Award<br>2026'],
+        ['#projects .proj-item:nth-child(4) h3','Hezhongzhen · AI Medical Consultation Prototype'], ['#projects .proj-item:nth-child(4) .stack','Full-stack development · pitch / defense'], ['#projects .proj-item:nth-child(4) p','For an AI medical consultation scenario, led most of the platform development, slide production, roadshow, and defense as team leader, organizing user consultation, health-information Q&A, and service demonstration flows.'], ['#projects .proj-item:nth-child(4) .proj-tag','Provincial First Prize<br>2025'],
+        ['#projects h3[style]','Awards'], ['.award:nth-child(1) p','Qingdao Bank · University “Coze” Agent Innovation Competition <b>Second Prize · Excellence Model Award</b> <span class="lv">— KouPilot</span>'], ['.award:nth-child(2) p','Chinese Collegiate Computing Design Competition <span class="lv">— two works advanced to Shandong provincial review</span>'], ['.award:nth-child(3) p','Chinese Collegiate Computing Design Competition, Shandong Provincial Round <b>First Prize</b> <span class="lv">— team leader / main developer / slides and defense</span>'], ['.award:nth-child(4) p','Lanqiao Cup, Shandong Division, C/C++ Programming <b>Second Prize</b>'],
+        ['#education .eyebrow','<span class="idx">04</span>Education'], ['.edu-top h3','Qingdao University · School of Computer Science and Technology'], ['.edu-major','B.Eng. in Computer Science and Technology (Turing Class) · Undergraduate'], ['.stat:nth-child(1) .lbl','Major ranking'], ['.stat:nth-child(2) .lbl','Average grade / 100'], ['.stat:nth-child(3) .lbl','GPA / 4.00'], ['.stat:nth-child(4) .lbl','CET-6'], ['.courses .ct','Core coursework'],
+        ['.course:nth-child(1)','Computer Organization and Architecture <span class="sc">96</span>'], ['.course:nth-child(2)','Mathematical Foundations of AI <span class="sc">96</span>'], ['.course:nth-child(3)','Database Systems <span class="sc">92</span>'], ['.course:nth-child(4)','Theory of Computation <span class="sc">90</span>'], ['.course:nth-child(5)','Computer Networks <span class="sc">88</span>'], ['.course:nth-child(6)','Artificial Intelligence Technology <span class="sc">88</span>'],
+        ['#skills .eyebrow','<span class="idx">05</span>Skills'], ['.skill-group:nth-child(1) h3','<span class="n">S1</span>Research execution'], ['.skill-group:nth-child(1) .chips','<span class="chip">Benchmark deployment</span><span class="chip">Open / closed-source model evaluation</span><span class="chip">Prompt design</span><span class="chip">Output parsing</span><span class="chip">Experiment logging</span><span class="chip">Statistical analysis</span><span class="chip">Research figures</span>'], ['.skill-group:nth-child(2) h3','<span class="n">S2</span>Training & data'], ['.skill-group:nth-child(2) .chips','<span class="chip">Multimodal data construction and cleaning</span><span class="chip">SFT / LoRA</span><span class="chip">BF16 training setup</span><span class="chip">Train / test / blind-eval split organization</span><span class="chip">Experiment scripts</span>'], ['.skill-group:nth-child(3) h3','<span class="n">S3</span>Engineering & communication'], ['.skill-group:nth-child(3) .chips','<span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">FastAPI</span><span class="chip">SQLAlchemy</span><span class="chip">pytest / httpx</span><span class="chip">LaTeX</span><span class="chip">Technical docs</span><span class="chip">Slides / defense</span>'], ['.skill-group:nth-child(4) h3','<span class="n">S4</span>AI tools'], ['.skill-group:nth-child(4) .chips','<span class="chip">Codex</span><span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">Trae</span><span class="chip">DeepSeek TUI</span>'],
+        ['#contact .eyebrow','<span class="idx">06</span>Contact'], ['#contact .sec-sub','I am seeking research and internship opportunities in multimodal AI and embodied intelligence. If there may be a suitable position, I would be grateful to hear from you.'], ['.contact-grid .cc:nth-child(2) .lbl','Phone'], ['.contact-grid .cc:nth-child(4) .val','<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>View profile'], ['footer .wrap > span:first-child','© 2026 Shenzhou Gao'], ['footer .font-mono','Qingdao University · Computer Science and Technology (Turing Class)'],
+        ['.jump-kicker','Leaving this page'], ['.jump-count','Auto-open in <b id="jumpCount">5</b> seconds. Choose “Stay here” to cancel.'], ['.pdf-fallback p','This browser may not provide a good embedded PDF preview. Open it in a new tab or download it instead.'], ['.pdf-fallback a','Open CV PDF in a new tab']
+      ],
+      attrs: [
+        ['#navtoggle','aria-label','Menu'], ['#langSwitch','aria-label','切换语言'], ['#pdfPanel','aria-label','CV PDF reader'], ['#pdfObject','title','Shenzhou Gao CV PDF'], ['#pdfCompact','aria-label','Use smaller reader window'], ['#pdfExpand','aria-label','Use larger reader window'], ['#pdfFit','aria-label','Fit reader window to screen'], ['#pdfClose','aria-label','Close PDF reader'], ['#backTop','aria-label','Back to top']
+      ]
+    };
+
+    var dict = { zh: cn, en: en };
+    function applyPairs(pairs, useHtml) {
+      pairs.forEach(function (it) {
+        var el = document.querySelector(it[0]);
+        if (!el) return;
+        if (useHtml) el.innerHTML = it[1]; else el.textContent = it[1];
+      });
+    }
+    function applyAttrs(pairs) {
+      pairs.forEach(function (it) {
+        var el = document.querySelector(it[0]);
+        if (el) el.setAttribute(it[1], it[2]);
+      });
+    }
+    function setMeta(name, value, prop) {
+      var sel = prop ? 'meta[property="' + name + '"]' : 'meta[name="' + name + '"]';
+      var el = document.querySelector(sel);
+      if (el) el.setAttribute('content', value);
+    }
+    window.setPageLanguage = function (lang) {
+      var d = dict[lang] || cn;
+      window.__pageLang = lang;
+      document.documentElement.lang = d.lang;
+      document.body.setAttribute('data-lang', lang);
+      document.title = d.title;
+      setMeta('description', d.desc);
+      setMeta('og:title', d.title, true);
+      setMeta('og:description', d.desc, true);
+      setMeta('og:locale', lang === 'en' ? 'en_US' : 'zh_CN', true);
+      setMeta('twitter:title', d.title);
+      setMeta('twitter:description', d.twitter);
+      langSwitch.textContent = d.toggle;
+      applyPairs(d.text, false);
+      applyPairs(d.html, true);
+      applyAttrs(d.attrs);
+      document.querySelectorAll('.pub-title-btn').forEach(function (btn) { btn.setAttribute('data-placeholder', d.pubPending); });
+      try { localStorage.setItem('homepage-lang', lang); } catch (_) {}
+    };
+    langSwitch.addEventListener('click', function () {
+      window.setPageLanguage(window.__pageLang === 'en' ? 'zh' : 'en');
+    });
+    var saved = 'zh';
+    try { saved = localStorage.getItem('homepage-lang') || 'zh'; } catch (_) {}
+    window.setPageLanguage(saved === 'en' ? 'en' : 'zh');
+  })();
+
+  // PDF 阅读器:自适应居中弹窗、窗口尺寸切换、拖动、退出。PDF 内容交给浏览器原生阅读器处理,兼容 Safari。
+  (function () {
+    var modal = document.getElementById('pdfModal');
+    var panel = document.getElementById('pdfPanel');
+    var head = document.getElementById('pdfHead');
+    var closeBtn = document.getElementById('pdfClose');
+    var compactBtn = document.getElementById('pdfCompact');
+    var expandBtn = document.getElementById('pdfExpand');
+    var fitBtn = document.getElementById('pdfFit');
+    var dragging = false, sx = 0, sy = 0, ox = 0, oy = 0, lastFocus = null;
+
+    function applyOffset() {
+      panel.style.setProperty('--pdf-x', ox + 'px');
+      panel.style.setProperty('--pdf-y', oy + 'px');
+    }
+    function resetPosition() {
+      ox = 0; oy = 0; applyOffset();
+    }
+    function setMode(mode) {
+      panel.classList.remove('compact', 'expanded');
+      if (mode) panel.classList.add(mode);
+      resetPosition();
+    }
+    function openPdf(trigger) {
+      lastFocus = trigger || document.activeElement;
+      modal.hidden = false;
+      document.body.classList.add('pdf-open');
+      setMode('');
+      closeBtn.focus();
+    }
+    function closePdf() {
+      modal.hidden = true;
+      document.body.classList.remove('pdf-open');
+      setMode('');
+      if (lastFocus && lastFocus.focus) { try { lastFocus.focus(); } catch (_) {} }
+    }
+    document.addEventListener('click', function (e) {
+      var opener = e.target.closest('[data-open-pdf]');
+      if (!opener) return;
+      e.preventDefault();
+      openPdf(opener);
+    });
+    closeBtn.addEventListener('click', closePdf);
+    compactBtn.addEventListener('click', function () { setMode('compact'); });
+    expandBtn.addEventListener('click', function () { setMode('expanded'); });
+    fitBtn.addEventListener('click', function () { setMode(''); });
+    modal.addEventListener('click', function (e) { if (e.target === modal) closePdf(); });
+    head.addEventListener('pointerdown', function (e) {
+      if (window.matchMedia('(max-width: 720px)').matches) return;
+      if (e.target.closest('button, a')) return;
+      dragging = true; sx = e.clientX; sy = e.clientY;
+      try { head.setPointerCapture(e.pointerId); } catch (_) {}
+    });
+    head.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var nextX = ox + e.clientX - sx;
+      var nextY = oy + e.clientY - sy;
+      panel.style.setProperty('--pdf-x', nextX + 'px');
+      panel.style.setProperty('--pdf-y', nextY + 'px');
+    });
+    head.addEventListener('pointerup', function (e) {
+      if (!dragging) return;
+      ox += e.clientX - sx; oy += e.clientY - sy; dragging = false;
+      try { head.releasePointerCapture(e.pointerId); } catch (_) {}
+    });
+    window.addEventListener('resize', function () { if (!modal.hidden) resetPosition(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closePdf(); });
+  })();
+
+  // 回到顶部按钮
+  (function () {
+    var btn = document.getElementById('backTop');
+    function paint() { btn.classList.toggle('show', window.scrollY > 520); }
+    window.addEventListener('scroll', paint, { passive: true });
+    btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    paint();
+  })();
+
+  // 论文链接占位反馈:上线后可替换为 arXiv / PDF / 项目页 / 代码仓 URL
+  (function () {
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.pub-title-btn');
+      if (!btn) return;
+      e.preventDefault();
+      showToast(btn.getAttribute('data-placeholder') || (window.__pageLang === 'en' ? 'Link pending' : '链接待补充'));
+    });
+  })();
+
+  // 跳转前 5 秒确认框(外链 / 邮件 / 电话;站内锚点不拦截)
+  (function () {
+    var modal = document.getElementById('jumpModal');
+    var destEl = document.getElementById('jumpDest');
+    var countEl = document.getElementById('jumpCount');
+    var fill = document.getElementById('jumpBarFill');
+    var goBtn = document.getElementById('jumpGo');
+    var stayBtn = document.getElementById('jumpStay');
+    var DURATION = 5;
+    var timer = null, tick = null, pending = null, lastFocus = null;
+
+    function describe(href) {
+      var en = window.__pageLang === 'en';
+      if (href.indexOf('mailto:') === 0) return (en ? 'Email ' : '发送邮件至 ') + href.slice(7);
+      if (href.indexOf('tel:') === 0) return (en ? 'Call ' : '拨打电话 ') + href.slice(4);
+      try { return (en ? 'Open external link · ' : '打开外部链接 · ') + new URL(href).host; } catch (_) { return (en ? 'Open ' : '打开 ') + href; }
+    }
+    function navigate(href, blank) {
+      if (href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0) { window.location.href = href; }
+      else if (blank) { window.open(href, '_blank', 'noopener'); }
+      else { window.location.href = href; }
+    }
+    function close() {
+      clearTimeout(timer); clearInterval(tick);
+      modal.hidden = true; pending = null;
+      if (lastFocus && lastFocus.focus) { try { lastFocus.focus(); } catch (_) {} }
+    }
+    function open(href, blank, trigger) {
+      pending = { href: href, blank: blank }; lastFocus = trigger;
+      destEl.textContent = describe(href);
+      modal.hidden = false;
+      var remain = DURATION; countEl.textContent = remain;
+      fill.style.transition = 'none'; fill.style.transform = 'scaleX(1)';
+      void fill.offsetWidth;
+      fill.style.transition = 'transform ' + DURATION + 's linear';
+      fill.style.transform = 'scaleX(0)';
+      goBtn.focus();
+      tick = setInterval(function () { remain -= 1; if (remain < 0) remain = 0; countEl.textContent = remain; }, 1000);
+      timer = setTimeout(function () { var p = pending; close(); if (p) navigate(p.href, p.blank); }, DURATION * 1000);
+    }
+
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('.copy-btn')) return;
+      var a = e.target.closest('a'); if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (!href || href.charAt(0) === '#') return;
+      var leaving = href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0 || /^https?:\/\//i.test(href);
+      if (!leaving) return;
+      e.preventDefault();
+      open(href, a.target === '_blank', a);
+    });
+
+    goBtn.addEventListener('click', function () { var p = pending; close(); if (p) navigate(p.href, p.blank); });
+    stayBtn.addEventListener('click', close);
+    modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
+  })();
+</script>
+
+</body>
+</html>
