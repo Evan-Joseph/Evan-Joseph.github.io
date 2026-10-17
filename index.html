@@ -581,7 +581,6 @@
         <button class="on" data-f="all">全部</button>
         <button data-f="lead">第一/共一作者</button>
         <button data-f="accepted">已录用</button>
-        <button data-f="review">在投</button>
       </div>
 
       <div id="pubList">
@@ -599,35 +598,22 @@
           </div>
         </article>
 
-        <article class="pub reveal" data-tags="lead review">
+        <article class="pub reveal" data-tags="lead accepted">
           <div class="pub-venue">
-            <span class="badge review">ECCV 2026 · 投稿中</span>
+            <span class="badge accept">PRICAI 2026 · 录用</span>
             <span class="pub-year">第一作者 · 2026</span>
           </div>
           <div class="pub-body">
-            <h3><a class="pub-title-link" href="https://openreview.net/forum?id=3DKDjS7nnp" target="_blank" rel="noopener">LEAP:面向长程具身规划的动作蓝图生成</a></h3>
-            <p class="pub-authors"><span class="me">Shenzhou Gao</span> (第一作者), et al.</p>
-            <p>针对长程具身任务全局规划不足、显式规划器感知脱节与推理延迟问题,将任务重构为 Action Blueprint 生成。</p>
-            <p class="pub-role"><span class="k">我的工作</span>独立完成 idea 选取、Agibot-derived 数据准备、Qwen3-VL-2B-Instruct Full-SFT / LoRA 微调、VLABench 评测与投稿 rebuttal 闭环。</p>
-          </div>
-        </article>
-
-        <article class="pub reveal" data-tags="lead review">
-          <div class="pub-venue">
-            <span class="badge review">NeurIPS 2026 · 投稿中</span>
-            <span class="pub-year">第一作者 · 2026</span>
-          </div>
-          <div class="pub-body">
-            <h3><button type="button" class="pub-title-btn" data-placeholder="论文链接待上线后补充">Progressive Training:具身 VLM 时空幻觉缓解</button></h3>
-            <p class="pub-authors"><span class="me">Shenzhou Gao</span> (第一作者), et al.</p>
-            <p>针对具身 VLM 多图推理中的输入顺序偏置与时空幻觉,构建 STCR-CoT 与弱监督扩展数据,监督模型先感知状态再判断进展;提出从 CoT 强监督预训练到标签弱监督微调的渐进式训练策略。</p>
-            <p class="pub-role"><span class="k">关键结果</span>forward / reverse 性能差距由 70%+ 降至 <span class="metric">6.53%</span></p>
+            <h3><span class="pub-title-link">Isolating the Supervision Target: A Matched-Control Study of Parser-Gated Plan Generation in Compact Vision-Language Models</span></h3>
+            <p class="pub-authors"><span class="me">Shenzhou Gao</span> (第一作者), Peijian Zhang</p>
+            <p>针对轻量级端侧视觉语言模型长程规划生成,采用严格匹配对照设计(Matched-Control Study)剥离探究监督目标对规划能力的影响,解耦内容得分与格式解析损失。</p>
+            <p class="pub-role"><span class="k">我的工作</span>独立选题、严格对照实验管线搭建、VLABench 结构化解析门控评测与 Camera-ready 录用闭环。</p>
           </div>
         </article>
 
         <article class="pub reveal" data-tags="accepted">
           <div class="pub-venue">
-            <span class="badge accept">ICML 2026 · 中稿</span>
+            <span class="badge accept">ICML 2026 · 录用</span>
             <span class="pub-year">合作 · 2026</span>
           </div>
           <div class="pub-body">
@@ -635,19 +621,6 @@
             <p class="pub-authors">合作者 · <span class="me">Shenzhou Gao</span> (共一后第一位 / 第三作者)</p>
             <p>研究第一视角视频中的任务导向时空推理与课程学习。</p>
             <p class="pub-role"><span class="k">我的工作</span>核心科研插图绘制,参与部分改稿与实验问题讨论。</p>
-          </div>
-        </article>
-
-        <article class="pub reveal" data-tags="review">
-          <div class="pub-venue">
-            <span class="badge review">NeurIPS 2026 · 投稿中</span>
-            <span class="pub-year">第二作者 · 2026</span>
-          </div>
-          <div class="pub-body">
-            <h3><button type="button" class="pub-title-btn" data-placeholder="论文链接待上线后补充">Orcust:GUI Agent 分步反馈强化学习</button></h3>
-            <p class="pub-authors">合作者 · <span class="me">Shenzhou Gao</span> (第二作者)</p>
-            <p>围绕 GUI Agent 的逐步反馈强化学习,聚焦原则约束的奖励建模与在线 VM 轨迹构建。</p>
-            <p class="pub-role"><span class="k">我的工作</span>科研插图绘制。</p>
           </div>
         </article>
 
