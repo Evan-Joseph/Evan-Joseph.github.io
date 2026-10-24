@@ -45,28 +45,32 @@
 ## 三、 0→1 独立产品与线上可交互作品展厅 (Featured Live Products)
 
 ### 3.1 《算了 · Suanle》—— 沉浸式 AI 互动决策与反内耗 Web 产品（独立产品主理人 · 2026.09 – 2026.10）
-- **线上体验地址**：[https://www.suanle.cc](https://www.suanle.cc)
+- **线上体验地址**：[https://www.suanle.cc](https://www.suanle.cc) ｜ **主理人实时运营看台**：[https://www.suanle.cc/curator](https://www.suanle.cc/curator)
 - **开源仓库与架构文档**：[https://github.com/Evan-Joseph/suanle](https://github.com/Evan-Joseph/suanle)
-- **1080p 60fps 品牌宣传片直链**：[https://github.com/Evan-Joseph/suanle/releases/download/v1.0.0/suanle_brand_promo_1080p60.mp4](https://github.com/Evan-Joseph/suanle/releases/download/v1.0.0/suanle_brand_promo_1080p60.mp4)
+- **1080p 60fps 品牌宣传片（双版本逐帧精修直链）**：
+  - **版本 A（Opus 5.5 导演版 · 45s）**：[https://evan-joseph.github.io/assets/suanle_promo_opus55.mp4](https://evan-joseph.github.io/assets/suanle_promo_opus55.mp4)（仓库内相对路径：`./assets/suanle_promo_opus55.mp4` ｜ GitHub Release：[suanle_promo_opus55_1080p60.mp4](https://github.com/Evan-Joseph/suanle/releases/download/v1.0.0/suanle_promo_opus55_1080p60.mp4)）
+  - **版本 B（Fable 5.1 Max 叙事版 · 50s）**：[https://evan-joseph.github.io/assets/suanle_promo_fable51max.mp4](https://evan-joseph.github.io/assets/suanle_promo_fable51max.mp4)（仓库内相对路径：`./assets/suanle_promo_fable51max.mp4` ｜ GitHub Release：[suanle_promo_fable51max_1080p60.mp4](https://github.com/Evan-Joseph/suanle/releases/download/v1.0.0/suanle_promo_fable51max_1080p60.mp4)）
 - **核心产品故事与落地亮点**：
   1. **痛点洞察与反内耗产品定义**：针对当代年轻人在高频日常选择中的“决策瘫痪”与情绪内耗，摒弃传统命理软件制造焦虑的套路，提出**“算一算，然后，算了”**的产品主张；设计“茶馆掌柜温润对话梳理心境 → 写下执念揉成纸团丢入竹篓 → 生成水墨宣纸箴言分享卡”的完整心理释怀链路。
   2. **多模型竞技选型与“确定性规则 + 大模型”零幻觉设计**：平行调度多款主流大模型孵化 **9 套不同交互风格的原型版本**，通过对比实测优中选优收敛出最终生产版；针对大模型直接推算极易胡编干支历法的痛点，设计**“前置确定性天文历法排盘计算 + 对话中按需唤起六爻/八字/紫微/塔罗等 6 类交互卡片 + 静默沉淀用户画像”**机制，从根源消除排盘幻觉。
-  3. **单人全链路交付、运营看台与商业闭环**：一人独立包揽需求定义、水墨宣纸视觉生图、换机同步码设计、**主理人实时运营看台（`/curator`，实时监控系统负载、模型思考轨迹与对话质量）**、云端部署上线、1080p60 宣传片制作与线上打赏支付闭环。
+  3. **单人全链路交付、运营看台与商业闭环**：一人独立包揽需求定义、水墨宣纸视觉生图、换机同步码设计、**主理人实时运营看台（`/curator`，实时监控系统负载、模型思考轨迹与对话质量）**、云端部署上线、两支不同叙事节奏的 1080p60 宣传片制作与线上打赏支付闭环。
 
 ### 3.2 《石室史诗——武氏墓群石刻数字展陈与多模态 AI 平台》（第一作者 / 队长 · 2026.01 – 2026.06）
-- **线上展厅地址**：[https://qdu-stone.pages.dev](https://qdu-stone.pages.dev)
+- **线上展厅地址（双版本同步在线）**：
+  - **版本 A（暗黑青铜 · 3D 沉浸考古发掘与拍照识图展陈版）**：[https://stone.4c666.top](https://stone.4c666.top)
+  - **版本 B（宣纸雅韵 · 76 件馆藏全量三馆数字展厅版）**：[https://qdu-stone.pages.dev](https://qdu-stone.pages.dev)
 - **开源代码仓库**：[https://github.com/Evan-Joseph/stone-carving-discovery-app](https://github.com/Evan-Joseph/stone-carving-discovery-app)
 - **奖项与权威背书**：
   - **第 19 届中国大学生计算机设计大赛（人工智能应用赛道）山东省二等奖**（作品编号 `2026034567`，第一作者/队长）
   - 获**山东嘉祥武氏墓群石刻博物馆馆长朱卫华副研究员实名签字推荐**
   - 依托该项目带领“石语新传实践团”获评**青岛大学 2026 年寒假社会实践“先进个人”及校级“优秀实践团队”**（《青大团字〔2026〕5号》）
 - **核心产品故事与落地亮点**：
-  1. **痛点洞察与沉浸展陈交互**：针对东汉画像石纹理剥落、历史典故晦涩导致普通游客“看得见却看不懂、静态展板信息割裂”的痛点，统筹设计 **76 件馆藏全量数字化目录**、虚拟考古发掘引导、拓片无级放大对比探照镜与武梁祠石刻三维立体检视台。
+  1. **痛点洞察与双风格沉浸展陈交互**：针对东汉画像石纹理剥落、历史典故晦涩导致普通游客“看得见却看不懂、静态展板信息割裂”的痛点，统筹设计 **76 件馆藏全量数字化目录（前石室 16 件 / 后石室 15 件 / 武梁祠及阙铭 45 件）**、虚拟考古发掘引导、拓片无级放大对比探照镜与武梁祠石刻三维立体检视台。
   2. **有据可查的流式 AI 导览与现场识图台**：构建绑定馆藏权威释文与鲁迅汉画考据资料的流式 AI 导览助手，支持游客围绕石刻图像层次、人物关系与历史典故实时追问；内置移动端现场拍照识图台，拍摄石刻即可秒级匹配数字档案。
 
 ### 3.3 校园与高频痛点“即想即做”线上产品矩阵
 1. **22408 沉浸心流时钟 (Focus Clock)**：
-   - **线上地址**：[https://clock.4c666.top](https://clock.4c666.top)
+   - **线上地址**：[https://clock.4c666.top](https://clock.4c666.top) ｜ **开源仓库**：[https://github.com/Evan-Joseph/open-timer](https://github.com/Evan-Joseph/open-timer)
    - **产品定位**：针对备考与深度工作中专注力易被打断的痛点，围绕 90 分钟心流周期独立设计并上线零干扰全屏时钟，支持平滑进度追踪与自适应暗色护眼模式。
 2. **22408 考研核心考点智能闪卡**：
    - **线上地址**：[https://kaoyan-22408-flashcards.pages.dev](https://kaoyan-22408-flashcards.pages.dev) ｜ **开源仓库**：[https://github.com/Evan-Joseph/kaoyan-22408-flashcards](https://github.com/Evan-Joseph/kaoyan-22408-flashcards)
@@ -106,15 +110,20 @@
 - **核心落地内容**：针对患者就医前“口语化症状描述不清、科室选择迷茫、挂号易走弯路”的痛点，作为队长设计多科室视角协同追问与智能分诊导引流程；通过主诊 Agent 引导患者补全关键病史特征，组织跨科室 Agent 交叉研判生成结构化就诊建议单，全流程独立把控产品交互、视觉资产与省赛路演答辩。
 
 ### 4.5 《从治得上到治得起——全球健康转型中的慢病承接陷阱、国家分型与干预优先级研究》（第一作者 / 队长 · 2026.01 – 2026.06）
+- **和鲸（HeyWhale）官方公开作品页**：[https://www.heywhale.com/org/4C2026/competition/work-detail?work=69eaf383acdef02a88d7d9b0](https://www.heywhale.com/org/4C2026/competition/work-detail?work=69eaf383acdef02a88d7d9b0)
 - **开源仓库与复现框架**：[https://github.com/Evan-Joseph/4c-health-insight-showcase](https://github.com/Evan-Joseph/4c-health-insight-showcase)
 - **奖项与专家审阅**：
   - 获 **第 19 届中国大学生计算机设计大赛（大数据应用主题赛）山东省二等奖**（作品编号 `2026025555`，第一作者/队长）
   - 获**三甲医院临床专家（青岛市海慈医疗集团科研科副主任胡勇主任医师）参与调研与审阅、杨环副教授签字推荐**
 - **核心研究与数据叙事**：整合 GBD、WHO 与世界银行 **2000–2023 年全球 203 个国家与地区宏观卫生数据**，跳出单一疾病视角，构建“健康转型压力指数 × 卫生承接能力指数”二维评价框架；以严谨的数据叙事与交互式可视化揭示发展中国家在慢病加速期面临的“卫生承接陷阱”，完成全球四象限国家分型（固若金汤型 / 负重致远型 / 风雨飘摇型 / 捉襟见肘型）、**2026 短期高危预警排序**与 **2030 政策干预情景推演**。
 
-### 4.6 《SurgiMind3D》三维手术辅助 & 《智眸鉴史》红色数字化平台
-- **《SurgiMind3D——多模态三维手术导航与医学影像辅助系统》**：作为核心成员获 **2026 中国国际大学生创新大赛（国创赛）青岛大学校赛金奖**，合作登记**国家软件著作权《腰椎 MRI 影像分析系统 V1.0》**（登记号 `2026R11L3615529`）。
-- **《智眸鉴史：AI 赋能党史智慧挖掘与传承新章》**：作为**核心技术研发成员**（负责利用 AI 编程工具搭建山东海阳地雷战纪念馆红色数字化宣传网站），获评**青岛大学 2025 年暑期“三下乡”社会实践活动校级“优秀实践团队”**及计算机科学技术学院“AI+行业探索计划”**三等奖**。
+### 4.6 《SurgiMind3D / 智脊析》三维手术与医学影像系统 & 《智眸鉴史》红色数字化平台
+- **《SurgiMind3D——多模态三维手术导航与医学影像辅助系统》 & 《智脊析——腰椎 MRI 结构化分析与诊断决策支持系统》**：
+  - **线上交互展示站（第一作者作品 `2026026666`）**：[https://lumbar.4c666.top](https://lumbar.4c666.top)
+  - **奖项与软著**：获 **2026 中国国际大学生创新大赛（国创赛）青岛大学校赛金奖**，登记**国家软件著作权《腰椎 MRI 影像分析系统 V1.0》**（登记号 `2026R11L3615529`）。
+- **《智眸鉴史：AI 赋能党史智慧挖掘与传承新章》**：
+  - **线上交互展示站（《地雷战：海阳1942》）**：[https://evan-joseph.github.io/haiyang-mine-war-web/](https://evan-joseph.github.io/haiyang-mine-war-web/) ｜ **开源仓库**：[https://github.com/Evan-Joseph/haiyang-mine-war-web](https://github.com/Evan-Joseph/haiyang-mine-war-web)
+  - **奖项**：作为**核心技术研发成员**（负责利用 AI 编程工具搭建山东海阳地雷战纪念馆红色数字化宣传网站），获评**青岛大学 2025 年暑期“三下乡”社会实践活动校级“优秀实践团队”**及计算机科学技术学院“AI+行业探索计划”**三等奖**。
 
 ---
 
@@ -179,41 +188,69 @@
 
 ---
 
-## 七、 仓库 `./assets/` 20 项静态资源完整字典 (Static Assets Manifest)
+## 七、 仓库 `./assets/` 44 项静态资源完整字典 (Static Assets Manifest)
 
-仓库 `assets/` 目录下共包含 **20 个真实项目静态资源文件**（支持通过相对路径 `./assets/<文件名>` 或绝对 URL `https://evan-joseph.github.io/assets/<文件名>` 直接调用）：
+仓库 `assets/` 目录下共包含 **44 个经过逐项核验的高清项目静态资源文件**（支持通过相对路径 `./assets/<文件名>` 或绝对 URL `https://evan-joseph.github.io/assets/<文件名>` 直接调用）：
 
-### 7.1 《算了 · Suanle》产品视觉与扫码资产（13 项）
-| 相对路径 (`./assets/...`) | 在线绝对 URL (`https://evan-joseph.github.io/...`) | 画面内容与用途说明 |
-| :--- | :--- | :--- |
-| `assets/suanle_promo_cover.webp` | `https://evan-joseph.github.io/assets/suanle_promo_cover.webp` | 《算了 · Suanle》1080p 品牌宣传片封面主视觉（1920×1080） |
-| `assets/suanle_logo.svg` | `https://evan-joseph.github.io/assets/suanle_logo.svg` | 《算了 · Suanle》矢量品牌 Logo |
-| `assets/suanle_qrcode.svg` | `https://evan-joseph.github.io/assets/suanle_qrcode.svg` | 手机扫码体验 `https://www.suanle.cc` 矢量二维码（SVG） |
-| `assets/suanle_qrcode.png` | `https://evan-joseph.github.io/assets/suanle_qrcode.png` | 手机扫码体验 `https://www.suanle.cc` 位图二维码（PNG） |
-| `assets/suanle_ui_kline.webp` | `https://evan-joseph.github.io/assets/suanle_ui_kline.webp` | 实机界面：前置确定性历法排盘与人生百岁周期 K 线（1640×1328） |
-| `assets/suanle_letgo.webp` | `https://evan-joseph.github.io/assets/suanle_letgo.webp` | 实机交互：写下执念揉成纸团释怀界面 |
-| `assets/suanle_letgo_throw.webp` | `https://evan-joseph.github.io/assets/suanle_letgo_throw.webp` | 实机交互：纸团抛入竹篓动态过程截图 |
-| `assets/suanle_ui_letgo.webp` | `https://evan-joseph.github.io/assets/suanle_ui_letgo.webp` | 实机界面：释怀竹篓完整视图 |
-| `assets/suanle_card_aphorism.webp` | `https://evan-joseph.github.io/assets/suanle_card_aphorism.webp` | 实机产物：水墨宣纸箴言分享卡样张 A |
-| `assets/suanle_card_letgo.webp` | `https://evan-joseph.github.io/assets/suanle_card_letgo.webp` | 实机产物：水墨宣纸释怀分享卡样张 B |
-| `assets/suanle_ui_hexagram.webp` | `https://evan-joseph.github.io/assets/suanle_ui_hexagram.webp` | 实机界面：对话中按需唤起的六爻摇卦交互卡片 |
-| `assets/suanle_divination.webp` | `https://evan-joseph.github.io/assets/suanle_divination.webp` | 实机界面：多维排盘推演卡片视图 |
-| `assets/suanle_ui_chat.webp` | `https://evan-joseph.github.io/assets/suanle_ui_chat.webp` | 实机界面：茶馆掌柜温润启发式对话界面 |
+### 7.1 《算了 · Suanle》产品视觉、1080p60 宣传片与运营看台资产（21 项）
+| 相对路径 (`./assets/...`) | 在线绝对 URL (`https://evan-joseph.github.io/...`) | 尺寸 / 规格 | 画面内容与用途说明 |
+| :--- | :--- | :--- | :--- |
+| `assets/suanle_promo_opus55.mp4` | `https://evan-joseph.github.io/assets/suanle_promo_opus55.mp4` | `1920×1080` · 60fps · 45s | 《算了 · Suanle》1080p60 品牌宣传片（版本 A：Opus 5.5 导演版，15.9MB） |
+| `assets/suanle_promo_fable51max.mp4` | `https://evan-joseph.github.io/assets/suanle_promo_fable51max.mp4` | `1920×1080` · 60fps · 50s | 《算了 · Suanle》1080p60 品牌宣传片（版本 B：Fable 5.1 Max 叙事版，19.2MB） |
+| `assets/suanle_promo_cover.webp` | `https://evan-joseph.github.io/assets/suanle_promo_cover.webp` | `1920×1080` | 《算了 · Suanle》1080p 品牌宣传片封面主视觉（算一算，然后，算了） |
+| `assets/suanle_divination.webp` | `https://evan-joseph.github.io/assets/suanle_divination.webp` | `1920×1080` | 宣传片高清剧照：三枚古钱六爻起卦与掌柜解局同框视图 |
+| `assets/suanle_letgo.webp` | `https://evan-joseph.github.io/assets/suanle_letgo.webp` | `1920×1080` | 宣传片高清剧照：“把放不下的，揉掉”宣纸执念书写与释怀仪式 |
+| `assets/suanle_letgo_throw.webp` | `https://evan-joseph.github.io/assets/suanle_letgo_throw.webp` | `1920×1080` | 宣传片高清剧照：执念纸团抛入竹篓与四款宣纸签文卡同框展示 |
+| `assets/suanle_curator_cockpit.webp` | `https://evan-joseph.github.io/assets/suanle_curator_cockpit.webp` | `2400×1600` | 主理人实时运营看台（`/curator`）：系统脉搏、安全审计与对话思考轨迹监控 |
+| `assets/suanle_ui_chat.webp` | `https://evan-joseph.github.io/assets/suanle_ui_chat.webp` | `860×1864` | 2x Retina 实机界面：茶馆掌柜温润启发式对话主界面 |
+| `assets/suanle_ui_hexagram.webp` | `https://evan-joseph.github.io/assets/suanle_ui_hexagram.webp` | `860×1864` | 2x Retina 实机界面：对话中按需唤起的六爻摇卦交互卡片 |
+| `assets/suanle_ui_bazi.webp` | `https://evan-joseph.github.io/assets/suanle_ui_bazi.webp` | `860×1864` | 2x Retina 实机界面：前置确定性天文历法四柱八字排盘与五行能量分布 |
+| `assets/suanle_ui_kline.webp` | `https://evan-joseph.github.io/assets/suanle_ui_kline.webp` | `860×1864` | 2x Retina 实机界面：人生百岁流年周期 K 线趋势图 |
+| `assets/suanle_ui_letgo_write.webp` | `https://evan-joseph.github.io/assets/suanle_ui_letgo_write.webp` | `860×1864` | 2x Retina 实机界面：“算了”模式写下执念宣纸输入态 |
+| `assets/suanle_ui_letgo_ball.webp` | `https://evan-joseph.github.io/assets/suanle_ui_letgo_ball.webp` | `860×1864` | 2x Retina 实机界面：执念揉成 3D 宣纸团物理交互态 |
+| `assets/suanle_ui_letgo.webp` | `https://evan-joseph.github.io/assets/suanle_ui_letgo.webp` | `860×1864` | 2x Retina 实机界面：纸团投入竹篓释怀完成与掌柜赠言态 |
+| `assets/suanle_card_aphorism.webp` | `https://evan-joseph.github.io/assets/suanle_card_aphorism.webp` | `1024×1396` | 实机产物：水墨宣纸签文分享卡样张 A（“风来听风，雨来听雨”） |
+| `assets/suanle_card_letgo.webp` | `https://evan-joseph.github.io/assets/suanle_card_letgo.webp` | `1024×1402` | 实机产物：水墨宣纸释怀分享卡样张 B（“算了 · 第叁拾柒号”） |
+| `assets/suanle_card_dialogue.webp` | `https://evan-joseph.github.io/assets/suanle_card_dialogue.webp` | `1024×1670` | 实机产物：水墨宣纸茶肆对谈录分享卡样张 C |
+| `assets/suanle_card_annual.webp` | `https://evan-joseph.github.io/assets/suanle_card_annual.webp` | `1024×1832` | 实机产物：水墨宣纸丙午年流年运势签分享卡样张 D |
+| `assets/suanle_logo.svg` | `https://evan-joseph.github.io/assets/suanle_logo.svg` | 矢量 SVG | 《算了 · Suanle》矢量品牌印章 Logo |
+| `assets/suanle_qrcode.svg` | `https://evan-joseph.github.io/assets/suanle_qrcode.svg` | 矢量 SVG | 手机扫码体验 `https://www.suanle.cc` 矢量二维码 |
+| `assets/suanle_qrcode.png` | `https://evan-joseph.github.io/assets/suanle_qrcode.png` | `1000×1000` | 手机扫码体验 `https://www.suanle.cc` 高清位图二维码 |
 
-### 7.2 《石室史诗》数字展厅实机截图与扫码资产（5 项）
-| 相对路径 (`./assets/...`) | 在线绝对 URL (`https://evan-joseph.github.io/...`) | 画面内容与用途说明 |
-| :--- | :--- | :--- |
-| `assets/stone_hall.webp` | `https://evan-joseph.github.io/assets/stone_hall.webp` | 《石室史诗》数字展厅主控台：六大核心模块与沉浸式考古开挖交互（1440×900） |
-| `assets/stone_3d_view.webp` | `https://evan-joseph.github.io/assets/stone_3d_view.webp` | 《石室史诗》武梁祠汉画像石三维立体检视与拓片对比台 |
-| `assets/stone_vision.webp` | `https://evan-joseph.github.io/assets/stone_vision.webp` | 《石室史诗》移动端现场拍照识图台（秒级匹配 76 件馆藏数字档案） |
-| `assets/stone_ai_guide.webp` | `https://evan-joseph.github.io/assets/stone_ai_guide.webp` | 《石室史诗》绑定馆藏权威释文与鲁迅汉画考据资料的流式 AI 导览助手 |
-| `assets/stone_qrcode.png` | `https://evan-joseph.github.io/assets/stone_qrcode.png` | 扫码访问 `https://qdu-stone.pages.dev` 在线数字展厅二维码 |
+### 7.2 《石室史诗》双版本数字展厅实机截图与扫码资产（8 项）
+| 相对路径 (`./assets/...`) | 在线绝对 URL (`https://evan-joseph.github.io/...`) | 尺寸 / 规格 | 画面内容与用途说明 |
+| :--- | :--- | :--- | :--- |
+| `assets/stone_hall.webp` | `https://evan-joseph.github.io/assets/stone_hall.webp` | `2400×1500` | 版本 A（`stone.4c666.top` 暗黑青铜版）：数字展厅主控台与沉浸考古开挖交互 |
+| `assets/stone_3d_view.webp` | `https://evan-joseph.github.io/assets/stone_3d_view.webp` | `2400×1500` | 版本 A（`stone.4c666.top`）：武梁祠汉画像石三维立体检视与拓片无级对比台 |
+| `assets/stone_vision.webp` | `https://evan-joseph.github.io/assets/stone_vision.webp` | `2400×1500` | 版本 A（`stone.4c666.top`）：现场拍照识图台（秒级匹配 76 件馆藏数字档案） |
+| `assets/stone_ai_guide.webp` | `https://evan-joseph.github.io/assets/stone_ai_guide.webp` | `2400×1500` | 版本 A（`stone.4c666.top`）：绑定馆藏权威释文与鲁迅考据资料的流式 AI 导览助手 |
+| `assets/stone_exhibit_home.webp` | `https://evan-joseph.github.io/assets/stone_exhibit_home.webp` | `2360×1600` | 版本 B（`qdu-stone.pages.dev` 宣纸雅韵版）：76 件馆藏全量三馆数字展厅首页 |
+| `assets/stone_exhibit_hall.webp` | `https://evan-joseph.github.io/assets/stone_exhibit_hall.webp` | `2360×1600` | 版本 B（`qdu-stone.pages.dev`）：前石室 / 后石室 / 武梁祠分类检索与石刻展柜 |
+| `assets/stone_exhibit_detail.webp` | `https://evan-joseph.github.io/assets/stone_exhibit_detail.webp` | `2360×1600` | 版本 B（`qdu-stone.pages.dev`）：石刻高清拓片检视与考据释文详情抽屉 |
+| `assets/stone_qrcode.png` | `https://evan-joseph.github.io/assets/stone_qrcode.png` | `320×320` | 扫码访问 `https://qdu-stone.pages.dev` 在线数字展厅二维码 |
 
-### 7.3 《从治得上到治得起》全球慢病转型研究图表（2 项）
-| 相对路径 (`./assets/...`) | 在线绝对 URL (`https://evan-joseph.github.io/...`) | 画面内容与用途说明 |
-| :--- | :--- | :--- |
-| `assets/health_quadrant.webp` | `https://evan-joseph.github.io/assets/health_quadrant.webp` | 图 1：全球 203 个国家与地区四象限分型（健康转型压力指数 × 卫生承接能力指数，2699×1890） |
-| `assets/health_warning.webp` | `https://evan-joseph.github.io/assets/health_warning.webp` | 图 2：2026 年全球慢病承接陷阱短期高危预警排序（识别持续高危与新滑入高危国家，2395×1633） |
+### 7.3 《从治得上到治得起》全球慢病转型研究高清科研图表（4 项）
+| 相对路径 (`./assets/...`) | 在线绝对 URL (`https://evan-joseph.github.io/...`) | 尺寸 / 规格 | 画面内容与用途说明 |
+| :--- | :--- | :--- | :--- |
+| `assets/health_quadrant.webp` | `https://evan-joseph.github.io/assets/health_quadrant.webp` | `2699×1890` | 图 1：全球 203 个国家与地区四象限分型（健康转型压力指数 × 卫生承接能力指数） |
+| `assets/health_trajectories.webp` | `https://evan-joseph.github.io/assets/health_trajectories.webp` | `2488×1816` | 图 2：2000–2023 年金砖五国（中/印/俄/巴/南）慢病转型与卫生承接演化轨迹 |
+| `assets/health_warning.webp` | `https://evan-joseph.github.io/assets/health_warning.webp` | `2395×1633` | 图 3：2026 年全球慢病承接陷阱短期高危预警排序（识别持续高危与新滑入高危国家） |
+| `assets/health_scenarios.webp` | `https://evan-joseph.github.io/assets/health_scenarios.webp` | `2671×1524` | 图 4：2023–2030 年三种政策干预情景下的高危国家风险消减推演 |
+
+### 7.4 LEAP 论文架构、KouPilot 海报与全栈线上作品 2x Retina 实机截图（11 项）
+| 相对路径 (`./assets/...`) | 在线绝对 URL (`https://evan-joseph.github.io/...`) | 尺寸 / 规格 | 画面内容与用途说明 |
+| :--- | :--- | :--- | :--- |
+| `assets/leap_framework.webp` | `https://evan-joseph.github.io/assets/leap_framework.webp` | `1600×894` | 独立一作《LEAP》论文图 1：动作蓝图生成与解析器规则门控（Parser-Gated Control）总架构 |
+| `assets/leap_execution.webp` | `https://evan-joseph.github.io/assets/leap_execution.webp` | `1600×894` | 独立一作《LEAP》论文图 2：结构化规划控制与消融对比实证视图 |
+| `assets/koupilot_poster.webp` | `https://evan-joseph.github.io/assets/koupilot_poster.webp` | `1440×2579` | 《KouPilot 智航学伴》高校扣子智能体大赛二等奖（卓越典范奖）路演展板 |
+| `assets/open_timer.webp` | `https://evan-joseph.github.io/assets/open_timer.webp` | `2400×1500` | `https://clock.4c666.top` 22408 沉浸心流时钟 2x Retina 实机运行截图 |
+| `assets/kaoyan_22408.webp` | `https://evan-joseph.github.io/assets/kaoyan_22408.webp` | `2400×1500` | `https://kaoyan-22408-flashcards.pages.dev` 22408 考研核心考点闪卡 2x Retina 截图 |
+| `assets/lumbar_ai.webp` | `https://evan-joseph.github.io/assets/lumbar_ai.webp` | `2400×1500` | `https://lumbar.4c666.top` 《智脊析》腰椎 MRI 结构化分析与诊断决策支持系统实机截图 |
+| `assets/haiyang_mine_war.webp` | `https://evan-joseph.github.io/assets/haiyang_mine_war.webp` | `2400×1500` | `https://evan-joseph.github.io/haiyang-mine-war-web/` 《地雷战：海阳1942》红色数字化平台截图 |
+| `assets/dialect_home.webp` | `https://evan-joseph.github.io/assets/dialect_home.webp` | `2400×1600` | `https://4c-dialect.pages.dev` 《声态齐鲁》山东方言文化数字博物馆实机截图 |
+| `assets/hospital_home.webp` | `https://evan-joseph.github.io/assets/hospital_home.webp` | `2400×1600` | `https://care.4c666.top` 《医脉山海》智慧医疗健康全流程无障碍门户实机截图 |
+| `assets/mission_control.webp` | `https://evan-joseph.github.io/assets/mission_control.webp` | `2400×1600` | `https://4c-panel.pages.dev` 全域项目指挥中枢与多模态资产看板实机截图 |
+| `assets/imageflow_workspace.webp` | `https://evan-joseph.github.io/assets/imageflow_workspace.webp` | `2880×1800` | `Evan-Joseph/imageflow` 全栈图片批处理与极速 WebP 转换工作台实机截图 |
 
 ---
 
@@ -228,16 +265,16 @@
   - **Cumulative Weighted Average**: **`86.19 / 100`** (GPA **`3.46 / 4.00`**, Cumulative Rank **`6 / 20`**, Zero Failures)
   - **English Proficiency**: **CET-6 `564`**
 - **Flagship 0→1 Live Products**:
-  1. **"Suanle · 算了"** ([https://www.suanle.cc](https://www.suanle.cc), Repo: [Evan-Joseph/suanle](https://github.com/Evan-Joseph/suanle)): Solo-created immersive AI decision-making & anti-overthinking web product. Converged from **9 multi-LLM interactive prototypes**; designed a **deterministic calendar pre-computation engine + 6-category on-demand interactive divination cards + silent user profiling** to eliminate LLM hallucinations; includes a paper-crumpling relief ritual, xuan-paper share cards, a real-time **Curator Operations Console (`/curator`)**, a 1080p60 brand promo video, and a verified online tipping loop.
-  2. **"Stone Epic · 石室史诗"** ([https://qdu-stone.pages.dev](https://qdu-stone.pages.dev), Repo: [Evan-Joseph/stone-carving-discovery-app](https://github.com/Evan-Joseph/stone-carving-discovery-app)): Han Dynasty Stone Relief Digital Exhibition & Multimodal AI Platform (**Provincial 2nd Prize in the 19th Chinese Collegiate Computing Competition**, 1st Author / Team Lead; endorsed by Curator Zhu Weihua of the Wu Family Shrine Museum). Features a 76-artifact digital hall, virtual excavation onboarding, stepless rubbing comparison lens, 3D relief inspection, mobile camera recognition, and a grounded streaming AI docent.
+  1. **"Suanle · 算了"** ([https://www.suanle.cc](https://www.suanle.cc), Curator Console: [https://www.suanle.cc/curator](https://www.suanle.cc/curator), Repo: [Evan-Joseph/suanle](https://github.com/Evan-Joseph/suanle), 1080p60 Promo Version A Opus 5.5 45s: [suanle_promo_opus55.mp4](https://evan-joseph.github.io/assets/suanle_promo_opus55.mp4), Version B Fable 5.1 Max 50s: [suanle_promo_fable51max.mp4](https://evan-joseph.github.io/assets/suanle_promo_fable51max.mp4)): Solo-created immersive AI decision-making & anti-overthinking web product. Converged from **9 multi-LLM interactive prototypes**; designed a **deterministic calendar pre-computation engine + 6-category on-demand interactive divination cards + silent user profiling** to eliminate LLM hallucinations; includes a paper-crumpling relief ritual, xuan-paper share cards, a real-time **Curator Operations Console (`/curator`)**, two polished 1080p60 brand promo videos, and a verified online tipping loop.
+  2. **"Stone Epic · 石室史诗"** (3D Excavation & Recognition Edition: [https://stone.4c666.top](https://stone.4c666.top) ｜ 76-Artifact Three-Shrine Digital Hall Edition: [https://qdu-stone.pages.dev](https://qdu-stone.pages.dev), Repo: [Evan-Joseph/stone-carving-discovery-app](https://github.com/Evan-Joseph/stone-carving-discovery-app)): Han Dynasty Stone Relief Digital Exhibition & Multimodal AI Platform (**Provincial 2nd Prize in the 19th Chinese Collegiate Computing Competition**, 1st Author / Team Lead; endorsed by Curator Zhu Weihua of the Wu Family Shrine Museum). Features a 76-artifact digital hall, virtual excavation onboarding, stepless rubbing comparison lens, 3D relief inspection, mobile camera recognition, and a grounded streaming AI docent.
   3. **Campus & High-Frequency Pain-Point Product Matrix**: **22408 Immersive Flow Clock** ([https://clock.4c666.top](https://clock.4c666.top)), **22408 CS Exam Smart Flashcards** ([https://kaoyan-22408-flashcards.pages.dev](https://kaoyan-22408-flashcards.pages.dev), 148 core topics & 962 cards), **Haile Dorm Laundry Availability Alert Tool** (serving 1,000+ students for 6+ months), and **26 Standardized Cross-Harness Agent Skills** ([Evan-Joseph/agent-workflow-skills](https://github.com/Evan-Joseph/agent-workflow-skills)).
 - **Enterprise Industrial AI & Multi-Agent Solutions**:
   1. **Shandong Port Group · Hazardous Goods Container Yard Intelligent Recommendation System** (Lead for Field Discovery, Rule Modeling & Delivery, 2025.11 – Present): Translated IMDG regulations and veteran dispatcher heuristics into **21+1 veto safety redlines** and **14 anti-reshuffling scoring dimensions**; cleaned **50,000+ "ghost container" dirty records**; built a **1-second hot-reload policy simulation sandbox** and **600+ automated regression checks**; achieved **90.0%–95.75% Top-2 zone hit rate** on a 400-container production backtest and **90.0% (18/20) live on-site feasibility** during shift testing at Qingdao Port on Oct 15, 2026.
   2. **KouPilot (智航学伴)**: Collegiate competition & career planning multi-agent system (**2nd Prize & Excellence Model Award in Qingdao Bank · University Coze Agent Competition Corporate Track**; sole owner of National Software Copyright *Intelligent Growth Planning Assistant*).
   3. **Shandong Port Tugboat Collaborative Scheduling High-Fidelity Mock & Situational Dashboard**: Rapid interactive mock and multi-vessel trajectory dashboard supporting stakeholder alignment and commercial bidding.
   4. **"Hezhongzhen · 合众诊"**: Multi-agent collaborative medical triage platform (**Provincial 1st Prize in the 18th Chinese Collegiate Computing Competition**, 1st Author / Team Captain & Presenter).
-  5. **"From Treatable to Affordable · 从治得上到治得起"** ([Evan-Joseph/4c-health-insight-showcase](https://github.com/Evan-Joseph/4c-health-insight-showcase)): Global chronic disease transition trap & country typology study across **203 economies (2000–2023)** (**Provincial 2nd Prize in the 19th Chinese Collegiate Computing Competition Big Data Track**, 1st Author / Team Lead; reviewed by clinical director Dr. Hu Yong and recommended by Assoc. Prof. Yang Huan).
-  6. **SurgiMind3D & "Zhimou Jianshi" Red Heritage Platform**: Core member of *SurgiMind3D* (**2026 China International College Students Innovation Competition University Gold Medal** & co-owner of *Lumbar MRI Image Analysis System V1.0* Software Copyright `2026R11L3615529`); Core technical developer of *"Zhimou Jianshi · 智眸鉴史" AI Red Heritage Digital Platform* (**QDU Summer Social Practice "Outstanding Team" & School "AI+ Industry Exploration" 3rd Prize**).
+  5. **"From Treatable to Affordable · 从治得上到治得起"** (HeyWhale Showcase: [HeyWhale Work Detail](https://www.heywhale.com/org/4C2026/competition/work-detail?work=69eaf383acdef02a88d7d9b0) ｜ Repo: [Evan-Joseph/4c-health-insight-showcase](https://github.com/Evan-Joseph/4c-health-insight-showcase)): Global chronic disease transition trap & country typology study across **203 economies (2000–2023)** (**Provincial 2nd Prize in the 19th Chinese Collegiate Computing Competition Big Data Track**, 1st Author / Team Lead; reviewed by clinical director Dr. Hu Yong and recommended by Assoc. Prof. Yang Huan).
+  6. **SurgiMind3D / Lumbar AI & "Zhimou Jianshi" Red Heritage Platform**: Core member of *SurgiMind3D* (**2026 China International College Students Innovation Competition University Gold Medal**, live system [https://lumbar.4c666.top](https://lumbar.4c666.top) & co-owner of *Lumbar MRI Image Analysis System V1.0* Software Copyright `2026R11L3615529`); Core technical developer of *"Zhimou Jianshi · 智眸鉴史" AI Red Heritage Digital Platform* ([https://evan-joseph.github.io/haiyang-mine-war-web/](https://evan-joseph.github.io/haiyang-mine-war-web/), **QDU Summer Social Practice "Outstanding Team" & School "AI+ Industry Exploration" 3rd Prize**).
 - **Publications & Research Grants**:
   1. **AAAI 2026 Oral (CCF-A, Co-First Author #2, Published)**: *SpatialLogic-Bench: A Diagnostic Benchmark for Task-Oriented Spatiotemporal Reasoning* ([DOI: 10.1609/aaai.v40i23.39022](https://doi.org/10.1609/aaai.v40i23.39022)).
   2. **ICML 2026 (CCF-A, 3rd Author, Accepted)**: *From Perception to Planning: Evolving Ego-Centric Task-Oriented Spatiotemporal Reasoning via Curriculum Learning* ([arXiv:2604.10517](https://arxiv.org/abs/2604.10517)).

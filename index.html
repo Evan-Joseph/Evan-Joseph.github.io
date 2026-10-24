@@ -1097,8 +1097,12 @@
                 </a>
                 <button type="button" class="btn btn-amber" data-open-video>
                   <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                  <span data-i18n="suanle_btn_video">观看 1080p60 宣传片</span>
+                  <span data-i18n="suanle_btn_video">观看 1080p60 宣传片（双版本）</span>
                 </button>
+                <a class="btn" href="https://www.suanle.cc/curator" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  <span data-i18n="suanle_btn_curator">主理人看台 (/curator)</span>
+                </a>
                 <a class="btn" href="https://github.com/Evan-Joseph/suanle" target="_blank" rel="noopener">
                   <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
                   <span data-i18n="suanle_btn_repo">开源仓库 &amp; 架构文档</span>
@@ -1108,15 +1112,16 @@
 
             <div class="prod-gallery" data-gallery="suanle">
               <div class="gallery-stage" data-lightbox-trigger title="点击放大查看高清预览">
-                <img id="suanleStageImg" src="assets/suanle_ui_kline.webp" alt="算了 Suanle 产品界面预览" width="1640" height="1328" loading="lazy" />
-                <span class="gallery-caption" id="suanleStageCap" data-i18n="suanle_tab_1">前置确定性历法排盘与人生百岁周期 K 线</span>
+                <img id="suanleStageImg" src="assets/suanle_divination.webp" alt="算了 Suanle 产品界面预览" width="1920" height="1080" loading="lazy" />
+                <span class="gallery-caption" id="suanleStageCap" data-i18n="suanle_tab_1">1. 1080p 排盘起卦与掌柜解局</span>
               </div>
               <div class="gallery-tabs" role="tablist" aria-label="算了产品截图切换">
-                <button type="button" class="gallery-tab active" data-img="assets/suanle_ui_kline.webp" data-i18n="suanle_tab_1">1. 命盘周期 K 线</button>
-                <button type="button" class="gallery-tab" data-img="assets/suanle_letgo.webp" data-i18n="suanle_tab_2">2. 揉纸丢弃释怀</button>
-                <button type="button" class="gallery-tab" data-img="assets/suanle_card_aphorism.webp" data-i18n="suanle_tab_3">3. 宣纸箴言分享卡</button>
-                <button type="button" class="gallery-tab" data-img="assets/suanle_ui_hexagram.webp" data-i18n="suanle_tab_4">4. 六爻摇卦卡片</button>
-                <button type="button" class="gallery-tab" data-img="assets/suanle_ui_chat.webp" data-i18n="suanle_tab_5">5. 掌柜启发式对话</button>
+                <button type="button" class="gallery-tab active" data-img="assets/suanle_divination.webp" data-i18n="suanle_tab_1">1. 1080p 排盘与起卦</button>
+                <button type="button" class="gallery-tab" data-img="assets/suanle_letgo.webp" data-i18n="suanle_tab_2">2. 写下执念揉纸释怀</button>
+                <button type="button" class="gallery-tab" data-img="assets/suanle_letgo_throw.webp" data-i18n="suanle_tab_3">3. 宣纸签文与竹篓归档</button>
+                <button type="button" class="gallery-tab" data-img="assets/suanle_curator_cockpit.webp" data-i18n="suanle_tab_4">4. 主理人看台 (/curator)</button>
+                <button type="button" class="gallery-tab" data-img="assets/suanle_ui_kline.webp" data-i18n="suanle_tab_5">5. 百岁周期 K 线</button>
+                <button type="button" class="gallery-tab" data-img="assets/suanle_card_aphorism.webp" data-i18n="suanle_tab_6">6. 宣纸箴言分享卡</button>
               </div>
             </div>
           </div>
@@ -1141,14 +1146,18 @@
                   <b>有据可查的 AI 导览与现场识图台</b>：构建绑定馆藏权威释文与鲁迅汉画考据资料的流式 AI 导览助手，支持游客围绕石刻图像层次、人物关系与历史典故实时追问；内置移动端现场拍照识图台，拍摄石刻即可秒级匹配数字档案。
                 </li>
                 <li data-i18n-html="stone_pt3">
-                  <b>社会实践与长效线上部署</b>：依托该项目带领“石语新传实践团”获评<b>青岛大学寒假社会实践“先进个人”及校级“优秀实践团队”</b>，全站部署于 Cloudflare Pages 长期稳定运行。
+                  <b>社会实践与双版本长效线上部署</b>：依托该项目带领“石语新传实践团”获评<b>青岛大学寒假社会实践“先进个人”及校级“优秀实践团队”</b>，同步部署暗黑青铜 3D 发掘版（<code>stone.4c666.top</code>）与宣纸雅韵 76 件三馆数字展厅版（<code>qdu-stone.pages.dev</code>）。
                 </li>
               </ul>
 
               <div class="prod-cta-row">
-                <a class="btn btn-primary" href="https://qdu-stone.pages.dev" target="_blank" rel="noopener">
+                <a class="btn btn-primary" href="https://stone.4c666.top" target="_blank" rel="noopener">
                   <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  <span data-i18n="stone_btn_live">在线访问展厅 (qdu-stone.pages.dev)</span>
+                  <span data-i18n="stone_btn_live_3d">3D 沉浸发掘版 (stone.4c666.top)</span>
+                </a>
+                <a class="btn btn-amber" href="https://qdu-stone.pages.dev" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span data-i18n="stone_btn_live">76 件三馆展厅版 (qdu-stone.pages.dev)</span>
                 </a>
                 <a class="btn" href="https://github.com/Evan-Joseph/stone-carving-discovery-app" target="_blank" rel="noopener">
                   <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
@@ -1159,14 +1168,15 @@
 
             <div class="prod-gallery" data-gallery="stone">
               <div class="gallery-stage" data-lightbox-trigger title="点击放大查看高清预览">
-                <img id="stoneStageImg" src="assets/stone_hall.webp" alt="石室史诗数字展厅界面预览" width="1440" height="900" loading="lazy" />
+                <img id="stoneStageImg" src="assets/stone_hall.webp" alt="石室史诗数字展厅界面预览" width="2400" height="1500" loading="lazy" />
                 <span class="gallery-caption" id="stoneStageCap" data-i18n="stone_tab_1">数字展厅主控台：六大核心模块与沉浸式开挖交互</span>
               </div>
               <div class="gallery-tabs" role="tablist" aria-label="石室史诗产品截图切换">
-                <button type="button" class="gallery-tab active" data-img="assets/stone_hall.webp" data-i18n="stone_tab_1">1. 主展厅总览</button>
+                <button type="button" class="gallery-tab active" data-img="assets/stone_hall.webp" data-i18n="stone_tab_1">1. 3D 展厅总览</button>
                 <button type="button" class="gallery-tab" data-img="assets/stone_3d_view.webp" data-i18n="stone_tab_2">2. 武梁祠石刻 3D 复现</button>
                 <button type="button" class="gallery-tab" data-img="assets/stone_vision.webp" data-i18n="stone_tab_3">3. 现场拍照识图台</button>
                 <button type="button" class="gallery-tab" data-img="assets/stone_ai_guide.webp" data-i18n="stone_tab_4">4. 多模态 AI 导览</button>
+                <button type="button" class="gallery-tab" data-img="assets/stone_exhibit_hall.webp" data-i18n="stone_tab_5">5. 76 件三馆数字展厅</button>
               </div>
             </div>
           </div>
@@ -1965,10 +1975,20 @@
             <span class="tag-badge" data-i18n="surgi_badge_1">2026 中国国际大学生创新大赛 · 青岛大学校赛金奖</span>
             <span class="tag-badge neutral" data-i18n="surgi_badge_2">暑期“三下乡”校级优秀实践团队 · 软著核心成员</span>
           </div>
-          <h3 data-i18n="surgi_title">《SurgiMind3D》三维手术辅助 &amp; 《智眸鉴史》红色数字化平台</h3>
+          <h3 data-i18n="surgi_title">《SurgiMind3D / 智脊析》医学影像系统 &amp; 《智眸鉴史》红色数字化平台</h3>
           <p data-i18n-html="surgi_desc">
-            作为核心成员参与研发《SurgiMind3D——多模态三维手术导航与医学影像辅助系统》，获 <b>2026 中国国际大学生创新大赛校赛金奖</b>并合作登记<b>国家软著《腰椎MRI影像分析系统 V1.0》</b>；同时作为核心技术成员参与《智眸鉴史：AI 赋能党史智慧挖掘与传承新章》，搭建海阳地雷战纪念馆数字化宣传平台，获评<b>青岛大学暑期“三下乡”社会实践校级“优秀实践团队”</b>及学院“AI+行业探索计划”三等奖。
+            作为核心成员参与研发《SurgiMind3D——多模态三维手术导航与医学影像辅助系统》（及第一作者交互系统《智脊析》），获 <b>2026 中国国际大学生创新大赛校赛金奖</b>并登记<b>国家软著《腰椎MRI影像分析系统 V1.0》</b>；同时作为核心技术成员参与《智眸鉴史：AI 赋能党史智慧挖掘与传承新章》，搭建山东海阳地雷战纪念馆红色数字化网站，获评<b>青岛大学暑期“三下乡”社会实践校级“优秀实践团队”</b>及学院“AI+行业探索计划”三等奖。
           </p>
+          <div class="prod-cta-row" style="margin-top:6px">
+            <a class="btn" href="https://lumbar.4c666.top" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span data-i18n="surgi_btn_lumbar">智脊析 MRI 决策系统 (lumbar.4c666.top)</span>
+            </a>
+            <a class="btn" href="https://evan-joseph.github.io/haiyang-mine-war-web/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span data-i18n="surgi_btn_haiyang">海阳地雷战红色数字展馆</span>
+            </a>
+          </div>
         </article>
 
         <!-- Full-Width Card with Visuals: Global Health Transition Study -->
@@ -1992,6 +2012,10 @@
             </figure>
           </div>
           <div class="prod-cta-row" style="margin-top:6px">
+            <a class="btn btn-primary" href="https://www.heywhale.com/org/4C2026/competition/work-detail?work=69eaf383acdef02a88d7d9b0" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span data-i18n="health_btn_heywhale">和鲸（HeyWhale）官方大赛公开作品页</span>
+            </a>
             <a class="btn" href="https://github.com/Evan-Joseph/4c-health-insight-showcase" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
               <span data-i18n="health_btn_repo">查看研究数据叙事与复现框架 (4c-health-insight-showcase)</span>
@@ -2463,16 +2487,19 @@
 <!-- Modal 2: 1080p60 Brand Promo Video Player -->
 <div class="modal-backdrop" id="videoModal" hidden>
   <div class="modal-panel video-mode" role="dialog" aria-modal="true" aria-label="《算了 · Suanle》1080p60 品牌宣传片">
-    <div class="modal-head">
-      <div class="modal-title" data-i18n="video_modal_title">《算了 · Suanle》1080p 60fps 品牌宣传片</div>
-      <div class="modal-tools">
+    <div class="modal-head" style="flex-wrap:wrap;gap:8px">
+      <div class="modal-title" id="videoModalTitle" data-i18n="video_modal_title">《算了 · Suanle》1080p 60fps 品牌宣传片 · 版本 A (Opus 5.5 · 45s)</div>
+      <div class="modal-tools" style="flex-wrap:wrap">
+        <button type="button" class="video-ver-btn" data-video-src="assets/suanle_promo_opus55.mp4" data-video-label="《算了 · Suanle》1080p 60fps 品牌宣传片 · 版本 A (Opus 5.5 · 45s)" style="background:var(--accent);border-color:var(--accent);color:#fff" data-i18n="video_ver_a">🎬 版本 A：Opus 5.5 (45s)</button>
+        <button type="button" class="video-ver-btn" data-video-src="assets/suanle_promo_fable51max.mp4" data-video-label="《算了 · Suanle》1080p 60fps 品牌宣传片 · 版本 B (Fable 5.1 Max · 50s)" data-i18n="video_ver_b">🎬 版本 B：Fable 5.1 Max (50s)</button>
         <a href="https://www.suanle.cc" target="_blank" rel="noopener" data-i18n="video_modal_try">前往 suanle.cc 体验 ↗</a>
         <button type="button" id="videoClose" data-i18n="modal_close">关闭</button>
       </div>
     </div>
     <div class="modal-body" style="aspect-ratio:16/9;width:100%">
-      <video id="promoVideo" controls playsinline preload="none" poster="assets/suanle_promo_cover.webp" style="width:100%;height:100%;max-height:76dvh;background:#000">
-        <source src="https://github.com/Evan-Joseph/suanle/releases/download/v1.0.0/suanle_brand_promo_1080p60.mp4" type="video/mp4" />
+      <video id="promoVideo" controls playsinline preload="metadata" poster="assets/suanle_promo_cover.webp" style="width:100%;height:100%;max-height:76dvh;background:#000">
+        <source src="assets/suanle_promo_opus55.mp4" type="video/mp4" />
+        <source src="https://github.com/Evan-Joseph/suanle/releases/download/v1.0.0/suanle_promo_opus55_1080p60.mp4" type="video/mp4" />
       </video>
     </div>
   </div>
@@ -2683,6 +2710,25 @@
         }
         return;
       }
+      var verBtn = e.target.closest('.video-ver-btn');
+      if (verBtn && promoVideo) {
+        e.preventDefault();
+        var vSrc = verBtn.getAttribute('data-video-src');
+        var vLabel = verBtn.getAttribute('data-video-label');
+        document.querySelectorAll('.video-ver-btn').forEach(function (b) {
+          b.style.background = '';
+          b.style.borderColor = '';
+          b.style.color = '';
+        });
+        verBtn.style.background = 'var(--accent)';
+        verBtn.style.borderColor = 'var(--accent)';
+        verBtn.style.color = '#fff';
+        var vTitle = document.getElementById('videoModalTitle');
+        if (vTitle && vLabel) vTitle.textContent = vLabel;
+        promoVideo.src = vSrc;
+        try { promoVideo.load(); promoVideo.play(); } catch (_) {}
+        return;
+      }
       var lbTrig = e.target.closest('[data-lightbox-trigger]');
       if (lbTrig) {
         var innerImg = lbTrig.querySelector('img');
@@ -2767,23 +2813,27 @@
       suanle_title: '"Suanle · 算了" — Immersive AI Decision-Making & Anti-Overthinking Web App',
       suanle_tagline: '"Calculate it, then let it go." Blending Eastern calendar deduction, warm teahouse storytelling, and cognitive-behavioral micro-actions for emotional relief.',
       suanle_btn_live: 'Launch suanle.cc Live',
-      suanle_btn_video: 'Watch 1080p60 Brand Promo',
+      suanle_btn_video: 'Watch 1080p60 Promo (Dual Cuts)',
+      suanle_btn_curator: 'Curator Console (/curator)',
       suanle_btn_repo: 'GitHub Repo & Architecture',
-      suanle_tab_1: '1. Life-Cycle K-Line & Bazi',
+      suanle_tab_1: '1. 1080p Divination & Hexagram',
       suanle_tab_2: '2. Crumple & Let-Go Ritual',
-      suanle_tab_3: '3. Xuan-Paper Share Card',
-      suanle_tab_4: '4. Six-Yao Hexagram Card',
-      suanle_tab_5: '5. Teahouse Guided Chat',
+      suanle_tab_3: '3. Xuan-Paper Cards & Basket',
+      suanle_tab_4: '4. Curator Console (/curator)',
+      suanle_tab_5: '5. Life-Cycle K-Line',
+      suanle_tab_6: '6. Xuan-Paper Quote Card',
       stone_badge_1: '19th Chinese Collegiate Computing Competition · Provincial 2nd Prize (1st Author / Lead)',
       stone_badge_2: 'Endorsed by Curator of Wu Family Shrine Museum',
       stone_title: '"Stone Epic · 石室史诗" — Han Dynasty Stone Relief Digital Exhibition & Multimodal AI Platform',
       stone_tagline: 'Solving the "visible but incomprehensible" museum pain point with a 76-artifact digital hall, rubbing inspection lens, 3D viewer, and grounded AI docent.',
-      stone_btn_live: 'Open Live Museum (qdu-stone.pages.dev)',
+      stone_btn_live_3d: '3D Excavation Edition (stone.4c666.top)',
+      stone_btn_live: '76-Artifact Hall Edition (qdu-stone.pages.dev)',
       stone_btn_repo: 'GitHub Repository',
-      stone_tab_1: '1. Main Exhibition Hall',
+      stone_tab_1: '1. 3D Exhibition Overview',
       stone_tab_2: '2. Interactive 3D Stone Relief',
       stone_tab_3: '3. Live Camera Recognition',
       stone_tab_4: '4. Grounded AI Docent',
+      stone_tab_5: '5. 76-Artifact Digital Hall',
       matrix_title: 'Campus & High-Frequency Pain-Point Product Matrix',
       matrix_sub: 'Spotting real daily friction · Rapid delivery with AI toolchains · Long-term active users',
       tool1_title: '22408 Immersive Flow Clock',
@@ -2825,12 +2875,15 @@
       med_title: '"Hezhongzhen · 合众诊" — Multi-Agent Collaborative Medical Triage & Consultation Platform',
       surgi_badge_1: '2026 China International College Students Innovation Competition · University Gold Medal',
       surgi_badge_2: 'QDU Summer Practice Outstanding Team · Software Copyright',
-      surgi_title: 'SurgiMind3D Surgical Navigation & "Zhimou Jianshi" Red Heritage Platform',
+      surgi_title: 'SurgiMind3D / Lumbar AI Medical System & "Zhimou Jianshi" Red Heritage Platform',
+      surgi_btn_lumbar: 'Lumbar MRI AI System (lumbar.4c666.top)',
+      surgi_btn_haiyang: 'Haiyang 1942 Digital Memorial Hall',
       health_badge_1: '19th Chinese Collegiate Computing Competition (Big Data Track) · Provincial 2nd Prize (1st Author / Lead)',
       health_badge_2: '203 Economies Data · Clinical Expert Reviewed',
       health_title: '"From Treatable to Affordable · 从治得上到治得起" — Global Chronic Disease Transition Trap, Country Typology & Intervention Priority',
       health_fig1: 'Fig 1: Four-Quadrant Global Typology (Health Transition Pressure vs. Healthcare Capacity Index across 203 economies)',
       health_fig2: 'Fig 2: 2026 Short-Term Early Warning Ranking for Chronic Disease Capacity Traps',
+      health_btn_heywhale: 'Official HeyWhale Competition Showcase',
       health_btn_repo: 'View Data Narrative & Reproducible Framework (4c-health-insight-showcase)',
       sec3_eyebrow: 'LLM Boundary Mastery & Top-Tier Publications',
       sec3_title: 'Model Evaluation & Publications',
@@ -2907,7 +2960,9 @@
       modal_download: 'Download PDF',
       modal_close: 'Close',
       pdf_fallback: 'Embedded PDF preview is not supported in this browser. Please open or download below.',
-      video_modal_title: '"Suanle · 算了" 1080p 60fps Brand Promo Video',
+      video_modal_title: '"Suanle · 算了" 1080p 60fps Brand Promo · Version A (Opus 5.5 · 45s)',
+      video_ver_a: '🎬 Ver A: Opus 5.5 (45s)',
+      video_ver_b: '🎬 Ver B: Fable 5.1 Max (50s)',
       video_modal_try: 'Try suanle.cc Live ↗'
     };
 
