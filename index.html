@@ -1176,7 +1176,8 @@
                 <button type="button" class="gallery-tab" data-img="assets/stone_3d_view.webp" data-i18n="stone_tab_2">2. 武梁祠石刻 3D 复现</button>
                 <button type="button" class="gallery-tab" data-img="assets/stone_vision.webp" data-i18n="stone_tab_3">3. 现场拍照识图台</button>
                 <button type="button" class="gallery-tab" data-img="assets/stone_ai_guide.webp" data-i18n="stone_tab_4">4. 多模态 AI 导览</button>
-                <button type="button" class="gallery-tab" data-img="assets/stone_exhibit_hall.webp" data-i18n="stone_tab_5">5. 76 件三馆数字展厅</button>
+                <button type="button" class="gallery-tab" data-img="assets/stone_exhibit_home.webp" data-i18n="stone_tab_5">5. 76 件三馆数字展厅</button>
+                <button type="button" class="gallery-tab" data-img="assets/stone_exhibit_detail.webp" data-i18n="stone_tab_6">6. 拓片考据详情页</button>
               </div>
             </div>
           </div>
@@ -1198,10 +1199,21 @@
                   </div>
                   <span class="tag-badge emerald" data-i18n="tool1_tag">线上运行中</span>
                 </div>
-                <p style="margin-top:10px" data-i18n="tool1_desc">针对备考与深度研发中专注力易被打断的痛点，独立设计并上线零干扰全屏时钟（沉浸时钟 · Open-Timer），支持专注/倒计时/正计时三模式切换、标签分类、每日时间轴（15m–1h 缩放）与年度热力日历回顾。</p>
+                <p style="margin-top:10px" data-i18n="tool1_desc">针对备考与深度研发中专注力易被打断的痛点，独立设计并上线零干扰全屏时钟（沉浸时钟 · Open-Timer），支持专注/倒计时/正计时三模式切换、标签分类、每日时间轴（15m–1h 缩放）与 14 天打卡日历热力回顾。</p>
+                <div class="health-visuals" style="margin-top:12px">
+                  <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+                    <img src="assets/open_timer.webp" alt="沉浸时钟 Open-Timer 主界面" width="2880" height="1800" loading="lazy" />
+                    <figcaption data-i18n="tool1_fig1">主时钟：考研倒计时与 7 科切换</figcaption>
+                  </figure>
+                  <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+                    <img src="assets/open_timer_review.webp" alt="沉浸时钟 Open-Timer 时间轴与14天回顾" width="2880" height="1800" loading="lazy" />
+                    <figcaption data-i18n="tool1_fig2">复盘台：流体时间轴与 14 天热力图</figcaption>
+                  </figure>
+                </div>
               </div>
               <div class="tool-links">
                 <a href="https://clock.4c666.top" target="_blank" rel="noopener" data-i18n="tool1_link">立即打开 clock.4c666.top ↗</a>
+                <a href="https://github.com/Evan-Joseph/open-timer" target="_blank" rel="noopener">GitHub ↗</a>
               </div>
             </div>
 
@@ -1215,9 +1227,21 @@
                   <span class="tag-badge emerald" data-i18n="tool2_tag">四科全覆盖 + 姊妹站矩阵</span>
                 </div>
                 <p style="margin-top:10px" data-i18n="tool2_desc">覆盖政治、英二、数二、408 四科共 1,513 条核心识记项与 1,613 道历年真题（含 408 专项 148 考点 / 962 闪卡），支持识记、真题研习与错题统计；同步衍生上线「政治识记」与「考研数学识记」独立站点。</p>
+                <div class="health-visuals" style="margin-top:12px">
+                  <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+                    <img src="assets/kaoyan_22408.webp" alt="22408 研记四科全科工作台" width="2880" height="1800" loading="lazy" />
+                    <figcaption data-i18n="tool2_fig1">22408 · 研记（四科全科主站）</figcaption>
+                  </figure>
+                  <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+                    <img src="assets/math2_flashcards.webp" alt="考研数学识记 302 项概念公式库" width="2880" height="1800" loading="lazy" />
+                    <figcaption data-i18n="tool2_fig2">姊妹站：考研数学识记 &amp; 政治识记</figcaption>
+                  </figure>
+                </div>
               </div>
               <div class="tool-links">
-                <a href="https://kaoyan-22408-flashcards.pages.dev" target="_blank" rel="noopener" data-i18n="tool2_link">在线刷卡复习 ↗</a>
+                <a href="https://kaoyan-22408-flashcards.pages.dev" target="_blank" rel="noopener" data-i18n="tool2_link">22408 研记主站 ↗</a>
+                <a href="https://kaoyan-politics.pages.dev" target="_blank" rel="noopener" data-i18n="tool2_link_pol">政治识记 ↗</a>
+                <a href="https://math2-flashcards.pages.dev" target="_blank" rel="noopener" data-i18n="tool2_link_math">考研数学识记 ↗</a>
               </div>
             </div>
 
@@ -1230,10 +1254,17 @@
                   </div>
                   <span class="tag-badge amber" data-i18n="tool3_tag">解决千人排队痛点</span>
                 </div>
-                <p style="margin-top:10px" data-i18n="tool3_desc">源于宿舍楼千名同学高峰期抢用 1–5 号公共洗衣机的日常痛点，独立梳理接口状态流转并上线 Web 抢占控制台与移动端 PWA，支持 5 台洗衣机实时监控、三级自适应高频脉冲（60s / 8s / 0.2–0.3s 毫秒级自动锁单）与一键跳转支付。</p>
+                <p style="margin-top:10px" data-i18n="tool3_desc">源于宿舍楼千名同学高峰期抢用 5 洗 1 烘公共设备的日常痛点，独立梳理状态流转并上线 Web 抢占控制台与移动端 PWA，支持实时状态监控、三级自适应高频脉冲（60s / 8s / 0.2–0.3s 毫秒级自动锁单）与一键跳转支付。</p>
+                <div class="health-visuals" style="grid-template-columns:1fr;margin-top:12px">
+                  <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+                    <img src="assets/haile_bot_matrix.webp" alt="泓园7号楼海乐生活抢占助手v3桌面端实时矩阵" width="2880" height="1800" loading="lazy" />
+                    <figcaption data-i18n="tool3_fig1">5 洗 1 烘实时状态矩阵与自适应脉冲锁单控制台</figcaption>
+                  </figure>
+                </div>
               </div>
               <div class="tool-links">
                 <a href="https://haile-bot.4c666.top" target="_blank" rel="noopener" data-i18n="tool3_note">访问 haile-bot.4c666.top ↗</a>
+                <a href="https://github.com/Evan-Joseph/haile-bot" target="_blank" rel="noopener">GitHub ↗</a>
               </div>
             </div>
 
@@ -1241,15 +1272,72 @@
               <div>
                 <div class="tool-top">
                   <div>
-                    <h4 data-i18n="tool4_title">跨端 26 项标准化 Agent 技能库 (agent-workflow-skills)</h4>
-                    <div class="sub">github.com/Evan-Joseph/agent-workflow-skills</div>
+                    <h4 data-i18n="tool4_title">跨端 26 项 Agent 技能库 &amp; 竞赛规划看板 V3</h4>
+                    <div class="sub">agent-workflow-skills · competition-mission-control</div>
                   </div>
-                  <span class="tag-badge" data-i18n="tool4_tag">26 项生产级 Skill</span>
+                  <span class="tag-badge" data-i18n="tool4_tag">26 项 Skill + 62 赛事指挥舱</span>
                 </div>
-                <p style="margin-top:10px" data-i18n="tool4_desc">将日常高频的 PRD 与公文排版、高保真前端界面构建、学术文献核验、视频转码剪辑与浏览器自动化沉淀为 26 个跨平台（Claude Code / Codex / Antigravity）标准化技能包，实现单人生产力数倍放大。</p>
+                <p style="margin-top:10px" data-i18n="tool4_desc">将 PRD 排版、高保真 UI 构建、文献核验、视频剪辑与浏览器自动化沉淀为 26 个跨平台（Claude Code / Codex / Antigravity）标准化技能包；配套构建纳管 62 项赛事排期、战术白板与 AI Action Card 的《竞赛矩阵 V3》。</p>
+                <div class="health-visuals" style="grid-template-columns:1fr;margin-top:12px">
+                  <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+                    <img src="assets/mission_control.webp" alt="竞赛矩阵 竞赛规划看板 V3" width="2880" height="1800" loading="lazy" />
+                    <figcaption data-i18n="tool4_fig1">《竞赛矩阵 V3》：62 项赛事排期与 AI Action Card 指挥舱</figcaption>
+                  </figure>
+                </div>
               </div>
               <div class="tool-links">
-                <a href="https://github.com/Evan-Joseph/agent-workflow-skills" target="_blank" rel="noopener" data-i18n="tool4_link">浏览开源技能库 ↗</a>
+                <a href="https://github.com/Evan-Joseph/agent-workflow-skills" target="_blank" rel="noopener" data-i18n="tool4_link">26 项 Agent 技能库 ↗</a>
+                <a href="https://github.com/Evan-Joseph/competition-mission-control" target="_blank" rel="noopener" data-i18n="tool4_link_mc">竞赛矩阵 V3 仓库 ↗</a>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <div>
+                <div class="tool-top">
+                  <div>
+                    <h4 data-i18n="tool5_title">GP-VTON++ 虚拟试衣双视口工作台与方案评审</h4>
+                    <div class="sub">gpvton-review.pages.dev · Dual-Viewport Studio</div>
+                  </div>
+                  <span class="tag-badge emerald" data-i18n="tool5_tag">桌面+手机同屏双视口</span>
+                </div>
+                <p style="margin-top:10px" data-i18n="tool5_desc">包含人物与服装上传、GPU 队列推理及并排/滑动对比的虚拟试衣工作台，并基于自研评审套件实现五套前端方向桌面+手机同页双视口同步交互与实时投票。</p>
+                <div class="health-visuals" style="grid-template-columns:1fr;margin-top:12px">
+                  <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+                    <img src="assets/gpvton_review.webp" alt="GP-VTON++ 虚拟试衣工作台与双视口方案评审" width="2880" height="1800" loading="lazy" />
+                    <figcaption data-i18n="tool5_fig1">虚拟试衣工作台：真实模特桌面 + 手机双视口同步预览</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="tool-links">
+                <a href="https://gpvton-review.pages.dev" target="_blank" rel="noopener" data-i18n="tool5_link">在线体验双视口工作台 ↗</a>
+                <a href="https://github.com/Evan-Joseph/gp-vton-virtual-try-on" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <div>
+                <div class="tool-top">
+                  <div>
+                    <h4 data-i18n="tool6_title">PPT 提示词增强器 &amp; 《君子之交》查重证据台</h4>
+                    <div class="sub">ppt-prompt-enhancer.pages.dev · junzi.4c666.top</div>
+                  </div>
+                  <span class="tag-badge" data-i18n="tool6_tag">AI 生产力与教学工作台</span>
+                </div>
+                <p style="margin-top:10px" data-i18n="tool6_desc">《PPT 提示词增强》将一句话需求补全为含场景、结构、配色与字体的专业提示词（支持全自动/半自动/图表模式）；《君子之交》提供三端协同作业管理、AI 作业海报生成与 92% 雷同检测力导向查重证据台。</p>
+                <div class="health-visuals" style="margin-top:12px">
+                  <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+                    <img src="assets/ppt_enhancer.webp" alt="PPT 提示词增强工具" width="2880" height="1800" loading="lazy" />
+                    <figcaption data-i18n="tool6_fig1">PPT 提示词增强（全自动/图表模式）</figcaption>
+                  </figure>
+                  <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+                    <img src="assets/junzi_deck.webp" alt="君子之交 教师端工作台与查重证据台" width="1440" height="900" loading="lazy" />
+                    <figcaption data-i18n="tool6_fig2">《君子之交》教师端查重证据台</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="tool-links">
+                <a href="https://ppt-prompt-enhancer.pages.dev" target="_blank" rel="noopener" data-i18n="tool6_link_ppt">PPT 提示词增强 ↗</a>
+                <a href="https://junzi.4c666.top" target="_blank" rel="noopener" data-i18n="tool6_link_junzi">君子之交工作台 ↗</a>
               </div>
             </div>
           </div>
@@ -1932,6 +2020,28 @@
             <b>生产数据回放归因与港区现场跟班实测</b>：独立搭建历史生产快照回放比对工具，剥离人工随意放箱噪声，驱动大区路由与子区评分持续优化，400 箱真实生产回测集大区 Top-2 命中率跃升至 <b>90.0% ~ 95.75%</b>；<b>2026 年 10 月 15 日赴青岛港现场驻场跟随计划员实测 20 箱，推荐落位现场采纳与可行率达 90.0%（18/20）</b>。
           </li>
         </ul>
+
+        <div class="health-visuals" style="grid-template-columns: repeat(3, 1fr); margin-top: 16px;">
+          <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+            <img src="assets/hazmat_yard_overview.webp" alt="山东港口危险品库堆场算法联调调试台运行总览" width="1440" height="920" loading="lazy" />
+            <figcaption data-i18n="port_fig1">运行总览：K/L/N/T 四大区、1467 贝位、4401 层位负载与预占锁监控</figcaption>
+          </figure>
+          <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+            <img src="assets/hazmat_yard_map.webp" alt="山东港口危险品库堆场俯视贝位图" width="1440" height="900" loading="lazy" />
+            <figcaption data-i18n="port_fig2">堆场俯视贝位图：危类着色、双贝跨箱、喷淋/遮阳属性与分层透视</figcaption>
+          </figure>
+          <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+            <img src="assets/hazmat_xdt_diff.webp" alt="甲方 XDT 与乙方地图数据库表建模范围差异可视化" width="2880" height="1800" loading="lazy" />
+            <figcaption data-i18n="port_fig3">线上诊断台 (hazmat-xdt.4c666.top)：甲方 XDT 与乙方地图建模范围差异对账</figcaption>
+          </figure>
+        </div>
+
+        <div class="prod-cta-row" style="margin-top:14px">
+          <a class="btn btn-primary" href="https://hazmat-xdt.4c666.top" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <span data-i18n="port_btn_xdt">甲方 XDT 与乙方地图建模差异诊断台 (hazmat-xdt.4c666.top)</span>
+          </a>
+        </div>
       </article>
 
       <!-- 4 Solutions Grid -->
@@ -1957,17 +2067,39 @@
           <p data-i18n-html="tug_desc">
             针对政企客户在项目前中期<b>“需求高频变动、传统开发排期慢、急需直观可视化效果汇报”</b>的痛点，熟练运用 AI 工具链极速产出高保真交互原型（Mock）与多船动态轨迹态势大屏；无缝衔接上游智能排程结果，支撑任务下发、方案对比、AI 助手与历史回放全流程演示，大幅缩短政企沟通确认周期。
           </p>
+          <div class="health-visuals" style="margin-top:8px">
+            <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+              <img src="assets/tug_dispatch_dark.webp" alt="山东港口青岛港智能拖轮调度工作席深色版" width="1440" height="900" loading="lazy" />
+              <figcaption data-i18n="tug_fig1">深色态势席：枚举 561 套方案输出三套推荐及人工编组下发</figcaption>
+            </figure>
+            <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+              <img src="assets/tug_dispatch_light.webp" alt="山东港口青岛港智能拖轮调度工作席浅色版" width="1440" height="900" loading="lazy" />
+              <figcaption data-i18n="tug_fig2">浅色诊断席：北主航道吃水超标一票否决诊断与多维评分拆解</figcaption>
+            </figure>
+          </div>
         </article>
 
         <article class="ind-card reveal">
           <div class="prod-kicker">
             <span class="tag-badge emerald" data-i18n="med_badge_1">第 18 届中国大学生计算机设计大赛 · 山东省一等奖（队长兼主答辩）</span>
-            <span class="tag-badge neutral" data-i18n="med_badge_2">多科室协同追问 · 智能分诊导引</span>
+            <span class="tag-badge neutral" data-i18n="med_badge_2">多科室协同追问 · 跨区域远程会诊</span>
           </div>
-          <h3 data-i18n="med_title">《合众诊——基于多智能体协同的医疗辅助会诊平台》</h3>
+          <h3 data-i18n="med_title">《合众诊》多智能体分诊平台 &amp; 《医线牵 / 医脉山海》远程会诊网</h3>
           <p data-i18n-html="med_desc">
-            针对患者就医前<b>“口语化症状描述不清、科室选择迷茫、挂号易走弯路”</b>的痛点，作为<b>第一作者兼队长</b>设计多科室视角协同追问与智能分诊导引流程；通过主诊 Agent 引导患者补全关键病史特征，并组织跨科室 Agent 交叉研判生成结构化就诊建议单，全流程独立把控产品交互、视觉资产与省赛路演答辩。
+            针对患者就医前<b>“口语化症状描述不清、科室选择迷茫、挂号易走弯路”</b>的痛点，作为<b>第一作者兼队长</b>设计《合众诊》多科室视角协同追问与智能分诊导引流程（获第 18 届 4C 大赛省一等奖）；并进一步延伸上线跨区域基层远程医疗协同平台<b>《医线牵（医脉山海）》</b>（<code>care.4c666.top</code>，支持多方会诊看板与四套临床主题切换）。
           </p>
+          <div class="health-visuals" style="grid-template-columns:1fr;margin-top:8px">
+            <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+              <img src="assets/medconnect_care.webp" alt="医线牵 医脉山海 远程多方会诊平台" width="2880" height="1800" loading="lazy" />
+              <figcaption data-i18n="med_fig1">《医线牵 · 医脉山海》(care.4c666.top)：跨区域远程多方会诊与四主题临床工作台</figcaption>
+            </figure>
+          </div>
+          <div class="prod-cta-row" style="margin-top:6px">
+            <a class="btn" href="https://care.4c666.top" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span data-i18n="med_btn_care">医线牵 / 医脉山海远程会诊平台 (care.4c666.top)</span>
+            </a>
+          </div>
         </article>
 
         <article class="ind-card reveal">
@@ -1979,6 +2111,12 @@
           <p data-i18n-html="surgi_desc">
             作为核心成员参与研发《SurgiMind3D——多模态三维手术导航与医学影像辅助系统》（及第一作者交互系统《智脊析——腰椎 MRI 结构化分析与诊断决策支持系统》），支持临床 MRI 病灶标注、节段退变分级与结构化诊断报告生成，获 <b>2026 中国国际大学生创新大赛校赛金奖</b>并登记<b>国家软件著作权《腰椎MRI影像分析系统 V1.0》</b>（登记号 <code>2026R11L3615529</code>）。
           </p>
+          <div class="health-visuals" style="grid-template-columns:1fr;margin-top:8px">
+            <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+              <img src="assets/lumbar_ai.webp" alt="LumbarAI 智脊析 腰椎智能辅助分析系统" width="2880" height="1800" loading="lazy" />
+              <figcaption data-i18n="surgi_fig1">《LumbarAI · 智脊析》(lumbar.4c666.top)：腰椎 MRI 矢状/轴位定位分割与结构化报告</figcaption>
+            </figure>
+          </div>
           <div class="prod-cta-row" style="margin-top:6px">
             <a class="btn" href="https://lumbar.4c666.top" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -2003,8 +2141,16 @@
               <figcaption data-i18n="health_fig1">图 1：全球四象限国家分型（转型压力指数 vs. 卫生承接能力指数）</figcaption>
             </figure>
             <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+              <img src="assets/health_trajectories.webp" alt="2000-2023年金砖五国慢病转型与卫生承接演化轨迹" width="2488" height="1816" loading="lazy" />
+              <figcaption data-i18n="health_fig2">图 2：2000–2023 年金砖五国（中/印/俄/巴/南）慢病转型与卫生承接演化轨迹</figcaption>
+            </figure>
+            <figure class="health-fig" style="margin:0" data-lightbox-trigger>
               <img src="assets/health_warning.webp" alt="2026年全球慢病承接陷阱高危预警排序" width="2395" height="1633" loading="lazy" />
-              <figcaption data-i18n="health_fig2">图 2：2026 年未来承接压力短期预警排序（识别持续与新滑入高危国家）</figcaption>
+              <figcaption data-i18n="health_fig3">图 3：2026 年未来承接压力短期预警排序（识别持续与新滑入高危国家）</figcaption>
+            </figure>
+            <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+              <img src="assets/health_scenarios.webp" alt="2023-2030年三种政策干预情景下的高危国家风险消减推演" width="2671" height="1524" loading="lazy" />
+              <figcaption data-i18n="health_fig4">图 4：2023–2030 年三种政策干预情景下的高危国家风险消减推演</figcaption>
             </figure>
           </div>
           <div class="prod-cta-row" style="margin-top:6px">
@@ -2137,6 +2283,16 @@
             <div class="pub-value" data-i18n-html="pub4_val">
               <span class="k">核心量化收益</span>实验证明<b>“剥离冗余思维链、引入解析器规则门控（Parser-Gated Control）”</b>可将高难任务规划得分提升 <b>+12.90 分</b>、结构化格式合规率提至 <b>99.8%</b>，同时将用户端等待响应耗时缩短近 <b>60%</b>（由 4.85s 降至 1.97s）。
             </div>
+            <div class="health-visuals" style="margin-top:8px">
+              <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+                <img src="assets/leap_framework.webp" alt="LEAP 论文架构图：动作蓝图生成与解析器规则门控" width="1600" height="894" loading="lazy" />
+                <figcaption data-i18n="leap_fig1">图 1：LEAP 动作蓝图生成与解析器规则门控（Parser-Gated Control）总架构</figcaption>
+              </figure>
+              <figure class="health-fig" style="margin:0" data-lightbox-trigger>
+                <img src="assets/leap_execution.webp" alt="LEAP 结构化规划控制与消融对比实证视图" width="1600" height="894" loading="lazy" />
+                <figcaption data-i18n="leap_fig2">图 2：结构化规划控制与消融对比实证视图（合规率 99.8%，延迟缩短近 60%）</figcaption>
+              </figure>
+            </div>
             <div class="pub-links">
               <a href="https://github.com/Evan-Joseph/leap-code" target="_blank" rel="noopener">GitHub: Evan-Joseph/leap-code ↗</a>
             </div>
@@ -2262,7 +2418,7 @@
             </div>
             <div class="award-row">
               <span class="yr">2025.11</span>
-              <p data-i18n-html="h5"><b>青岛大学暑期“三下乡”社会实践“优秀实践团队”</b> <span class="lv">— 校级集体表彰</span></p>
+              <p data-i18n-html="h5"><b>青岛大学暑期“三下乡”社会实践“优秀实践团队” &amp; 院“AI+行业探索计划”三等奖</b> <span class="lv">— 《智眸鉴史》· 核心技术研发成员</span></p>
             </div>
             <div class="award-row">
               <span class="yr">2024–2025</span>
@@ -2830,24 +2986,46 @@
       stone_tab_3: '3. Live Camera Recognition',
       stone_tab_4: '4. Grounded AI Docent',
       stone_tab_5: '5. 76-Artifact Digital Hall',
+      stone_tab_6: '6. Rubbing & Archive Detail',
       matrix_title: 'Campus & High-Frequency Pain-Point Product Matrix',
       matrix_sub: 'Spotting real daily friction · Rapid delivery with AI toolchains · Long-term active users',
       tool1_title: 'Immersive Clock · Open-Timer (Flow & Review Workbench)',
       tool1_tag: 'Live Web App',
-      tool1_desc: 'Zero-clutter fullscreen focus system (clock.4c666.top) supporting Focus / Countdown / Stopwatch modes, tag categorization, daily zoomable timeline (15m–1h), and annual heatmap review.',
+      tool1_desc: 'Zero-clutter fullscreen focus system (clock.4c666.top) supporting Focus / Countdown / Stopwatch modes, 7-subject pills, daily zoomable fluid timeline (15m–1h), and 14-day heatmap review.',
+      tool1_fig1: 'Main Clock: Exam Countdown & 7-Subject Switcher',
+      tool1_fig2: 'Review Studio: Fluid Timeline & 14-Day Heatmap',
       tool1_link: 'Open clock.4c666.top ↗',
       tool2_title: '22408 · YanJi (4-Subject Flashcards & Real Exam Studio)',
       tool2_tag: '4 Subjects + Sister Sites',
       tool2_desc: 'Covers 1,513 core flashcards and 1,613 past exam questions across Politics, English II, Math II, and CS 408 (including 148 CS topics / 962 cards), plus standalone Politics and Math II sister web apps.',
-      tool2_link: 'Practice Flashcards Live ↗',
+      tool2_fig1: '22408 · YanJi (4-Subject Main Workbench)',
+      tool2_fig2: 'Sister Sites: Math II & Politics Flashcards',
+      tool2_link: '22408 Main Studio ↗',
+      tool2_link_pol: 'Politics Site ↗',
+      tool2_link_math: 'Math II Site ↗',
       tool3_title: 'Hongyuan Bldg 7 · Haile Laundry Auto-Lock Assistant v3',
       tool3_tag: 'Solved 1,000-Student Queue Pain',
-      tool3_desc: 'Built for 1,000+ dorm students competing for 5 public washing machines; features real-time state monitoring, 3-tier adaptive pulse polling (60s / 8s / 0.2–0.3s auto-lock), and one-tap payment redirect.',
+      tool3_desc: 'Built for 1,000+ dorm students competing for 5 washers + 1 dryer; features real-time state monitoring, 3-tier adaptive pulse polling (60s / 8s / 0.2–0.3s auto-lock), and one-tap payment redirect.',
+      tool3_fig1: 'Live 5-Washer + 1-Dryer Matrix & Adaptive Auto-Lock Console',
       tool3_note: 'Open haile-bot.4c666.top ↗',
-      tool4_title: 'Cross-Harness 26 Standardized Agent Skills (agent-workflow-skills)',
-      tool4_tag: '26 Production Skills',
-      tool4_desc: 'Packaged high-frequency document crafting, modern UI engineering, literature auditing, video editing, and browser automation into 26 reusable Agent Skills across Claude Code, Codex, and Antigravity.',
-      tool4_link: 'Explore Skills Repository ↗',
+      tool4_title: '26 Standardized Agent Skills & Competition Mission Control V3',
+      tool4_tag: '26 Skills + 62-Contest Cockpit',
+      tool4_desc: 'Packaged PRD crafting, modern UI engineering, literature auditing, video editing, and browser automation into 26 cross-harness Agent Skills; paired with Competition Mission Control V3 managing 62 contests and AI Action Cards.',
+      tool4_fig1: 'Competition Mission Control V3: 62-Contest Calendar & AI Action Cards',
+      tool4_link: '26 Agent Skills Repo ↗',
+      tool4_link_mc: 'Mission Control V3 Repo ↗',
+      tool5_title: 'GP-VTON++ Virtual Try-On Dual-Viewport Studio & Review',
+      tool5_tag: 'Desktop + Mobile Dual Viewport',
+      tool5_desc: 'Features person/garment upload, GPU queue inference, and side-by-side comparison, plus a custom multi-direction dual-viewport (desktop + mobile) interactive review and real-time voting suite.',
+      tool5_fig1: 'Virtual Try-On Studio: Synchronized Desktop + Mobile Preview',
+      tool5_link: 'Launch Dual-Viewport Studio ↗',
+      tool6_title: 'PPT Prompt Enhancer & "Junzi" Plagiarism Evidence Workbench',
+      tool6_tag: 'AI Productivity & EdTech',
+      tool6_desc: 'PPT Prompt Enhancer turns one-line ideas into structured slide prompts (Auto / Semi-Auto / Chart modes); Junzi provides 3-portal assignment management, AI poster generation, and a 92% similarity force-directed evidence graph.',
+      tool6_fig1: 'PPT Prompt Enhancer (Auto / Data Chart Modes)',
+      tool6_fig2: '"Junzi" Instructor Plagiarism Evidence Workbench',
+      tool6_link_ppt: 'PPT Prompt Enhancer ↗',
+      tool6_link_junzi: 'Junzi Workbench ↗',
       sec2_eyebrow: 'Enterprise Industrial AI & Multi-Agent Solutions',
       sec2_title: 'Industrial AI & Agent Solutions',
       sec2_sub: 'On-site field research at major state-owned enterprises: translating hundreds of pages of safety regulations and veteran dispatcher heuristics into deterministic rules and verifiable production metrics.',
@@ -2860,24 +3038,35 @@
       port_m2_lbl: 'Cleaned 50,000+ "Ghost Container" Records · 1-Second Parameter Sandbox',
       port_m3_lbl: '400-Container Real Production Backtest · Top-2 Zone Hit Rate',
       port_m4_lbl: 'Oct 15, 2026 On-Site Shift Test at Qingdao Port (18/20 Feasible)',
+      port_fig1: 'System Overview: K/L/N/T Zones, 1,467 Bays, 4,401 Tiers & Lock Monitor',
+      port_fig2: 'Overhead Yard Bay Map: Hazard Coloring, Cross-Bay Containers & Tier Inspection',
+      port_fig3: 'Live Diagnostic Console (hazmat-xdt.4c666.top): XDT vs. Map DB Scope Diff',
+      port_btn_xdt: 'Live XDT vs. Map Scope Diagnostic Console (hazmat-xdt.4c666.top)',
       kou_badge_1: 'Qingdao Bank · University "Coze" Agent Competition · Corporate Track 2nd Prize (Excellence Award)',
       kou_badge_2: 'National Software Copyright · Sole Owner',
       kou_title: 'KouPilot (智航学伴) — Cross-Platform Collegiate Competition & Career Planning Agent',
       tug_badge_1: 'Shandong Port Industry Project · Oct 2025 – Jun 2026',
       tug_badge_2: 'High-Fidelity Interactive Mock · Multi-Vessel Dashboard · Bidding Demo',
       tug_title: 'Shandong Port Tugboat Collaborative Scheduling High-Fidelity Mock & Situational Dashboard',
+      tug_fig1: 'Dark Situational Console: Enumerating 561 Plans & Top-3 Recommendations',
+      tug_fig2: 'Light Diagnostic Console: Draft-Limit Veto Diagnosis & Multi-Criteria Scoring',
       med_badge_1: '18th Chinese Collegiate Computing Competition · Provincial 1st Prize (Team Lead & Presenter)',
-      med_badge_2: 'Multi-Specialty Collaborative Inquiry · Smart Triage Guidance',
-      med_title: '"Hezhongzhen · 合众诊" — Multi-Agent Collaborative Medical Triage & Consultation Platform',
+      med_badge_2: 'Multi-Specialty Inquiry · Cross-Regional Telemedicine',
+      med_title: '"Hezhongzhen · 合众诊" Multi-Agent Triage & "MedConnect · 医线牵" Telemedicine Network',
+      med_fig1: 'MedConnect · 医脉山海 (care.4c666.top): Cross-Regional Telemedicine & 4-Theme Clinical Console',
+      med_btn_care: 'MedConnect Telemedicine Platform (care.4c666.top)',
       surgi_badge_1: '2026 China International College Students Innovation Competition · University Gold Medal',
       surgi_badge_2: 'National Software Copyright · Medical Imaging Decision Support',
       surgi_title: 'SurgiMind3D / Lumbar AI — 3D Surgical Navigation & Lumbar MRI Decision Support System',
+      surgi_fig1: 'LumbarAI · 智脊析 (lumbar.4c666.top): Sagittal/Axial MRI Segmentation & Structured Report',
       surgi_btn_lumbar: 'Lumbar MRI AI System (lumbar.4c666.top)',
       health_badge_1: '19th Chinese Collegiate Computing Competition (Big Data Track) · Provincial 2nd Prize (1st Author / Lead)',
       health_badge_2: '203 Economies Data · Clinical Expert Reviewed',
       health_title: '"From Treatable to Affordable · 从治得上到治得起" — Global Chronic Disease Transition Trap, Country Typology & Intervention Priority',
       health_fig1: 'Fig 1: Four-Quadrant Global Typology (Health Transition Pressure vs. Healthcare Capacity Index across 203 economies)',
-      health_fig2: 'Fig 2: 2026 Short-Term Early Warning Ranking for Chronic Disease Capacity Traps',
+      health_fig2: 'Fig 2: 2000–2023 BRICS (China/India/Russia/Brazil/South Africa) Transition & Capacity Trajectories',
+      health_fig3: 'Fig 3: 2026 Short-Term Early Warning Ranking for Chronic Disease Capacity Traps',
+      health_fig4: 'Fig 4: 2023–2030 Risk Reduction Projections under Three Policy Intervention Scenarios',
       health_btn_heywhale: 'Official HeyWhale Competition Showcase',
       health_btn_repo: 'View Data Narrative & Reproducible Framework (4c-health-insight-showcase)',
       sec3_eyebrow: 'LLM Boundary Mastery & Top-Tier Publications',
@@ -2897,6 +3086,8 @@
       pub4_badge: '1st-Author SCI Under Review',
       pub4_role: 'Sole First Author · 2026',
       pub4_tier: 'Open-Source Code & Benchmark Released',
+      leap_fig1: 'Fig 1: LEAP Action Blueprint Generation & Parser-Gated Control Architecture',
+      leap_fig2: 'Fig 2: Structured Plan Control & Ablation Study (99.8% Compliance, ~60% Lower Latency)',
       pub5_badge: 'ICLR / ICASSP 2027 Under Review',
       pub5_role: 'Collaborative Research · 2026–2027',
       pub5_tier: 'Audio-Visual Generation Acceleration',
@@ -2980,7 +3171,7 @@
       port_pt3: '<b>Production Snapshot Attribution &amp; Live On-Site Validation</b>: Built a historical snapshot replay tool to isolate manual placement noise, driving Top-2 zone hit rate on a 400-container production backtest to <b>90.0% ~ 95.75%</b>; <b>conducted a live 20-container shift test with dispatchers at Qingdao Port on Oct 15, 2026, achieving 90.0% (18/20) on-site adoption and feasibility</b>.',
       kou_desc: 'Born from students\' real pain points of <b>scattered competition notices, cross-school team-building friction, and unstructured preparation</b>; as <b>Project Lead (1st Author)</b>, designed Coze multi-agent workflows covering competition search, resume diagnosis, complementary team matching, and prep scheduling. Single-handedly produced the UI assets, live demo video, and Business Plan (BP), winning <b>2nd Prize &amp; Excellence Model Award in the Qingdao Bank · University Coze Agent Competition (Corporate Track)</b> and registering the <b>National Software Copyright</b>.',
       tug_desc: 'Addressing enterprise clients\' mid-project pain point of <b>frequent requirement changes and urgent need for visual demonstrations</b>, leveraged AI toolchains to rapidly deliver high-fidelity interactive mocks and multi-vessel trajectory dashboards seamlessly connected to upstream scheduling results, significantly shortening stakeholder alignment cycles and supporting commercial bidding.',
-      med_desc: 'Targeting patients\' pre-visit struggle with <b>vague symptom descriptions and department selection</b>, led the team as <b>1st Author &amp; Team Captain</b> to design a multi-specialty collaborative inquiry and triage platform, overseeing product UX, visual assets, and the provincial finals defense.',
+      med_desc: 'Targeting patients\' pre-visit struggle with <b>vague symptom descriptions and department selection</b>, led the team as <b>1st Author &amp; Team Captain</b> to design the <i>Hezhongzhen</i> multi-specialty collaborative triage platform (18th 4C Provincial 1st Prize), and further launched the cross-regional telemedicine platform <b><i>MedConnect · 医线牵 (医脉山海)</i></b> (<code>care.4c666.top</code>, featuring multi-party consultation boards and 4 clinical themes).',
       surgi_desc: 'Core member of <i>SurgiMind3D — Multimodal 3D Surgical Navigation &amp; Medical Imaging System</i> (and 1st-author interactive system <i>Lumbar AI / 智脊析</i>), supporting clinical MRI lesion annotation, disc degeneration grading, and structured diagnostic reporting; won the <b>2026 China International College Students Innovation Competition University Gold Medal</b> and co-registered the <b>National Software Copyright "Lumbar MRI Image Analysis System V1.0"</b> (<code>2026R11L3615529</code>).',
       health_desc: 'Integrated macro health data across <b>203 economies (2000–2023)</b> from GBD, WHO, and World Bank to construct a 2D evaluation framework (<i>Health Transition Pressure × Healthcare Capacity Index</i>); revealed the "chronic disease capacity trap" in developing nations through interactive data storytelling, delivering a four-quadrant global typology, <b>2026 short-term warning rankings</b>, and <b>2030 policy simulations</b>.',
       pub1_desc: 'Co-led a diagnostic benchmark for task-oriented spatiotemporal reasoning in dynamic robot manipulation videos with forward/reverse temporal paradigms and multi-granularity sliding windows; systematically evaluated <b>20+ mainstream open/closed-source VLMs</b> (GPT-4o, Gemini, Qwen-VL), pinpointing hallucination blind spots in multi-step spatial transformations and causal inference.',
@@ -3003,7 +3194,7 @@
       h2: '<b>Gangjin Scholarship "Innovation &amp; Entrepreneurship Star"</b> <span class="lv">— School of CS Top Innovation Award</span>',
       h3: '<b>Qingdao University Academic Excellence Scholarship (2×)</b> <span class="lv">— University 2nd Class &amp; 3rd Class Scholarships</span>',
       h4: '<b>Qingdao University Winter Social Practice "Outstanding Individual" &amp; "Outstanding Team"</b> <span class="lv">— Official University Commendation</span>',
-      h5: '<b>Qingdao University Summer Social Practice "Outstanding Team"</b> <span class="lv">— University Collective Honor</span>',
+      h5: '<b>Qingdao University Summer Social Practice "Outstanding Team" &amp; CS "AI+ Industry Exploration" 3rd Prize</b> <span class="lv">— "Zhimou Jianshi" · Core Tech Developer</span>',
       h6: '<b>"Outstanding Youth League Cadre", "Outstanding Member" &amp; "Advanced Class Collective"</b> <span class="lv">— Vice Class President of Turing Class</span>',
       a1: '<b>18th Chinese Collegiate Computing Competition · Shandong 1st Prize</b> <span class="lv">— "Hezhongzhen" · 1st Author / Team Lead &amp; Main Presenter</span>',
       a2: '<b>19th Chinese Collegiate Computing Competition · Shandong 2nd Prize</b> <span class="lv">— AI Track "Stone Epic · 石室史诗" · 1st Author / Team Lead</span>',
