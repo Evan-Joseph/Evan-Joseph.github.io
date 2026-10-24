@@ -1,22 +1,22 @@
-# Personal Academic Homepage (evan-joseph.github.io)
+# Shenzhou Gao (高神舟) — AI Product Portfolio & Academic Homepage
 
-This repository contains the source code and static assets for the personal academic homepage of **Shenzhou Gao (高神舟)**.
+Source code and optimized static assets for the personal portfolio and academic homepage of **Shenzhou Gao (高神舟)** at **[https://evan-joseph.github.io](https://evan-joseph.github.io)**.
 
-- **Live Site**: [https://evan-joseph.github.io](https://evan-joseph.github.io)
-- **Focus Areas**: Multimodal & Embodied AI, Vision-Language Models, Long-horizon Planning
-- **Design Philosophy**: Minimalist academic-editorial layout with OKLCH color palettes, fluid typography, and zero heavy framework dependencies.
+- **Positioning**: AI Product Creator & Agent Solutions | 0→1 End-to-End Delivery | LLM Evaluation & Industrial AI
+- **Flagship Live Product**: [《算了 · Suanle》 (https://www.suanle.cc)](https://www.suanle.cc)
+- **Cultural Heritage AI Hall**: [《石室史诗》 (https://qdu-stone.pages.dev)](https://qdu-stone.pages.dev)
+- **Design & Engineering**: Semantic OKLCH `light-dark()` theming, container queries, zero-drift bilingual (`zh`/`en`) snapshot engine, interactive product screenshot galleries, and WebP-optimized visual assets.
 
-## Structure
+## Repository Structure
 
-- `index.html`: Main responsive academic landing page
-- `Shenzhou_Gao_CV.pdf`: Curated academic CV document
-- `.nojekyll`: Bypass Jekyll processing for GitHub Pages
+- `index.html`: Responsive bilingual (`zh-CN` / `en`) product portfolio & academic landing page
+- `Shenzhou_Gao_CV.pdf`: Latest dual-QR curriculum vitae PDF
+- `assets/`: High-PSNR WebP & SVG visual assets (`suanle_*`, `stone_*`, `health_*`)
+- `.nojekyll`: Bypass Jekyll processing on GitHub Pages
 
-## Local Development & Preview
+## Local Preview
 
 ```bash
-# Run a local HTTP server
-python3 -m http.server 8000
-
-# Open in browser: http://localhost:8000
+python3 -m http.server 8090
+# Open http://127.0.0.1:8090
 ```
