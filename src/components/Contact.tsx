@@ -60,16 +60,16 @@ export function Contact({ no }: { no: number }) {
         {/* Résumé */}
         <div className="lg:col-span-7">
           <div className="paper-card overflow-hidden rounded-3xl">
-            <div className="flex flex-wrap items-center gap-4 border-b border-ink/10 p-6 sm:p-8">
-              <span className="seal h-14 w-14 text-xl">{t("简历", "CV")}</span>
+            <div className="flex flex-wrap items-center gap-4 border-b border-ink/10 p-5 sm:p-8">
+              <span className="seal h-12 w-12 text-lg sm:h-14 sm:w-14 sm:text-xl">{t("简历", "CV")}</span>
               <div className="min-w-0 flex-1">
-                <p className="font-serif-cn text-xl font-black">{t("求职简历 · PDF", "Résumé · PDF")}</p>
+                <p className="font-serif-cn text-lg font-black sm:text-xl">{t("求职简历 · PDF", "Résumé · PDF")}</p>
                 <p className="font-mono text-xs text-mute">Shenzhou_Gao_CV.pdf</p>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex w-full gap-2 sm:w-auto">
                 <button
                   onClick={openResume}
-                  className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition hover:bg-seal"
+                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-ink px-4 py-2.5 text-sm font-semibold text-paper transition hover:bg-seal active:scale-[0.97] sm:flex-initial sm:px-5"
                 >
                   <Eye size={16} />
                   {t("全屏预览", "Full preview")}
@@ -79,14 +79,14 @@ export function Contact({ no }: { no: number }) {
                   download
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-ink/25 px-5 py-2.5 text-sm font-semibold transition hover:border-seal hover:text-seal"
+                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-ink/25 px-4 py-2.5 text-sm font-semibold transition hover:border-seal hover:text-seal active:scale-[0.97] sm:flex-initial sm:px-5"
                 >
                   <Download size={16} />
                   {t("下载", "Download")}
                 </a>
               </div>
             </div>
-            <div className="p-6 sm:p-8">
+            <div className="p-5 sm:p-8">
               {inline ? (
                 <div className="overflow-hidden rounded-xl border border-ink/10 bg-paper-3">
                   <iframe title="Resume" src={`${CV_URL}#view=FitH`} className="h-[560px] w-full border-0 sm:h-[720px]" loading="lazy" />
@@ -94,7 +94,7 @@ export function Contact({ no }: { no: number }) {
               ) : (
                 <button
                   onClick={() => setInline(true)}
-                  className="group relative grid h-56 w-full place-items-center overflow-hidden rounded-xl border border-dashed border-ink/25 bg-paper/60 transition hover:border-seal"
+                  className="group relative grid h-48 w-full place-items-center overflow-hidden rounded-xl border border-dashed border-ink/25 bg-paper/60 transition hover:border-seal sm:h-56"
                 >
                   <span className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "repeating-linear-gradient(0deg, #000 0 1px, transparent 1px 22px)" }} />
                   <span className="relative flex flex-col items-center gap-2 text-ink-2 transition group-hover:text-seal">
@@ -103,7 +103,7 @@ export function Contact({ no }: { no: number }) {
                   </span>
                 </button>
               )}
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-1.5 sm:mt-5 sm:gap-2">
                 {[t("AI 产品经理", "AI Product Manager"), t("智能体解决方案", "Agent Solutions"), t("前线部署工程师（FDE）", "Forward-Deployed Engineer"), t("AI 原生应用负责人", "AI-Native App Lead")].map((r) => (
                   <Chip key={r} tone="seal">
                     {r}
@@ -115,21 +115,21 @@ export function Contact({ no }: { no: number }) {
         </div>
 
         {/* Contacts */}
-        <div className="space-y-4 lg:col-span-5">
+        <div className="space-y-3.5 sm:space-y-4 lg:col-span-5">
           {cards.map((c) => (
             <div
               key={c.key}
-              className={cn("paper-card relative flex items-center gap-4 rounded-2xl p-5 transition", c.rec && "border-seal/40 shadow-lg shadow-seal/10")}
+              className={cn("paper-card relative flex items-center gap-3 rounded-2xl p-4 transition sm:gap-4 sm:p-5", c.rec && "border-seal/40 shadow-lg shadow-seal/10")}
             >
-              <span className={cn("grid h-12 w-12 flex-none place-items-center rounded-xl", c.rec ? "bg-seal text-white" : "bg-ink/8 text-ink")}>
-                <c.icon size={20} />
+              <span className={cn("grid h-10 w-10 flex-none place-items-center rounded-xl sm:h-12 sm:w-12", c.rec ? "bg-seal text-white" : "bg-ink/8 text-ink")}>
+                <c.icon size={19} />
               </span>
               <div className="min-w-0 flex-1">
-                <p className="flex items-center gap-2 text-[12px] font-medium text-mute">
+                <p className="flex items-center gap-2 text-[11.5px] font-medium text-mute sm:text-[12px]">
                   {c.label}
                   {c.rec && <span className="rounded bg-seal px-1.5 py-px font-mono text-[10px] font-bold uppercase text-white">{t("推荐", "Suggested")}</span>}
                 </p>
-                <a href={c.href} className="block truncate font-mono text-[15px] font-bold transition hover:text-seal">
+                <a href={c.href} className="mt-0.5 block break-all font-mono text-[13px] font-bold leading-snug transition hover:text-seal sm:truncate sm:text-[15px]">
                   {c.value}
                 </a>
               </div>

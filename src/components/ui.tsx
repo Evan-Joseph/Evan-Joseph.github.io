@@ -31,7 +31,7 @@ export function SectionShell({
       id={id}
       data-section={id}
       className={cn(
-        "relative scroll-mt-16 overflow-hidden py-20 sm:py-28",
+        "relative scroll-mt-16 overflow-hidden py-14 sm:py-24 lg:py-28",
         dark ? "bg-night text-paper" : "text-ink",
         className,
       )}
@@ -49,22 +49,22 @@ export function SectionShell({
       <span
         aria-hidden
         className={cn(
-          "pointer-events-none absolute -top-6 right-2 select-none font-mono text-[9rem] font-bold leading-none sm:right-10 sm:text-[15rem]",
+          "pointer-events-none absolute -top-6 right-2 select-none font-mono text-[7.5rem] font-bold leading-none sm:right-10 sm:text-[15rem]",
           dark ? "text-paper/[0.04]" : "text-ink/[0.045]",
         )}
       >
         {String(no).padStart(2, "0")}
       </span>
       <div className="relative mx-auto max-w-[1240px] px-5 sm:px-8">
-        <header className="mb-12 max-w-5xl sm:mb-16">
-          <p className={cn("mb-4 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em]", dark ? "text-bronze-2" : "text-seal")}>
+        <header className="mb-9 max-w-5xl sm:mb-16">
+          <p className={cn("mb-3 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] sm:mb-4", dark ? "text-bronze-2" : "text-seal")}>
             <span className="inline-block h-px w-8 bg-current" />
             <span>{String(no).padStart(2, "0")}</span>
             <span>{kicker}</span>
           </p>
-          <h2 className="font-serif-cn text-[1.95rem] font-black leading-[1.18] tracking-tight sm:text-[2.65rem]">{title}</h2>
+          <h2 className="font-serif-cn text-[1.62rem] font-black leading-[1.24] tracking-tight sm:text-[2.65rem] sm:leading-[1.18]">{title}</h2>
           {intro && (
-            <p className={cn("mt-5 max-w-3xl text-base leading-relaxed sm:text-lg", dark ? "text-paper/70" : "text-ink-2")}>{intro}</p>
+            <p className={cn("mt-4 max-w-3xl text-[15px] leading-relaxed sm:mt-5 sm:text-lg", dark ? "text-paper/70" : "text-ink-2")}>{intro}</p>
           )}
         </header>
         {children}
@@ -261,18 +261,18 @@ export function Metric({
   className?: string;
 }) {
   return (
-    <div className={cn("relative p-5 sm:p-6", dark ? "night-card" : "paper-card", "rounded-xl", className)}>
+    <div className={cn("relative p-4 sm:p-6", dark ? "night-card" : "paper-card", "rounded-xl", className)}>
       <div
         className={cn(
-          "font-serif-cn font-black tracking-tight",
-          typeof value === "string" && value.length > 9 ? "text-2xl sm:text-[1.7rem]" : "text-3xl sm:text-[2.5rem]",
+          "tabular-nums font-serif-cn font-black tracking-tight",
+          typeof value === "string" && value.length > 9 ? "text-xl sm:text-[1.7rem]" : "text-2xl sm:text-[2.5rem]",
           "leading-none",
           dark ? "text-bronze-2" : "text-seal",
         )}
       >
         {value}
       </div>
-      <div className={cn("mt-3 text-sm font-medium leading-snug", dark ? "text-paper" : "text-ink")}>{label}</div>
+      <div className={cn("mt-2.5 text-sm font-medium leading-snug sm:mt-3", dark ? "text-paper" : "text-ink")}>{label}</div>
       {sub && <div className={cn("mt-1.5 text-xs leading-relaxed", dark ? "text-paper/55" : "text-mute")}>{sub}</div>}
     </div>
   );
@@ -352,7 +352,7 @@ export function CopyButton({ text, dark, label }: { text: string; dark?: boolean
         setTimeout(() => setDone(false), 1600);
       }}
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition",
+        "inline-flex min-h-[32px] flex-none items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium transition active:scale-[0.96] sm:px-3",
         dark ? "border-paper/25 text-paper hover:border-bronze-2" : "border-ink/20 text-ink hover:border-seal hover:text-seal",
       )}
       aria-label={label ?? t("复制", "Copy")}

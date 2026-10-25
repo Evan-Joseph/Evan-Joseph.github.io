@@ -115,9 +115,14 @@ main .grid > *, footer .grid > * { min-width: 0; }
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x proximity;
+  overscroll-behavior-x: contain;
   -webkit-overflow-scrolling: touch;
 }
 .snap-x-row > * { scroll-snap-align: start; flex: none; }
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
 
 .skeleton {
   background: linear-gradient(100deg, rgba(0,0,0,0.04) 30%, rgba(0,0,0,0.09) 50%, rgba(0,0,0,0.04) 70%);
@@ -131,8 +136,10 @@ main .grid > *, footer .grid > * { min-width: 0; }
 }
 
 /* Seal stamp */
-.seal {
+.seal:not(.hidden) {
   display: inline-grid;
+}
+.seal {
   place-items: center;
   background: var(--color-seal);
   color: #fbeee6;

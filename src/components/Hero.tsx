@@ -13,7 +13,7 @@ export function Hero() {
   const phones = [A.suanle_ui_bazi, A.suanle_ui_chat, A.suanle_ui_letgo_ball];
 
   return (
-    <header id="top" className="relative overflow-hidden pt-24 sm:pt-28">
+    <header id="top" className="relative overflow-hidden pt-20 sm:pt-28">
       {/* ambient ink washes */}
       <div
         aria-hidden
@@ -23,43 +23,43 @@ export function Hero() {
             "radial-gradient(620px 420px at 82% 28%, rgba(181,39,31,.10), transparent 65%), radial-gradient(760px 520px at 8% 0%, rgba(160,122,60,.16), transparent 60%)",
         }}
       />
-      <div className="relative mx-auto grid max-w-[1240px] items-center gap-12 px-5 pb-16 sm:px-8 lg:grid-cols-12 lg:pb-24">
+      <div className="relative mx-auto grid max-w-[1240px] items-center gap-8 px-5 pb-10 sm:gap-12 sm:px-8 sm:pb-16 lg:grid-cols-12 lg:pb-24">
         {/* Left */}
         <div className="lg:col-span-7" style={{ animation: "rise .9s cubic-bezier(.2,.7,.2,1) both" }}>
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-ink/12 bg-paper/70 py-1.5 pl-3 pr-4 text-[13px] backdrop-blur">
-            <span className="relative grid h-2.5 w-2.5 place-items-center">
-              <span className="h-2.5 w-2.5 rounded-full bg-seal" style={{ animation: "pulse-ring 2.4s ease-out infinite" }} />
+          <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-ink/12 bg-paper/70 py-1 pl-2.5 pr-3.5 text-[11.5px] backdrop-blur sm:gap-2.5 sm:py-1.5 sm:pl-3 sm:pr-4 sm:text-[13px]">
+            <span className="relative grid h-2 w-2 flex-none place-items-center sm:h-2.5 sm:w-2.5">
+              <span className="h-2 w-2 rounded-full bg-seal sm:h-2.5 sm:w-2.5" style={{ animation: "pulse-ring 2.4s ease-out infinite" }} />
             </span>
-            <span className="font-medium">
+            <span className="truncate font-medium">
               {t("2027 届应届本科 · 校招 / 全职 · 现正求职", "Class of 2027 · new-grad full-time · open to offers")}
             </span>
           </div>
 
-          <div className="mt-7 flex items-end gap-5">
+          <div className="mt-5 flex items-end gap-3 sm:mt-7 sm:gap-5">
             <h1
               className={cn(
                 "font-serif-cn font-black tracking-tight",
                 lang === "zh"
-                  ? "whitespace-nowrap text-[4.6rem] sm:text-[7.5rem] lg:text-[9rem]"
-                  : "whitespace-nowrap text-[3rem] sm:text-[4.8rem] lg:text-[5.2rem]",
+                  ? "whitespace-nowrap text-[4.1rem] sm:text-[7.5rem] lg:text-[9rem]"
+                  : "whitespace-nowrap text-[2.35rem] sm:text-[4.8rem] lg:text-[5.2rem]",
                 "leading-[0.98]",
               )}
             >
               {t("高神舟", "Shenzhou Gao")}
             </h1>
-            <span className="seal mb-3 hidden h-14 w-14 flex-none text-xl sm:grid lg:h-20 lg:w-20 lg:text-3xl">
+            <span className="seal mb-1.5 h-11 w-11 flex-none text-base sm:mb-3 sm:h-14 sm:w-14 sm:text-xl lg:h-20 lg:w-20 lg:text-3xl">
               {t("神舟", "SG")}
             </span>
           </div>
-          <p className="mt-3 font-mono text-sm tracking-[0.3em] text-mute">
+          <p className="mt-2.5 font-mono text-xs tracking-[0.14em] text-mute sm:mt-3 sm:text-sm sm:tracking-[0.3em]">
             {t("SHENZHOU GAO · @Evan-Joseph", "@Evan-Joseph · QINGDAO, CHINA")}
           </p>
 
-          <div className="mt-8 space-y-3">
-            <p className="font-serif-cn text-[1.28rem] font-bold leading-snug sm:text-[2rem]">
+          <div className="mt-5 space-y-2.5 sm:mt-8 sm:space-y-3">
+            <p className="font-serif-cn text-[1.25rem] font-bold leading-snug sm:text-[2rem]">
               <span className="ink-mark">{t("AI 产品主理人 & 智能体解决方案", "AI Product Creator & Agent Solutions")}</span>
             </p>
-            <p className="max-w-2xl text-base leading-relaxed text-ink-2 sm:text-lg">
+            <p className="max-w-2xl text-[15px] leading-relaxed text-ink-2 sm:text-lg">
               {t(
                 "0→1 独立产品交付 ｜ 多模态大模型评测与工业智能体。从需求定义、多模型原型比选、确定性规则设计、全栈开发部署，到 1080p60 宣传片与实时运营看台。",
                 "0→1 independent product delivery | multimodal LLM evaluation & industrial AI systems. From problem definition, multi-model prototyping and deterministic rule design to full-stack deployment, 1080p60 brand films and live ops cockpits.",
@@ -67,48 +67,48 @@ export function Hero() {
             </p>
           </div>
 
-          <div className="mt-7">
-            <p className="mb-2.5 font-mono text-[11px] uppercase tracking-[0.2em] text-mute">
+          <div className="mt-5 sm:mt-7">
+            <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-mute sm:mb-2.5">
               {t("目标方向 · TARGET ROLES", "TARGET ROLES")}
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {[
                 t("AI 产品经理", "AI Product Manager"),
                 t("智能体（Agent）解决方案", "Agent Solutions"),
                 t("前线部署工程师（FDE）", "Forward-Deployed Eng. (FDE)"),
                 t("AI 原生应用负责人", "AI-Native App Lead"),
               ].map((r) => (
-                <Chip key={r} tone="seal" className="px-3 py-1 text-[13px]">
+                <Chip key={r} tone="seal" className="px-2.5 py-0.5 text-[12px] sm:px-3 sm:py-1 sm:text-[13px]">
                   {r}
                 </Chip>
               ))}
             </div>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-2 sm:gap-3">
+          <div className="mt-6 flex flex-wrap items-center gap-1.5 sm:mt-8 sm:gap-3">
             <button
               onClick={openResume}
-              className="inline-flex items-center gap-1.5 rounded-full bg-ink px-3.5 py-2.5 text-[13px] font-semibold text-paper shadow-lg shadow-ink/20 transition hover:-translate-y-0.5 hover:bg-seal sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
+              className="inline-flex items-center gap-1.5 rounded-full bg-ink px-3 py-2.5 text-[12.5px] font-semibold text-paper shadow-lg shadow-ink/20 transition hover:-translate-y-0.5 hover:bg-seal active:scale-[0.97] sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
             >
-              <FileText size={15} />
+              <FileText size={14} />
               {t("预览简历", "View résumé")}
             </button>
             <a
               href={LINKS.suanle}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-1.5 rounded-full border border-ink/25 px-3.5 py-2.5 text-[13px] font-semibold transition hover:-translate-y-0.5 hover:border-seal hover:text-seal sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
+              className="group inline-flex items-center gap-1 rounded-full border border-ink/25 px-3 py-2.5 text-[12.5px] font-semibold transition hover:-translate-y-0.5 hover:border-seal hover:text-seal active:scale-[0.97] sm:gap-2 sm:px-6 sm:py-3 sm:text-sm"
             >
-              <Sparkles size={15} />
+              <Sparkles size={14} />
               {t("体验《算了》", "Try Suanle")}
-              <ArrowUpRight size={14} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <ArrowUpRight size={13} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
-            <a href="#contact" className="px-2 py-2.5 text-[13px] font-semibold text-ink-2 underline decoration-seal/50 underline-offset-4 transition hover:text-seal sm:py-3 sm:text-sm">
+            <a href="#contact" className="px-1.5 py-2.5 text-[12.5px] font-semibold text-ink-2 underline decoration-seal/50 underline-offset-4 transition hover:text-seal active:scale-[0.97] sm:px-2 sm:py-3 sm:text-sm">
               {t("联系我", "Contact")}
             </a>
           </div>
 
-          <p className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-1 text-[13px] text-mute">
+          <p className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-1 text-[12.5px] text-mute sm:mt-8 sm:text-[13px]">
             <span className="inline-flex items-center gap-1.5">
               <MapPin size={14} />
               {t("山东青岛 · 籍贯山东潍坊", "Qingdao, Shandong · from Weifang")}
@@ -285,7 +285,7 @@ export function MetricsBand() {
         <dl className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-5">
           {cfg.metrics.map((m) => (
             <div key={m.value + m.label.zh} className="border-l border-bronze-2/30 pl-4">
-              <dt className="font-serif-cn text-[1.7rem] font-black leading-none text-bronze-2 sm:text-[2rem]">{m.value}</dt>
+              <dt className="tabular-nums font-serif-cn text-[1.6rem] font-black leading-none text-bronze-2 sm:text-[2rem]">{m.value}</dt>
               <dd className="mt-2.5 text-[13px] leading-snug text-paper/70">{t(m.label)}</dd>
             </div>
           ))}

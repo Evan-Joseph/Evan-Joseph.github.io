@@ -59,7 +59,7 @@ export function LangToggle({ className }: { className?: string }) {
           onClick={() => setLang(k)}
           aria-pressed={lang === k}
           className={cn(
-            "rounded-full px-3 py-1.5 transition",
+            "min-h-[30px] rounded-full px-3 py-1.5 transition active:scale-[0.96]",
             lang === k ? "bg-ink text-paper shadow" : "text-ink-2 hover:text-ink",
           )}
         >
@@ -85,7 +85,8 @@ export function LensSwitch({ className, compact }: { className?: string; compact
             aria-pressed={on}
             title={t(LENSES[k].name)}
             className={cn(
-              "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 transition",
+              "inline-flex min-h-[30px] items-center gap-1.5 rounded-full transition active:scale-[0.96]",
+              compact ? "px-2.5 py-1.5" : "px-3 py-1.5",
               on ? "bg-seal text-white shadow" : "text-ink-2 hover:text-ink",
             )}
           >
@@ -152,10 +153,11 @@ export function Nav() {
             <LensSwitch />
           </div>
 
-          <div className="ml-auto flex items-center gap-2 lg:ml-0">
+          <div className="ml-auto flex items-center gap-1.5 sm:gap-2 lg:ml-0">
+            <LensSwitch compact className="lg:hidden" />
             <button
               onClick={openResume}
-              className="hidden items-center gap-1.5 rounded-full border border-ink/20 px-3.5 py-1.5 text-xs font-semibold transition hover:border-seal hover:text-seal sm:inline-flex"
+              className="hidden min-h-[34px] items-center gap-1.5 rounded-full border border-ink/20 px-3.5 py-1.5 text-xs font-semibold transition hover:border-seal hover:text-seal active:scale-[0.96] sm:inline-flex"
             >
               <FileText size={14} />
               {t("简历", "Résumé")}
@@ -163,7 +165,7 @@ export function Nav() {
             <LangToggle />
             <button
               onClick={() => setOpen(true)}
-              className="inline-flex items-center gap-1.5 rounded-full bg-ink px-3.5 py-1.5 text-xs font-semibold text-paper transition hover:bg-seal"
+              className="inline-flex min-h-[34px] items-center gap-1.5 rounded-full bg-ink px-3 py-1.5 text-xs font-semibold text-paper transition hover:bg-seal active:scale-[0.96] sm:px-3.5"
               aria-label={t("目录", "Index")}
             >
               <Menu size={14} />

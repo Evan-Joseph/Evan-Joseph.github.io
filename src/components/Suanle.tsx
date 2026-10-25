@@ -91,11 +91,11 @@ export function Suanle({ no }: { no: number }) {
       kicker="FLAGSHIP · SOLO PRODUCT"
       className="bg-paper-2/60"
       title={
-        <span className="flex flex-wrap items-center gap-x-5 gap-y-2">
-          <img src={asset("suanle_logo.svg")} alt="Suanle logo" className="h-14 w-14 rounded-md sm:h-[4.5rem] sm:w-[4.5rem]" />
-          <span>
-            {t("《算了》", "Suanle")}
-            <span className="ml-3 text-seal">{t("算一算，然后，算了", "Calculate, then let go")}</span>
+        <span className="flex items-center gap-3.5 sm:gap-5">
+          <img src={asset("suanle_logo.svg")} alt="Suanle logo" className="h-12 w-12 flex-none rounded-lg sm:h-[4.5rem] sm:w-[4.5rem]" />
+          <span className="flex flex-col sm:block">
+            <span>{t("《算了》", "Suanle")}</span>
+            <span className="mt-0.5 text-[1.18rem] text-seal sm:ml-3 sm:mt-0 sm:text-[inherit]">{t("算一算，然后，算了", "Calculate, then let go")}</span>
           </span>
         </span>
       }
@@ -195,9 +195,10 @@ export function Suanle({ no }: { no: number }) {
       </div>
 
       {/* Phone journey */}
-      <div className="mt-20">
-        <div className="mb-8 flex items-end justify-between gap-4">
+      <div className="mt-14 sm:mt-20">
+        <div className="mb-5 flex flex-wrap items-end justify-between gap-2 sm:mb-8 sm:gap-4">
           <h3 className="font-serif-cn text-2xl font-black sm:text-3xl">{t("实机界面：聊 · 算 · 放", "Live UI: talk · calculate · let go")}</h3>
+          <span className="font-mono text-[11px] text-mute sm:hidden">{t("← 左右滑动查看 7 屏 →", "← Swipe 7 screens →")}</span>
           <span className="hidden font-mono text-xs uppercase tracking-widest text-mute sm:block">860 × 1864 · 2x Retina</span>
         </div>
         <div className="snap-x-row no-scrollbar -mx-5 gap-0 px-5 pb-4 sm:-mx-8 sm:px-8">
