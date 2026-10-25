@@ -5,20 +5,20 @@ import { Chip, ExtLink, GithubIcon, SectionShell } from "./ui";
 const GROUPS: { icon: typeof Cloud; title: L; sub: L; items: L[] }[] = [
   {
     icon: TerminalSquare,
-    title: l("AI 编码与 Agent 搭档", "AI coding & agent partners"),
-    sub: l("多模型并行，先竞技再收敛", "Multiple models in parallel — contest first, converge later"),
+    title: l("AI 编程与 Agent 协同环境", "AI coding & agent environments"),
+    sub: l("多模型并行原型开发与交叉验证", "Multi-model parallel prototyping & cross-verification"),
     items: [l("Claude Code", "Claude Code"), l("Codex", "Codex"), l("Cursor", "Cursor"), l("Antigravity", "Antigravity"), l("扣子（Coze）", "Coze")],
   },
   {
     icon: Clapperboard,
-    title: l("多模态创作", "Multimodal creation"),
-    sub: l("从视觉、声音到成片", "From visuals and sound to the finished film"),
+    title: l("多模态设计与成片工具链", "Multimodal design & video toolchain"),
+    sub: l("从品牌视觉、分镜生图到 1080p60 宣传片", "From visual identity and storyboarding to 1080p60 brand films"),
     items: [l("多模态生图", "Multimodal image generation"), l("音视频工具链", "Audio / video toolchain"), l("1080p60 宣传片", "1080p60 promo films"), l("水墨宣纸视觉", "Ink-wash visual language")],
   },
   {
     icon: Cloud,
-    title: l("全栈与部署", "Full-stack & deployment"),
-    sub: l("一个人能把东西真正上线", "Enough to take a product live alone"),
+    title: l("全栈开发与云端部署", "Full-stack development & edge deployment"),
+    sub: l("独立完成前后端研发、边缘部署与线上运维", "Full-stack build, edge deployment & live operations"),
     items: [
       l("React 18 / 19", "React 18 / 19"),
       l("Hono", "Hono"),
@@ -30,8 +30,8 @@ const GROUPS: { icon: typeof Cloud; title: L; sub: L; items: L[] }[] = [
   },
   {
     icon: FlaskRound,
-    title: l("评测与规则方法", "Evaluation & rule methods"),
-    sub: l("把“感觉靠谱”变成“数字靠谱”", "Turning “feels right” into “measures right”"),
+    title: l("评测实验与确定性规则建模", "Evaluation & deterministic rule modeling"),
+    sub: l("对照实验、解析器规则门控与生产快照回测", "Controlled experiments, parser-gated control & production backtests"),
     items: [
       l("严格匹配对照实验", "Matched-control studies"),
       l("解析器规则门控", "Parser-gated control"),
@@ -57,16 +57,16 @@ export function Toolkit({ no }: { no: number }) {
       id="toolkit"
       no={no}
       dark
-      kicker="TOOLKIT"
+      kicker="ENGINEERING & TOOLING"
       title={
         <>
-          {t("个人武器库：", "The toolkit: ")}
-          <span className="ink-mark-dark">{t("把经验沉淀成可复用的技能", "turning experience into reusable skills")}</span>
+          {t("工程栈与工具链：", "Engineering stack & tooling: ")}
+          <span className="ink-mark-dark">{t("把高频工作流封装为可复用技能包", "packaging workflows into reusable skills")}</span>
         </>
       }
       intro={t(
-        "工具会换，方法会留下。常用的工具链、工程栈与评测方法，以及一套已开源的跨平台 Agent 技能库。",
-        "Tools change; methods stay. The toolchains, engineering stack and evaluation methods I reach for — plus an open-sourced cross-platform agent skill library.",
+        "日常主力使用的开发工具链、全栈架构与评测方法，以及已开源的 26 个跨平台 Agent 标准化技能包。",
+        "Primary development toolchains, full-stack architecture and evaluation methods, alongside 26 open-source cross-platform agent skill packs.",
       )}
     >
       <div className="grid gap-5 md:grid-cols-2">
@@ -107,8 +107,8 @@ export function Toolkit({ no }: { no: number }) {
             </h3>
             <p className="mt-3 text-[14.5px] leading-[1.85] text-paper/75">
               {t(
-                "把反复出现的工作流沉淀为标准化技能包：任何一个 Agent 平台都能直接调用，不必每次重新“教”一遍。",
-                "Recurring workflows are distilled into standardized skill packs that any agent platform can call directly — no re-teaching every time.",
+                "将高频研发与文档工作流封装为包含运行时契约、质量门禁与执行脚本的标准化技能包，支持在 Claude Code、Codex 与 Antigravity 中直接挂载调用。",
+                "Packages recurring engineering and documentation workflows into standardized skill packs with runtime contracts, quality gates and execution scripts — ready to mount directly in Claude Code, Codex and Antigravity.",
               )}
             </p>
             <div className="mt-4 flex flex-wrap gap-2">

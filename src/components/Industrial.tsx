@@ -20,7 +20,7 @@ const FLOW: { n: string; title: L; body: L }[] = [
   },
   { n: "02", title: l("21+1 一票否决", "21+1 veto rules"), body: l("IMDG 安全红线硬约束，不合规候选贝位直接出局", "IMDG safety red lines — non-compliant slots drop out") },
   { n: "03", title: l("14 维防翻箱评分", "14-dim anti-reshuffle score"), body: l("老计划员经验量化建模，支持 1 秒级策略参数热更新", "Planners’ know-how quantified; parameters hot-update in ~1s") },
-  { n: "04", title: l("推荐与人工采纳", "Recommend & planner decides"), body: l("输出大区 Top-2 推荐方案，由现场计划员最终拍板", "Zone Top-2 recommendations; the on-site planner has the final say") },
+  { n: "04", title: l("推荐与现场采纳", "Recommend & field confirmation"), body: l("输出大区 Top-2 推荐落位，由现场计划员确认下发", "Outputs zone Top-2 recommended placements for on-site planner confirmation") },
 ];
 
 type TugTab = "dark" | "light";
@@ -90,8 +90,8 @@ const SOLUTIONS: {
     period: "2026.01 – 2026.03",
     role: l("第一作者 / 项目负责人", "First author / project lead"),
     body: l(
-      "源于大学生“找比赛通知散、跨学院组队难、备赛无头绪”的真实痛点，基于扣子（Coze）工作流编排四大模块，单人包揽 UI 设计、实机演示视频与商业计划书（BP）。",
-      "Born from students’ real pains — scattered contest notices, hard cross-school teaming, no prep plan. Four modules orchestrated on Coze workflows; UI design, demo video and business plan (BP) done solo.",
+      "针对大学生跨平台查找赛事通知分散、跨学院组队难、备赛缺少规划的问题，基于扣子（Coze）工作流编排四大模块，独立完成 UI 设计、实机演示视频与商业计划书（BP）。",
+      "Addressing scattered contest notices, cross-school team formation and structured contest preparation for university students, I orchestrated four functional modules on Coze workflows and independently built the UI, live demo video and business plan (BP).",
     ),
     chips: [l("赛事智能检索", "Contest search"), l("简历诊断", "Résumé diagnosis"), l("互补组队撮合", "Complementary team matching"), l("备赛计划生成", "Prep-plan generation")],
     awards: [
@@ -231,8 +231,8 @@ export function Industrial({ no }: { no: number }) {
           </p>
           <p className="mt-5 text-[15px] leading-[1.85] text-paper/80">
             {t(
-              "政企客户在项目前中期需求高频变动，却急需直观的可视化效果来汇报和竞标演示。用 AI 工具链极速产出高保真交互工作席与全港 AIS 多船动态轨迹态势大屏，让方案“先看见、再讨论”。",
-              "Government and enterprise clients change requirements often in early and mid project phases yet urgently need something visual for reports and bid demos. An AI toolchain quickly produced a hi-fi interactive workstation and a port-wide AIS multi-vessel trajectory board — so proposals could be seen before being debated.",
+              "面向港口与政企客户在需求对齐、方案汇报与竞标演示阶段的交互验证需求，构建高保真拖轮调度工作席与全港 AIS 多船动态轨迹态势大屏，直观呈现编组枚举、约束诊断与指令下发全流程。",
+              "Built for port and enterprise stakeholders during requirement alignment, executive reviews and bid demonstrations: a hi-fi interactive tug-dispatch workstation and port-wide AIS multi-vessel trajectory board demonstrating crew enumeration, constraint diagnosis and command dispatch end to end.",
             )}
           </p>
           <ul className="mt-5 space-y-2.5 text-[14.5px] text-paper/80">

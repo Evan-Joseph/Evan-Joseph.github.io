@@ -55,26 +55,26 @@ const CARDS: Img[] = [A.suanle_card_aphorism, A.suanle_card_letgo, A.suanle_card
 const STORY: { n: string; title: L; body: L }[] = [
   {
     n: "01",
-    title: l("痛点洞察与反内耗产品定义", "Insight & an anti-rumination product definition"),
+    title: l("问题定义与反内耗交互流程", "Problem definition & anti-rumination interaction flow"),
     body: l(
-      "针对当代年轻人在高频日常选择中的“决策瘫痪”与情绪内耗，提出“算一算，然后，算了”的产品主张；设计“茶馆掌柜温润对话梳理心境 → 写下执念揉成纸团丢入竹篓（配合颂钵声效）→ 生成水墨宣纸箴言分享卡”的完整心理释怀链路。",
-      "Targeting young people’s “decision paralysis” and emotional rumination in everyday choices, the product thesis is “calculate it — then, let it go.” The full release journey: a teahouse Keeper gently sorts out your mood → write the fixation, crumple it and toss it in the bamboo basket (with singing-bowl sound) → receive an ink-wash aphorism card to share.",
+      "针对年轻人在高频日常选择中的决策犹豫与情绪内耗，提出“算一算，然后，算了”的产品主张；设计“茶馆掌柜对话梳理处境 → 写下执念揉成纸团投入竹篓（配颂钵声效）→ 生成水墨宣纸箴言分享卡”的完整交互流程。",
+      "Addressing decision hesitation and emotional rumination in everyday choices, the product centres on “calculate it — then, let it go.” The interaction flow: clarify your situation in dialogue with the Teahouse Keeper → write down the fixation, crumple it into a paper ball and toss it into the bamboo basket (with singing-bowl acoustics) → generate an ink-wash aphorism share card.",
     ),
   },
   {
     n: "02",
-    title: l("多模型竞技与“规则+模型”零幻觉", "Multi-model contest + “deterministic rules + LLM” zero-hallucination design"),
+    title: l("9 套原型比选与“确定性排盘 + 模型解读”", "9-prototype evaluation & deterministic charting + LLM reading"),
     body: l(
-      "平行调度多款主流大模型孵化 9 套不同交互风格的原型版本，优中选优收敛出最终生产版。针对大模型直接推算极易胡编干支历法的痛点，设计“前置确定性天文历法排盘计算 + 对话中按需唤起六爻/八字/紫微/塔罗等 6 类交互卡片 + 静默沉淀用户画像”机制，从根源消除排盘幻觉。",
-      "Several mainstream LLMs were orchestrated in parallel to incubate 9 prototypes in different interaction styles, converged into the final production build. Because LLMs easily fabricate Chinese calendar charts, the design pairs a deterministic astronomical-calendar chart engine up front, 6 kinds of on-demand interactive cards (hexagram / Bazi / Zi Wei / Tarot …) and silent user-profile accumulation — removing charting hallucination at the root.",
+      "并行调度多款主流大模型构建 9 套不同交互风格的原型版本，比选定版生产环境。针对大模型直接推算干支历法易出错的问题，采用前置确定性天文历法排盘计算，结合对话内按需唤起的六爻、八字、紫微、塔罗等 6 类交互卡片与结构化画像记录，消除排盘幻觉。",
+      "Built 9 prototypes across different interaction styles using multiple mainstream LLMs in parallel before selecting the production build. Because LLMs frequently miscalculate traditional Chinese calendars, a deterministic astronomical-calendar engine computes the chart up front, paired with 6 on-demand in-chat interactive cards (hexagram / Bazi / Zi Wei / Tarot …) and structured profile logging.",
     ),
   },
   {
     n: "03",
-    title: l("单人全链路交付、看台与商业闭环", "Solo delivery, ops cockpit and a commercial loop"),
+    title: l("独立全栈开发、实时看台与线上收款", "Solo full-stack build, live cockpit and online payment"),
     body: l(
-      "一人独立包揽需求定义、水墨宣纸视觉生图、换机同步码设计、主理人实时运营看台（/curator）、云端部署上线、两支 1080p60 宣传片制作与线上打赏支付闭环。",
-      "One person covers requirements, ink-wash visual generation, the device-sync code design, the live curator cockpit (/curator), cloud deployment, two 1080p60 promo films and an online tipping payment loop.",
+      "独立完成需求定义、水墨宣纸视觉设计、换机同步码机制、主理人实时运营看台（/curator）、云端部署、两支 1080p60 宣传片制作及线上打赏支付。",
+      "Independently delivered product definition, ink-wash visual design, cross-device sync codes, the live curator cockpit (/curator), cloud deployment, two 1080p60 brand films and online tipping payment.",
     ),
   },
 ];

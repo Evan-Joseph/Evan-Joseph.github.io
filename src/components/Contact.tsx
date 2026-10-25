@@ -47,8 +47,8 @@ export function Contact({ no }: { no: number }) {
       kicker="RÉSUMÉ & CONTACT"
       title={
         <>
-          {t("如果你正在找", "If you’re looking for ")}
-          <span className="ink-mark">{t("能把 AI 产品落地的人", "someone who lands AI products")}</span>
+          {t("求职简历与", "Résumé & ")}
+          <span className="ink-mark">{t("直接联系通道", "direct contact")}</span>
         </>
       }
       intro={t(

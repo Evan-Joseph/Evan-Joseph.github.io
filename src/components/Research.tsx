@@ -34,10 +34,10 @@ const PUBS: Pub[] = [
       </>
     ),
     body: l(
-      "主导构建面向复杂动态场景的多模态大模型时空推理诊断基准，引入前/反向双任务时序范式与多粒度滑窗评测；系统测评 GPT-4o、Gemini、Qwen-VL 等 20+ 款主流开源与闭源大模型，定位多步空间方位转换与因果推断的“幻觉盲区”；独立搭建高并发自动化评测流水线，主导完成 Rebuttal 与全套科研信息架构图设计。",
-      "Led the construction of a diagnostic benchmark for multimodal LLMs’ spatiotemporal reasoning in complex dynamic scenes, with forward/backward dual-task temporal paradigms and multi-granularity sliding-window evaluation. Systematically evaluated 20+ open and closed models including GPT-4o, Gemini and Qwen-VL, locating “hallucination blind spots” in multi-step spatial-orientation changes and causal inference. Built the high-concurrency automated evaluation pipeline solo, led the rebuttal and designed the full set of research architecture figures.",
+      "主导构建面向复杂动态场景的多模态大模型时空推理诊断基准，引入前/反向双任务时序范式与多粒度滑窗评测；系统测评 GPT-4o、Gemini、Qwen-VL 等 20+ 款主流开源与闭源大模型，定位多步空间方位转换与因果推断的失真盲区；独立搭建高并发自动化评测流水线，主导完成 Rebuttal 与全套科研信息架构图设计。",
+      "Led the construction of a diagnostic benchmark for multimodal LLMs’ spatiotemporal reasoning in complex dynamic scenes, featuring forward/backward dual-task temporal paradigms and multi-granularity sliding-window evaluation. Systematically evaluated 20+ open and closed models including GPT-4o, Gemini and Qwen-VL to locate failure modes in multi-step spatial-orientation changes and causal inference. Independently built the high-concurrency automated evaluation pipeline, led the rebuttal and designed the full set of research architecture figures.",
     ),
-    take: l("一手建立对“大模型能力上限与幻觉盲区”的实证直觉。", "First-hand empirical sense of model capability ceilings and hallucination blind spots."),
+    take: l("定位多模态大模型在多步空间方位转换与因果推断上的能力边界与失真模式。", "Pinpoints capability boundaries and failure modes in multi-step spatial transformation and causal inference."),
     links: [
       { href: "https://doi.org/10.1609/aaai.v40i23.39022", label: "DOI" },
       { href: "https://ojs.aaai.org/index.php/AAAI/article/view/39022", label: "AAAI Proceedings" },
@@ -56,8 +56,8 @@ const PUBS: Pub[] = [
       </>
     ),
     body: l(
-      "参与研发三阶段渐进式课程学习框架，验证将长链路任务拆解为“基础感知 → 局部关联 → 全局规划”对提升 AI 规划可靠性的显著增益。",
-      "Contributed to a three-stage progressive curriculum-learning framework, validating that decomposing long-horizon tasks into “basic perception → local association → global planning” markedly improves planning reliability.",
+      "构建三阶段渐进式课程学习框架，验证将长链路任务拆解为“基础感知 → 局部关联 → 全局规划”对提升多模态模型规划可靠性的显著增益。",
+      "Built a three-stage progressive curriculum-learning framework, validating that decomposing long-horizon tasks into “basic perception → local association → global planning” markedly improves planning reliability.",
     ),
     take: l("直接指导复杂 Agent 工作流的分阶段状态拆解设计。", "Directly informs staged state decomposition in complex agent workflows."),
     links: [{ href: "https://arxiv.org/abs/2604.10517", label: "arXiv" }],
@@ -69,8 +69,8 @@ const PUBS: Pub[] = [
     role: l("第六作者", "Sixth author"),
     title: "Diagnosing Order Dependence in Vision-Language Task-Progress Judgment with Equal-State Supervision",
     body: l(
-      "参与诊断并缓解多模态大模型在评估任务进度时“盲目相信输入顺序而忽略真实画面状态”的顺序偏置（Order Dependence）问题。",
-      "Contributed to diagnosing and mitigating order dependence — multimodal LLMs that “blindly trust input order and ignore the real visual state” when judging task progress.",
+      "诊断并缓解多模态大模型在评估任务进度时依赖输入帧顺序、忽略真实视觉状态的顺序偏置（Order Dependence）问题。",
+      "Diagnosed and mitigated order dependence in vision-language task-progress judgment, where models rely on input frame order rather than actual visual state.",
     ),
     take: l("为多模态 Agent 状态校验门禁提供实证依据。", "Empirical grounding for state-verification gates in multimodal agents."),
     links: [{ href: "https://openreview.net/forum?id=7iS3Cxm7af", label: "OpenReview" }],
@@ -88,9 +88,8 @@ export function Research({ no }: { no: number }) {
       kicker="RESEARCH & MODEL EVALUATION"
       title={
         <>
-          {t("先把模型", "Understand the model first, ")}
-          <span className="ink-mark-dark">{t("测明白", "then decide")}</span>
-          {t("，再决定产品怎么\u2060“\u2060放\u2060权\u2060”", " how the product delegates")}
+          {t("系统评测模型边界，", "Benchmarking model limits, ")}
+          <span className="ink-mark-dark">{t("以实证指导架构设计", "guiding architecture with empirical data")}</span>
         </>
       }
       intro={t(
@@ -173,8 +172,8 @@ export function Research({ no }: { no: number }) {
               </p>
               <p className="mt-4 text-[14.5px] leading-[1.85] text-paper/80">
                 {t(
-                  "针对小尺寸模型执行复杂指令时“格式崩溃、思维链废话冗长、响应延迟高”的痛点，独立设计严格匹配对照实验（Matched-Control Study），证明“剥离冗余思维链、引入解析器规则门控（Parser-Gated Control）”更优。",
-                  "Compact models often suffer broken formats, rambling chains of thought and high latency on complex instructions. A solo-designed Matched-Control Study shows that stripping redundant chain-of-thought and adding Parser-Gated Control works better.",
+                  "针对小尺寸视觉语言模型执行复杂规划指令时结构化格式易失效、长思维链推理延迟高的问题，独立设计严格匹配对照实验（Matched-Control Study），验证剥离冗余思维链并引入解析器规则门控（Parser-Gated Control）能够同时提升规划质量与响应速度。",
+                  "Addressing broken structured formats and high long-CoT latency in compact vision-language models on complex planning instructions, I designed a strict Matched-Control Study demonstrating that stripping redundant chain-of-thought and introducing Parser-Gated Control simultaneously improves planning quality and response speed.",
                 )}
               </p>
               <div className="mt-6 grid gap-3 sm:grid-cols-3">
@@ -219,8 +218,8 @@ export function Research({ no }: { no: number }) {
             </h3>
             <p className="mt-4 text-[14.5px] leading-[1.85] text-paper/80">
               {t(
-                "围绕生成式音视频大模型的高算力瓶颈，参与研发高效缓存与稀疏推理加速框架，实现单卡最高 54.67× 推理加速。",
-                "Targeting the compute bottleneck of generative audio-video models, contributed to an efficient caching and sparse-inference acceleration framework achieving up to 54.67× single-GPU speedup.",
+                "针对生成式音视频大模型的高算力开销瓶颈，联合研发高效特征缓存与稀疏推理加速框架，实现单卡最高 54.67× 推理加速。",
+                "Addressing the compute bottleneck of generative audio-video models, co-developed an efficient feature-caching and sparse-inference acceleration framework achieving up to 54.67× single-GPU speedup.",
               )}
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-4">

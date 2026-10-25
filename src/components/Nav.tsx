@@ -14,7 +14,7 @@ export const LENS_ICON: Record<LensId, typeof Briefcase> = {
 const LENS_SHORT: Record<LensId, ReturnType<typeof l>> = {
   recruiter: l("招聘", "Hiring"),
   academic: l("学术", "Academic"),
-  explorer: l("随逛", "Explore"),
+  explorer: l("作品", "Works"),
 };
 
 export function useActiveSection(ids: string[]) {

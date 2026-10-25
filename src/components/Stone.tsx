@@ -27,7 +27,7 @@ const VERS: Record<
     host: "stone.4c666.top",
     shots: [A.stone_hall, A.stone_3d_view, A.stone_vision, A.stone_ai_guide],
     feats: [
-      { icon: Pickaxe, title: l("虚拟考古发掘引导", "Virtual archaeological dig"), body: l("从“挖出来”开始的沉浸式入口", "An immersive entry that begins with “digging it up”") },
+      { icon: Pickaxe, title: l("虚拟考古发掘引导", "Virtual archaeological dig"), body: l("模拟田野考古清理与出土过程的交互式导览入口", "Interactive entry modeling the field archaeological clearing process") },
       { icon: ScanSearch, title: l("拓片无级放大对比探照镜", "Rubbing comparison lens"), body: l("拓片与石刻无级放大，对照细节", "Continuous zoom to compare rubbing and relief details") },
       { icon: Landmark, title: l("武梁祠石刻三维立体检视台", "3D inspection table"), body: l("武梁祠汉画像石三维立体检视", "3D inspection of Wu Liang Shrine reliefs") },
       { icon: Camera, title: l("现场拍照识图台", "On-site photo recognition"), body: l("移动端拍照，秒级匹配 76 件馆藏数字档案", "Snap on mobile; match 76 digital records in seconds") },
@@ -85,8 +85,8 @@ export function Stone({ no }: { no: number }) {
         </>
       }
       intro={t(
-        "《石室史诗——武氏墓群石刻数字展陈与多模态 AI 平台》（亦称《石刻文化发现》）。针对东汉画像石纹理剥落、典故晦涩导致游客“看得见却看不懂”的痛点，做了两个风格迥异、同步在线的数字展厅。第一作者 / 队长 · 2026.01 – 2026.06。",
-        "“Stone Chamber Epic — Digital Exhibition & Multimodal AI Platform for the Wu Family Tombs Reliefs” (also “Stone Carving Culture Discovery”). Eastern Han reliefs are eroded and their allusions obscure, so visitors see but don’t understand — hence two contrasting digital halls, both live online. First author / team lead · Jan – Jun 2026.",
+        "《石室史诗——武氏墓群石刻数字展陈与多模态 AI 平台》（亦称《石刻文化发现》）。针对东汉画像石浅浮雕纹理漫漶、汉代经史典故晦涩导致观众难以识读的问题，构建两套在线数字展厅。第一作者 / 队长 · 2026.01 – 2026.06。",
+        "“Stone Chamber Epic — Digital Exhibition & Multimodal AI Platform for the Wu Family Tombs Reliefs” (also “Stone Carving Culture Discovery”). Built two online digital exhibition halls to address weathered low-relief textures and obscure Eastern Han historical allusions. First author / team lead · Jan – Jun 2026.",
       )}
     >
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">

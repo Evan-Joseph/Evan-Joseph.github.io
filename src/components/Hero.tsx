@@ -61,8 +61,8 @@ export function Hero() {
             </p>
             <p className="max-w-2xl text-base leading-relaxed text-ink-2 sm:text-lg">
               {t(
-                "0→1 创意到上线全链路交付 ｜ 大模型评测与工业落地。一个人完成需求调研、原型竞技、确定性规则兜底、全栈上线，到宣传片与运营看台。",
-                "0→1 end-to-end product delivery | multimodal LLM evaluation & enterprise industrial AI. One person from research and prototype contests to rule-guarded full-stack launch, brand film and ops cockpit.",
+                "0→1 独立产品交付 ｜ 多模态大模型评测与工业智能体。从需求定义、多模型原型比选、确定性规则设计、全栈开发部署，到 1080p60 宣传片与实时运营看台。",
+                "0→1 independent product delivery | multimodal LLM evaluation & industrial AI systems. From problem definition, multi-model prototyping and deterministic rule design to full-stack deployment, 1080p60 brand films and live ops cockpits.",
               )}
             </p>
           </div>
@@ -187,10 +187,10 @@ export function LensGuide() {
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <p className="mb-3 font-mono text-xs uppercase tracking-[0.22em] text-seal">{t("导览 · GUIDED VISIT", "GUIDED VISIT")}</p>
-            <h2 className="font-serif-cn text-3xl font-black leading-tight sm:text-4xl">{t("你是哪位访客？", "Who’s visiting?")}</h2>
+            <h2 className="font-serif-cn text-3xl font-black leading-tight sm:text-4xl">{t("按访问目的切换视图", "Choose a viewing lens")}</h2>
           </div>
           <p className="max-w-md text-sm text-ink-2">
-            {t("选一个视角，页面会按你最关心的内容重排章节与重点数字。", "Pick a lens — the page reorders its chapters and headline numbers around what you care about.")}
+            {t("切换视角后，页面将按对应关切重排 11 个章节的阅读顺序与核心指标。", "Switching lenses reorders all 11 chapters and headline metrics around your focus.")}
           </p>
         </div>
 
@@ -280,7 +280,7 @@ export function MetricsBand() {
       />
       <div className="relative mx-auto max-w-[1240px] px-5 sm:px-8">
         <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.22em] text-bronze-2">
-          {t(`数字说话 · ${t(cfg.name)}视角`, `BY THE NUMBERS · ${cfg.name.en.toUpperCase()}`)}
+          {t(`核心指标 · ${t(cfg.name)}视角`, `KEY METRICS · ${cfg.name.en.toUpperCase()}`)}
         </p>
         <dl className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-5">
           {cfg.metrics.map((m) => (

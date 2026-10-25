@@ -75,8 +75,8 @@ const PRODUCTS: Prod[] = [
     name: l("泓园 7 号楼洗衣房 · 海乐生活抢占助手 v3", "Hongyuan Bldg 7 Laundry · Haile Life Grabber v3"),
     alias: l("控制台原名：泓园7号楼 · 海乐生活洗衣机抢占控制台", "Console name: “Hongyuan Bldg 7 · Haile Life Washer-Grabbing Console”"),
     desc: l(
-      "源于青大浮山校区泓园 7 号楼千名同学高峰期抢用 5 台洗衣机 + 1 台烘干机的痛点：逆向梳理设备状态流转，实现短信验证码登录、三档自适应脉冲轮询（>60s 巡航、10–60s 临近、≤10s 高频脉冲 0.2–0.3s 极速锁单）、防重复下单守卫、SSE 实时推送与一键拉起海乐 App 支付，稳定服务宿舍楼同学超半年。",
-      "Born from a thousand students at Qingdao University’s Fushan campus fighting over 5 washers and 1 dryer at peak hours. It reverse-engineers the device state flow and delivers SMS-code login, three-tier adaptive pulse polling (>60s cruise, 10–60s approach, ≤10s high-frequency 0.2–0.3s lock-in), duplicate-order guards, SSE live push and one-tap launch of the Haile app for payment — serving the dorm stably for over half a year.",
+      "面向青岛大学浮山校区泓园 7 号楼千名学生高峰期共用 5 台洗衣机与 1 台烘干机的排队场景，梳理设备状态流转并实现短信验证码登录、三档自适应脉冲轮询（>60s 巡航、10–60s 临近、≤10s 高频脉冲 0.2–0.3s 锁单）、防重复下单守卫、SSE 实时推送与一键拉起海乐 App 支付，已在宿舍楼稳定运行超半年。",
+      "Built for a 1,000-student dormitory at Qingdao University’s Fushan campus sharing 5 washers and 1 dryer during peak hours. Models device state transitions and implements SMS-code login, three-tier adaptive pulse polling (>60s cruise, 10–60s approach, ≤10s high-frequency 0.2–0.3s lock-in), duplicate-order guards, SSE live push and one-tap Haile app payment launch — running stably in the dorm for over six months.",
     ),
     stats: [
       { v: "5 + 1", k: l("洗衣机 + 烘干机", "washers + dryer") },
@@ -112,8 +112,8 @@ const PRODUCTS: Prod[] = [
     big: "26",
     name: l("跨端 Agent 技能库 · agent-workflow-skills", "Cross-platform Agent Skill Library · agent-workflow-skills"),
     desc: l(
-      "将 PRD 与公文排版、高保真 UI 构建、学术文献核验、音视频剪辑与浏览器自动化沉淀为 26 个跨平台（Claude Code / Codex / Antigravity）标准化技能包。",
-      "Distills PRD and official-document typesetting, hi-fi UI building, academic-reference verification, audio/video editing and browser automation into 26 standardized skill packs that run across Claude Code, Codex and Antigravity.",
+      "将 PRD 与公文排版、高保真 UI 构建、学术文献核验、音视频剪辑与浏览器自动化封装为 26 个跨平台（Claude Code / Codex / Antigravity）标准化技能包。",
+      "Packages PRD and official-document typesetting, hi-fi UI building, academic-reference verification, audio/video editing and browser automation into 26 standardized skill packs across Claude Code, Codex and Antigravity.",
     ),
     stats: [{ v: "26", k: l("标准化技能包", "skill packs") }],
     tags: ["Claude Code", "Codex", "Antigravity"],
@@ -256,16 +256,16 @@ export function Matrix({ no }: { no: number }) {
       id="matrix"
       no={no}
       className="bg-paper-2/60"
-      kicker="BUILD-IT-NOW PRODUCT MATRIX"
+      kicker="INDEPENDENT PRODUCT MATRIX"
       title={
         <>
-          {t("看见痛点，", "See a pain point, ")}
-          <span className="ink-mark">{t("就动手做出来", "then build the fix")}</span>
+          {t("面向高频场景，", "Built for daily friction, ")}
+          <span className="ink-mark">{t("独立开发并上线运行的 8 款产品与工具", "8 live products and developer tools")}</span>
         </>
       }
       intro={t(
-        "校园与高频备考、研发效能场景里的“即想即做”产品：每一个都已上线、能打开、有仓库。",
-        "“Build-it-now” products from campus life, exam prep and developer efficiency — each one is live, clickable and has a repo.",
+        "覆盖备考效率、校园高频刚需、Agent 工程工具链与垂直 AI 应用，全部已上线部署并附开源仓库。",
+        "Spanning exam preparation, campus utility, agent engineering toolchains and vertical AI apps — all deployed live with open-source repositories.",
       )}
     >
       <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
