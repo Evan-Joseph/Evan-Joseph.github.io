@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Award, Camera, Landmark, MessageSquareText, Pickaxe, QrCode, ScanSearch, Users } from "lucide-react";
+import { Award, Camera, Landmark, MessageSquareText, Pickaxe, ScanSearch, Users } from "lucide-react";
 import { l, useI18n, type L } from "../i18n";
 import { A, asset, type Img } from "../data/assets";
 import { BrowserFrame, Bullet, Chip, ExtLink, GithubIcon, Pic, SectionShell, Tabs } from "./ui";
@@ -7,13 +7,14 @@ import { cn } from "../utils/cn";
 
 type Ver = "a" | "b";
 
+const REPO_URL = "https://github.com/Evan-Joseph/stone-carving-discovery-app";
+
 const VERS: Record<
   Ver,
   {
     tab: L;
     name: L;
     style: L;
-    url: string;
     host: string;
     shots: Img[];
     feats: { icon: typeof Pickaxe; title: L; body: L }[];
@@ -23,8 +24,7 @@ const VERS: Record<
     tab: l("版本 A · 暗黑青铜 3D 考古", "Version A · Dark-bronze 3D archaeology"),
     name: l("暗黑青铜 · 3D 沉浸考古与拍照识图展厅", "Dark bronze · 3D immersive dig & photo-recognition exhibition"),
     style: l("《石室史诗》", "Stone Chamber Epic"),
-    url: "https://stone.4c666.top",
-    host: "stone.4c666.top",
+    host: "stone-carving-discovery-app / dark-bronze-3d",
     shots: [A.stone_hall, A.stone_3d_view, A.stone_vision, A.stone_ai_guide],
     feats: [
       { icon: Pickaxe, title: l("虚拟考古发掘引导", "Virtual archaeological dig"), body: l("模拟田野考古清理与出土过程的交互式导览入口", "Interactive entry modeling the field archaeological clearing process") },
@@ -42,8 +42,7 @@ const VERS: Record<
     tab: l("版本 B · 宣纸雅韵三馆展厅", "Version B · Rice-paper three-museum hall"),
     name: l("宣纸雅韵 · 76 件馆藏全量三馆数字展厅版", "Rice-paper elegance · full 76-piece, three-museum digital hall"),
     style: l("《石刻文化发现》", "Stone Carving Culture Discovery"),
-    url: "https://qdu-stone.pages.dev",
-    host: "qdu-stone.pages.dev",
+    host: "stone-carving-discovery-app / three-museum-hall",
     shots: [A.stone_exhibit_home, A.stone_exhibit_hall, A.stone_exhibit_detail],
     feats: [
       {
@@ -99,8 +98,9 @@ export function Stone({ no }: { no: number }) {
           }}
           items={(Object.keys(VERS) as Ver[]).map((k) => ({ id: k, label: t(VERS[k].tab) }))}
         />
-        <ExtLink dark={dark} variant="solid" href={v.url}>
-          {t("进入线上展厅", "Enter live hall")} · {v.host}
+        <ExtLink dark={dark} variant="solid" href={REPO_URL}>
+          <GithubIcon size={14} />
+          {t("开源仓库 · stone-carving-discovery-app", "Repo · stone-carving-discovery-app")}
         </ExtLink>
       </div>
 
@@ -164,16 +164,6 @@ export function Stone({ no }: { no: number }) {
                   </li>
                 ))}
               </ul>
-              <div className="mt-5 flex items-center gap-4 rounded-xl bg-paper p-3">
-                <img src={asset(A.stone_qrcode.file)} alt={t(A.stone_qrcode.cap)} className="h-20 w-20 rounded" loading="lazy" />
-                <div>
-                  <p className="flex items-center gap-1.5 text-sm font-bold">
-                    <QrCode size={14} className="text-seal" />
-                    {t("扫码逛展厅", "Scan to visit")}
-                  </p>
-                  <p className="mt-0.5 font-mono text-[11px] text-mute">qdu-stone.pages.dev</p>
-                </div>
-              </div>
             </div>
           )}
         </aside>

@@ -1,14 +1,15 @@
 import { useState } from "react";
-import { Award, ArrowRight, Anchor, Ship, Stethoscope, Bot, ScrollText, Waypoints } from "lucide-react";
+import { Award, ArrowRight, Anchor, Ship, Stethoscope, Bot, ScrollText, Waypoints, ZoomIn } from "lucide-react";
 import { l, useI18n, type L } from "../i18n";
 import { A, type Img } from "../data/assets";
-import { BrowserFrame, Bullet, Chip, ExtLink, Metric, Pic, SectionShell, Tabs } from "./ui";
+import { useOverlay } from "./Overlay";
+import { BrowserFrame, Bullet, Chip, Metric, Pic, SectionShell, Tabs } from "./ui";
 
 type HzTab = "overview" | "map" | "xdt";
 const HZ: Record<HzTab, { tab: L; img: Img; url: string }> = {
   overview: { tab: l("运行总览", "Overview"), img: A.hazmat_yard_overview, url: "debug-console / overview" },
   map: { tab: l("堆场俯视贝位图", "Bay map"), img: A.hazmat_yard_map, url: "debug-console / yard-map" },
-  xdt: { tab: l("XDT 差异诊断台", "XDT diff console"), img: A.hazmat_xdt_diff, url: "hazmat-xdt.4c666.top" },
+  xdt: { tab: l("XDT 差异诊断台", "XDT diff console"), img: A.hazmat_xdt_diff, url: "debug-console / xdt-scope-diff" },
 };
 const HZ_ALL = [A.hazmat_yard_overview, A.hazmat_yard_map, A.hazmat_xdt_diff];
 
@@ -37,7 +38,6 @@ const SOLUTIONS: {
   body: L;
   chips: L[];
   awards: L[];
-  link?: { href: string; label: L };
 }[] = [
   {
     key: "yixianqian",
@@ -57,7 +57,6 @@ const SOLUTIONS: {
     ),
     chips: [l("多方会诊看板", "Consultation board"), l("加密病历共享", "Encrypted records"), l("四套临床主题", "4 clinical themes")],
     awards: [],
-    link: { href: "https://care.4c666.top", label: l("在线体验 care.4c666.top", "Live: care.4c666.top") },
   },
   {
     key: "lumbar",
@@ -80,7 +79,6 @@ const SOLUTIONS: {
       l("2026 中国国际大学生创新大赛（国创赛）青岛大学校赛金奖（《SurgiMind3D》核心成员）", "2026 China International College Students’ Innovation Competition · QDU campus Gold Prize (SurgiMind3D core member)"),
       l("国家软著《腰椎 MRI 影像分析系统 V1.0》· 登记号 2026R11L3615529", "Software copyright “Lumbar MRI Image Analysis System V1.0” · reg. no. 2026R11L3615529"),
     ],
-    link: { href: "https://lumbar.4c666.top", label: l("在线展示 lumbar.4c666.top", "Live: lumbar.4c666.top") },
   },
   {
     key: "koupilot",
@@ -117,6 +115,7 @@ const SOLUTIONS: {
 
 export function Industrial({ no }: { no: number }) {
   const { t } = useI18n();
+  const { openImages } = useOverlay();
   const [hz, setHz] = useState<HzTab>("overview");
   const [tug, setTug] = useState<TugTab>("dark");
   const tugImg = tug === "dark" ? A.tug_dispatch_dark : A.tug_dispatch_light;
@@ -203,9 +202,7 @@ export function Industrial({ no }: { no: number }) {
         <div className="mt-8">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
             <Tabs dark value={hz} onChange={setHz} items={(Object.keys(HZ) as HzTab[]).map((k) => ({ id: k, label: t(HZ[k].tab) }))} />
-            <ExtLink dark href="https://hazmat-xdt.4c666.top">
-              {t("线上诊断台 hazmat-xdt.4c666.top", "Live console hazmat-xdt.4c666.top")}
-            </ExtLink>
+            <span className="font-mono text-xs text-paper/50">{t("点击画面可放大检视 2x Retina 实机视图", "Click image to inspect 2x Retina console view")}</span>
           </div>
           <BrowserFrame dark url={HZ[hz].url}>
             <Pic key={hz} img={HZ[hz].img} group={HZ_ALL} dark rounded="rounded-none" lazy={false} />
@@ -309,11 +306,16 @@ export function Industrial({ no }: { no: number }) {
                     ))}
                   </ul>
                 )}
-                {s.link && (
+                {s.img && (
                   <div className="mt-5">
-                    <ExtLink dark href={s.link.href}>
-                      {t(s.link.label)}
-                    </ExtLink>
+                    <button
+                      type="button"
+                      onClick={() => openImages([s.img!], 0)}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-paper/25 px-4 py-2 text-sm font-medium text-paper transition hover:border-bronze-2 hover:text-bronze-2 active:scale-[0.97]"
+                    >
+                      <ZoomIn size={14} />
+                      {t("查看 2x Retina 实机视图", "Inspect 2x Retina UI")}
+                    </button>
                   </div>
                 )}
               </div>

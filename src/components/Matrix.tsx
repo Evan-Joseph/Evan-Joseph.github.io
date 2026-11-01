@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Boxes } from "lucide-react";
+import { Boxes, ZoomIn } from "lucide-react";
 import { l, useI18n, type L } from "../i18n";
 import { A, type Img } from "../data/assets";
+import { useOverlay } from "./Overlay";
 import { Chip, ExtLink, GithubIcon, Pic, SectionShell, Tabs } from "./ui";
 import { cn } from "../utils/cn";
 
@@ -58,13 +59,11 @@ const PRODUCTS: Prod[] = [
     tags: ["FSRS-6", "v8 cooldown", "408 sandboxes"],
     shots: [
       { img: A.kaoyan_22408, label: l("全科主站", "Main site") },
-      { img: A.kaoyan_politics, label: l("政治识记", "Politics recall"), href: "https://kaoyan-politics.pages.dev" },
-      { img: A.math2_flashcards, label: l("考研数学识记", "Math recall"), href: "https://math2-flashcards.pages.dev" },
+      { img: A.kaoyan_politics, label: l("政治识记", "Politics recall") },
+      { img: A.math2_flashcards, label: l("考研数学识记", "Math recall") },
     ],
     links: [
       { href: "https://kaoyan-22408-flashcards.pages.dev", label: l("全科主站", "Main site") },
-      { href: "https://kaoyan-politics.pages.dev", label: l("政治识记", "Politics") },
-      { href: "https://math2-flashcards.pages.dev", label: l("数学识记", "Math") },
       { href: "https://github.com/Evan-Joseph/kaoyan-22408-flashcards", label: l("主站仓库", "Main repo"), repo: true },
       { href: "https://github.com/Evan-Joseph/math2-flashcards", label: l("数学仓库", "Math repo"), repo: true },
     ],
@@ -73,23 +72,22 @@ const PRODUCTS: Prod[] = [
     id: "haile",
     cat: "campus",
     name: l("泓园 7 号楼洗衣房 · 海乐生活抢占助手 v3", "Hongyuan Bldg 7 Laundry · Haile Life Grabber v3"),
-    alias: l("控制台原名：泓园7号楼 · 海乐生活洗衣机抢占控制台", "Console name: “Hongyuan Bldg 7 · Haile Life Washer-Grabbing Console”"),
+    alias: l("Android 原生独立 APK + 本地 Web 控制台双端架构", "Android native standalone APK + local Web console dual-client architecture"),
     desc: l(
-      "面向青岛大学浮山校区泓园 7 号楼千名学生高峰期共用 5 台洗衣机与 1 台烘干机的排队场景，梳理设备状态流转并实现短信验证码登录、三档自适应脉冲轮询（>60s 巡航、10–60s 临近、≤10s 高频脉冲 0.2–0.3s 锁单）、防重复下单守卫、SSE 实时推送与一键拉起海乐 App 支付，已在宿舍楼稳定运行超半年。",
-      "Built for a 1,000-student dormitory at Qingdao University’s Fushan campus sharing 5 washers and 1 dryer during peak hours. Models device state transitions and implements SMS-code login, three-tier adaptive pulse polling (>60s cruise, 10–60s approach, ≤10s high-frequency 0.2–0.3s lock-in), duplicate-order guards, SSE live push and one-tap Haile app payment launch — running stably in the dorm for over six months.",
+      "面向青岛大学浮山校区泓园 7 号楼千名学生高峰期共用 5 台洗衣机与 1 台烘干机的排队场景，梳理设备状态流转并实现 Android 原生独立引擎 APK 与本地 Web 控制台双端协同：支持短信验证码登录、三档自适应脉冲轮询（>60s 巡航、10–60s 临近、≤10s 高频脉冲 0.2–0.3s 锁单）、防重复下单守卫、SSE 实时推送与一键拉起海乐 App 支付，已在宿舍楼稳定运行超半年。",
+      "Built for a 1,000-student dormitory at Qingdao University’s Fushan campus sharing 5 washers and 1 dryer during peak hours. Models device state transitions across a standalone Android native engine APK and local Web console: SMS-code login, three-tier adaptive pulse polling (>60s cruise, 10–60s approach, ≤10s high-frequency 0.2–0.3s lock-in), duplicate-order guards, SSE live push and one-tap Haile app payment launch — running stably in the dorm for over six months.",
     ),
     stats: [
       { v: "5 + 1", k: l("洗衣机 + 烘干机", "washers + dryer") },
       { v: "0.2–0.3s", k: l("高频脉冲锁单", "pulse lock-in") },
       { v: "6+", k: l("月稳定服务", "months in service") },
     ],
-    tags: ["SSE", "Adaptive polling"],
+    tags: ["Android APK", "SSE", "Adaptive polling"],
     shots: [
       { img: A.haile_bot_matrix, label: l("桌面宽屏", "Desktop") },
       { img: A.haile_bot_mobile, label: l("移动端", "Mobile") },
     ],
     links: [
-      { href: "https://haile-bot.4c666.top", label: l("在线体验", "Live") },
       { href: "https://github.com/Evan-Joseph/haile-bot", label: l("开源仓库", "Repo"), repo: true },
     ],
   },
@@ -131,7 +129,6 @@ const PRODUCTS: Prod[] = [
     tags: ["GPU queue", "Cloudflare KV"],
     shots: [{ img: A.gpvton_review, label: l("双视口评审", "Dual-viewport review") }],
     links: [
-      { href: "https://gpvton-review.pages.dev", label: l("在线体验", "Live") },
       { href: "https://github.com/Evan-Joseph/gp-vton-virtual-try-on", label: l("开源仓库", "Repo"), repo: true },
     ],
   },
@@ -145,7 +142,7 @@ const PRODUCTS: Prod[] = [
     ),
     tags: ["Prompt engineering", "Multi-model"],
     shots: [{ img: A.ppt_enhancer, label: l("三模式", "Three modes") }],
-    links: [{ href: "https://ppt-prompt-enhancer.pages.dev", label: l("在线体验", "Live") }],
+    links: [],
   },
   {
     id: "junzi",
@@ -157,12 +154,13 @@ const PRODUCTS: Prod[] = [
     ),
     tags: ["React 19", "Spring Boot 3.5"],
     shots: [{ img: A.junzi_deck, label: l("教师端", "Teacher desk") }],
-    links: [{ href: "https://junzi.4c666.top", label: l("在线体验", "Live") }],
+    links: [],
   },
 ];
 
 function Card({ p }: { p: Prod }) {
   const { t } = useI18n();
+  const { openImages } = useOverlay();
   const [i, setI] = useState(0);
   const shot = p.shots[i];
   const group = p.shots.map((s) => s.img);
@@ -240,6 +238,16 @@ function Card({ p }: { p: Prod }) {
               {t(k.label)}
             </ExtLink>
           ))}
+          {shot && (
+            <button
+              type="button"
+              onClick={() => openImages(group, i)}
+              className="inline-flex items-center gap-1.5 rounded-full border border-ink/20 px-3.5 py-1.5 text-[13px] font-medium text-ink transition hover:border-seal hover:text-seal active:scale-[0.97]"
+            >
+              <ZoomIn size={13} />
+              {t(p.shots.length > 1 ? "高清实机画廊" : "查看实机大图", p.shots.length > 1 ? "HD UI gallery" : "Inspect HD UI")}
+            </button>
+          )}
         </div>
       </div>
     </article>
