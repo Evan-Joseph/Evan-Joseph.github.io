@@ -93,8 +93,7 @@ const SOLUTIONS: {
     ),
     chips: [l("赛事智能检索", "Contest search"), l("简历诊断", "Résumé diagnosis"), l("互补组队撮合", "Complementary team matching"), l("备赛计划生成", "Prep-plan generation")],
     awards: [
-      l("青岛银行·高校“扣子（Coze）”智能体创新大赛企业赛道二等奖（卓越典范奖）", "Qingdao Bank × universities “Coze” Agent Innovation Contest — Corporate Track 2nd Prize (Excellence Model Award)"),
-      l("国家软件著作权《智能成长规划助手》（独立著作权人）", "National software copyright “Intelligent Growth Planning Assistant” (sole holder)"),
+      l("青岛银行·高校“扣子（Coze）”智能体创新大赛二等奖（卓越典范奖）", "Qingdao Bank × universities “Coze” Agent Innovation Contest — 2nd Prize (Excellence Model Award)"),
     ],
   },
   {

@@ -80,7 +80,7 @@ export function Education({ no }: { no: number }) {
         <Metric value="86.19" label={t("全学程累计加权均分", "Cumulative weighted average")} sub={t("满分 100", "out of 100")} />
         <Metric value="3.46" label={t("累计 GPA", "Cumulative GPA")} sub={t("满分 4.00", "out of 4.00")} />
         <Metric value="6 / 20" label={t("累计学业排名", "Cumulative academic rank")} />
-        <Metric value="564" label={t("CET-6 成绩", "CET-6 score")} sub={t("CET-4：567", "CET-4: 567")} />
+        <Metric value="564" label={t("CET-6 成绩", "CET-6 score")} sub={t("CET-4：568", "CET-4: 568")} />
       </div>
 
       <div className="mt-14 grid gap-10 lg:grid-cols-12">
@@ -127,11 +127,11 @@ export function Education({ no }: { no: number }) {
             <div>
               <p className="font-serif-cn text-base font-black">{t("英文学术能力", "Academic English")}</p>
               <p className="mt-1 text-[13.5px] leading-relaxed text-ink-2">
-                {t("CET-6 564、CET-4 567；具备流利的英文顶会论文撰写与审稿答辩（Rebuttal）能力", "CET-6 564, CET-4 567; fluent in writing top-conference papers in English and handling reviewer rebuttals")}
+                {t("CET-6 564、CET-4 568；计算机专业英语满分（100 分），具备流利的英文顶会论文撰写与学术汇报能力", "CET-6 564, CET-4 568; full marks (100/100) in Computer Science English, fluent in writing top-conference papers and academic presentations")}
               </p>
               <div className="mt-3 flex gap-2">
                 <Chip tone="seal">CET-6 564</Chip>
-                <Chip tone="paper">CET-4 567</Chip>
+                <Chip tone="paper">CET-4 568</Chip>
               </div>
             </div>
           </div>

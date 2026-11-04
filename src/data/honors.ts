@@ -66,9 +66,9 @@ export const HONORS: Honor[] = [
   {
     date: "2026.03",
     cat: "competition",
-    level: l("企业赛道", "Corporate track"),
+    level: l("卓越典范奖", "Excellence Award"),
     star: true,
-    title: l("青岛银行·高校“扣子（Coze）”智能体创新大赛 · 企业赛道二等奖（卓越典范奖）", "Qingdao Bank × Universities “Coze” Agent Innovation Contest · Corporate Track 2nd Prize (Excellence Model Award)"),
+    title: l("青岛银行·高校“扣子（Coze）”智能体创新大赛 · 二等奖（卓越典范奖）", "Qingdao Bank × Universities “Coze” Agent Innovation Contest · 2nd Prize (Excellence Model Award)"),
     detail: l("《KouPilot》· 项目负责人 / 第一作者", "“KouPilot” · project lead / first author"),
   },
   {

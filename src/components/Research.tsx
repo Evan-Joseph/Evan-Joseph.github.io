@@ -34,8 +34,8 @@ const PUBS: Pub[] = [
       </>
     ),
     body: l(
-      "主导构建面向复杂动态场景的多模态大模型时空推理诊断基准，引入前/反向双任务时序范式与多粒度滑窗评测；系统测评 GPT-4o、Gemini、Qwen-VL 等 20+ 款主流开源与闭源大模型，定位多步空间方位转换与因果推断的失真盲区；独立搭建高并发自动化评测流水线，主导完成 Rebuttal 与全套科研信息架构图设计。",
-      "Led the construction of a diagnostic benchmark for multimodal LLMs’ spatiotemporal reasoning in complex dynamic scenes, featuring forward/backward dual-task temporal paradigms and multi-granularity sliding-window evaluation. Systematically evaluated 20+ open and closed models including GPT-4o, Gemini and Qwen-VL to locate failure modes in multi-step spatial-orientation changes and causal inference. Independently built the high-concurrency automated evaluation pipeline, led the rebuttal and designed the full set of research architecture figures.",
+      "主导构建面向复杂动态场景的多模态大模型时空推理诊断基准，引入前/反向双任务时序范式与多粒度滑窗评测；系统测评 GPT-4o、Gemini、Qwen-VL 等 20+ 款主流开源与闭源大模型，定位多步空间方位转换与因果推断的失真盲区；独立搭建高并发自动化评测流水线，独立完成全套科研信息架构图设计与 LaTeX 出版排版。",
+      "Led the construction of a diagnostic benchmark for multimodal LLMs’ spatiotemporal reasoning in complex dynamic scenes, featuring forward/backward dual-task temporal paradigms and multi-granularity sliding-window evaluation. Systematically evaluated 20+ open and closed models including GPT-4o, Gemini and Qwen-VL to locate failure modes in multi-step spatial-orientation changes and causal inference. Independently built the high-concurrency automated evaluation pipeline and designed the full set of research architecture figures and camera-ready LaTeX layout.",
     ),
     take: l("定位多模态大模型在多步空间方位转换与因果推断上的能力边界与失真模式。", "Pinpoints capability boundaries and failure modes in multi-step spatial transformation and causal inference."),
     links: [
