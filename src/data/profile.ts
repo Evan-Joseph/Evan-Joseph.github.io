@@ -126,7 +126,7 @@ export const LENSES: Record<LensId, LensCfg> = {
         to: "education",
         stat: "2 / 20",
         title: l("图灵拔尖创新班综测第 2 / 20", "Ranked 2nd of 20 in the Turing Honors Class"),
-        note: l("累计加权均分 86.19、GPA 3.46/4.00、CET-6 564", "Weighted avg 86.19, GPA 3.46/4.00, CET-6 564"),
+        note: l("学年智育 91.72（5/20）、累计均分 86.19（GPA 3.46）、CET-6 564 / CET-4 568", "Junior avg 91.72 (5/20), cumulative avg 86.19 (GPA 3.46), CET-6 564 / CET-4 568"),
       },
     ],
     metrics: [
@@ -154,7 +154,7 @@ export const LENSES: Record<LensId, LensCfg> = {
         to: "stone",
         stat: "76",
         title: l("《石室史诗》：双版本汉画像石数字展厅", "Stone Chamber Epic: dual-edition digital halls"),
-        note: l("暗黑青铜 3D 考古版与宣纸雅韵三馆展厅版，均支持在线访问", "Dark-bronze 3D archaeology hall & rice-paper three-museum edition — both live online"),
+        note: l("暗黑青铜 3D 考古版与宣纸雅韵三馆展厅版，代码已开源并收录 2x Retina 展板", "Dark-bronze 3D archaeology hall & rice-paper three-museum edition — open-source with 2x Retina boards"),
       },
       {
         to: "matrix",
