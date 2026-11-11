@@ -187,13 +187,13 @@ export const A = {
   ),
   leap_framework: i(
     "leap_framework.webp", 1600, 894,
-    "LEAP 论文图 1 · 动作蓝图生成与解析器规则门控（Parser-Gated Control）总架构",
-    "LEAP Fig. 1 · Action-blueprint generation and Parser-Gated Control — overall architecture",
+    "LEAP 论文图 1 · 紧凑型 VLM 过程接口（Procedural Interface）与全参微调总架构",
+    "LEAP Fig. 1 · Procedural Interface and full-parameter SFT architecture for compact VLMs",
   ),
   leap_execution: i(
     "leap_execution.webp", 1600, 894,
-    "LEAP 论文图 2 · 结构化规划控制与消融对比实证视图",
-    "LEAP Fig. 2 · structured plan control and ablation comparison",
+    "LEAP 论文图 2 · 有序动作步规划生成与长程操作执行序列视图",
+    "LEAP Fig. 2 · structured step-plan generation and multi-step execution sequence",
   ),
 
   /* ---------------- Product matrix ---------------- */

@@ -126,7 +126,7 @@
 
 ### 4.6 《SurgiMind3D / 智脊析》三维手术导航与腰椎 MRI 智能辅助分析系统
 - **2x Retina 实机诊断视图（第一作者作品 `2026026666`《智脊析》）**：见 `./assets/lumbar_ai.webp`
-- **奖项与软著**：获 **2026 中国国际大学生创新大赛（国创赛）青岛大学校赛金奖**（《SurgiMind3D》），登记**国家软件著作权《腰椎 MRI 影像分析系统 V1.0》**（登记号 `2026R11L3615529`）。
+- **奖项**：获 **2026 中国国际大学生创新大赛（国创赛）青岛大学校赛金奖**（《SurgiMind3D》核心成员）。
 
 ---
 
@@ -151,21 +151,19 @@
    - **权威链接**：[OpenReview: 7iS3Cxm7af](https://openreview.net/forum?id=7iS3Cxm7af)
    - **核心贡献与产品价值**：参与诊断并缓解多模态大模型在评估任务进度时**“盲目相信输入顺序而忽略真实画面状态”**的顺序偏置（Order Dependence）问题，为多模态 Agent 的状态校验门禁设计提供关键实证依据。
 
-4. **[独立第一作者 · SCI 期刊在审 · 已开源完整代码与评测集]**
-   - **论文题目**：*LEAP: Action Blueprint Generation & Parser-Gated Plan Control in Compact Vision-Language Models*
+4. **[独立第一作者 · *Neurocomputing*（中科院二区 / CCF-C / JCR Q1）在审 · 已开源完整代码与评测集]**
+   - **论文题目**：*Structured Supervision Targets as a Procedural Interface for Reliable Parser-Gated Plan Generation in Compact Vision-Language Models*（项目代号：**`LEAP`**）
    - **作者**：**Shenzhou Gao** (First Author), Peijian Zhang
    - **开源仓库**：[https://github.com/Evan-Joseph/leap-code](https://github.com/Evan-Joseph/leap-code)
-   - **核心量化收益**：针对轻量级模型在执行复杂指令时极易出现“格式崩溃、思维链废话冗长、响应延迟高”的痛点，独立设计严格匹配对照实验（Matched-Control Study），证明**“剥离冗余思维链、引入解析器规则门控（Parser-Gated Control）”**可将高难任务规划得分提升 **`+12.90` 分**、结构化格式合规率提至 **`99.8%`**，同时将用户端等待响应耗时缩短近 **`60%`**（由 `4.85s` 降至 `1.97s`）。
+   - **核心量化收益**：面向紧凑型端侧视觉语言模型（`Qwen3-VL-2B-Instruct`）在严格符号解析门禁下易退化为散文拒答或循环截断的瓶颈，将训练期监督目标形式化为显式**过程接口（Procedural Interface）**。基于 **151,230 条真实机器人操作轨迹**与 **`VLABench` 零样本跨域评测（45 项未见任务、4,500 条样本）**开展严格同域匹配对照与两阶段符号契约诊断：有序步骤目标将严格门禁六维宏平均分由 `25.10`（同域重述对照 `24.26`）提升至 **`28.38`**（`+3.29`，$p < 0.0001$）；全参微调保持 **`96.00%`** 严格 JSON 解析存活率并消除 **`91.2%`** 散文拒答（`102 → 9`）；在实体类型序列化对齐（$\psi_{\mathrm{norm}}$）下达 **`38.90`** 六维宏平均分（超越 LoRA **`+5.32`** 分，技能序列匹配分 **`70.68%`**）。
 
 5. **[ICLR 2027 & ICASSP 2027 在审 · 合作研究]**
    - **研究方向**：高分辨率多模态音视频生成加速与轻量化部署研究
    - **核心成果**：围绕生成式视频与音频大模型在实际业务落地中的高算力成本瓶颈，参与研发高效缓存与稀疏推理加速框架，实现单卡最高 **`54.67×`** 推理加速（生成耗时由 `318s` 缩短至 `5.8s`），支撑生成式媒体能力在低成本硬件下的实用化部署。
 
-6. **主持科研课题（2 项）与国家软件著作权（2 项）**：
+6. **主持科研课题（2 项）**：
    - **大学生创新训练计划 · 重点立项（10,000 元资助 · 课题负责人 · 2026–2027）**：《面向视频过程理解的视觉语言模型世界表征能力评测研究》
    - **大学生创新训练计划 · 已顺利结项（项目编号 `X2025110650475` · 课题负责人 · 2025–2026.10）**：《基于 Wan 系列模型的轻量化重构与 3D 点阵研究》
-   - **中华人民共和国国家软件著作权（独立著作权人 · 2026）**：《智能成长规划助手》
-   - **中华人民共和国国家软件著作权（核心研发成员 · 登记号 `2026R11L3615529` · 2026）**：《腰椎 MRI 影像分析系统 V1.0》
 
 ---
 
@@ -248,8 +246,8 @@
 | `assets/hazmat_xdt_diff.webp` | `https://evan-joseph.github.io/assets/hazmat_xdt_diff.webp` | `2880×1800` | **《甲方 XDT 与乙方地图数据库表建模范围差异可视化》**（2x Retina 实机诊断台：2015 条在场箱空间落点对账） |
 | `assets/tug_dispatch_dark.webp` | `https://evan-joseph.github.io/assets/tug_dispatch_dark.webp` | `1440×900` | **《拖轮调度工作席 · 深色纯净无水印版》**（山东港口青岛港智能拖轮调度与轮驳分配系统：枚举 561 套方案输出三套推荐及人工编组下发） |
 | `assets/tug_dispatch_light.webp` | `https://evan-joseph.github.io/assets/tug_dispatch_light.webp` | `1440×900` | **《拖轮调度工作席 · 浅色纯净无水印版》**（山东港口拖轮系统：北主航道吃水超标一票否决诊断与多维评分拆解） |
-| `assets/leap_framework.webp` | `https://evan-joseph.github.io/assets/leap_framework.webp` | `1600×894` | 独立一作《LEAP》论文图 1：动作蓝图生成与解析器规则门控（Parser-Gated Control）总架构 |
-| `assets/leap_execution.webp` | `https://evan-joseph.github.io/assets/leap_execution.webp` | `1600×894` | 独立一作《LEAP》论文图 2：结构化规划控制与消融对比实证视图 |
+| `assets/leap_framework.webp` | `https://evan-joseph.github.io/assets/leap_framework.webp` | `1600×894` | 独立一作《LEAP》论文图 1：紧凑型 VLM 过程接口（Procedural Interface）与全参微调总架构 |
+| `assets/leap_execution.webp` | `https://evan-joseph.github.io/assets/leap_execution.webp` | `1600×894` | 独立一作《LEAP》论文图 2：有序动作步规划生成与长程操作执行序列视图 |
 | `assets/open_timer.webp` | `https://evan-joseph.github.io/assets/open_timer.webp` | `2880×1800` | `https://clock.4c666.top` **《沉浸时钟 · Open-Timer（主界面）》**（2x Retina 线上最新 16:10 截取：2027 考研倒计时、7 科药丸切换与超大居中数字时钟） |
 | `assets/open_timer_review.webp` | `https://evan-joseph.github.io/assets/open_timer_review.webp` | `2880×1800` | `https://clock.4c666.top` **《沉浸时钟 · Open-Timer（时间轴与 14 天回顾）》**（2x Retina 线上最新截取：流体`时间轴`与 14 天趋势柱状图 + 打卡日历热力图） |
 | `assets/kaoyan_22408.webp` | `https://evan-joseph.github.io/assets/kaoyan_22408.webp` | `2880×1800` | `https://kaoyan-22408-flashcards.pages.dev` **《22408 · 研记（识记与真题研习）》**（2x Retina 线上最新截取：政治+英二+数二+408 全科 1,513 学习项与 1,613 真题工作台） |
@@ -286,11 +284,11 @@
   3. **Shandong Port Tugboat Collaborative Scheduling High-Fidelity Mock & Situational Dashboard**: Rapid interactive mock and multi-vessel trajectory dashboard (enumerating 561 scheduling combinations into 3 recommended dispatch plans) supporting stakeholder alignment and commercial bidding.
   4. **"Hezhongzhen · 合众诊" & "MedConnect Care · 医线牵 / 医脉山海"** (`./assets/medconnect_care.webp`): Multi-agent collaborative medical triage platform (**Provincial 1st Prize in the 18th Chinese Collegiate Computing Competition**, 1st Author / Team Captain & Presenter) and cross-regional remote medical consultation platform (`2026045907`).
   5. **"From Treatable to Affordable · 从治得上到治得起"** (HeyWhale Showcase: [HeyWhale Work Detail](https://www.heywhale.com/org/4C2026/competition/work-detail?work=69eaf383acdef02a88d7d9b0) ｜ Repo: [Evan-Joseph/4c-health-insight-showcase](https://github.com/Evan-Joseph/4c-health-insight-showcase)): Global chronic disease transition trap & country typology study across **203 economies (2000–2023)** (**Provincial 2nd Prize in the 19th Chinese Collegiate Computing Competition Big Data Track**, 1st Author / Team Lead; reviewed by clinical director Dr. Hu Yong and recommended by Assoc. Prof. Yang Huan).
-  6. **SurgiMind3D / Lumbar AI**: Core member of *SurgiMind3D* (**2026 China International College Students Innovation Competition University Gold Medal**, 2x Retina diagnostic UI `./assets/lumbar_ai.webp` & co-owner of *Lumbar MRI Image Analysis System V1.0* Software Copyright `2026R11L3615529`).
+  6. **SurgiMind3D / Lumbar AI**: Core member of *SurgiMind3D* (**2026 China International College Students Innovation Competition University Gold Medal**, 2x Retina diagnostic UI `./assets/lumbar_ai.webp`).
 - **Publications & Research Grants**:
   1. **AAAI 2026 Oral (CCF-A, Co-First Author #2, Published)**: *SpatialLogic-Bench: A Diagnostic Benchmark for Task-Oriented Spatiotemporal Reasoning* ([DOI: 10.1609/aaai.v40i23.39022](https://doi.org/10.1609/aaai.v40i23.39022)).
   2. **ICML 2026 (CCF-A, 3rd Author, Accepted)**: *From Perception to Planning: Evolving Ego-Centric Task-Oriented Spatiotemporal Reasoning via Curriculum Learning* ([arXiv:2604.10517](https://arxiv.org/abs/2604.10517)).
   3. **EMNLP 2026 Findings (6th Author, Accepted)**: *Diagnosing Order Dependence in Vision-Language Task-Progress Judgment with Equal-State Supervision* ([OpenReview: 7iS3Cxm7af](https://openreview.net/forum?id=7iS3Cxm7af)).
-  4. **1st-Author SCI Journal Under Review**: *LEAP: Action Blueprint Generation & Parser-Gated Plan Control in Compact Vision-Language Models* ([Evan-Joseph/leap-code](https://github.com/Evan-Joseph/leap-code)) — **+12.90** planning score gain, **99.8%** format compliance, and **~60% latency reduction** (`4.85s → 1.97s`).
+  4. **1st-Author Journal Paper Under Review at *Neurocomputing* (CAS Q2 / CCF-C / JCR Q1)**: *Structured Supervision Targets as a Procedural Interface for Reliable Parser-Gated Plan Generation in Compact Vision-Language Models* (Codename **LEAP**, [Evan-Joseph/leap-code](https://github.com/Evan-Joseph/leap-code)) — **96.00%** strict JSON parse survival (**−91.2%** prose refusals), **28.38** raw / **38.90** contract-aligned 6-D macro score (**+5.32** over LoRA, $p < 0.0001$) across 4,500 zero-shot VLABench instances.
   5. **ICLR 2027 & ICASSP 2027 Under Review**: High-resolution multimodal audio-visual generation acceleration (**54.67×** single-GPU speedup).
   6. **Principal Investigator of 2 University Innovation Grants**: Key Project (¥10,000 funded, 2026–2027) on VLM video process evaluation; Completed Project (`X2025110650475`, 2025–2026.10) on Wan video model lightweighting.

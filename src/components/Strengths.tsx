@@ -95,15 +95,15 @@ const CASES: Record<
   },
   leap: {
     tab: l("LEAP 论文", "LEAP paper"),
-    title: l("小尺寸模型长思维链易发散，引入解析器规则门控更可靠", "Compact VLMs drift in long CoT; parser-gated control keeps plans valid and fast"),
+    title: l("小尺寸模型零样本易退化为散文拒答，需训练期过程接口与解析门禁协同", "Compact VLMs emit prose refusals zero-shot; pairing a procedural interface with parser gating keeps plans valid"),
     flex: [
-      l("小尺寸视觉语言模型生成高层动作蓝图（Action Blueprint）", "Compact vision-language model generates the high-level Action Blueprint"),
+      l("2.2B 紧凑型视觉语言模型通过显式有序动作步目标（过程接口）生成高层规划序列", "2.2B compact VLM trained via an explicit ordered-step Procedural Interface generates symbolic action plans"),
     ],
     guard: [
-      l("解析器规则门控（Parser-Gated Control）：严格匹配对照实验验证剥离冗余思维链显著提升规划可靠性", "Parser-Gated Control — matched-control experiments show stripping redundant chain-of-thought significantly improves planning reliability"),
-      l("结构化格式合规率 99.8%，高难任务规划得分 +12.90", "99.8% structured format compliance, +12.90 planning score on hard tasks"),
+      l("两阶段符号执行契约（Stage 1 严格 JSON 语法门禁 + Stage 2 实体类型归一化对齐）拦截循环截断与类型漂移", "Two-stage symbolic contract (Stage 1 strict JSON syntax gate + Stage 2 entity type-serialization alignment) blocks loop truncation and schema drift"),
+      l("严格 JSON 解析存活率达 96.00%，消除 91.2% 散文拒答（102 → 9）", "96.00% strict JSON parse survival, eliminating 91.2% of conversational prose refusals (102 → 9)"),
     ],
-    outcome: l("用户等待响应耗时由 4.85s 降至 1.97s（缩短近 60%）", "Response latency reduced from 4.85s to 1.97s (nearly 60% faster)"),
+    outcome: l("VLABench 4,500 样本零样本评测宏均分 38.90（超越 LoRA +5.32 分，Neurocomputing 在审）", "38.90 macro score across 4,500 zero-shot VLABench instances (+5.32 over LoRA; under review at Neurocomputing)"),
   },
 };
 

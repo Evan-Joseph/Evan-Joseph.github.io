@@ -107,14 +107,14 @@ export const LENSES: Record<LensId, LensCfg> = {
       {
         to: "research",
         stat: "AAAI · ICML · EMNLP",
-        title: l("三篇顶会录用，一篇独立一作在审", "Three top-tier acceptances + one solo first-author paper"),
-        note: l("AAAI 2026 Oral 共同一作、ICML 2026 第三作者、EMNLP 2026 Findings 第六作者", "AAAI 2026 Oral (co-first), ICML 2026 (3rd), EMNLP 2026 Findings (6th)"),
+        title: l("三篇顶会录用，一篇独立一作期刊在审", "Three top-tier acceptances + one solo 1st-author journal paper"),
+        note: l("AAAI 2026 Oral 共同一作、ICML 2026 第三作者、EMNLP 2026 Findings 第六作者、Neurocomputing 一作在审", "AAAI 2026 Oral (co-first), ICML 2026 (3rd), EMNLP 2026 Findings (6th), Neurocomputing (solo 1st, under review)"),
       },
       {
         to: "research",
-        stat: "+12.90 / 99.8%",
-        title: l("LEAP：小尺寸模型解析器规则门控", "LEAP: parser-gated planning for compact VLMs"),
-        note: l("独立设计匹配对照实验，响应耗时 4.85s → 1.97s，代码与评测集已开源", "Matched-control study; latency 4.85s → 1.97s; code and evaluation set open-sourced"),
+        stat: "96.00% / 38.90",
+        title: l("LEAP：紧凑型 VLM 过程接口与解析门禁", "LEAP: procedural interface & parser-gated planning"),
+        note: l("Neurocomputing 在审（中科院二区 / JCR Q1），4,500 样本两阶段契约诊断，代码已开源", "Under review at Neurocomputing (CAS Q2 / JCR Q1); 4,500-instance contract audit; open-sourced"),
       },
       {
         to: "health",
@@ -131,8 +131,8 @@ export const LENSES: Record<LensId, LensCfg> = {
     ],
     metrics: [
       { value: "AAAI 2026 Oral", label: l("CCF-A · 共同第一作者 (#2) · 已正式发表", "CCF-A · co-first author (#2) · published") },
-      { value: "+12.90", label: l("LEAP 高难任务规划得分提升", "LEAP planning-score gain on hard tasks") },
-      { value: "99.8%", label: l("结构化输出格式合规率", "structured-output format compliance") },
+      { value: "96.00%", label: l("LEAP 严格 JSON 解析存活率（−91.2% 散文拒答）", "LEAP strict JSON parse survival (−91.2% prose refusals)") },
+      { value: "38.90", label: l("LEAP 契约对齐六维宏均分（超 LoRA +5.32）", "LEAP contract-aligned macro score (+5.32 over LoRA)") },
       { value: "54.67×", label: l("单卡最高推理加速（合作研究，在审）", "max single-GPU speedup (collaborative, under review)") },
       { value: "20+", label: l("系统评测的主流多模态大模型", "mainstream multimodal LLMs evaluated") },
     ],

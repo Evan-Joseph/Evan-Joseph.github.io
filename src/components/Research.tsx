@@ -1,4 +1,4 @@
-import { BadgeCheck, BookMarked, FileText, FlaskConical, Gauge, GraduationCap, Timer, Zap } from "lucide-react";
+import { BadgeCheck, BookMarked, FlaskConical, GraduationCap, Timer, Zap } from "lucide-react";
 import { Fragment, type ReactNode } from "react";
 import { l, noOrphan, useI18n, type L } from "../i18n";
 import { A } from "../data/assets";
@@ -93,8 +93,8 @@ export function Research({ no }: { no: number }) {
         </>
       }
       intro={t(
-        "共同第一作者发表 AAAI 2026 Oral，另有 ICML 2026、EMNLP 2026 Findings 录用，并独立完成结构化规则门控研究 LEAP，以系统性评测实证支撑产品架构与边界判断。",
-        "Co-first author of an AAAI 2026 Oral, with ICML 2026 and EMNLP 2026 Findings acceptances and the solo-led LEAP study on structured rule gating — grounding product architecture and boundary decisions in systematic empirical evaluation.",
+        "共同第一作者发表 AAAI 2026 Oral，另有 ICML 2026、EMNLP 2026 Findings 录用，并独立完成过程接口与符号契约诊断研究 LEAP（Neurocomputing 在审），以系统性评测实证支撑产品架构与边界判断。",
+        "Co-first author of an AAAI 2026 Oral, with ICML 2026 and EMNLP 2026 Findings acceptances and the solo-led LEAP study on procedural interfaces and symbolic parser contracts (under review at Neurocomputing) — grounding product architecture and boundary decisions in systematic empirical evaluation.",
       )}
     >
       {/* profile links */}
@@ -155,7 +155,8 @@ export function Research({ no }: { no: number }) {
             <div className="md:col-span-3">
               <p className="font-serif-cn text-2xl font-black leading-tight text-bronze-2">LEAP</p>
               <div className="mt-3 flex flex-wrap gap-1.5">
-                <Chip tone="outline-dark">{t("SCI 期刊在审", "SCI journal, under review")}</Chip>
+                <Chip tone="outline-dark">{t("Neurocomputing 在审", "Neurocomputing · Under review")}</Chip>
+                <Chip tone="outline-dark">{t("中科院二区 · CCF-C · JCR Q1", "CAS Q2 · CCF-C · JCR Q1")}</Chip>
                 <Chip tone="dark">
                   <GithubIcon size={12} />
                   {t("代码与评测集已开源", "Code & eval set open")}
@@ -165,21 +166,45 @@ export function Research({ no }: { no: number }) {
             </div>
             <div className="md:col-span-9">
               <h3 className="font-serif-cn text-lg font-bold italic leading-snug sm:text-xl">
-                {noOrphan("LEAP: Action Blueprint Generation & Parser-Gated Plan Control in Compact Vision-Language Models", "en")}
+                {noOrphan(
+                  "Structured Supervision Targets as a Procedural Interface for Reliable Parser-Gated Plan Generation in Compact Vision-Language Models",
+                  "en",
+                )}
               </h3>
               <p className="mt-2 text-sm text-paper/65">
-                <Me>Shenzhou Gao</Me> (First Author), Peijian Zhang
+                <span className="whitespace-nowrap">
+                  <Me>Shenzhou Gao</Me> (First Author), Peijian Zhang
+                </span>
+                <span className="hidden text-paper/45 sm:inline"> · </span>
+                <span className="mt-1 block text-xs text-paper/55 sm:mt-0 sm:inline sm:text-sm">
+                  {t("项目代号 LEAP · 投稿至 Neurocomputing", "Codename LEAP · Submitted to Neurocomputing")}
+                </span>
               </p>
               <p className="mt-4 text-[14.5px] leading-[1.85] text-paper/80">
                 {t(
-                  "针对小尺寸视觉语言模型执行复杂规划指令时结构化格式易失效、长思维链推理延迟高的问题，独立设计严格匹配对照实验（Matched-Control Study），验证剥离冗余思维链并引入解析器规则门控（Parser-Gated Control）能够同时提升规划质量与响应速度。",
-                  "Addressing broken structured formats and high long-CoT latency in compact vision-language models on complex planning instructions, I designed a strict Matched-Control Study demonstrating that stripping redundant chain-of-thought and introducing Parser-Gated Control simultaneously improves planning quality and response speed.",
+                  "面向端侧小尺寸视觉语言模型（Qwen3-VL-2B）在严格符号解析门禁下易退化为散文拒答或循环截断的瓶颈，将训练期监督目标形式化为显式“过程接口（Procedural Interface）”。基于 151,230 条真实操作轨迹与 VLABench 零样本评测（45 项未见任务、4,500 条样本）开展严格同域匹配对照与两阶段符号契约诊断，证实跨域规划迁移收益源自有序动作步目标结构而非领域词表曝光。",
+                  "Addressing prose refusals and loop truncations in compact edge VLMs (Qwen3-VL-2B) under strict symbolic parser gates, I formulate the training supervision target as an explicit Procedural Interface. Across 151,230 real-world manipulation trajectories and 4,500 zero-shot VLABench instances (45 unseen tasks), a matched-control and two-stage symbolic contract study proves that cross-domain planning transfer stems from explicit procedural step structure rather than domain vocabulary exposure.",
                 )}
               </p>
               <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                <Metric dark value="+12.90" label={t("高难任务规划得分提升", "planning-score gain on hard tasks")} />
-                <Metric dark value="99.8%" label={t("结构化格式合规率", "structured-format compliance")} />
-                <Metric dark value="≈ −60%" label={t("用户等待响应耗时缩短近 60%", "user-wait latency cut by nearly 60%")} sub="4.85s → 1.97s" />
+                <Metric
+                  dark
+                  value="96.00%"
+                  label={t("严格 JSON 解析存活率", "strict JSON parse survival")}
+                  sub={t("消除 91.2% 散文拒答 (102→9)", "−91.2% prose refusals (102→9)")}
+                />
+                <Metric
+                  dark
+                  value="38.90"
+                  label={t("契约对齐六维宏平均分", "contract-aligned 6-D macro score")}
+                  sub={t("超越 LoRA +5.32 分 (p < 0.0001)", "+5.32 over LoRA (p < 0.0001)")}
+                />
+                <Metric
+                  dark
+                  value="4,500"
+                  label={t("零样本跨任务评测实例", "zero-shot unseen eval instances")}
+                  sub={t("151,230 条轨迹严格匹配对照", "151,230-episode matched control")}
+                />
               </div>
               <div className="mt-5">
                 <ExtLink dark variant="solid" href="https://github.com/Evan-Joseph/leap-code">
@@ -235,11 +260,11 @@ export function Research({ no }: { no: number }) {
         </article>
       </div>
 
-      {/* grants and copyrights */}
+      {/* grants */}
       <div className="mt-16">
         <h3 className="mb-6 flex items-center gap-3 font-serif-cn text-2xl font-black sm:text-3xl">
           <GraduationCap className="text-bronze-2" size={26} />
-          {t("科研课题与知识产权", "Research grants & IP")}
+          {t("主持科研课题", "Principal-Investigator Research Grants")}
         </h3>
         <div className="grid gap-4 md:grid-cols-2">
           {[
@@ -253,6 +278,7 @@ export function Research({ no }: { no: number }) {
               tag: l("大创 · 已顺利结项 · 编号 X2025110650475 · 课题负责人 · 2025–2026.10", "Innovation project · Completed · no. X2025110650475 · PI · 2025 – Oct 2026"),
               title: l("基于 Wan 系列模型的轻量化重构与 3D 点阵研究", "Lightweight reconstruction and 3D point-lattice research based on Wan-series models"),
             },
+            /* Pending issuance — uncomment (and restore FileText/Gauge imports + "& IP" heading) once certificates are approved:
             {
               icon: FileText,
               tag: l("国家软件著作权 · 独立著作权人 · 2026", "National software copyright · sole holder · 2026"),
@@ -263,6 +289,7 @@ export function Research({ no }: { no: number }) {
               tag: l("国家软件著作权 · 核心研发成员 · 登记号 2026R11L3615529 · 2026", "National software copyright · core developer · reg. no. 2026R11L3615529 · 2026"),
               title: l("《腰椎 MRI 影像分析系统 V1.0》", "“Lumbar MRI Image Analysis System V1.0”"),
             },
+            */
           ].map((g, n) => (
             <Fragment key={n}>
               <div className="night-card flex gap-4 rounded-2xl p-5">
@@ -278,7 +305,9 @@ export function Research({ no }: { no: number }) {
           ))}
         </div>
         <ul className="mt-6 space-y-1 text-sm text-paper/55">
-          <Bullet dark>{t("2 项主持科研课题 + 2 项国家软件著作权", "2 research projects as PI + 2 national software copyrights")}</Bullet>
+          <Bullet dark>
+            {t("主持 2 项大学生创新训练计划课题（重点资助立项 1 项、已结项 1 项）", "Principal Investigator of 2 collegiate innovation grants (1 key funded project, 1 completed)")}
+          </Bullet>
         </ul>
       </div>
     </SectionShell>

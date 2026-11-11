@@ -13,8 +13,9 @@ const ZH_COMPOUND_RE = new RegExp(
     "第三作者",
     "第六作者",
     "独立作者",
-    "独立著作权人",
+    // "独立著作权人", // restore after software copyright issuance
     "项目负责人",
+    "课题负责人",
     "核心成员",
     "老计划员",
     "计划员",
@@ -22,7 +23,9 @@ const ZH_COMPOUND_RE = new RegExp(
     "主任医师",
     "副研究员",
     "副教授",
-    "软件著作权",
+    // "软件著作权", // restore after software copyright issuance
+    "过程接口",
+    "中科院二区",
     "工业智能体",
     "智能体",
     "人工智能",
@@ -67,8 +70,8 @@ export function noOrphan(raw: string, lang: Lang): string {
       .replace(/(?:共同第一|第一|第三|第六|独立|项目|产品)?(?:作者|负责人|主理人)\s*\/\s*(?:队长|开发者)/g, (m) =>
         m.replace(/\s+/g, "\u00A0").split("").join("\u2060"),
       )
-      // Keep "编号 2026045907" / "登记号 2026R11L3615529" bound together
-      .replace(/(编号|登记号)\s+([A-Za-z0-9\u2011-]+(?:\s+[A-Za-z0-9\u2011-]+)?)/g, (_m, k, v) =>
+      // Keep "编号 2026045907" bound together
+      .replace(/(编号)\s+([A-Za-z0-9\u2011-]+(?:\s+[A-Za-z0-9\u2011-]+)?)/g, (_m, k, v) =>
         `${k}\u00A0${v.replace(/\s+/g, "\u00A0")}`.split("").join("\u2060"),
       );
 

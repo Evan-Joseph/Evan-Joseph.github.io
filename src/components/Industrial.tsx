@@ -77,7 +77,9 @@ const SOLUTIONS: {
     chips: [l("L1–S1 定位分割", "L1–S1 segmentation"), l("Pfirrmann 分级", "Pfirrmann grading"), l("结构化报告", "Structured reports")],
     awards: [
       l("2026 中国国际大学生创新大赛（国创赛）青岛大学校赛金奖（《SurgiMind3D》核心成员）", "2026 China International College Students’ Innovation Competition · QDU campus Gold Prize (SurgiMind3D core member)"),
+      /* Pending issuance — uncomment after certificate approval:
       l("国家软著《腰椎 MRI 影像分析系统 V1.0》· 登记号 2026R11L3615529", "Software copyright “Lumbar MRI Image Analysis System V1.0” · reg. no. 2026R11L3615529"),
+      */
     ],
   },
   {
