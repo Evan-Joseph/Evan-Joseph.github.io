@@ -73,25 +73,26 @@ const PRODUCTS: Prod[] = [
   {
     id: "haile",
     cat: "campus",
-    name: l("泓园 7 号楼洗衣房 · 海乐生活抢占助手 v3", "Hongyuan Bldg 7 Laundry · Haile Life Grabber v3"),
-    alias: l("Android 原生独立 APK + 本地 Web 控制台双端架构", "Android native standalone APK + local Web console dual-client architecture"),
+    name: l("海乐生活洗衣抢占助手 v4.2 · 全国高校通用版", "Haile Laundry Grabber v4.2 · Nationwide Campus Edition"),
+    alias: l("独立 Android APK + 本地 FastAPI Web 双端开源（始于青大泓园 7 号楼）", "Open-source standalone Android APK + local FastAPI Web dual client"),
     desc: l(
-      "面向青岛大学浮山校区泓园 7 号楼千名学生高峰期共用 5 台洗衣机与 1 台烘干机的排队场景，梳理设备状态流转并实现 Android 原生独立引擎 APK 与本地 Web 控制台双端协同：支持短信验证码登录、三档自适应脉冲轮询（>60s 巡航、10–60s 临近、≤10s 高频脉冲 0.2–0.3s 锁单）、防重复下单守卫、SSE 实时推送与一键拉起海乐 App 支付，已在宿舍楼稳定运行超半年。",
-      "Built for a 1,000-student dormitory at Qingdao University’s Fushan campus sharing 5 washers and 1 dryer during peak hours. Models device state transitions across a standalone Android native engine APK and local Web console: SMS-code login, three-tier adaptive pulse polling (>60s cruise, 10–60s approach, ≤10s high-frequency 0.2–0.3s lock-in), duplicate-order guards, SSE live push and one-tap Haile app payment launch — running stably in the dorm for over six months.",
+      "源于青岛大学浮山校区泓园 7 号楼千名学生高峰期共用 5 洗 1 烘的排队痛点并稳定运行超半年，现已开源升级至 v4.2.0 全国高校通用版：内置 WGS-84 → GCJ-02 坐标转换与全国高校交互地图选楼、首次登录自动识别常用洗衣房与最近设备跨楼切换、机身二维码 / 15 位 IMEI / GTB 设备码解析，配合三档自适应脉冲轮询（≤10s 高频 0.2–0.3s 锁单）、一键拉起海乐 App 支付与 APK 应用内单飞更新。",
+      "Originated from a 1,000-student dormitory sharing 5 washers and 1 dryer at Qingdao University (6+ months in service) and now open-sourced as v4.2.0 for campuses nationwide: built-in WGS-84 → GCJ-02 coordinate conversion with interactive campus map picking, auto-detection of recent laundry rooms and cross-building switching, QR / 15-digit IMEI / GTB code parsing, three-tier adaptive pulse polling (0.2–0.3s lock-in), one-tap Haile app payment launch, and in-app OTA updates.",
     ),
     stats: [
-      { v: "5 + 1", k: l("洗衣机 + 烘干机", "washers + dryer") },
+      { v: "v4.2.0", k: l("全国高校通用", "nationwide campuses") },
       { v: "0.2–0.3s", k: l("高频脉冲锁单", "pulse lock-in") },
       { v: "6+", k: l("月稳定服务", "months in service") },
     ],
-    tags: ["Android APK", "SSE", "Adaptive polling"],
+    tags: ["Android APK", "FastAPI Web", "Campus Map", "Adaptive Polling"],
     shots: [
       { img: A.haile_bot_matrix, label: l("桌面宽屏", "Desktop") },
       { img: A.haile_bot_mobile, label: l("移动端", "Mobile") },
     ],
     links: [
-      // Private repository (campus laundry IoT protocol):
-      // { href: "https://github.com/Evan-Joseph/haile-bot", label: l("开源仓库", "Repo"), repo: true },
+      { href: "https://haile-bot.pages.dev", label: l("线上主站 & OTA", "Live & OTA") },
+      { href: "https://github.com/Evan-Joseph/haile-bot", label: l("开源仓库", "Repo"), repo: true },
+      { href: "https://github.com/Evan-Joseph/haile-bot/releases/tag/v4.2.0", label: l("v4.2.0 APK", "v4.2.0 APK") },
     ],
   },
   {

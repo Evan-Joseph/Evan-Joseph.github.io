@@ -224,13 +224,13 @@ export const A = {
   ),
   haile_bot_matrix: i(
     "haile_bot_matrix.webp", 2880, 1800,
-    "《海乐生活抢占助手 v3》桌面宽屏 · 左侧验证码登录，右侧 5 洗 1 烘实时进度条，零手机号暴露",
-    "Haile Grabber v3 · desktop: code login on the left, live 5-washer + 1-dryer progress on the right, no phone numbers exposed",
+    "《海乐生活洗衣抢占助手》桌面宽屏 · 验证码登录与 5 洗 1 烘实时进度监控（现已开源升级至 v4.2.0 全国高校通用选楼版）",
+    "Haile Laundry Grabber · desktop console: SMS login and live washer/dryer progress (open-sourced at v4.2.0 for nationwide campuses)",
   ),
   haile_bot_mobile: i(
     "haile_bot_mobile.webp", 1170, 2532,
-    "《海乐生活抢占助手 v3》移动端（3x Retina）· 实时 5 洗 1 烘状态与排队抢占",
-    "Haile Grabber v3 · mobile (3x Retina): live 5+1 machine status and queue grabbing",
+    "《海乐生活洗衣抢占助手》移动端（3x Retina）· 实时空机监测、多机并池抢占与收衣提醒",
+    "Haile Laundry Grabber · mobile (3x Retina): live machine status, multi-machine pool lock-in, and pickup alerts",
   ),
   lumbar_ai: i(
     "lumbar_ai.webp", 2880, 1800,
