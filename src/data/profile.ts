@@ -72,15 +72,15 @@ export const LENSES: Record<LensId, LensCfg> = {
       },
       {
         to: "industrial",
-        stat: "90.0% (18/20)",
-        title: l("青岛港现场实测推荐落位采纳率", "Field-test recommendation acceptance at Qingdao Port"),
-        note: l("2026.10.15 赴青岛港驻场跟班实测 20 箱，18 箱推荐落位被计划员现场采纳", "On-site at Qingdao Port (15 Oct 2026): 18 of 20 recommended placements accepted by planners"),
+        stat: "90.0% · 1,374",
+        title: l("青岛港现场实测与线上持续运行", "Qingdao Port field test & live operations"),
+        note: l("400 箱回测 Top-2 命中率 95.8%，驻场实测 20 箱可行率 90.0%，线上 1,374 箱命中率超 91.5%（违规箱 207→105）", "95.8% Top-2 backtest, 90.0% (18/20) field feasibility, >91.5% live hit rate across 1,374 containers (violations 207→105)"),
       },
       {
         to: "research",
         stat: "AAAI 2026 Oral",
         title: l("多模态大模型评测与幻觉边界控制", "Multimodal LLM evaluation & hallucination control"),
-        note: l("系统实测 20+ 款主流模型，用实证数据划分模型生成与确定性规则的边界", "20+ multimodal LLMs evaluated — separating model generation from deterministic rule guards"),
+        note: l("系统实测 19 款主流模型，用实证数据划分模型生成与确定性规则的边界", "19 mainstream multimodal LLMs evaluated — separating model generation from deterministic rule guards"),
       },
       {
         to: "contact",
@@ -94,7 +94,7 @@ export const LENSES: Record<LensId, LensCfg> = {
       { value: "21+1 / 14", label: l("安全否决红线 / 防翻箱评分维度", "safety veto rules / anti-reshuffle scoring dimensions") },
       { value: "50,000+", label: l("清洗治理“幽灵在场箱”异常数据", "“ghost container” records reconciled") },
       { value: "9 → 1", label: l("套并行原型比选定版", "parallel prototypes evaluated for production") },
-      { value: "26", label: l("跨平台标准化 Agent 技能包", "cross-platform standardized agent skills") },
+      { value: "20", label: l("跨平台标准化 Agent 技能包", "cross-platform standardized agent skills") },
     ],
   },
   academic: {
@@ -134,7 +134,7 @@ export const LENSES: Record<LensId, LensCfg> = {
       { value: "96.00%", label: l("LEAP 严格 JSON 解析存活率（−91.2% 散文拒答）", "LEAP strict JSON parse survival (−91.2% prose refusals)") },
       { value: "38.90", label: l("LEAP 契约对齐六维宏均分（超 LoRA +5.32）", "LEAP contract-aligned macro score (+5.32 over LoRA)") },
       { value: "54.67×", label: l("单卡最高推理加速（合作研究，在审）", "max single-GPU speedup (collaborative, under review)") },
-      { value: "20+", label: l("系统评测的主流多模态大模型", "mainstream multimodal LLMs evaluated") },
+      { value: "19", label: l("系统评测的主流多模态大模型", "mainstream multimodal LLMs evaluated") },
     ],
   },
   explorer: {

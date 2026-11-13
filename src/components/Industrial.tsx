@@ -173,9 +173,9 @@ export function Industrial({ no }: { no: number }) {
           />
           <Metric
             dark
-            value="90.0% ~ 95.75%"
-            label={t("大区 Top-2 推荐命中率", "Zone Top-2 recommendation hit rate")}
-            sub={t("400 箱真实生产快照回测集", "On a 400-container real production snapshot backtest set")}
+            value="95.8% / >91.5%"
+            label={t("400 箱回测 Top-2 / 线上 1,374 箱命中率", "400-box backtest Top-2 / 1,374-box live hit rate")}
+            sub={t("线上持续运行 1,374 箱，全场违规箱由 207 骤降至 105 箱", "Live across 1,374 containers; yard violations cut from 207 to 105")}
           />
           <div className="relative overflow-hidden rounded-xl border border-bronze-2/60 bg-bronze-2/10 p-5 sm:p-6">
             <Award className="absolute right-4 top-4 text-bronze-2/60" size={20} />

@@ -8,6 +8,7 @@ const COURSES: { name: L; score: number }[] = [
   { name: l("计算机组成与结构", "Computer Organization & Architecture"), score: 96 },
   { name: l("人工智能数学基础", "Mathematical Foundations of AI"), score: 96 },
   { name: l("程序设计与算法实践", "Programming & Algorithm Practice"), score: 95 },
+  { name: l("计算机系统基础", "Computer Systems Fundamentals"), score: 93 },
   { name: l("离散数学", "Discrete Mathematics"), score: 93 },
   { name: l("数据库系统原理", "Database System Principles"), score: 92 },
   { name: l("形式语言与计算理论", "Formal Languages & Theory of Computation"), score: 90 },
@@ -77,7 +78,7 @@ export function Education({ no }: { no: number }) {
       </div>
 
       <div className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-4">
-        <Metric value="86.19" label={t("全学程累计加权均分", "Cumulative weighted average")} sub={t("满分 100", "out of 100")} />
+        <Metric value="86.19" label={t("全部均分（累计加权）", "Overall weighted average")} sub={t("满分 100", "out of 100")} />
         <Metric value="3.46" label={t("累计 GPA", "Cumulative GPA")} sub={t("满分 4.00", "out of 4.00")} />
         <Metric value="6 / 20" label={t("累计学业排名", "Cumulative academic rank")} />
         <Metric value="564" label={t("CET-6 成绩", "CET-6 score")} sub={t("CET-4：568", "CET-4: 568")} />

@@ -5,7 +5,7 @@ import { Chip, ExtLink, GithubIcon, Pic, SectionShell } from "./ui";
 
 const FIGS: { img: Img; tag: L }[] = [
   { img: A.health_quadrant, tag: l("图 1 · 四象限分型", "Fig. 1 · Quadrant typology") },
-  { img: A.health_trajectories, tag: l("图 2 · 金砖五国轨迹", "Fig. 2 · BRICS trajectories") },
+  { img: A.health_trajectories, tag: l("图 2 · 五国演化轨迹", "Fig. 2 · 5-economy trajectories") },
   { img: A.health_warning, tag: l("图 3 · 2026 高危预警", "Fig. 3 · 2026 risk warning") },
   { img: A.health_scenarios, tag: l("图 4 · 2030 情景推演", "Fig. 4 · 2030 scenarios") },
 ];
@@ -40,8 +40,8 @@ export function Health({ no }: { no: number }) {
         <div className="lg:col-span-5">
           <p className="text-[15px] leading-[1.9] text-ink-2">
             {t(
-              "整合 GBD、WHO 与世界银行 2000–2023 年全球 203 个国家与地区宏观卫生数据，构建“健康转型压力指数 × 卫生承接能力指数”二维评价框架，完成全球四象限国家分型、金砖五国演化轨迹、2026 短期高危预警排序与 2030 政策干预情景推演。",
-              "Integrating 2000–2023 macro-health data for 203 countries and territories from GBD, WHO and the World Bank, the study builds a two-dimensional framework — Health-Transition Pressure Index × Health-System Absorption Index — and delivers a global four-quadrant typology, BRICS evolution trajectories, a 2026 short-term high-risk ranking and 2030 policy-intervention scenarios.",
+              "整合 GBD、WHO 与世界银行 2000–2023 年全球 203 个国家与地区宏观卫生数据，构建“健康转型压力指数 × 卫生承接能力指数”二维评价框架，完成全球四象限国家分型、典型发展中经济体跨期演化轨迹、2026 短期高危预警排序与 2030 政策干预情景推演。",
+              "Integrating 2000–2023 macro-health data for 203 countries and territories from GBD, WHO and the World Bank, the study builds a two-dimensional framework — Health-Transition Pressure Index × Health-System Absorption Index — and delivers a global four-quadrant typology, cross-period evolution trajectories across five representative developing economies, a 2026 short-term high-risk ranking and 2030 policy-intervention scenarios.",
             )}
           </p>
 

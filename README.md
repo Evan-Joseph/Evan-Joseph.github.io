@@ -3,9 +3,9 @@
 > **在线主页 (Live Portfolio)**：[https://evan-joseph.github.io](https://evan-joseph.github.io)  
 > **GitHub 主页 (GitHub Profile)**：[https://github.com/Evan-Joseph](https://github.com/Evan-Joseph)  
 > **最新求职简历 PDF (Resume PDF)**：[https://evan-joseph.github.io/Shenzhou_Gao_CV.pdf](https://evan-joseph.github.io/Shenzhou_Gao_CV.pdf)（仓库内相对路径：`./Shenzhou_Gao_CV.pdf`）  
-> **核心定位**：`AI 产品主理人 & 智能体解决方案 ｜ 0→1 创意到上线全链路交付 ｜ 大模型评测与工业落地`
+> **核心定位**：`AI 产品主理人 & 智能体解决方案 ｜ 0→1 独立产品研发与上线运维 ｜ 大模型评测与工业落地`
 
-本文件为 `https://evan-joseph.github.io` 的**唯一权威事实源（Single Source of Truth）与静态资源字典**，供访问者、招聘方、学术合作者及前端重构模型直接读取。所有个人履历、学业排名、线上产品、国企交付指标、顶会论文与荣誉奖项均已经过教务系统、校院红头文件及线上生产环境 100% 交叉核验。
+本文件为 `https://evan-joseph.github.io` 的**唯一权威事实源（Single Source of Truth）与静态资源字典**，供访问者、招聘方、学术合作者及前端构建流程直接读取。所有个人履历、学业排名、线上产品、国企交付指标、顶会论文与荣誉奖项均已经过教务系统、校院红头文件及线上生产环境 100% 交叉核验。
 
 ---
 
@@ -21,24 +21,24 @@
 - **OpenReview 主页**：[https://openreview.net/profile?id=~Shenzhou_Gao1](https://openreview.net/profile?id=%7EShenzhou_Gao1)
 - **ORCID**：`0009-0005-4019-0114`
 
-### 1.2 核心竞争壁垒（从痛点洞察到 0→1 端到端落地）
-1. **敏锐痛点洞察与“单兵全链路”产品交付能力**：擅长从日常高频场景与复杂非标产业一线挖掘真实痛点，熟练驾驭 Claude Code、Codex、Cursor、Antigravity、扣子（Coze）与多模态生图/音视频工具链，能够**一个人完成从需求调研、多模型原型竞技选型、高保真交互 Mock、确定性规则兜底设计、全栈开发部署，一直到 1080p60 品牌宣传片制作、商业计划书（BP）、运营看台搭建与线上支付闭环的 0→1 完整交付**。
-2. **大型国企驻场交付与复杂规程数字化抽象**：具备深入港口与政企一线驻场调研的实战经验，能够将数百页非标安全规程与老师傅口传经验转化为可量化、可回测、可热更新的产品规则规格（PRD）与智能推荐系统，用真实生产快照回测与现场跟班实测可行率说话。
-3. **顶会级大模型评测认知与幻觉治理直觉**：以共同第一作者发表 CCF-A 类顶会 AAAI 2026 Oral、第三作者录用 ICML 2026、第六作者录用 EMNLP 2026 Findings，独立开展结构化规则门控实验（`leap-code`）；通过对 20+ 款主流多模态大模型的系统性实测，建立对**“大模型能力上限、时空与顺序偏置幻觉盲区、结构化输出控制”**的一手实证直觉，精准把握 AI 产品设计中“哪里放权给模型生成、哪里必须用确定性规则兜底”。
+### 1.2 三项核心长板（从问题定义到 0→1 独立上线）
+1. **问题定义与 0→1 独立全栈交付**：从日常高频场景与非标产业一线梳理真实需求，熟练运用 Claude Code、Codex、Antigravity、扣子（Coze）与多模态生图/音视频工具链，独立完成需求调研、多模型原型比选、高保真交互 Mock、确定性规则设计、全栈开发部署，以及 1080p60 品牌宣传片制作、商业计划书（BP）、实时运营看台搭建与线上打赏收款。
+2. **国企驻场交付与复杂规程数字化建模**：具备港口与政企一线驻场调研经验，将数百页非标安全规程与老计划员口传经验转化为可量化、可回测、可热更新的产品规则规格（PRD）与智能推荐系统，经 400 箱生产快照回测、青岛港现场跟班实测与线上 1,374 箱持续运行验证。
+3. **顶会大模型评测实证与幻觉边界控制**：以共同第一作者发表 CCF-A 类顶会 AAAI 2026 Oral、第三作者录用 ICML 2026、第六作者录用 EMNLP 2026 Findings，独立开展结构化规则门控实验（`leap-code`）；通过对 19 款主流多模态大模型的系统实测，定位模型能力边界、时空与顺序偏置盲区及结构化输出失效模式，用实证数据划分“哪里由模型生成、哪里由确定性规则约束”。
 
 ---
 
 ## 二、 教育背景与学业成绩（100% 教务与红头核验）
 
 - **就读院校**：**青岛大学 · 计算机科学技术学院**
-- **专业与班级**：**计算机科学与技术（图灵拔尖创新班）**（2023.09 – 2027.06，2023 级末代全院选拔独立成班仅 **20 人**，任**副班长**）
+- **专业与班级**：**计算机科学与技术（图灵拔尖创新班）**（2023.09 – 2027.06，2023 级全院选拔独立成班仅 **20 人**，任**副班长**）
 - **核心学业与综测指标**：
   - **2025–2026 学年（大三）综合素质测评排名**：**`2 / 20`（拔尖班前 10%）**（大三上学期综测 `69.07` 分列 `2/20`、大三下学期综测 `71.11` 分列 `2/20`，双创智育加分触顶满分，体育与劳育均满分）
   - **2025–2026 学年（大三）学业成绩排名**：**`5 / 20`（拔尖班前 25%）**（大三下学期单学期加权均分 **`91.72`**，零挂科）
-  - **全学程累计加权均分**：**`86.19 / 100`**（累计 GPA **`3.46 / 4.00`**，累计学业排名 **`6 / 20`**）
+  - **全部均分（累计加权）**：**`86.19 / 100`**（累计 GPA **`3.46 / 4.00`**，累计学业排名 **`6 / 20`**）
   - **英语水平**：**CET-6 `564` 分**（CET-4 `568` 分，计算机专业英语 `100` 分，具备流利英文顶会论文撰写与学术汇报能力）
 - **专业核心高分课程**：
-  - 人工智能通识与实践（**100**）、计算机组成与结构（**96**）、人工智能数学基础（**96**）、程序设计与算法实践（**95**）、离散数学（**93**）、数据库系统原理（**92**）、形式语言与计算理论（**90**）
+  - 人工智能通识与实践（**100**）、计算机组成与结构（**96**）、人工智能数学基础（**96**）、程序设计与算法实践（**95**）、计算机系统基础（**93**）、离散数学（**93**）、数据库系统原理（**92**）、形式语言与计算理论（**90**）
 
 ---
 
@@ -50,10 +50,10 @@
 - **1080p 60fps 品牌宣传片（双版本逐帧精修直链）**：
   - **版本 A（Opus 5.5 导演版 · 45s）**：[https://evan-joseph.github.io/assets/suanle_promo_opus55.mp4](https://evan-joseph.github.io/assets/suanle_promo_opus55.mp4)（仓库内相对路径：`./assets/suanle_promo_opus55.mp4` ｜ GitHub Release：[suanle_promo_opus55_1080p60.mp4](https://github.com/Evan-Joseph/suanle/releases/download/v1.0.0/suanle_promo_opus55_1080p60.mp4)）
   - **版本 B（Fable 5.1 Max 叙事版 · 50s）**：[https://evan-joseph.github.io/assets/suanle_promo_fable51max.mp4](https://evan-joseph.github.io/assets/suanle_promo_fable51max.mp4)（仓库内相对路径：`./assets/suanle_promo_fable51max.mp4` ｜ GitHub Release：[suanle_promo_fable51max_1080p60.mp4](https://github.com/Evan-Joseph/suanle/releases/download/v1.0.0/suanle_promo_fable51max_1080p60.mp4)）
-- **核心产品故事与落地亮点**：
-  1. **痛点洞察与反内耗产品定义**：针对当代年轻人在高频日常选择中的“决策瘫痪”与情绪内耗，摒弃传统命理软件制造焦虑的套路，提出**“算一算，然后，算了”**的产品主张；设计“茶馆掌柜温润对话梳理心境 → 写下执念揉成纸团丢入竹篓 → 生成水墨宣纸箴言分享卡”的完整心理释怀链路。
-  2. **多模型竞技选型与“确定性规则 + 大模型”零幻觉设计**：平行调度多款主流大模型孵化 **9 套不同交互风格的原型版本**，通过对比实测优中选优收敛出最终生产版；针对大模型直接推算极易胡编干支历法的痛点，设计**“前置确定性天文历法排盘计算 + 对话中按需唤起六爻/八字/紫微/塔罗等 6 类交互卡片 + 静默沉淀用户画像”**机制，从根源消除排盘幻觉。
-  3. **单人全链路交付、运营看台与商业闭环**：一人独立包揽需求定义、水墨宣纸视觉生图、换机同步码设计、**主理人实时运营看台（`/curator`，实时监控系统负载、模型思考轨迹与对话质量）**、云端部署上线、两支不同叙事节奏的 1080p60 宣传片制作与线上打赏支付闭环。
+- **核心产品设计与工程亮点**：
+  1. **问题定义与反内耗交互流程**：针对年轻人在高频日常选择中的决策犹豫与情绪内耗，提出**“算一算，然后，算了”**的产品主张；设计“茶馆掌柜温润对话梳理处境 → 写下执念揉成纸团投入竹篓 → 生成水墨宣纸箴言分享卡”的交互流程。
+  2. **9 套多模型原型比选与“确定性排盘 + 模型解读”**：并行调用多款主流大模型生成 **9 套不同交互风格的原型版本**，比选融合出最终生产版；针对大模型直接推算干支历法易出错的问题，采用**“前端确定性天文历法排盘计算 + 对话中按需唤起六爻/八字/紫微/塔罗等 6 类交互卡片 + 后台结构化记录用户画像”**机制，消除排盘幻觉。
+  3. **独立全栈上线、实时看台与打赏收款**：单人独立完成需求定义、水墨宣纸视觉设计、免登录跨设备同步码、**主理人实时运营看台（`/curator`，实时监控系统负载、吞吐波形与对话质量）**、Docker 部署上线、两支 1080p60 宣传片制作与线上打赏收款。
 
 ### 3.2 《石室史诗——武氏墓群石刻数字展陈与多模态 AI 平台》（第一作者 / 队长 · 2026.01 – 2026.06）
 - **开源代码仓库**：[https://github.com/Evan-Joseph/stone-carving-discovery-app](https://github.com/Evan-Joseph/stone-carving-discovery-app)
@@ -71,21 +71,21 @@
 ### 3.3 校园与高频痛点“即想即做”线上产品矩阵
 1. **《沉浸时钟 · Open-Timer》（亦称：22408 沉浸心流时钟）**：
    - **界面原名**：**`沉浸时钟`**（HTML `<title>`: `沉浸时钟 · Open-Timer`）
-   - **线上地址**：[https://clock.4c666.top](https://clock.4c666.top) ｜ **开源仓库**：[https://github.com/Evan-Joseph/open-timer](https://github.com/Evan-Joseph/open-timer)
+   - **线上地址**：[https://clock.4c666.top](https://clock.4c666.top)（2x Retina 实机视图见 `./assets/open_timer.webp`、`./assets/open_timer_review.webp`）
    - **真实产品形态**：基于 React 18 + Hono + Cloudflare D1 + R2 构建的自托管备考心流计时与全天流体时间轴工作台。内建 2027 考研倒计时与 9 段日常作息节律条、7 科（数学/英语/数据结构/计组/操作系统/计网/政治）快捷切换、任务胶囊模板、**Flowtime 弹性休息结算（`专注时长 ÷ 5`）**、全天无重叠流体**`时间轴`**、7/14/31 天打卡热力图**`回顾`**及确定性“神奇海螺”下一步建议引擎。
 2. **《22408 · 研记》（HTML 标题：`22408 · 识记与真题研习` ｜ 亦称：22408 考研全科主动回忆工作台）**：
-   - **线上地址**：[https://kaoyan-22408-flashcards.pages.dev](https://kaoyan-22408-flashcards.pages.dev) ｜ **开源仓库**：[https://github.com/Evan-Joseph/kaoyan-22408-flashcards](https://github.com/Evan-Joseph/kaoyan-22408-flashcards)、[https://github.com/Evan-Joseph/math2-flashcards](https://github.com/Evan-Joseph/math2-flashcards)
+   - **线上地址**：[https://kaoyan-22408-flashcards.pages.dev](https://kaoyan-22408-flashcards.pages.dev)（2x Retina 实机视图见 `./assets/kaoyan_22408.webp`）
    - **单科专项模块与实机视图**：
      - **《政治识记》**（考研 101 客观题微批次 / 帽子题定位词速配 / 主观题采分点挖空）：见 `./assets/kaoyan_politics.webp`
-     - **《考研数学识记》**（数一/数二 302 项核心概念公式主动回忆与 1987–2025 真题索引，仓库 [`Evan-Joseph/math2-flashcards`](https://github.com/Evan-Joseph/math2-flashcards)）：见 `./assets/math2_flashcards.webp`
+     - **《考研数学识记》**（数一/数二 302 项核心概念公式主动回忆与 1987–2025 真题索引）：见 `./assets/math2_flashcards.webp`
    - **真实产品形态**：覆盖**思想政治理论、英语（二）、数学（二）与 408 计算机统考四门专业课（数据结构、计组、操作系统、计网）全科**的主动回忆与真题研习平台（共 **`1,513` 个可学习项 + `1,613` 道历年真题**）。首创 **`v8` 连续信息流五分钟物理冷却机制**（无打断弹窗）、**`FSRS-6` 动态间隔重复调度**、**6 套 408 硬件/算法交互可视化沙盒**（IEEE 754 浮点、5 级流水线、Cache 映射、虚拟内存页表、KMP 自动机、页置换算法）及 SHA-256 同步码云端备份。
 3. **《泓园 7 号楼洗衣房 · 海乐生活抢占助手 v3》（桌面控制台原名：`泓园7号楼 · 海乐生活洗衣机抢占控制台`）**：
-   - **开源仓库与双端架构**：[https://github.com/Evan-Joseph/haile-bot](https://github.com/Evan-Joseph/haile-bot)（Android 原生独立引擎 APK + 本地 Web 控制台双端架构，2x/3x Retina 实机视图见 `./assets/haile_bot_mobile.webp`、`./assets/haile_bot_matrix.webp`）
+   - **双端架构与实机视图**：Android 原生独立引擎 APK + 本地 Web 控制台双端架构（2x/3x Retina 实机视图见 `./assets/haile_bot_mobile.webp`、`./assets/haile_bot_matrix.webp`）
    - **真实产品形态**：源于青大浮山校区泓园 7 号楼千名同学高峰期抢用 5 台洗衣机 + 1 台烘干机的痛点，逆向梳理设备状态流转，实现**短信验证码接码登录、三档自适应脉冲轮询（`>60s` 巡航、`10–60s` 临近、`≤10s` 高频脉冲 `0.2–0.3s` 极速锁单）、防重复下单守卫、SSE 实时推送与一键拉起海乐 App 支付**，稳定服务宿舍楼同学超半年。
-4. **跨端 26 项标准化 Agent 技能库 (`agent-workflow-skills`) & 研发效能工具集**：
-   - **跨端 Agent 技能库**：[https://github.com/Evan-Joseph/agent-workflow-skills](https://github.com/Evan-Joseph/agent-workflow-skills)，将日常高频的 PRD 与公文排版、高保真界面构建、学术文献核验、音视频剪辑与浏览器自动化沉淀为 **26 个跨平台（Claude Code / Codex / Antigravity）标准化技能包（Skills）**。
+4. **跨端 20 项标准化 Agent 技能库 (`agent-workflow-skills`) & 研发效能工具集**：
+   - **跨端 Agent 技能库**：[https://github.com/Evan-Joseph/agent-workflow-skills](https://github.com/Evan-Joseph/agent-workflow-skills)，将日常高频的 PRD 与公文排版、高保真界面构建、学术文献核验、音视频剪辑与浏览器自动化封装为 **20 个跨平台（Claude Code / Codex / Antigravity）标准化技能包（Skills）**（附运行时契约、质量门禁与 87 个 AST 校验可执行脚本）。
    - **《竞赛矩阵 · 竞赛规划看板 V3》**（[`Evan-Joseph/competition-mission-control`](https://github.com/Evan-Joseph/competition-mission-control)）：纳管 62 项赛事的日历排期、战术白板与 AI Action Card 指挥舱。
-   - **《GP-VTON++ 虚拟试衣双视口工作台与方案评审》**（仓库 [`Evan-Joseph/gp-vton-virtual-try-on`](https://github.com/Evan-Joseph/gp-vton-virtual-try-on)，实机视图 `./assets/gpvton_review.webp`）：同页同步展示桌面+手机双视口时尚模特虚拟试衣工作台与 Cloudflare KV 实时投票。
+   - **《GP-VTON++ 虚拟试衣双视口工作台与方案评审》**（实机视图 `./assets/gpvton_review.webp`）：同页同步展示桌面+手机双视口时尚模特虚拟试衣工作台与 Cloudflare KV 实时投票。
    - **《PPT 提示词增强》**（实机视图 `./assets/ppt_enhancer.webp`）：把一句话需求转化为结构化专业 PPT 提示词，支持全自动/半自动/数据图表三模式与多模型切换。
    - **《君子之“交”——三端协同课程作业管理与多模态查重证据台》**（实机视图 `./assets/junzi_deck.webp`）：支持 AI 作业海报生成、92% 雷同检测力导向图查重证据台与受控 AI 助教。
 
@@ -97,12 +97,12 @@
 - **核心量化成果**：
   - **`21+1 / 14`**：将海运危规与老计划员经验抽象为 **21+1 项一票否决安全红线 + 14 维防翻箱优选评分规格**
   - **`50,000+`**：清洗治理生产库中 **5 万余条**已离场未销账的“幽灵在场箱”异常数据，构建 **1 秒级策略参数热更新推演看板**与近 **600 项自动化回归验证**
-  - **`90.0% ~ 95.75%`**：在 **400 箱真实生产快照回测集**上，大区 Top-2 推荐命中率跃升至 **90.0% ~ 95.75%**
-  - **`90.0% (18/20)`**：**2026 年 10 月 15 日赴青岛港现场驻场跟随计划员实测 20 箱，推荐落位现场采纳与可行率达 90.0%（18/20）**
-- **从调研到实测的核心落地链路**：
-  1. **驻场需求调研与复杂业务规则抽象**：深入青岛港调度一线访谈计划员，将数百页《国际海运危险货物规则》（IMDG）条文与老计划员口耳相传的排位经验，系统转化为 **21+1 项一票否决安全红线**（危规隔离表、消防栓与办公楼安全距离边界、特种箱型限制等）与 **14 维防翻箱优选评分规格**（同船集中度、船期早晚防互压等），完成从非标人工经验到数字化产品规格（PRD）的跨越。
-  2. **驾驭 AI 工具链极速交付与脏数据治理**：面对生产库中 5 万余条已离场未销账的“幽灵在场箱”异常数据及复杂的副危属性、船期匹配问题，高效调度 AI 工具构建智能推荐服务、**1 秒级策略参数热更新推演看板**与近 **600 项自动化回归验证**，快速完成多轮规则迭代与质量加固。
-  3. **生产数据回放归因与港区现场跟班实测**：独立搭建历史生产快照回放比对工具，剥离人工随意放箱噪声，驱动大区路由与子区评分持续优化，最终在港区一线跟班实测中取得 90.0% 的现场可行率。
+  - **`95.8%`**：在 **400 箱真实生产快照回测集**上，大区 Top-2 推荐命中率达 **95.8%**
+  - **`90.0% (18/20)` & `>91.5% (1,374 箱)`**：**2026 年 10 月 15 日赴青岛港驻场跟班实测 20 箱可行率达 90.0%（18/20）；线上持续运行 1,374 箱命中率超 91.5%，全场违规箱由 207 骤降至 105 箱**
+- **从调研到实测的交付过程**：
+  1. **驻场需求调研与业务规则抽象**：深入青岛港调度室访谈计划员，将数百页《国际海运危险货物规则》（IMDG）条文与老计划员口传排位经验梳理转化为 **21+1 项一票否决安全红线**（危规隔离表、消防栓与办公楼安全距离边界、特种箱型限制等）与 **14 维防翻箱优选评分规格**（同船集中度、船期早晚防互压等），形成可执行的数字化产品规格（PRD）。
+  2. **AI 辅助研发与脏数据治理**：面对生产库中 5 万余条已离场未销账的“幽灵在场箱”异常数据及副危属性、船期匹配问题，运用 AI 编程工具构建智能推荐后端、**1 秒级策略参数热更新推演看板**与近 **600 项自动化回归测试**，完成多轮规则迭代。
+  3. **生产数据回放与港区跟班实测**：搭建历史生产快照回放比对工具剥离人工放箱噪声，持续优化大区路由与子区评分，取得 400 箱回测 Top-2 命中率 95.8%、驻场 20 箱实测可行率 90.0% 及线上 1,374 箱超 91.5% 命中率的生产表现。
 
 ### 4.2 KouPilot（智航学伴）—— 大学生跨平台竞赛与生涯规划智能体（第一作者 / 项目负责人 · 2026.01 – 2026.03）
 - **奖项**：
@@ -132,13 +132,13 @@
 
 ## 五、 大模型评测认知与顶会科研背书 (Model Evaluation & Publications)
 
-> **产品赋能逻辑**：通过对 20+ 款主流多模态大模型的系统性评测与结构化输出控制实验，建立对“大模型能力边界、时空与顺序偏置幻觉、解析器规则门控”的一手实证直觉，直接指导 AI 产品选型、工作流分阶段拆解与零幻觉质量门禁设计。
+> **评测实证对产品架构的指导**：通过对 19 款主流多模态大模型的系统评测与结构化输出控制实验，定位大模型能力边界、时空与顺序偏置幻觉及解析器规则门控机制，直接指导 AI 产品选型、工作流分阶段拆解与输出质量校验设计。
 
 1. **[AAAI 2026 Oral · CCF-A 类顶会 · 共同第一作者 (#2) · 已正式发表]**
    - **论文题目**：*SpatialLogic-Bench: A Diagnostic Benchmark for Task-Oriented Spatiotemporal Reasoning*
    - **作者**：Xiaoda Yang\*, **Shenzhou Gao\***, Can Wang\*, Peijian Zhang, et al.
    - **权威链接**：[DOI: 10.1609/aaai.v40i23.39022](https://doi.org/10.1609/aaai.v40i23.39022) ｜ [AAAI Proceedings](https://ojs.aaai.org/index.php/AAAI/article/view/39022)
-   - **核心贡献与产品价值**：主导构建面向复杂动态场景的多模态大模型时空推理诊断基准，引入前/反向双任务时序范式与多粒度滑窗评测；系统性测评 GPT-4o、Gemini、Qwen-VL 等 **20+ 款主流开源与闭源大模型**，精准定位当前模型在多步空间方位转换与前因后果推断上的“幻觉盲区”；独立搭建高并发自动化评测流水线，独立完成全套科研信息架构图设计与 LaTeX 出版排版。
+   - **核心贡献与产品价值**：主导构建面向复杂动态场景的多模态大模型时空推理诊断基准，引入前/反向双任务时序范式与多粒度滑窗评测；系统评测 GPT-4o、Gemini、Qwen-VL 等 **19 款主流开源与闭源大模型**，定位当前模型在多步空间方位转换与因果推断上的失真盲区；独立搭建高并发自动化评测流水线，独立完成全套科研信息架构图设计与 LaTeX 出版排版。
 
 2. **[ICML 2026 · CCF-A 类顶会 · 第三作者（除共一外首位）· 正式录用]**
    - **论文题目**：*From Perception to Planning: Evolving Ego-Centric Task-Oriented Spatiotemporal Reasoning via Curriculum Learning*
@@ -234,7 +234,7 @@
 | 相对路径 (`./assets/...`) | 在线绝对 URL (`https://evan-joseph.github.io/...`) | 尺寸 / 规格 | 画面内容与用途说明 |
 | :--- | :--- | :--- | :--- |
 | `assets/health_quadrant.webp` | `https://evan-joseph.github.io/assets/health_quadrant.webp` | `2699×1890` | 图 1：全球 203 个国家与地区四象限分型（健康转型压力指数 × 卫生承接能力指数） |
-| `assets/health_trajectories.webp` | `https://evan-joseph.github.io/assets/health_trajectories.webp` | `2488×1816` | 图 2：2000–2023 年金砖五国（中/印/俄/巴/南）慢病转型与卫生承接演化轨迹 |
+| `assets/health_trajectories.webp` | `https://evan-joseph.github.io/assets/health_trajectories.webp` | `2488×1816` | 图 2：典型发展中经济体（中国/巴西/印度/埃及/亚美尼亚）慢病转型与卫生承接跨期演化轨迹 |
 | `assets/health_warning.webp` | `https://evan-joseph.github.io/assets/health_warning.webp` | `2395×1633` | 图 3：2026 年全球慢病承接陷阱短期高危预警排序（识别持续高危与新滑入高危国家） |
 | `assets/health_scenarios.webp` | `https://evan-joseph.github.io/assets/health_scenarios.webp` | `2671×1524` | 图 4：2023–2030 年三种政策干预情景下的高危国家风险消减推演 |
 
@@ -252,13 +252,13 @@
 | `assets/open_timer_review.webp` | `https://evan-joseph.github.io/assets/open_timer_review.webp` | `2880×1800` | `https://clock.4c666.top` **《沉浸时钟 · Open-Timer（时间轴与 14 天回顾）》**（2x Retina 线上最新截取：流体`时间轴`与 14 天趋势柱状图 + 打卡日历热力图） |
 | `assets/kaoyan_22408.webp` | `https://evan-joseph.github.io/assets/kaoyan_22408.webp` | `2880×1800` | `https://kaoyan-22408-flashcards.pages.dev` **《22408 · 研记（识记与真题研习）》**（2x Retina 线上最新截取：政治+英二+数二+408 全科 1,513 学习项与 1,613 真题工作台） |
 | `assets/kaoyan_politics.webp` | `https://evan-joseph.github.io/assets/kaoyan_politics.webp` | `2880×1800` | **《政治识记》**（2x Retina 实机截取：考研 101 本地优先刷题、客观题微批次、帽子题定位词速配与主观题挖空） |
-| `assets/math2_flashcards.webp` | `https://evan-joseph.github.io/assets/math2_flashcards.webp` | `2880×1800` | `Evan-Joseph/math2-flashcards` **《考研数学识记》**（2x Retina 实机截取：数学一/数学二 302 项核心概念公式 FSRS 主动回忆与 1987–2025 真题库） |
-| `assets/haile_bot_mobile.webp` | `https://evan-joseph.github.io/assets/haile_bot_mobile.webp` | `1170×2532` | `Evan-Joseph/haile-bot` **《泓园 7 号楼洗衣房 · 海乐生活抢占助手 v3（移动端）》**（3x Retina 最新 v3 实机：实时 5 洗 1 烘状态与排队抢占，零手机号暴露） |
-| `assets/haile_bot_matrix.webp` | `https://evan-joseph.github.io/assets/haile_bot_matrix.webp` | `2880×1800` | `Evan-Joseph/haile-bot` **《泓园 7 号楼洗衣房 · 海乐生活抢占助手 v3（桌面宽屏）》**（2x Retina 最新 v3 实机：左侧验证码登录与右侧 5 洗 1 烘实时进度条，零手机号暴露） |
+| `assets/math2_flashcards.webp` | `https://evan-joseph.github.io/assets/math2_flashcards.webp` | `2880×1800` | **《考研数学识记》**（2x Retina 实机截取：数学一/数学二 302 项核心概念公式 FSRS 主动回忆与 1987–2025 真题库） |
+| `assets/haile_bot_mobile.webp` | `https://evan-joseph.github.io/assets/haile_bot_mobile.webp` | `1170×2532` | **《泓园 7 号楼洗衣房 · 海乐生活抢占助手 v3（移动端）》**（3x Retina 最新 v3 实机：实时 5 洗 1 烘状态与排队抢占，零手机号暴露） |
+| `assets/haile_bot_matrix.webp` | `https://evan-joseph.github.io/assets/haile_bot_matrix.webp` | `2880×1800` | **《泓园 7 号楼洗衣房 · 海乐生活抢占助手 v3（桌面宽屏）》**（2x Retina 最新 v3 实机：左侧验证码登录与右侧 5 洗 1 烘实时进度条，零手机号暴露） |
 | `assets/lumbar_ai.webp` | `https://evan-joseph.github.io/assets/lumbar_ai.webp` | `2880×1800` | **《LumbarAI · 腰椎智能辅助分析系统》**（2x Retina 实机截取：4C 大赛作品 `2026026666`《智脊析——腰椎MRI结构化分析与诊断决策支持系统》） |
 | `assets/medconnect_care.webp` | `https://evan-joseph.github.io/assets/medconnect_care.webp` | `2880×1800` | **《医线牵 · 连接医患与医院协作网络》**（2x Retina 实机截取：4C 大赛作品 `2026045907`《医脉山海》远程多方会诊平台，支持四套临床主题切换） |
 | `assets/mission_control.webp` | `https://evan-joseph.github.io/assets/mission_control.webp` | `2880×1800` | `Evan-Joseph/competition-mission-control` **《竞赛矩阵 · 竞赛规划看板 V3》**（2x Retina 最新实机：纳管 62 项赛事的日历排期、战术白板与 AI Action Card 指挥舱） |
-| `assets/gpvton_review.webp` | `https://evan-joseph.github.io/assets/gpvton_review.webp` | `2880×1800` | `Evan-Joseph/gp-vton-virtual-try-on` **《GP-VTON++ / FRONTEND REVIEW 虚拟试衣工作台与方案评审》**（2x Retina 实机截取：切换至“试衣工作台”展示真实模特时尚试衣桌面+手机双视口） |
+| `assets/gpvton_review.webp` | `https://evan-joseph.github.io/assets/gpvton_review.webp` | `2880×1800` | **《GP-VTON++ / FRONTEND REVIEW 虚拟试衣工作台与方案评审》**（2x Retina 实机截取：切换至“试衣工作台”展示真实模特时尚试衣桌面+手机双视口） |
 | `assets/ppt_enhancer.webp` | `https://evan-joseph.github.io/assets/ppt_enhancer.webp` | `2880×1800` | **《PPT 提示词增强》**（2x Retina 实机截取：把一句话需求变成专业结构化 PPT 提示词，支持全自动/半自动/数据图表与多模型切换） |
 | `assets/junzi_deck.webp` | `https://evan-joseph.github.io/assets/junzi_deck.webp` | `1440×900` | **《君子之交 · 教师端工作台与查重证据台》**（易途杯 Java 作品高清实机大图：展示课程管理、92% 雷同检测与 AI 任务状态） |
 
@@ -275,18 +275,18 @@
   - **Cumulative Weighted Average**: **`86.19 / 100`** (GPA **`3.46 / 4.00`**, Cumulative Rank **`6 / 20`**, Zero Failures)
   - **English Proficiency**: **CET-6 `564`** ｜ **CET-4 `568`**
 - **Flagship 0→1 Live Products**:
-  1. **"Suanle · 算了"** ([https://www.suanle.cc](https://www.suanle.cc), Curator Console: [https://www.suanle.cc/curator](https://www.suanle.cc/curator), Repo: [Evan-Joseph/suanle](https://github.com/Evan-Joseph/suanle), 1080p60 Promo Version A Opus 5.5 45s: [suanle_promo_opus55.mp4](https://evan-joseph.github.io/assets/suanle_promo_opus55.mp4), Version B Fable 5.1 Max 50s: [suanle_promo_fable51max.mp4](https://evan-joseph.github.io/assets/suanle_promo_fable51max.mp4)): Solo-created immersive AI decision-making & anti-overthinking web product. Converged from **9 multi-LLM interactive prototypes**; designed a **deterministic calendar pre-computation engine + 6-category on-demand interactive divination cards + silent user profiling** to eliminate LLM hallucinations; includes a paper-crumpling relief ritual, xuan-paper share cards, a real-time **Curator Operations Console (`/curator`)**, two polished 1080p60 brand promo videos, and a verified online tipping loop.
+  1. **"Suanle · 算了"** ([https://www.suanle.cc](https://www.suanle.cc), Curator Console: [https://www.suanle.cc/curator](https://www.suanle.cc/curator), Repo: [Evan-Joseph/suanle](https://github.com/Evan-Joseph/suanle), 1080p60 Promo Version A Opus 5.5 45s: [suanle_promo_opus55.mp4](https://evan-joseph.github.io/assets/suanle_promo_opus55.mp4), Version B Fable 5.1 Max 50s: [suanle_promo_fable51max.mp4](https://evan-joseph.github.io/assets/suanle_promo_fable51max.mp4)): Solo-created immersive AI decision-making & anti-overthinking web product. Converged from **9 multi-LLM interactive prototypes**; designed a **deterministic calendar pre-computation engine + 6-category on-demand interactive divination cards + structured user profiling** to eliminate LLM calendar hallucinations; includes a paper-crumpling relief ritual, xuan-paper share cards, a real-time **Curator Operations Console (`/curator`)**, two polished 1080p60 brand promo videos, and online tipping payment.
   2. **"Stone Epic · 石室史诗"** (Repo: [Evan-Joseph/stone-carving-discovery-app](https://github.com/Evan-Joseph/stone-carving-discovery-app), 2x Retina Exhibition Boards: `./assets/stone_*.webp`): Han Dynasty Stone Relief Digital Exhibition & Multimodal AI Platform (**Provincial 2nd Prize in the 19th Chinese Collegiate Computing Competition**, 1st Author / Team Lead; endorsed by Curator Zhu Weihua of the Wu Family Shrine Museum). Features a 76-artifact digital hall, virtual excavation onboarding, stepless rubbing comparison lens, 3D relief inspection, mobile camera recognition, and a grounded streaming AI docent.
-  3. **Campus, Productivity & AI Workflow Matrix**: **Immersive Clock · Open-Timer** ([https://clock.4c666.top](https://clock.4c666.top), Repo: [Evan-Joseph/open-timer](https://github.com/Evan-Joseph/open-timer), focus/countdown/stopwatch, fluid daily timeline & 14-day heatmap review), **22408 · YanJi (4-Subject Flashcards & Real Exam Studio)** ([https://kaoyan-22408-flashcards.pages.dev](https://kaoyan-22408-flashcards.pages.dev), Repos: [Evan-Joseph/kaoyan-22408-flashcards](https://github.com/Evan-Joseph/kaoyan-22408-flashcards) & [Evan-Joseph/math2-flashcards](https://github.com/Evan-Joseph/math2-flashcards), 1,513 learning items & 1,613 exam questions across Politics, English II, Math II & CS 408), **Hongyuan Bldg 7 · Haile Laundry Auto-Lock Assistant v3** (Repo: [Evan-Joseph/haile-bot](https://github.com/Evan-Joseph/haile-bot), Android native standalone APK + local Web console, 5 washers + 1 dryer real-time monitoring, `0.2–0.3s` adaptive pulse auto-lock & one-tap payment redirect serving 1,000+ students for 6+ months), **Competition Mission Control V3** ([Evan-Joseph/competition-mission-control](https://github.com/Evan-Joseph/competition-mission-control)), **GP-VTON++ Dual-Viewport Virtual Try-On Studio** ([Evan-Joseph/gp-vton-virtual-try-on](https://github.com/Evan-Joseph/gp-vton-virtual-try-on)), **PPT Prompt Enhancer** (`./assets/ppt_enhancer.webp`), **Junzi AI Coursework & Plagiarism Evidence Workbench** (`./assets/junzi_deck.webp`), and **26 Standardized Cross-Harness Agent Skills** ([Evan-Joseph/agent-workflow-skills](https://github.com/Evan-Joseph/agent-workflow-skills)).
+  3. **Campus, Productivity & AI Workflow Matrix**: **Immersive Clock · Open-Timer** ([https://clock.4c666.top](https://clock.4c666.top), `./assets/open_timer*.webp`, focus/countdown/stopwatch, fluid daily timeline & 14-day heatmap review), **22408 · YanJi (4-Subject Flashcards & Real Exam Studio)** ([https://kaoyan-22408-flashcards.pages.dev](https://kaoyan-22408-flashcards.pages.dev), `./assets/kaoyan_*.webp`, 1,513 learning items & 1,613 exam questions across Politics, English II, Math II & CS 408), **Hongyuan Bldg 7 · Haile Laundry Auto-Lock Assistant v3** (`./assets/haile_bot_*.webp`, Android native standalone APK + local Web console, 5 washers + 1 dryer real-time monitoring, `0.2–0.3s` adaptive pulse auto-lock & one-tap payment redirect serving 1,000+ students for 6+ months), **Competition Mission Control V3** ([Evan-Joseph/competition-mission-control](https://github.com/Evan-Joseph/competition-mission-control)), **GP-VTON++ Dual-Viewport Virtual Try-On Studio** (`./assets/gpvton_review.webp`), **PPT Prompt Enhancer** (`./assets/ppt_enhancer.webp`), **Junzi AI Coursework & Plagiarism Evidence Workbench** (`./assets/junzi_deck.webp`), and **20 Standardized Cross-Harness Agent Skills** ([Evan-Joseph/agent-workflow-skills](https://github.com/Evan-Joseph/agent-workflow-skills), across Claude Code, Codex & Antigravity).
 - **Enterprise Industrial AI & Multi-Agent Solutions**:
-  1. **Shandong Port Group · Hazardous Goods Container Yard Intelligent Recommendation System** (Lead for Field Discovery, Rule Modeling & Delivery, 2025.11 – Present; 2x Retina Consoles: `./assets/hazmat_*.webp`): Translated IMDG regulations and veteran dispatcher heuristics into **21+1 veto safety redlines** and **14 anti-reshuffling scoring dimensions**; cleaned **50,000+ "ghost container" dirty records**; built a **1-second hot-reload policy simulation sandbox** and **600+ automated regression checks**; achieved **90.0%–95.75% Top-2 zone hit rate** on a 400-container production backtest and **90.0% (18/20) live on-site feasibility** during shift testing at Qingdao Port on Oct 15, 2026.
+  1. **Shandong Port Group · Hazardous Goods Container Yard Intelligent Recommendation System** (Lead for Field Discovery, Rule Modeling & Delivery, 2025.11 – Present; 2x Retina Consoles: `./assets/hazmat_*.webp`): Translated IMDG regulations and veteran dispatcher heuristics into **21+1 veto safety redlines** and **14 anti-reshuffling scoring dimensions**; cleaned **50,000+ "ghost container" dirty records**; built a **1-second hot-reload policy simulation sandbox** and **600+ automated regression checks**; achieved **95.8% Top-2 zone hit rate** on a 400-container production backtest, **90.0% (18/20) live on-site feasibility** during shift testing at Qingdao Port on Oct 15, 2026, and **>91.5% live hit rate across 1,374 containers** (cutting yard violations from **207 to 105**).
   2. **KouPilot (智航学伴)**: Collegiate competition & career planning multi-agent system (**2nd Prize & Excellence Model Award in Qingdao Bank · University Coze Agent Competition**, Project Lead / 1st Author).
   3. **Shandong Port Tugboat Collaborative Scheduling High-Fidelity Mock & Situational Dashboard**: Rapid interactive mock and multi-vessel trajectory dashboard (enumerating 561 scheduling combinations into 3 recommended dispatch plans) supporting stakeholder alignment and commercial bidding.
   4. **"Hezhongzhen · 合众诊" & "MedConnect Care · 医线牵 / 医脉山海"** (`./assets/medconnect_care.webp`): Multi-agent collaborative medical triage platform (**Provincial 1st Prize in the 18th Chinese Collegiate Computing Competition**, 1st Author / Team Captain & Presenter) and cross-regional remote medical consultation platform (`2026045907`).
   5. **"From Treatable to Affordable · 从治得上到治得起"** (HeyWhale Showcase: [HeyWhale Work Detail](https://www.heywhale.com/org/4C2026/competition/work-detail?work=69eaf383acdef02a88d7d9b0) ｜ Repo: [Evan-Joseph/4c-health-insight-showcase](https://github.com/Evan-Joseph/4c-health-insight-showcase)): Global chronic disease transition trap & country typology study across **203 economies (2000–2023)** (**Provincial 2nd Prize in the 19th Chinese Collegiate Computing Competition Big Data Track**, 1st Author / Team Lead; reviewed by clinical director Dr. Hu Yong and recommended by Assoc. Prof. Yang Huan).
   6. **SurgiMind3D / Lumbar AI**: Core member of *SurgiMind3D* (**2026 China International College Students Innovation Competition University Gold Medal**, 2x Retina diagnostic UI `./assets/lumbar_ai.webp`).
 - **Publications & Research Grants**:
-  1. **AAAI 2026 Oral (CCF-A, Co-First Author #2, Published)**: *SpatialLogic-Bench: A Diagnostic Benchmark for Task-Oriented Spatiotemporal Reasoning* ([DOI: 10.1609/aaai.v40i23.39022](https://doi.org/10.1609/aaai.v40i23.39022)).
+  1. **AAAI 2026 Oral (CCF-A, Co-First Author #2, Published)**: *SpatialLogic-Bench: A Diagnostic Benchmark for Task-Oriented Spatiotemporal Reasoning* ([DOI: 10.1609/aaai.v40i23.39022](https://doi.org/10.1609/aaai.v40i23.39022)) — evaluated **19** mainstream multimodal LLMs.
   2. **ICML 2026 (CCF-A, 3rd Author, Accepted)**: *From Perception to Planning: Evolving Ego-Centric Task-Oriented Spatiotemporal Reasoning via Curriculum Learning* ([arXiv:2604.10517](https://arxiv.org/abs/2604.10517)).
   3. **EMNLP 2026 Findings (6th Author, Accepted)**: *Diagnosing Order Dependence in Vision-Language Task-Progress Judgment with Equal-State Supervision* ([OpenReview: 7iS3Cxm7af](https://openreview.net/forum?id=7iS3Cxm7af)).
   4. **1st-Author Journal Paper Under Review at *Neurocomputing* (CAS Q2 / CCF-C / JCR Q1)**: *Structured Supervision Targets as a Procedural Interface for Reliable Parser-Gated Plan Generation in Compact Vision-Language Models* (Codename **LEAP**, [Evan-Joseph/leap-code](https://github.com/Evan-Joseph/leap-code)) — **96.00%** strict JSON parse survival (**−91.2%** prose refusals), **28.38** raw / **38.90** contract-aligned 6-D macro score (**+5.32** over LoRA, $p < 0.0001$) across 4,500 zero-shot VLABench instances.

@@ -39,7 +39,8 @@ const PRODUCTS: Prod[] = [
     ],
     links: [
       { href: "https://clock.4c666.top", label: l("在线体验", "Live") },
-      { href: "https://github.com/Evan-Joseph/open-timer", label: l("开源仓库", "Repo"), repo: true },
+      // Private during 22408 exam period (live D1/PIN); restore after clean-room public release:
+      // { href: "https://github.com/Evan-Joseph/open-timer", label: l("开源仓库", "Repo"), repo: true },
     ],
   },
   {
@@ -64,8 +65,9 @@ const PRODUCTS: Prod[] = [
     ],
     links: [
       { href: "https://kaoyan-22408-flashcards.pages.dev", label: l("全科主站", "Main site") },
-      { href: "https://github.com/Evan-Joseph/kaoyan-22408-flashcards", label: l("主站仓库", "Main repo"), repo: true },
-      { href: "https://github.com/Evan-Joseph/math2-flashcards", label: l("数学仓库", "Math repo"), repo: true },
+      // Private repositories (exam past-paper question banks):
+      // { href: "https://github.com/Evan-Joseph/kaoyan-22408-flashcards", label: l("主站仓库", "Main repo"), repo: true },
+      // { href: "https://github.com/Evan-Joseph/math2-flashcards", label: l("数学仓库", "Math repo"), repo: true },
     ],
   },
   {
@@ -88,7 +90,8 @@ const PRODUCTS: Prod[] = [
       { img: A.haile_bot_mobile, label: l("移动端", "Mobile") },
     ],
     links: [
-      { href: "https://github.com/Evan-Joseph/haile-bot", label: l("开源仓库", "Repo"), repo: true },
+      // Private repository (campus laundry IoT protocol):
+      // { href: "https://github.com/Evan-Joseph/haile-bot", label: l("开源仓库", "Repo"), repo: true },
     ],
   },
   {
@@ -107,14 +110,14 @@ const PRODUCTS: Prod[] = [
   {
     id: "skills",
     cat: "agent",
-    big: "26",
+    big: "20",
     name: l("跨端 Agent 技能库 · agent-workflow-skills", "Cross-platform Agent Skill Library · agent-workflow-skills"),
     desc: l(
-      "将 PRD 与公文排版、高保真 UI 构建、学术文献核验、音视频剪辑与浏览器自动化封装为 26 个跨平台（Claude Code / Codex / Antigravity）标准化技能包。",
-      "Packages PRD and official-document typesetting, hi-fi UI building, academic-reference verification, audio/video editing and browser automation into 26 standardized skill packs across Claude Code, Codex and Antigravity.",
+      "将 PRD 与公文排版、高保真 UI 构建、学术文献核验、音视频剪辑与浏览器自动化封装为 20 个跨平台（Claude Code / Codex / Antigravity）标准化技能包。",
+      "Packages PRD and official-document typesetting, hi-fi UI building, academic-reference verification, audio/video editing and browser automation into 20 standardized skill packs across Claude Code, Codex and Antigravity.",
     ),
-    stats: [{ v: "26", k: l("标准化技能包", "skill packs") }],
-    tags: ["Claude Code", "Codex", "Antigravity"],
+    stats: [{ v: "20", k: l("标准化技能包", "skill packs") }],
+    tags: ["Claude Code", "Codex", "Antigravity", "MCP / CLI"],
     shots: [],
     links: [{ href: "https://github.com/Evan-Joseph/agent-workflow-skills", label: l("开源仓库", "Repo"), repo: true }],
   },
@@ -129,7 +132,8 @@ const PRODUCTS: Prod[] = [
     tags: ["GPU queue", "Cloudflare KV"],
     shots: [{ img: A.gpvton_review, label: l("双视口评审", "Dual-viewport review") }],
     links: [
-      { href: "https://github.com/Evan-Joseph/gp-vton-virtual-try-on", label: l("开源仓库", "Repo"), repo: true },
+      // Private repository (internal review workbench):
+      // { href: "https://github.com/Evan-Joseph/gp-vton-virtual-try-on", label: l("开源仓库", "Repo"), repo: true },
     ],
   },
   {
@@ -272,8 +276,8 @@ export function Matrix({ no }: { no: number }) {
         </>
       }
       intro={t(
-        "覆盖备考效率、校园高频刚需、Agent 工程工具链与垂直 AI 应用，全部已上线部署并附开源仓库。",
-        "Spanning exam preparation, campus utility, agent engineering toolchains and vertical AI apps — all deployed live with open-source repositories.",
+        "覆盖备考效率、校园高频刚需、Agent 工程工具链与垂直 AI 应用，附在线体验入口、开源仓库或 2x Retina 实机视图。",
+        "Spanning exam preparation, campus utility, agent engineering toolchains and vertical AI apps — complete with live web apps, open-source repositories, or 2x Retina UI galleries.",
       )}
     >
       <div className="mb-8 flex flex-wrap items-center justify-between gap-3">

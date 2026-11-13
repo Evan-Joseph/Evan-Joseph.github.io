@@ -145,8 +145,8 @@ export const A = {
   ),
   health_trajectories: i(
     "health_trajectories.webp", 2488, 1816,
-    "图 2 · 2000–2023 年金砖五国（中/印/俄/巴/南）慢病转型与卫生承接演化轨迹",
-    "Fig. 2 · 2000–2023 evolution trajectories of the five BRICS countries (CN/IN/RU/BR/ZA)",
+    "图 2 · 典型发展中经济体（中/巴/印/埃/亚）慢病转型与卫生承接跨期演化轨迹",
+    "Fig. 2 · Cross-period evolution trajectories across five representative economies (China, Brazil, India, Egypt, Armenia)",
   ),
   health_warning: i(
     "health_warning.webp", 2395, 1633,

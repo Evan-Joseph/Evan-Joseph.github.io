@@ -7,7 +7,13 @@ const GROUPS: { icon: typeof Cloud; title: L; sub: L; items: L[] }[] = [
     icon: TerminalSquare,
     title: l("AI 编程与 Agent 协同环境", "AI coding & agent environments"),
     sub: l("多模型并行原型开发与交叉验证", "Multi-model parallel prototyping & cross-verification"),
-    items: [l("Claude Code", "Claude Code"), l("Codex", "Codex"), l("Cursor", "Cursor"), l("Antigravity", "Antigravity"), l("扣子（Coze）", "Coze")],
+    items: [
+      l("Claude Code", "Claude Code"),
+      l("Codex", "Codex"),
+      l("Antigravity", "Antigravity"),
+      l("MCP / CLI", "MCP / CLI"),
+      l("扣子（Coze）", "Coze"),
+    ],
   },
   {
     icon: Clapperboard,
@@ -65,8 +71,8 @@ export function Toolkit({ no }: { no: number }) {
         </>
       }
       intro={t(
-        "日常主力使用的开发工具链、全栈架构与评测方法，以及已开源的 26 个跨平台 Agent 标准化技能包。",
-        "Primary development toolchains, full-stack architecture and evaluation methods, alongside 26 open-source cross-platform agent skill packs.",
+        "日常主力使用的开发工具链、全栈架构与评测方法，以及已开源的 20 个跨平台 Agent 标准化技能包。",
+        "Primary development toolchains, full-stack architecture and evaluation methods, alongside 20 open-source cross-platform agent skill packs.",
       )}
     >
       <div className="grid gap-5 md:grid-cols-2">
@@ -95,7 +101,7 @@ export function Toolkit({ no }: { no: number }) {
       <div className="relative mt-8 overflow-hidden rounded-3xl border border-bronze-2/40 bg-gradient-to-br from-bronze-2/12 via-transparent to-seal/10 p-6 sm:p-10">
         <div className="grid items-center gap-8 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="font-serif-cn text-[6rem] font-black leading-none text-bronze-2 sm:text-[8rem]">26</p>
+            <p className="font-serif-cn text-[6rem] font-black leading-none text-bronze-2 sm:text-[8rem]">20</p>
             <p className="-mt-1 font-mono text-xs uppercase tracking-[0.2em] text-paper/60">{t("标准化技能包", "standardized skill packs")}</p>
           </div>
           <div className="md:col-span-8">

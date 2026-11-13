@@ -14,8 +14,8 @@ const MOATS: {
     n: "壹",
     title: l("问题定义与 0→1 独立全栈交付", "Problem definition & solo 0→1 product delivery"),
     body: l(
-      "从高频日常场景与非标产业一线切入，结合 Claude Code、Codex、Cursor、Antigravity、扣子（Coze）与多模态音视频工具链，独立完成需求调研、多模型原型比选、高保真交互 Mock、确定性规则设计、全栈开发部署，以及 1080p60 品牌宣传片、商业计划书（BP）、实时运营看台与线上收款。",
-      "Starting from high-frequency daily scenarios and non-standard industrial operations, I pair Claude Code, Codex, Cursor, Antigravity, Coze and multimodal audio/video toolchains to deliver the full 0→1 product lifecycle solo: user research, multi-model prototyping, hi-fi interactive mocks, deterministic rule design, full-stack deployment, 1080p60 brand films, business plans (BP), live ops cockpits and online payment.",
+      "从高频日常场景与非标产业一线切入，结合 Claude Code、Codex、Antigravity、扣子（Coze）与多模态音视频工具链，独立完成需求调研、多模型原型比选、高保真交互 Mock、确定性规则设计、全栈开发部署，以及 1080p60 品牌宣传片、商业计划书（BP）、实时运营看台与线上打赏收款。",
+      "Starting from high-frequency daily scenarios and non-standard industrial operations, I pair Claude Code, Codex, Antigravity, Coze and multimodal audio/video toolchains to deliver the full 0→1 product lifecycle solo: user research, multi-model prototyping, hi-fi interactive mocks, deterministic rule design, full-stack deployment, 1080p60 brand films, business plans (BP), live ops cockpits and online tipping payment.",
     ),
     chips: [
       { text: l("算了 · 0→1 实例", "Suanle · 0→1 case"), to: "#suanle" },
@@ -26,20 +26,20 @@ const MOATS: {
     n: "贰",
     title: l("国企驻场交付与复杂规程数字化", "On-site enterprise delivery & procedure digitization"),
     body: l(
-      "驻场港口与政企一线，将数百页非标安全规程与老计划员经验转化为可量化、可回测、可热更新的产品规则规格（PRD）与智能推荐系统，经 400 箱真实生产快照回测与青岛港现场跟班实测验证。",
-      "Working on-site with port and enterprise operations teams, I translate hundreds of pages of non-standard safety regulations and planners’ tacit experience into quantifiable, back-testable, hot-updatable product rule specifications (PRD) and recommendation systems — validated through 400-container production-snapshot backtests and on-site field testing at Qingdao Port.",
+      "驻场港口与政企一线，将数百页非标安全规程与老计划员经验转化为可量化、可回测、可热更新的产品规则规格（PRD）与智能推荐系统，经 400 箱生产快照回测（Top-2 命中率 95.8%）、青岛港现场跟班实测（90.0%）及线上 1,374 箱持续运行（命中率超 91.5%）验证。",
+      "Working on-site with port and enterprise operations teams, I translate hundreds of pages of non-standard safety regulations and planners’ tacit experience into quantifiable, back-testable, hot-updatable product rule specifications (PRD) and recommendation systems — validated across a 400-container backtest (95.8% Top-2 hit rate), Qingdao Port field testing (90.0%) and 1,374 live containers (>91.5% hit rate).",
     ),
     chips: [
       { text: l("21+1 / 14 规则规格", "21+1 / 14 rule spec"), to: "#industrial" },
-      { text: l("现场 90.0% (18/20)", "On-site 90.0% (18/20)"), to: "#industrial" },
+      { text: l("现场 90.0% · 线上 1,374 箱", "Field 90.0% · 1,374 live"), to: "#industrial" },
     ],
   },
   {
     n: "叁",
     title: l("顶会评测实证与大模型幻觉治理", "Top-tier LLM evaluation & hallucination control"),
     body: l(
-      "以共同第一作者发表 CCF-A 类顶会 AAAI 2026 Oral，第三作者录用 ICML 2026，第六作者录用 EMNLP 2026 Findings，并独立开展结构化规则门控实验（leap-code）。通过对 20+ 款主流多模态大模型的系统评测，定位时空推理与顺序偏置盲区，用实证数据划分模型生成与确定性规则的职责边界。",
-      "Co-first author of an AAAI 2026 Oral (CCF-A), third author at ICML 2026, sixth author at EMNLP 2026 Findings, and solo first author of the structured rule-gating study (leap-code). Benchmarking 20+ mainstream multimodal LLMs across spatiotemporal reasoning and order-bias blind spots provides empirical criteria for separating model generation from deterministic rule constraints.",
+      "以共同第一作者发表 CCF-A 类顶会 AAAI 2026 Oral，第三作者录用 ICML 2026，第六作者录用 EMNLP 2026 Findings，并独立开展结构化规则门控实验（leap-code）。通过对 19 款主流多模态大模型的系统评测，定位时空推理与顺序偏置盲区，用实证数据划分模型生成与确定性规则的职责边界。",
+      "Co-first author of an AAAI 2026 Oral (CCF-A), third author at ICML 2026, sixth author at EMNLP 2026 Findings, and solo first author of the structured rule-gating study (leap-code). Benchmarking 19 mainstream multimodal LLMs across spatiotemporal reasoning and order-bias blind spots provides empirical criteria for separating model generation from deterministic rule constraints.",
     ),
     chips: [
       { text: l("论文与评测", "Papers & evaluation"), to: "#research" },
@@ -85,13 +85,13 @@ const CASES: Record<
     flex: [
       l("14 维防翻箱优选评分：将老计划员经验量化为可调权重参数", "14-dimension anti-reshuffle scoring — planners’ experience modeled as tunable weights"),
       l("1 秒级策略参数热更新推演，调参即时预览落位变化", "1-second hot-update simulation to preview placement changes immediately"),
-      l("400 箱真实生产快照回测，大区 Top-2 命中率 90.0% ~ 95.75%", "400-container production-snapshot backtest: zone Top-2 hit rate 90.0% ~ 95.75%"),
+      l("400 箱真实生产快照回测，大区 Top-2 命中率 95.8%", "400-container production-snapshot backtest: zone Top-2 hit rate 95.8%"),
     ],
     guard: [
       l("21+1 项一票否决安全红线，严格对齐 IMDG《国际海运危险货物规则》", "21+1 one-vote-veto safety rules strictly aligned with the IMDG Code"),
       l("近 600 项自动化回归验证保障改规则不破红线", "Nearly 600 automated regression checks ensuring parameter updates never breach safety rules"),
     ],
-    outcome: l("2026.10.15 青岛港现场实测：20 箱推荐落位中 18 箱被计划员现场采纳", "Qingdao Port field test (15 Oct 2026): 18 of 20 recommended placements accepted by planners"),
+    outcome: l("驻场跟班实测 20 箱可行率 90.0% (18/20)；线上持续运行 1,374 箱命中率超 91.5%，全场违规箱由 207 降至 105 箱", "Field test: 90.0% (18/20) feasibility; live across 1,374 containers (>91.5% hit rate), cutting yard violations from 207 to 105"),
   },
   leap: {
     tab: l("LEAP 论文", "LEAP paper"),
