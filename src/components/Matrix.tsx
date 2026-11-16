@@ -111,13 +111,13 @@ const PRODUCTS: Prod[] = [
   {
     id: "skills",
     cat: "agent",
-    big: "20",
+    big: "23",
     name: l("跨端 Agent 技能库 · agent-workflow-skills", "Cross-platform Agent Skill Library · agent-workflow-skills"),
     desc: l(
-      "将 PRD 与公文排版、高保真 UI 构建、学术文献核验、音视频剪辑与浏览器自动化封装为 20 个跨平台（Claude Code / Codex / Antigravity）标准化技能包。",
-      "Packages PRD and official-document typesetting, hi-fi UI building, academic-reference verification, audio/video editing and browser automation into 20 standardized skill packs across Claude Code, Codex and Antigravity.",
+      "将 PRD 与公文排版、高保真 UI 构建、学术文献核验、音视频工程、浏览器自动化与多端配置治理封装为 23 个跨平台（Claude Code / Codex / Antigravity）标准化技能包（含 96 个可执行 Python 脚本）。",
+      "Packages PRD and document typesetting, UI implementation, academic literature verification, video rendering, browser automation and multi-harness configuration into 23 portable SKILL.md skill packs (96 Python scripts) across Claude Code, Codex and Antigravity.",
     ),
-    stats: [{ v: "20", k: l("标准化技能包", "skill packs") }],
+    stats: [{ v: "23", k: l("标准化技能包", "skill packs") }],
     tags: ["Claude Code", "Codex", "Antigravity", "MCP / CLI"],
     shots: [],
     links: [{ href: "https://github.com/Evan-Joseph/agent-workflow-skills", label: l("开源仓库", "Repo"), repo: true }],
