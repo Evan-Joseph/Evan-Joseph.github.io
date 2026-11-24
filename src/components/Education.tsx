@@ -9,8 +9,10 @@ const COURSES: { name: L; score: number }[] = [
   { name: l("人工智能数学基础", "Mathematical Foundations of AI"), score: 96 },
   { name: l("程序设计与算法实践", "Programming & Algorithm Practice"), score: 95 },
   { name: l("计算机系统基础", "Computer Systems Fundamentals"), score: 93 },
-  { name: l("离散数学", "Discrete Mathematics"), score: 93 },
+  { name: l("Java 程序设计", "Java Programming"), score: 93 },
+  { name: l("软件工程导论", "Introduction to Software Engineering"), score: 93 },
   { name: l("数据库系统原理", "Database System Principles"), score: 92 },
+  { name: l("编译原理", "Compiler Principles"), score: 91 },
   { name: l("形式语言与计算理论", "Formal Languages & Theory of Computation"), score: 90 },
 ];
 

@@ -224,8 +224,8 @@ export const A = {
   ),
   haile_bot_matrix: i(
     "haile_bot_matrix.webp", 2880, 1800,
-    "《海乐生活洗衣抢占助手》桌面宽屏 · 验证码登录与 5 洗 1 烘实时进度监控（现已开源升级至 v4.2.0 全国高校通用选楼版）",
-    "Haile Laundry Grabber · desktop console: SMS login and live washer/dryer progress (open-sourced at v4.2.0 for nationwide campuses)",
+    "《海乐生活洗衣抢占助手》桌面宽屏 · 验证码登录与 5 洗 1 烘实时进度监控（现已迭代至 v4.3.0 全国高校通用选楼版）",
+    "Haile Laundry Grabber · desktop console: SMS login and live washer/dryer progress (now at v4.3.0 for nationwide campuses)",
   ),
   haile_bot_mobile: i(
     "haile_bot_mobile.webp", 1170, 2532,

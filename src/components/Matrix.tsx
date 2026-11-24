@@ -73,14 +73,14 @@ const PRODUCTS: Prod[] = [
   {
     id: "haile",
     cat: "campus",
-    name: l("海乐生活洗衣抢占助手 v4.2 · 全国高校通用版", "Haile Laundry Grabber v4.2 · Nationwide Campus Edition"),
-    alias: l("独立 Android APK + 本地 FastAPI Web 双端开源（始于青大泓园 7 号楼）", "Open-source standalone Android APK + local FastAPI Web dual client"),
+    name: l("海乐生活洗衣抢占助手 v4.3.0 · 全国高校通用版", "Haile Laundry Grabber v4.3.0 · Nationwide Campus Edition"),
+    alias: l("独立 Android APK + 本地 FastAPI Web 双端架构（始于青大泓园 7 号楼，现为私有维护）", "Standalone Android APK + local FastAPI Web dual client (privately maintained)"),
     desc: l(
-      "源于青岛大学浮山校区泓园 7 号楼千名学生高峰期共用 5 洗 1 烘的排队痛点并稳定运行超半年，现已开源升级至 v4.2.0 全国高校通用版：内置 WGS-84 → GCJ-02 坐标转换与全国高校交互地图选楼、首次登录自动识别常用洗衣房与最近设备跨楼切换、机身二维码 / 15 位 IMEI / GTB 设备码解析，配合三档自适应脉冲轮询（≤10s 高频 0.2–0.3s 锁单）、一键拉起海乐 App 支付与 APK 应用内单飞更新。",
-      "Originated from a 1,000-student dormitory sharing 5 washers and 1 dryer at Qingdao University (6+ months in service) and now open-sourced as v4.2.0 for campuses nationwide: built-in WGS-84 → GCJ-02 coordinate conversion with interactive campus map picking, auto-detection of recent laundry rooms and cross-building switching, QR / 15-digit IMEI / GTB code parsing, three-tier adaptive pulse polling (0.2–0.3s lock-in), one-tap Haile app payment launch, and in-app OTA updates.",
+      "源于青岛大学浮山校区泓园 7 号楼千名学生高峰期共用 5 洗 1 烘的排队痛点并稳定运行超半年，现已迭代至 v4.3.0 全国高校通用版（项目转为私有维护，不再公开分发安装包与线上站点）：内置 WGS-84 → GCJ-02 坐标转换与全国高校交互地图选楼、首次登录自动识别常用洗衣房与最近设备跨楼切换、机身二维码 / 15 位 IMEI / GTB 设备码解析，配合三档自适应脉冲轮询（≤10s 高频 0.2–0.3s 锁单）、一键拉起海乐 App 支付与 APK 应用内单飞更新。",
+      "Originated from a 1,000-student dormitory sharing 5 washers and 1 dryer at Qingdao University (6+ months in service) and now evolved into v4.3.0 for campuses nationwide (privately maintained; installers and the live site are no longer publicly distributed): built-in WGS-84 → GCJ-02 coordinate conversion with interactive campus map picking, auto-detection of recent laundry rooms and cross-building switching, QR / 15-digit IMEI / GTB code parsing, three-tier adaptive pulse polling (0.2–0.3s lock-in), one-tap Haile app payment launch, and in-app OTA updates.",
     ),
     stats: [
-      { v: "v4.2.0", k: l("全国高校通用", "nationwide campuses") },
+      { v: "v4.3.0", k: l("全国高校通用", "nationwide campuses") },
       { v: "0.2–0.3s", k: l("高频脉冲锁单", "pulse lock-in") },
       { v: "6+", k: l("月稳定服务", "months in service") },
     ],
@@ -89,11 +89,7 @@ const PRODUCTS: Prod[] = [
       { img: A.haile_bot_matrix, label: l("桌面宽屏", "Desktop") },
       { img: A.haile_bot_mobile, label: l("移动端", "Mobile") },
     ],
-    links: [
-      { href: "https://haile-bot.pages.dev", label: l("线上主站 & OTA", "Live & OTA") },
-      { href: "https://github.com/Evan-Joseph/haile-bot", label: l("开源仓库", "Repo"), repo: true },
-      { href: "https://github.com/Evan-Joseph/haile-bot/releases/tag/v4.2.0", label: l("v4.2.0 APK", "v4.2.0 APK") },
-    ],
+    links: [],
   },
   {
     id: "mission",
@@ -111,13 +107,13 @@ const PRODUCTS: Prod[] = [
   {
     id: "skills",
     cat: "agent",
-    big: "23",
+    big: "22",
     name: l("跨端 Agent 技能库 · agent-workflow-skills", "Cross-platform Agent Skill Library · agent-workflow-skills"),
     desc: l(
-      "将 PRD 与公文排版、高保真 UI 构建、学术文献核验、音视频工程、浏览器自动化与多端配置治理封装为 23 个跨平台（Claude Code / Codex / Antigravity）标准化技能包（含 96 个可执行 Python 脚本）。",
-      "Packages PRD and document typesetting, UI implementation, academic literature verification, video rendering, browser automation and multi-harness configuration into 23 portable SKILL.md skill packs (96 Python scripts) across Claude Code, Codex and Antigravity.",
+      "将 PRD 与公文排版、高保真 UI 构建、学术文献核验、音视频工程、浏览器自动化与多端配置治理封装为 22 个现役跨平台（Claude Code / Codex / Antigravity）标准化技能包；公开净室仓 agent-workflow-skills 提供脱敏可移植版本（含 96 个可执行 Python 脚本）。",
+      "Packages PRD and document typesetting, UI implementation, academic literature verification, video rendering, browser automation and multi-harness configuration into 22 actively used portable SKILL.md skill packs across Claude Code, Codex and Antigravity; the public clean-room repo agent-workflow-skills offers a sanitized portable edition (96 Python scripts).",
     ),
-    stats: [{ v: "23", k: l("标准化技能包", "skill packs") }],
+    stats: [{ v: "22", k: l("标准化技能包", "skill packs") }],
     tags: ["Claude Code", "Codex", "Antigravity", "MCP / CLI"],
     shots: [],
     links: [{ href: "https://github.com/Evan-Joseph/agent-workflow-skills", label: l("开源仓库", "Repo"), repo: true }],
