@@ -71,10 +71,10 @@ const STORY: { n: string; title: L; body: L }[] = [
   },
   {
     n: "03",
-    title: l("独立全栈开发、实时看台与线上收款", "Solo full-stack build, live cockpit and online payment"),
+    title: l("独立全栈开发、实时看台与零成本部署", "Solo full-stack build, live cockpit and zero-cost deployment"),
     body: l(
-      "独立完成需求定义、水墨宣纸视觉设计、换机同步码机制、主理人实时运营看台（/curator）、云端部署、两支 1080p60 宣传片制作及线上打赏支付。",
-      "Independently delivered product definition, ink-wash visual design, cross-device sync codes, the live curator cockpit (/curator), cloud deployment, two 1080p60 brand films and online tipping payment.",
+      "独立完成需求定义、水墨宣纸视觉设计、换机同步码机制、主理人实时运营看台（/curator）、云端部署及两支 1080p60 宣传片制作。",
+      "Independently delivered product definition, ink-wash visual design, cross-device sync codes, the live curator cockpit (/curator), cloud deployment and two 1080p60 brand films.",
     ),
   },
 ];
