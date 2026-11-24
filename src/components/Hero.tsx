@@ -154,7 +154,7 @@ export function Hero() {
             </div>
 
             <div className="absolute -left-1 bottom-[2%] z-20 rounded-xl border border-ink/10 bg-paper/90 px-3.5 py-2.5 shadow-xl backdrop-blur sm:left-[-4%]">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-mute">suanle.cc</p>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-mute">www.suanle.cc</p>
               <p className="font-serif-cn text-sm font-black leading-tight">{t("独立产品 · 已上线", "Solo product · live")}</p>
             </div>
             <div className="absolute -bottom-[2%] right-0 z-20 rounded-xl bg-ink px-3.5 py-2.5 text-paper shadow-xl sm:right-[-2%]">

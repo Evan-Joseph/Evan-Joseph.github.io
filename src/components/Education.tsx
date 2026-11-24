@@ -80,7 +80,7 @@ export function Education({ no }: { no: number }) {
       </div>
 
       <div className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-4">
-        <Metric value="86.19" label={t("全部均分（累计加权）", "Overall weighted average")} sub={t("满分 100", "out of 100")} />
+        <Metric value="86.19" label={t("全部课程均分", "Overall course average")} sub={t("满分 100", "out of 100")} />
         <Metric value="3.46" label={t("累计 GPA", "Cumulative GPA")} sub={t("满分 4.00", "out of 4.00")} />
         <Metric value="6 / 20" label={t("累计学业排名", "Cumulative academic rank")} />
         <Metric value="564" label={t("CET-6 成绩", "CET-6 score")} sub={t("CET-4：568", "CET-4: 568")} />

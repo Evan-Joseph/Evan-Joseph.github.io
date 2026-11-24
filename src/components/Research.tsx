@@ -278,16 +278,11 @@ export function Research({ no }: { no: number }) {
               tag: l("大创 · 已顺利结项 · 编号 X2025110650475 · 课题负责人 · 2025–2026.10", "Innovation project · Completed · no. X2025110650475 · PI · 2025 – Oct 2026"),
               title: l("基于 Wan 系列模型的轻量化重构与 3D 点阵研究", "Lightweight reconstruction and 3D point-lattice research based on Wan-series models"),
             },
-            /* Pending issuance — uncomment (and restore FileText/Gauge imports + "& IP" heading) once certificates are approved:
+            /* Pending issuance — uncomment (and restore FileText import + "& IP" heading) once certificate is approved:
             {
               icon: FileText,
               tag: l("国家软件著作权 · 独立著作权人 · 2026", "National software copyright · sole holder · 2026"),
               title: l("《智能成长规划助手》", "“Intelligent Growth Planning Assistant”"),
-            },
-            {
-              icon: Gauge,
-              tag: l("国家软件著作权 · 核心研发成员 · 登记号 2026R11L3615529 · 2026", "National software copyright · core developer · reg. no. 2026R11L3615529 · 2026"),
-              title: l("《腰椎 MRI 影像分析系统 V1.0》", "“Lumbar MRI Image Analysis System V1.0”"),
             },
             */
           ].map((g, n) => (

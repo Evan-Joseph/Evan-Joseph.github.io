@@ -148,7 +148,7 @@ export function Suanle({ no }: { no: number }) {
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-seal">{t("线上体验", "TRY IT LIVE")}</p>
             <div className="mt-4 flex flex-col items-start gap-2.5">
               <ExtLink href={LINKS.suanle} variant="solid" className="w-full justify-between">
-                suanle.cc <Radio size={14} className="ml-auto" />
+                www.suanle.cc <Radio size={14} className="ml-auto" />
               </ExtLink>
               <ExtLink href={LINKS.curator} className="w-full justify-between">
                 {t("主理人运营看台 /curator", "Curator cockpit /curator")}

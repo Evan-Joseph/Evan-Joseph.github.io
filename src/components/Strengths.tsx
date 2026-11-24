@@ -14,8 +14,8 @@ const MOATS: {
     n: "壹",
     title: l("问题定义与 0→1 独立全栈交付", "Problem definition & solo 0→1 product delivery"),
     body: l(
-      "从高频日常场景与非标产业一线切入，结合 Claude Code、Codex、Antigravity、扣子（Coze）与多模态音视频工具链，独立完成需求调研、多模型原型比选、高保真交互 Mock、确定性规则设计、全栈开发部署，以及 1080p60 品牌宣传片、商业计划书（BP）、实时运营看台与线上打赏收款。",
-      "Starting from high-frequency daily scenarios and non-standard industrial operations, I pair Claude Code, Codex, Antigravity, Coze and multimodal audio/video toolchains to deliver the full 0→1 product lifecycle solo: user research, multi-model prototyping, hi-fi interactive mocks, deterministic rule design, full-stack deployment, 1080p60 brand films, business plans (BP), live ops cockpits and online tipping payment.",
+      "从高频日常场景与非标产业一线切入，结合 Claude Code、Codex、Antigravity、扣子（Coze）与多模态音视频工具链，独立完成需求调研、多模型原型比选、高保真交互 Mock、确定性规则设计、全栈开发部署，以及 1080p60 品牌宣传片、商业计划书（BP）、实时运营看台与随喜闭环设计。",
+      "Starting from high-frequency daily scenarios and non-standard industrial operations, I pair Claude Code, Codex, Antigravity, Coze and multimodal audio/video toolchains to deliver the full 0→1 product lifecycle solo: user research, multi-model prototyping, hi-fi interactive mocks, deterministic rule design, full-stack deployment, 1080p60 brand films, business plans (BP), live ops cockpits and tipping workflow design.",
     ),
     chips: [
       { text: l("算了 · 0→1 实例", "Suanle · 0→1 case"), to: "#suanle" },
@@ -57,7 +57,7 @@ const STEPS: { n: string; name: L; ev: L }[] = [
   { n: "06", name: l("1080p60 品牌宣传片", "1080p60 brand film"), ev: l("双版本成片：45s 与 50s", "Two cuts: 45s and 50s") },
   { n: "07", name: l("商业计划书（BP）", "Business plan (BP)"), ev: l("KouPilot 独立完成 UI、演示视频与 BP", "KouPilot: UI, demo video and BP built solo") },
   { n: "08", name: l("实时运营看台", "Live ops cockpit"), ev: l("/curator：24h 吞吐、CPU/Mem、对话质量", "/curator: 24h throughput, CPU/Mem, dialogue quality") },
-  { n: "09", name: l("线上收款与运维", "Live payment & ops"), ev: l("线上打赏支付与常态化运维", "Online tipping payment & daily operations") },
+  { n: "09", name: l("边缘容灾与运维", "Edge resilience & ops"), ev: l("双模边缘容灾与常态化运维", "Dual-mode edge failover & daily operations") },
 ];
 
 type CaseId = "suanle" | "hazmat" | "leap";
@@ -77,7 +77,7 @@ const CASES: Record<
       l("前置确定性天文历法排盘计算：四柱八字与五行分布先由算法算准，再交由模型解读", "Deterministic astronomical-calendar calculation runs first — Four Pillars and Five Elements are computed before model interpretation"),
       l("排盘数据完全脱离模型自由生成，消除历法排盘幻觉", "Chart data is never generated freely by the LLM, eliminating calendar hallucinations"),
     ],
-    outcome: l("suanle.cc 线上运行，主理人看台实时监控吞吐与对话质量", "Live at suanle.cc, monitored in real time from the curator cockpit"),
+    outcome: l("www.suanle.cc 线上运行，主理人看台实时监控吞吐与对话质量", "Live at www.suanle.cc, monitored in real time from the curator cockpit"),
   },
   hazmat: {
     tab: l("危化品堆存", "Hazmat yard"),

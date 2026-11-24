@@ -53,8 +53,8 @@ const PRODUCTS: Prod[] = [
       "A recall and past-paper workbench covering Politics, English II, Math II and the CS-408 unified exam. It pioneers a v8 continuous-feed five-minute physical cooldown, FSRS-6 dynamic spaced-repetition scheduling and 6 interactive 408 hardware/algorithm sandboxes (IEEE 754, 5-stage pipeline, cache mapping, virtual page table, KMP automaton, page replacement). Standalone sister sites cover single subjects.",
     ),
     stats: [
-      { v: "1,513", k: l("学习项", "study items") },
-      { v: "1,613", k: l("历年真题", "past questions") },
+      { v: "926", k: l("学习项", "study items") },
+      { v: "1,614", k: l("历年真题", "past questions") },
       { v: "148 / 962", k: l("408 考点 / 闪卡", "408 topics / cards") },
     ],
     tags: ["FSRS-6", "v8 cooldown", "408 sandboxes"],

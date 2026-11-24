@@ -67,7 +67,7 @@ export const LENSES: Record<LensId, LensCfg> = {
       {
         to: "suanle",
         stat: "0 → 1",
-        title: l("《算了》：独立完成从定义到上线收款", "Suanle: solo build from concept to live payment"),
+        title: l("《算了》：独立完成从定义到全栈上线", "Suanle: solo build from concept to live launch"),
         note: l("9 套原型比选、确定性排盘计算、实时运营看台与两支 1080p60 宣传片", "9 prototypes compared, deterministic chart engine, live ops cockpit and two 1080p60 films"),
       },
       {
@@ -94,7 +94,7 @@ export const LENSES: Record<LensId, LensCfg> = {
       { value: "21+1 / 14", label: l("安全否决红线 / 防翻箱评分维度", "safety veto rules / anti-reshuffle scoring dimensions") },
       { value: "50,000+", label: l("清洗治理“幽灵在场箱”异常数据", "“ghost container” records reconciled") },
       { value: "9 → 1", label: l("套并行原型比选定版", "parallel prototypes evaluated for production") },
-      { value: "20", label: l("跨平台标准化 Agent 技能包", "cross-platform standardized agent skills") },
+      { value: "22", label: l("跨平台标准化 Agent 技能包", "cross-platform standardized agent skills") },
     ],
   },
   academic: {
@@ -148,7 +148,7 @@ export const LENSES: Record<LensId, LensCfg> = {
         to: "suanle",
         stat: "1080p · 60fps",
         title: l("《算了》：两支宣传片与线上实机体验", "Suanle: two brand films & live web app"),
-        note: l("suanle.cc 线上运行：确定性排盘、茶馆掌柜对谈、宣纸揉团释怀与实时看台", "Live at suanle.cc: deterministic charting, Keeper dialogue, paper-ball release and live cockpit"),
+        note: l("www.suanle.cc 线上运行：确定性排盘、茶馆掌柜对谈、宣纸揉团释怀与实时看台", "Live at www.suanle.cc: deterministic charting, Keeper dialogue, paper-ball release and live cockpit"),
       },
       {
         to: "stone",
@@ -174,7 +174,7 @@ export const LENSES: Record<LensId, LensCfg> = {
       { value: "76", label: l("件馆藏全量数字化石刻档案", "stone-relief pieces digitized") },
       { value: "561", label: l("套拖轮编组方案自动枚举", "tug crew plans auto-enumerated") },
       { value: "203", label: l("国家与地区宏观卫生数据建模", "countries & territories modeled") },
-      { value: "1,513 / 1,613", label: l("考研学习项 / 历年真题入库", "exam study items / past questions indexed") },
+      { value: "926 / 1,614", label: l("考研学习项 / 历年真题入库", "exam study items / past questions indexed") },
     ],
   },
 };

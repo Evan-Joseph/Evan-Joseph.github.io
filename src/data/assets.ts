@@ -97,7 +97,7 @@ export const A = {
     "Ink-wash share card D · Bing-Wu year fortune slip",
   ),
   suanle_logo: i("suanle_logo.svg", 512, 512, "《算了 · Suanle》矢量品牌印章 Logo", "Suanle vector brand-seal logo"),
-  suanle_qrcode: i("suanle_qrcode.png", 1024, 1024, "扫码体验 suanle.cc", "Scan to try suanle.cc"),
+  suanle_qrcode: i("suanle_qrcode.png", 1024, 1024, "扫码体验 www.suanle.cc", "Scan to try www.suanle.cc"),
 
   /* ---------------- Stone ---------------- */
   stone_hall: i(
@@ -209,8 +209,8 @@ export const A = {
   ),
   kaoyan_22408: i(
     "kaoyan_22408.webp", 2880, 1800,
-    "《22408 · 研记》全科主站 · 政治+英二+数二+408 共 1,513 学习项与 1,613 真题工作台",
-    "22408 · Yanji main site · Politics + English II + Math II + CS-408 — 1,513 study items and 1,613 past-exam questions",
+    "《22408 · 研记》全科主站 · 政治+英二+数二+408 共 926 学习项与 1,614 真题工作台",
+    "22408 · Yanji main site · Politics + English II + Math II + CS-408 — 926 study items and 1,614 past-exam questions",
   ),
   kaoyan_politics: i(
     "kaoyan_politics.webp", 2880, 1800,
