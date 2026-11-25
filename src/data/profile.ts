@@ -94,7 +94,7 @@ export const LENSES: Record<LensId, LensCfg> = {
       { value: "21+1 / 14", label: l("安全否决红线 / 防翻箱评分维度", "safety veto rules / anti-reshuffle scoring dimensions") },
       { value: "50,000+", label: l("清洗治理“幽灵在场箱”异常数据", "“ghost container” records reconciled") },
       { value: "9 → 1", label: l("套并行原型比选定版", "parallel prototypes evaluated for production") },
-      { value: "22", label: l("跨平台标准化 Agent 技能包", "cross-platform standardized agent skills") },
+      { value: "23", label: l("跨平台标准化 Agent 技能包", "cross-platform standardized agent skills") },
     ],
   },
   academic: {

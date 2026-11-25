@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, FileText, MapPin, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, FileText, MapPin, Sparkles } from "lucide-react";
 import { useI18n, useLens, type LensId } from "../i18n";
 import { A } from "../data/assets";
 import { LENSES, LINKS, SECTION_META } from "../data/profile";
@@ -51,8 +51,8 @@ export function Hero() {
               {t("神舟", "SG")}
             </span>
           </div>
-          <p className="mt-2.5 font-mono text-xs tracking-[0.14em] text-mute sm:mt-3 sm:text-sm sm:tracking-[0.3em]">
-            {t("SHENZHOU GAO · @Evan-Joseph", "@Evan-Joseph · QINGDAO, CHINA")}
+          <p className="mt-2.5 text-xs font-medium text-mute sm:mt-3 sm:text-sm">
+            {t("Shenzhou Gao · @Evan-Joseph", "@Evan-Joseph · Qingdao, China")}
           </p>
 
           <div className="mt-5 space-y-2.5 sm:mt-8 sm:space-y-3">
@@ -68,8 +68,8 @@ export function Hero() {
           </div>
 
           <div className="mt-5 sm:mt-7">
-            <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-mute sm:mb-2.5">
-              {t("目标方向 · TARGET ROLES", "TARGET ROLES")}
+            <p className="mb-2 text-xs font-semibold text-mute sm:mb-2.5">
+              {t("目标方向", "Target roles")}
             </p>
             <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {[
@@ -126,7 +126,7 @@ export function Hero() {
                 "pointer-events-none absolute -right-10 top-4 hidden select-none font-bold text-seal/55 xl:block",
                 lang === "zh"
                   ? "vertical-text font-serif-cn text-lg"
-                  : "font-mono text-[11px] uppercase tracking-[0.3em] [writing-mode:vertical-rl]",
+                  : "font-serif-cn text-xs [writing-mode:vertical-rl]",
               )}
             >
               {t("算一算，然后，算了", "Calculate it, then, let it go")}
@@ -154,11 +154,11 @@ export function Hero() {
             </div>
 
             <div className="absolute -left-1 bottom-[2%] z-20 rounded-xl border border-ink/10 bg-paper/90 px-3.5 py-2.5 shadow-xl backdrop-blur sm:left-[-4%]">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-mute">www.suanle.cc</p>
+              <p className="text-[11px] font-medium text-mute">www.suanle.cc</p>
               <p className="font-serif-cn text-sm font-black leading-tight">{t("独立产品 · 已上线", "Solo product · live")}</p>
             </div>
             <div className="absolute -bottom-[2%] right-0 z-20 rounded-xl bg-ink px-3.5 py-2.5 text-paper shadow-xl sm:right-[-2%]">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-bronze-2">AAAI 2026 Oral</p>
+              <p className="text-[11px] font-semibold text-bronze-2">AAAI 2026 Oral</p>
               <p className="font-serif-cn text-sm font-black leading-tight">{t("共同第一作者 · CCF-A", "Co-first author · CCF-A")}</p>
             </div>
           </div>
@@ -166,8 +166,8 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto flex max-w-[1240px] justify-center pb-4">
-        <a href="#lens" className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-mute transition hover:text-seal">
-          {t("向下探索", "Scroll")} <ArrowDown size={13} className="animate-bounce" />
+        <a href="#lens" className="group inline-flex items-center gap-1.5 text-xs font-medium text-mute transition-colors hover:text-seal">
+          {t("向下探索", "Scroll")} <ArrowDown size={13} className="transition-transform group-hover:translate-y-0.5" />
         </a>
       </div>
     </header>
@@ -186,7 +186,6 @@ export function LensGuide() {
       <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.22em] text-seal">{t("导览 · GUIDED VISIT", "GUIDED VISIT")}</p>
             <h2 className="font-serif-cn text-3xl font-black leading-tight sm:text-4xl">{t("按访问目的切换视图", "Choose a viewing lens")}</h2>
           </div>
           <p className="max-w-md text-sm text-ink-2">
@@ -216,8 +215,8 @@ export function LensGuide() {
                 <p className="font-serif-cn text-lg font-black">{t(LENSES[k].name)}</p>
                 <p className={cn("mt-1.5 text-[13px] leading-relaxed", on ? "text-paper/70" : "text-ink-2")}>{t(LENSES[k].who)}</p>
                 {on && (
-                  <span className="absolute right-4 top-4 rounded-full bg-bronze-2 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-night">
-                    {t("当前", "ACTIVE")}
+                  <span className="absolute right-4 top-4 rounded-full bg-bronze-2 px-2 py-0.5 text-[11px] font-bold text-night">
+                    {t("当前", "Active")}
                   </span>
                 )}
               </button>
@@ -237,7 +236,11 @@ export function LensGuide() {
                 href={`#${p.to}`}
                 className="group relative flex flex-col rounded-2xl border border-ink/12 bg-paper/80 p-5 transition duration-300 hover:-translate-y-1 hover:border-seal/50 hover:shadow-xl hover:shadow-ink/10"
               >
-                <span className="font-mono text-[11px] text-mute">{String(n + 1).padStart(2, "0")} → {t(SECTION_META[p.to].label)}</span>
+                <span className="inline-flex items-center gap-1.5 text-xs font-medium text-mute">
+                  <span className="font-mono tabular-nums">{String(n + 1).padStart(2, "0")}</span>
+                  <ArrowRight size={11} />
+                  <span>{t(SECTION_META[p.to].label)}</span>
+                </span>
                 <span className="mt-3 font-serif-cn text-2xl font-black leading-tight text-seal">{p.stat}</span>
                 <span className="mt-2 font-serif-cn text-base font-bold leading-snug">{t(p.title)}</span>
                 <span className="mt-2 flex-1 text-[13px] leading-relaxed text-ink-2">{t(p.note)}</span>
@@ -247,7 +250,7 @@ export function LensGuide() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-2">
-            <span className="mr-1 font-mono text-[11px] uppercase tracking-widest text-mute">{t("当前章节顺序", "Chapter order")}</span>
+            <span className="mr-1 text-xs font-medium text-mute">{t("当前章节顺序", "Chapter order")}</span>
             {cfg.order.map((id, n) => (
               <a
                 key={id}
@@ -279,8 +282,8 @@ export function MetricsBand() {
         style={{ background: "radial-gradient(700px 260px at 50% 0%, rgba(214,173,104,.14), transparent 70%)" }}
       />
       <div className="relative mx-auto max-w-[1240px] px-5 sm:px-8">
-        <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.22em] text-bronze-2">
-          {t(`核心指标 · ${t(cfg.name)}视角`, `KEY METRICS · ${cfg.name.en.toUpperCase()}`)}
+        <p className="mb-6 text-xs font-semibold text-bronze-2">
+          {t(`核心指标 · ${t(cfg.name)}视角`, `Key metrics · ${cfg.name.en}`)}
         </p>
         <dl className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-5">
           {cfg.metrics.map((m) => (

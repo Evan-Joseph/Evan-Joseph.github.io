@@ -85,7 +85,7 @@ export function Research({ no }: { no: number }) {
       id="research"
       no={no}
       dark
-      kicker="RESEARCH & MODEL EVALUATION"
+      kicker={t("学术研究与模型评测", "Research & Model Evaluation")}
       title={
         <>
           {t("系统评测模型边界，", "Benchmarking model limits, ")}

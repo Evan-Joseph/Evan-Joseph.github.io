@@ -48,7 +48,7 @@ export function Education({ no }: { no: number }) {
     <SectionShell
       id="education"
       no={no}
-      kicker="EDUCATION"
+      kicker={t("教育背景与学业成绩", "Education")}
       title={
         <>
           {t("图灵拔尖班里的", "Ranked ")}

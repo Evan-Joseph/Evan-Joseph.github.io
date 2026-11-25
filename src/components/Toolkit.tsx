@@ -1,4 +1,4 @@
-import { BrainCircuit, Clapperboard, Cloud, FlaskRound, Layers3, TerminalSquare } from "lucide-react";
+import { BrainCircuit, Clapperboard, Cloud, FlaskRound, TerminalSquare } from "lucide-react";
 import { l, useI18n, type L } from "../i18n";
 import { Chip, ExtLink, GithubIcon, SectionShell } from "./ui";
 
@@ -63,7 +63,7 @@ export function Toolkit({ no }: { no: number }) {
       id="toolkit"
       no={no}
       dark
-      kicker="ENGINEERING & TOOLING"
+      kicker={t("工程栈与工具链", "Engineering & Tooling")}
       title={
         <>
           {t("工程栈与工具链：", "Engineering stack & tooling: ")}
@@ -71,8 +71,8 @@ export function Toolkit({ no }: { no: number }) {
         </>
       }
       intro={t(
-        "日常主力使用的开发工具链、全栈架构与评测方法，以及 22 个现役跨平台 Agent 标准化技能包。",
-        "Primary development toolchains, full-stack architecture and evaluation methods, alongside 22 actively used cross-platform agent skill packs.",
+        "日常主力使用的开发工具链、全栈架构与评测方法，以及 23 个现役跨平台 Agent 标准化技能包。",
+        "Primary development toolchains, full-stack architecture and evaluation methods, alongside 23 actively used cross-platform agent skill packs.",
       )}
     >
       <div className="grid gap-5 md:grid-cols-2">
@@ -101,13 +101,10 @@ export function Toolkit({ no }: { no: number }) {
       <div className="relative mt-8 overflow-hidden rounded-3xl border border-bronze-2/40 bg-gradient-to-br from-bronze-2/12 via-transparent to-seal/10 p-6 sm:p-10">
         <div className="grid items-center gap-8 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="font-serif-cn text-[6rem] font-black leading-none text-bronze-2 sm:text-[8rem]">22</p>
-            <p className="-mt-1 font-mono text-xs uppercase tracking-[0.2em] text-paper/60">{t("标准化技能包", "standardized skill packs")}</p>
+            <p className="font-serif-cn text-[6rem] font-black leading-none text-bronze-2 sm:text-[8rem]">23</p>
+            <p className="mt-1 text-xs font-medium text-paper/65">{t("标准化技能包", "standardized skill packs")}</p>
           </div>
           <div className="md:col-span-8">
-            <p className="mb-2 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-bronze-2">
-              <Layers3 size={14} /> agent-workflow-skills
-            </p>
             <h3 className="font-serif-cn text-2xl font-black leading-snug sm:text-3xl">
               {t("跨 Claude Code / Codex / Antigravity 的 Agent 技能库", "An agent skill library across Claude Code, Codex and Antigravity")}
             </h3>

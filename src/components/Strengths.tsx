@@ -116,7 +116,7 @@ export function Strengths({ no }: { no: number }) {
     <SectionShell
       id="strengths"
       no={no}
-      kicker="CORE CAPABILITIES"
+      kicker={t("核心能力与工程边界", "Core Capabilities")}
       title={
         <>
           {t("三项核心能力，", "Three core capabilities, ")}
@@ -152,7 +152,7 @@ export function Strengths({ no }: { no: number }) {
       <div className="mt-20">
         <div className="mb-8 flex items-end justify-between gap-4">
           <h3 className="font-serif-cn text-2xl font-black sm:text-3xl">{t("从需求定义到上线运维的 9 个环节", "Nine stages from problem definition to live operations")}</h3>
-          <span className="hidden font-mono text-xs uppercase tracking-widest text-mute sm:block">9 stages</span>
+          <span className="hidden text-xs font-medium text-mute sm:block">{t("共 9 个环节", "9 stages")}</span>
         </div>
         <ol className="grid gap-px overflow-hidden rounded-2xl border border-ink/12 bg-ink/12 sm:grid-cols-2 lg:grid-cols-3">
           {STEPS.map((s) => (
@@ -175,7 +175,6 @@ export function Strengths({ no }: { no: number }) {
           />
           <div className="relative flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <p className="mb-3 font-mono text-xs uppercase tracking-[0.22em] text-bronze-2">{t("架构原则 · ARCHITECTURE PRINCIPLE", "ARCHITECTURE PRINCIPLE")}</p>
               <h3 className="font-serif-cn text-2xl font-black leading-tight sm:text-4xl">
                 {t("模型生成与确定性规则的边界划分", "Separating model generation from deterministic rules")}
               </h3>
@@ -192,9 +191,9 @@ export function Strengths({ no }: { no: number }) {
 
           <div key={cs} className="relative mt-6 grid gap-4 md:grid-cols-2" style={{ animation: "pop .35s ease both" }}>
             <div className="night-card rounded-2xl p-5 sm:p-6">
-              <p className="mb-4 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-bronze-2">
+              <p className="mb-4 flex items-center gap-2 text-sm font-semibold text-bronze-2">
                 <Wand2 size={15} />
-                {t("模型生成 · MODEL GENERATION", "MODEL GENERATION")}
+                {t("模型生成", "Model generation")}
               </p>
               <ul className="space-y-3 text-[14.5px] leading-relaxed text-paper/85">
                 {c.flex.map((x) => (
@@ -205,9 +204,9 @@ export function Strengths({ no }: { no: number }) {
               </ul>
             </div>
             <div className="rounded-2xl border border-seal-2/40 bg-seal/12 p-5 sm:p-6">
-              <p className="mb-4 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-seal-2">
+              <p className="mb-4 flex items-center gap-2 text-sm font-semibold text-seal-2">
                 <ShieldCheck size={15} />
-                {t("确定性规则 · DETERMINISTIC RULES", "DETERMINISTIC RULES")}
+                {t("确定性规则", "Deterministic rules")}
               </p>
               <ul className="space-y-3 text-[14.5px] leading-relaxed text-paper/90">
                 {c.guard.map((x) => (

@@ -124,7 +124,7 @@ export function Industrial({ no }: { no: number }) {
       id="industrial"
       no={no}
       dark
-      kicker="INDUSTRIAL AI & AGENT SOLUTIONS"
+      kicker={t("工业智能与多智能体交付", "Industrial AI & Agent Solutions")}
       title={
         <>
           {t("把规程、经验与调度，", "Turning procedures, experience and dispatching into ")}
@@ -143,7 +143,7 @@ export function Industrial({ no }: { no: number }) {
             <Anchor size={12} /> {t("山东港口集团", "Shandong Port Group")}
           </Chip>
           <Chip tone="dark">{t("需求调研、规则建模与交付负责人", "Requirements, rule modeling & delivery lead")}</Chip>
-          <Chip tone="dark">2025.11 – {t("至今", "present")}</Chip>
+          <Chip tone="dark">{t("2025.11 至今", "Since Nov 2025")}</Chip>
         </div>
         <h3 className="mt-5 max-w-4xl font-serif-cn text-2xl font-black leading-snug sm:text-4xl">
           {t("危险品集装箱智能堆存与推荐系统", "Hazmat Container Smart Stacking & Recommendation System")}
@@ -216,7 +216,7 @@ export function Industrial({ no }: { no: number }) {
             <Chip tone="outline-dark">
               <Ship size={12} /> {t("山东港口集团 · 青岛港", "Shandong Port Group · Qingdao Port")}
             </Chip>
-            <Chip tone="dark">2025.10 – 2026.06</Chip>
+            <Chip tone="dark">{t("2025.10 至 2026.06", "Oct 2025 to Jun 2026")}</Chip>
           </div>
           <h3 className="mt-5 font-serif-cn text-2xl font-black leading-snug sm:text-3xl">
             {t("智能拖轮调度与轮驳分配系统", "Intelligent Tug Dispatch & Assignment System")}
@@ -275,7 +275,7 @@ export function Industrial({ no }: { no: number }) {
               ) : (
                 <div className="relative grid h-36 place-items-center overflow-hidden bg-gradient-to-br from-bronze/25 via-night-3 to-seal/25">
                   <s.icon size={56} className="text-bronze-2/70" strokeWidth={1.2} />
-                  <span className="absolute left-5 top-4 font-mono text-[11px] uppercase tracking-widest text-paper/40">{s.period}</span>
+                  <span className="font-mono text-xs text-paper/45">{s.period}</span>
                 </div>
               )}
               <div className="flex flex-1 flex-col p-6">

@@ -87,7 +87,7 @@ function Lightbox({ list, start, onClose }: { list: readonly Img[]; start: numbe
       }}
     >
       <div className="flex items-center justify-between px-4 py-3 text-paper/80 sm:px-6">
-        <span className="font-mono text-xs tracking-wider">
+        <span className="font-mono text-xs tabular-nums">
           {String(idx + 1).padStart(2, "0")} / {String(list.length).padStart(2, "0")}
           <span className="ml-3 text-paper/40">
             {img.w}×{img.h}

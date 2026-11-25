@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Activity, Play, QrCode, Radio } from "lucide-react";
+import { Play, QrCode, Radio } from "lucide-react";
 import { l, useI18n, type L } from "../i18n";
 import { A, asset, VIDEOS, type Img } from "../data/assets";
 import { LINKS } from "../data/profile";
@@ -88,7 +88,7 @@ export function Suanle({ no }: { no: number }) {
     <SectionShell
       id="suanle"
       no={no}
-      kicker="FLAGSHIP · SOLO PRODUCT"
+      kicker={t("代表作 · 独立主理产品", "Flagship · Solo Product")}
       className="bg-paper-2/60"
       title={
         <span className="flex items-center gap-3.5 sm:gap-5">
@@ -145,7 +145,7 @@ export function Suanle({ no }: { no: number }) {
 
         <aside className="space-y-5 lg:col-span-4">
           <div className="paper-card rounded-2xl p-6">
-            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-seal">{t("线上体验", "TRY IT LIVE")}</p>
+            <p className="text-xs font-semibold text-seal">{t("线上体验", "Try it live")}</p>
             <div className="mt-4 flex flex-col items-start gap-2.5">
               <ExtLink href={LINKS.suanle} variant="solid" className="w-full justify-between">
                 www.suanle.cc <Radio size={14} className="ml-auto" />
@@ -199,7 +199,7 @@ export function Suanle({ no }: { no: number }) {
         <div className="mb-5 flex flex-wrap items-end justify-between gap-2 sm:mb-8 sm:gap-4">
           <h3 className="font-serif-cn text-2xl font-black sm:text-3xl">{t("实机界面：聊 · 算 · 放", "Live UI: talk · calculate · let go")}</h3>
           <span className="font-mono text-[11px] text-mute sm:hidden">{t("← 左右滑动查看 7 屏 →", "← Swipe 7 screens →")}</span>
-          <span className="hidden font-mono text-xs uppercase tracking-widest text-mute sm:block">860 × 1864 · 2x Retina</span>
+          <span className="hidden font-mono text-xs tabular-nums text-mute sm:block">860 × 1864 · 2x Retina</span>
         </div>
         <div className="snap-x-row no-scrollbar -mx-5 gap-0 px-5 pb-4 sm:-mx-8 sm:px-8">
           {STAGES.map((st, si) => (
@@ -237,7 +237,7 @@ export function Suanle({ no }: { no: number }) {
           {CARDS.map((c, n) => (
             <figure key={c.file} className="mb-4 break-inside-avoid">
               <Pic img={c} group={CARDS} index={n} className="media-shadow" rounded="rounded-md" />
-              <figcaption className="mt-2 font-mono text-[11px] uppercase tracking-wider text-mute">
+              <figcaption className="mt-2 text-xs text-mute">
                 {t(["签文 A", "释怀 B", "对谈 C", "流年 D"][n], ["Aphorism A", "Let-go B", "Dialogue C", "Annual D"][n])}
               </figcaption>
             </figure>
@@ -253,9 +253,6 @@ export function Suanle({ no }: { no: number }) {
           </BrowserFrame>
         </div>
         <div className="lg:col-span-5">
-          <p className="mb-3 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.22em] text-seal">
-            <Activity size={14} /> OPS COCKPIT
-          </p>
           <h3 className="font-serif-cn text-2xl font-black leading-snug sm:text-3xl">{t("主理人实时运营看台", "A live cockpit for the curator")}</h3>
           <p className="mt-4 text-[15px] leading-[1.85] text-ink-2">
             {t(

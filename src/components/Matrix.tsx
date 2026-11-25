@@ -107,13 +107,13 @@ const PRODUCTS: Prod[] = [
   {
     id: "skills",
     cat: "agent",
-    big: "22",
+    big: "23",
     name: l("跨端 Agent 技能库 · agent-workflow-skills", "Cross-platform Agent Skill Library · agent-workflow-skills"),
     desc: l(
-      "将 PRD 与公文排版、高保真 UI 构建、学术文献核验、音视频工程、浏览器自动化与多端配置治理封装为 22 个现役跨平台（Claude Code / Codex / Antigravity）标准化技能包；公开净室仓 agent-workflow-skills 提供脱敏可移植版本（含 96 个可执行 Python 脚本）。",
-      "Packages PRD and document typesetting, UI implementation, academic literature verification, video rendering, browser automation and multi-harness configuration into 22 actively used portable SKILL.md skill packs across Claude Code, Codex and Antigravity; the public clean-room repo agent-workflow-skills offers a sanitized portable edition (96 Python scripts).",
+      "将 PRD 与公文排版、高保真 UI 构建、学术文献核验、音视频工程、浏览器自动化与多端配置治理封装为 23 个跨平台（Claude Code / Codex / Antigravity）标准化技能包；公开净室仓 agent-workflow-skills 提供脱敏可移植版本（含 95 个可执行 Python 脚本）。",
+      "Packages PRD and document typesetting, UI implementation, academic literature verification, video rendering, browser automation and multi-harness configuration into 23 portable SKILL.md skill packs across Claude Code, Codex and Antigravity; the public clean-room repo agent-workflow-skills offers a sanitized portable edition (95 Python scripts).",
     ),
-    stats: [{ v: "22", k: l("标准化技能包", "skill packs") }],
+    stats: [{ v: "23", k: l("标准化技能包", "skill packs") }],
     tags: ["Claude Code", "Codex", "Antigravity", "MCP / CLI"],
     shots: [],
     links: [{ href: "https://github.com/Evan-Joseph/agent-workflow-skills", label: l("开源仓库", "Repo"), repo: true }],
@@ -204,7 +204,7 @@ function Card({ p }: { p: Prod }) {
       ) : (
         <div className="relative grid aspect-[16/10] w-full place-items-center overflow-hidden bg-gradient-to-br from-ink via-night-3 to-seal/80">
           <span className="font-serif-cn text-[7rem] font-black leading-none text-bronze-2/90">{p.big}</span>
-          <span className="absolute bottom-3 left-4 font-mono text-[11px] uppercase tracking-widest text-paper/50">agent-workflow-skills</span>
+          <span className="absolute bottom-3 left-4 font-mono text-xs text-paper/60">agent-workflow-skills</span>
         </div>
       )}
 

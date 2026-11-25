@@ -75,8 +75,8 @@ export function Stone({ no }: { no: number }) {
       id="stone"
       no={no}
       dark={dark}
-      className={cn(dark ? "bg-[#1a1209]" : "bg-paper-2/60", "transition-colors duration-500")}
-      kicker="STONE CHAMBER EPIC · DIGITAL EXHIBITION"
+      className={cn(dark ? "bg-stone-dark" : "bg-paper-2/60", "transition-colors duration-500")}
+      kicker={t("《石室史诗》数字展陈", "Stone Chamber Epic · Digital Exhibition")}
       title={
         <>
           {t("让东汉画像石", "Making Han stone reliefs ")}
@@ -149,7 +149,7 @@ export function Stone({ no }: { no: number }) {
 
           {ver === "b" && (
             <div className="paper-card rounded-2xl p-6">
-              <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.2em] text-seal">{t("76 件馆藏构成", "THE 76 PIECES")}</p>
+              <p className="mb-3 text-xs font-semibold text-seal">{t("76 件馆藏构成", "76-piece collection")}</p>
               <div className="flex h-3 overflow-hidden rounded-full bg-ink/10">
                 {CATALOG.map((c, n) => (
                   <span key={c.label.zh} style={{ width: `${(c.n / 76) * 100}%` }} className={["bg-seal", "bg-bronze", "bg-ink"][n]} />

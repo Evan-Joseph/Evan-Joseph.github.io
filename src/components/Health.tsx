@@ -24,7 +24,7 @@ export function Health({ no }: { no: number }) {
     <SectionShell
       id="health"
       no={no}
-      kicker="GLOBAL HEALTH DATA STUDY"
+      kicker={t("全球宏观卫生研究", "Global Health Data Study")}
       title={
         <>
           {t("从“治得上”到“治得起”：", "From “treatable” to “affordable”: ")}
@@ -58,8 +58,8 @@ export function Health({ no }: { no: number }) {
             ))}
           </div>
 
-          <p className="mb-2.5 mt-7 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-mute">
-            <Globe2 size={13} /> {t("四类国家分型", "FOUR COUNTRY TYPES")}
+          <p className="mb-2.5 mt-7 flex items-center gap-2 text-xs font-semibold text-mute">
+            <Globe2 size={13} /> {t("四类国家分型", "Four country types")}
           </p>
           <div className="flex flex-wrap gap-2">
             {TYPES.map((x) => (
@@ -108,7 +108,7 @@ export function Health({ no }: { no: number }) {
               <figure key={f.img.file} className="paper-card flex flex-col rounded-2xl p-3">
                 <Pic img={f.img} group={FIG_IMGS} index={n} rounded="rounded-lg" />
                 <figcaption className="px-1 pb-1 pt-3">
-                  <span className="flex items-center gap-1.5 font-mono text-[11px] font-bold uppercase tracking-wider text-seal">
+                  <span className="flex items-center gap-1.5 text-xs font-semibold text-seal">
                     <FlaskConical size={12} />
                     {t(f.tag)}
                   </span>

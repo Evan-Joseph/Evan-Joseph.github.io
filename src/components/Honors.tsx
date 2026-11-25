@@ -25,7 +25,7 @@ export function Honors({ no }: { no: number }) {
       id="honors"
       no={no}
       className="bg-paper-2/60"
-      kicker="VERIFIED HONORS & AWARDS"
+      kicker={t("荣誉与学科竞赛台账", "Verified Honors & Awards")}
       title={
         <>
           {t("每一项荣誉，", "Every honor ")}

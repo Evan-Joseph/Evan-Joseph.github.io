@@ -137,7 +137,7 @@ export function Nav() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+          "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
           scrolled ? "border-b border-ink/10 bg-paper/85 backdrop-blur-xl" : "bg-transparent",
         )}
       >
@@ -194,8 +194,8 @@ export function Nav() {
             </span>
             <span
               className={cn(
-                "block rounded-full transition-all",
-                active === id ? "h-2.5 w-6 bg-seal" : "h-1.5 w-1.5 bg-ink/30 group-hover:bg-ink/60",
+                "block h-2 w-2 rounded-full transition-transform transition-colors",
+                active === id ? "scale-125 bg-seal" : "scale-75 bg-ink/30 group-hover:bg-ink/60",
               )}
               data-n={n}
             />
@@ -217,7 +217,7 @@ function IndexOverlay({ order, active, onClose }: { order: SectionId[]; active: 
     <div className="fixed inset-0 z-[90] overflow-y-auto bg-paper/97 backdrop-blur-xl" style={{ animation: "fade-in .2s ease both" }}>
       <div className="mx-auto max-w-[1100px] px-5 pb-16 pt-5 sm:px-8">
         <div className="flex items-center justify-between">
-          <span className="font-mono text-xs uppercase tracking-[0.22em] text-seal">{t("目录 · INDEX", "INDEX")}</span>
+          <span className="text-xs font-semibold text-seal">{t("目录导览", "Section index")}</span>
           <button onClick={onClose} className="rounded-full p-2 transition hover:bg-ink/10" aria-label={t("关闭", "Close")}>
             <X size={22} />
           </button>

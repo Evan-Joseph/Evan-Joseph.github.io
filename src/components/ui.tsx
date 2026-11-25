@@ -57,9 +57,9 @@ export function SectionShell({
       </span>
       <div className="relative mx-auto max-w-[1240px] px-5 sm:px-8">
         <header className="mb-9 max-w-5xl sm:mb-16">
-          <p className={cn("mb-3 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] sm:mb-4", dark ? "text-bronze-2" : "text-seal")}>
+          <p aria-hidden="true" className={cn("mb-3 flex items-center gap-3 text-[13px] font-medium sm:mb-4", dark ? "text-bronze-2" : "text-seal")}>
             <span className="inline-block h-px w-8 bg-current" />
-            <span>{String(no).padStart(2, "0")}</span>
+            <span className="tabular-nums">{String(no).padStart(2, "0")}</span>
             <span>{kicker}</span>
           </p>
           <h2 className="font-serif-cn text-[1.62rem] font-black leading-[1.24] tracking-tight sm:text-[2.65rem] sm:leading-[1.18]">{title}</h2>
@@ -217,9 +217,9 @@ export function BrowserFrame({
     >
       <div className={cn("flex items-center gap-3 px-3.5 py-2.5", dark ? "bg-night-3" : "bg-paper-2")}>
         <span className="flex gap-1.5">
-          <i className="h-2.5 w-2.5 rounded-full bg-[#e5584d]" />
-          <i className="h-2.5 w-2.5 rounded-full bg-[#e5b04d]" />
-          <i className="h-2.5 w-2.5 rounded-full bg-[#5fb865]" />
+          <i className="h-2.5 w-2.5 rounded-full bg-traffic-red" />
+          <i className="h-2.5 w-2.5 rounded-full bg-traffic-amber" />
+          <i className="h-2.5 w-2.5 rounded-full bg-traffic-green" />
         </span>
         <span
           className={cn(
@@ -384,6 +384,6 @@ export function Bullet({ children, dark }: { children: ReactNode; dark?: boolean
 
 export function Eyebrow({ children, dark }: { children: ReactNode; dark?: boolean }) {
   return (
-    <p className={cn("font-mono text-[11px] uppercase tracking-[0.2em]", dark ? "text-bronze-2" : "text-seal")}>{children}</p>
+    <p className={cn("text-xs font-semibold", dark ? "text-bronze-2" : "text-seal")}>{children}</p>
   );
 }

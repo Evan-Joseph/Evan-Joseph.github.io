@@ -44,7 +44,7 @@ export function Contact({ no }: { no: number }) {
     <SectionShell
       id="contact"
       no={no}
-      kicker="RÉSUMÉ & CONTACT"
+      kicker={t("求职简历与联系", "Résumé & Contact")}
       title={
         <>
           {t("求职简历与", "Résumé & ")}
@@ -96,7 +96,7 @@ export function Contact({ no }: { no: number }) {
                   onClick={() => setInline(true)}
                   className="group relative grid h-48 w-full place-items-center overflow-hidden rounded-xl border border-dashed border-ink/25 bg-paper/60 transition hover:border-seal sm:h-56"
                 >
-                  <span className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "repeating-linear-gradient(0deg, #000 0 1px, transparent 1px 22px)" }} />
+                  <span className="hatch-lines absolute inset-0 opacity-[0.07]" />
                   <span className="relative flex flex-col items-center gap-2 text-ink-2 transition group-hover:text-seal">
                     <FileText size={36} strokeWidth={1.3} />
                     <span className="text-sm font-semibold">{t("点击在此处内嵌预览简历", "Click to preview the résumé inline")}</span>
@@ -121,13 +121,13 @@ export function Contact({ no }: { no: number }) {
               key={c.key}
               className={cn("paper-card relative flex items-center gap-3 rounded-2xl p-4 transition sm:gap-4 sm:p-5", c.rec && "border-seal/40 shadow-lg shadow-seal/10")}
             >
-              <span className={cn("grid h-10 w-10 flex-none place-items-center rounded-xl sm:h-12 sm:w-12", c.rec ? "bg-seal text-white" : "bg-ink/8 text-ink")}>
+              <span className={cn("grid h-10 w-10 flex-none place-items-center rounded-xl sm:h-12 sm:w-12", c.rec ? "bg-seal text-paper" : "bg-ink/8 text-ink")}>
                 <c.icon size={19} />
               </span>
               <div className="min-w-0 flex-1">
                 <p className="flex items-center gap-2 text-[11.5px] font-medium text-mute sm:text-[12px]">
                   {c.label}
-                  {c.rec && <span className="rounded bg-seal px-1.5 py-px font-mono text-[10px] font-bold uppercase text-white">{t("推荐", "Suggested")}</span>}
+                  {c.rec && <span className="rounded bg-seal px-1.5 py-px text-[11px] font-bold text-paper">{t("推荐", "Suggested")}</span>}
                 </p>
                 <a href={c.href} className="mt-0.5 block break-all font-mono text-[13px] font-bold leading-snug transition hover:text-seal sm:truncate sm:text-[15px]">
                   {c.value}
@@ -157,7 +157,9 @@ export function Contact({ no }: { no: number }) {
                 ORCID
               </ExtLink>
             </div>
-            <p className="mt-3 font-mono text-[11px] text-mute">ORCID {LINKS.orcidId}</p>
+            <p className="mt-3 text-xs text-mute">
+              ORCID <code className="font-mono tabular-nums">{LINKS.orcidId}</code>
+            </p>
           </div>
 
           <p className="px-1 text-[13px] leading-relaxed text-ink-2">
