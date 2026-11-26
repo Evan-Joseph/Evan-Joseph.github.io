@@ -134,16 +134,26 @@ const PRODUCTS: Prod[] = [
     ],
   },
   {
-    id: "ppt",
+    id: "unhumor",
     cat: "agent",
-    name: l("PPT 提示词增强", "PPT Prompt Enhancer"),
+    name: l("别哄我 · unhumor", "Unhumor · AI Honesty Plugin"),
+    alias: l("跨智能体术语校准与本地盲区复盘插件（MIT 开源）", "Cross-harness terminology calibration & blindspot ledger plugin (MIT)"),
     desc: l(
-      "将一句话需求转化为含场景、结构、配色与字体的专业结构化 PPT 提示词，支持全自动 / 半自动 / 数据图表三模式与多模型切换。",
-      "Turns a one-line request into a professional, structured PPT prompt covering scenario, structure, palette and typography, with auto / semi-auto / data-chart modes and multi-model switching.",
+      "不足 220 tokens 的轻量规则与纯本地复盘 Skill，原生兼容 Antigravity、Claude Code、Codex 与 Cursor。按 concepts > terms > typos > slang 优先级在回复首行轻标概念混用与口语指代，默认放行代码缩写与协议原词，答对两次自动移出盲区卡，45 条正反评测全绿零误触发。",
+      "A sub-220-token zero-latency rule & local blindspot ledger natively built for Antigravity, Claude Code, Codex and Cursor. Flags mixed-up concepts and lay terms cleanly by priority (concepts > terms > typos > slang) while preserving code identifiers and slang, graduating items after two correct recalls (45/45 eval, 0 false positives).",
     ),
-    tags: ["Prompt engineering", "Multi-model"],
-    shots: [{ img: A.ppt_enhancer, label: l("三模式", "Three modes") }],
-    links: [],
+    stats: [
+      { v: "45 / 45", k: l("基准评测零误报", "eval precision (0 FP)") },
+      { v: "< 220", k: l("Token 常驻规则", "token rule cost") },
+      { v: "4", k: l("原生支持 Agent 端", "native harnesses") },
+    ],
+    tags: ["MIT", "Antigravity / Claude / Codex", "45/45 Eval"],
+    shots: [
+      { img: A.unhumor_overview, label: l("浅色示例", "Light UI") },
+      { img: A.unhumor_switches, label: l("开关与盲区卡", "Toggles & card") },
+      { img: A.unhumor_dark, label: l("深色示例", "Dark UI") },
+    ],
+    links: [{ href: "https://github.com/Evan-Joseph/unhumor", label: l("开源仓库", "Repo"), repo: true }],
   },
   {
     id: "junzi",

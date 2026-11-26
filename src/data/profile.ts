@@ -160,7 +160,7 @@ export const LENSES: Record<LensId, LensCfg> = {
         to: "matrix",
         stat: "8",
         title: l("8 款已上线独立产品与研发工具", "8 live independent products & developer tools"),
-        note: l("沉浸时钟、22408 研记、洗衣机脉冲抢占助手、虚拟试衣双视口工作台等", "Flow timer, 22408 exam workbench, laundry pulse grabber, virtual try-on workbench and more"),
+        note: l("沉浸时钟、22408 研记、《别哄我》开源插件、虚拟试衣双视口工作台等", "Flow timer, 22408 exam workbench, Unhumor open-source plugin, virtual try-on workbench and more"),
       },
       {
         to: "honors",

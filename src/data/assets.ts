@@ -252,10 +252,20 @@ export const A = {
     "《GP-VTON++ 虚拟试衣工作台与方案评审》· 模特试衣桌面 + 手机双视口同步预览",
     "GP-VTON++ try-on workbench & design review · desktop + phone dual-viewport sync",
   ),
-  ppt_enhancer: i(
-    "ppt_enhancer.webp", 2880, 1800,
-    "《PPT 提示词增强》· 一句话需求变成专业结构化 PPT 提示词，支持全自动/半自动/数据图表三模式",
-    "PPT Prompt Enhancer · one-line request → structured PPT prompt; auto / semi-auto / data-chart modes",
+  unhumor_overview: i(
+    "unhumor_overview.webp", 2880, 1800,
+    "《别哄我 · unhumor》浅色示例 · 概念混用、外行指代与错别字三场景零说教校准",
+    "Unhumor light overview · three real calibration cases across terms, concepts and typos",
+  ),
+  unhumor_switches: i(
+    "unhumor_switches.webp", 2880, 1800,
+    "《别哄我 · unhumor》开关与本地盲区卡 · 四类独立开关、忽略词表与答对两次自动毕业机制",
+    "Unhumor toggles & blindspot ledger · four independent switches, ignore list and 2-recall mastery graduation",
+  ),
+  unhumor_dark: i(
+    "unhumor_dark.webp", 2880, 1800,
+    "《别哄我 · unhumor》深色视图 · 低扰动单行引用提醒（< 220 tokens 常驻规则开销）",
+    "Unhumor dark preview · single-blockquote nudge at < 220-token rule footprint",
   ),
   junzi_deck: i(
     "junzi_deck.webp", 1440, 900,

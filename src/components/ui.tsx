@@ -95,7 +95,7 @@ export function Chip({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-[11.5px] font-medium leading-5",
+        "inline-flex max-w-full whitespace-nowrap items-center gap-1 rounded-full border px-2.5 py-0.5 text-[11.5px] font-medium leading-5",
         tones[tone],
         className,
       )}
@@ -123,11 +123,11 @@ export function ExtLink({
   const base = "group inline-flex items-center gap-1.5 text-sm font-medium transition";
   const styles = {
     solid: dark
-      ? "rounded-full bg-bronze-2 px-4 py-2 text-night hover:bg-paper"
-      : "rounded-full bg-ink px-4 py-2 text-paper hover:bg-seal",
+      ? "whitespace-nowrap rounded-full bg-bronze-2 px-4 py-2 text-night hover:bg-paper"
+      : "whitespace-nowrap rounded-full bg-ink px-4 py-2 text-paper hover:bg-seal",
     ghost: dark
-      ? "rounded-full border border-paper/25 px-4 py-2 text-paper hover:border-bronze-2 hover:text-bronze-2"
-      : "rounded-full border border-ink/20 px-4 py-2 text-ink hover:border-seal hover:text-seal",
+      ? "whitespace-nowrap rounded-full border border-paper/25 px-4 py-2 text-paper hover:border-bronze-2 hover:text-bronze-2"
+      : "whitespace-nowrap rounded-full border border-ink/20 px-4 py-2 text-ink hover:border-seal hover:text-seal",
     text: dark ? "text-bronze-2 hover:text-paper" : "text-seal hover:text-ink",
   } as const;
   return (
